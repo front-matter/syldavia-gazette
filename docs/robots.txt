@@ -1,1 +1,0 @@
-Sitemap: https://front-matter.github.io/rogue-scholar-quarto/sitemap.xml

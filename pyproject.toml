@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "rogue-scholar-notebooks"
+version = "0.1.0"
+description = ""
+authors = ["Martin Fenner <martin@front-matter.io>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jupyter = "^1.0.0"
+jupyterlab = "^4.0.6"
+matplotlib = "^3.8.0"
+plotly = "^5.17.0"
+jupyterlab-quarto = "^0.2.8"
+jupyter-cache = "^0.6.1"
+pydash = "^6"
+markdown-it-py = "^3.0.0"
+commonmeta-py = "^0.8.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
