@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Fenner">
-<meta name="dcterms.date" content="2023-10-11">
+<meta name="dcterms.date" content="2023-11-10">
 
-<title>Retraction Watch</title>
+<title>Posts about Retraction Watch</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -133,7 +133,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Retraction Watch</h1>
+<h1 class="title">Posts about Retraction Watch</h1>
 </div>
 
 
@@ -150,7 +150,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 11, 2023</p>
+      <p class="date">November 10, 2023</p>
     </div>
   </div>
   
@@ -181,38 +181,42 @@ Note
 </ul>
 </div>
 </div>
-<div class="cell" data-execution_count="8">
+<div class="cell" data-scrolled="true" data-execution_count="6">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pydash <span class="im">as</span> py_</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> commonmeta.doi_utils <span class="im">import</span> doi_from_url</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> markdown_it <span class="im">import</span> MarkdownIt</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"retraction watch"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,doi"</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> baseUrl <span class="op">+</span> <span class="ss">f"posts?query=</span><span class="sc">{</span>query<span class="sc">.</span>replace(<span class="st">' '</span>, <span class="st">'+'</span>)<span class="sc">}</span><span class="ss">&amp;published_since=2010&amp;language=en&amp;sort=published_at&amp;order=desc&amp;per_page=50&amp;include_fields=</span><span class="sc">{</span>include_fields<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(url)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> response.json()</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Some results removed after manual curation</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>curated <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">9</span>,<span class="dv">12</span>,<span class="dv">16</span>]</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>found <span class="op">=</span> result[<span class="st">"found"</span>]</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>out_of <span class="op">=</span> result[<span class="st">"out_of"</span>]</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_post(post):</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> post[<span class="st">"document"</span>]</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> format_post(post):</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    md <span class="op">=</span> MarkdownIt(<span class="st">'commonmark'</span> ,{<span class="st">'breaks'</span>:<span class="va">True</span>,<span class="st">'html'</span>:<span class="va">True</span>})</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> post[<span class="st">"title"</span>]</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    blog <span class="op">=</span> post[<span class="st">"blog_name"</span>]</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    url <span class="op">=</span> post.get(<span class="st">"doi"</span>, <span class="st">""</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    summary <span class="op">=</span> post[<span class="st">"summary"</span>]</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f"### </span><span class="sc">{</span>title<span class="sc">}</span><span class="ch">\n</span><span class="ss">Published in </span><span class="sc">{</span>blog<span class="sc">}</span><span class="ch">\n</span><span class="sc">{</span>url<span class="sc">}</span><span class="ch">\n</span><span class="sc">{</span>summary<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>  <span class="co"># md.render</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>posts <span class="op">=</span> [ get_post(x) <span class="cf">for</span> i, x <span class="kw">in</span> <span class="bu">enumerate</span>(result[<span class="st">"hits"</span>]) <span class="cf">if</span> i <span class="kw">not</span> <span class="kw">in</span> curated ]</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>posts_as_string <span class="op">=</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>.join([ format_post(x) <span class="cf">for</span> x <span class="kw">in</span> posts])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> markdown_it <span class="im">import</span> MarkdownIt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"retraction watch"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,doi"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> baseUrl <span class="op">+</span> <span class="ss">f"posts?query=</span><span class="sc">{</span>query<span class="sc">.</span>replace(<span class="st">' '</span>, <span class="st">'+'</span>)<span class="sc">}</span><span class="ss">&amp;published_since=2010&amp;language=en&amp;sort=published_at&amp;order=desc&amp;per_page=50&amp;include_fields=</span><span class="sc">{</span>include_fields<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(url)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> response.json()</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Some results removed after manual curation</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>curated <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">9</span>,<span class="dv">12</span>,<span class="dv">16</span>]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>found <span class="op">=</span> result[<span class="st">"found"</span>]</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>out_of <span class="op">=</span> result[<span class="st">"out_of"</span>]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_post(post):</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> post[<span class="st">"document"</span>]</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> format_post(post):</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    md <span class="op">=</span> MarkdownIt(<span class="st">'commonmark'</span> ,{<span class="st">'breaks'</span>:<span class="va">True</span>,<span class="st">'html'</span>:<span class="va">True</span>})</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> post[<span class="st">"title"</span>]</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    blog <span class="op">=</span> post[<span class="st">"blog_name"</span>]</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    url <span class="op">=</span> post.get(<span class="st">"doi"</span>, <span class="st">""</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    summary <span class="op">=</span> post[<span class="st">"summary"</span>]</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f"### </span><span class="sc">{</span>title<span class="sc">}</span><span class="ch">\n</span><span class="ss">Published in </span><span class="sc">{</span>blog<span class="sc">}</span><span class="ch">\n</span><span class="sc">{</span>url<span class="sc">}</span><span class="ch">\n</span><span class="sc">{</span>summary<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>  <span class="co"># md.render</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>posts <span class="op">=</span> [ get_post(x) <span class="cf">for</span> i, x <span class="kw">in</span> <span class="bu">enumerate</span>(result[<span class="st">"hits"</span>]) <span class="cf">if</span> i <span class="kw">not</span> <span class="kw">in</span> curated ]</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>posts_as_string <span class="op">=</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>.join([ format_post(x) <span class="cf">for</span> x <span class="kw">in</span> posts])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
-<div class="cell" data-execution_count="5">
+<div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get bibtex-formatted metadata for all posts</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_bibtex(post):</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    doi <span class="op">=</span> doi_from_url(post[<span class="st">"doi"</span>])</span>
@@ -222,6 +226,7 @@ Note
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>bibtex <span class="op">=</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>.join([ get_bibtex(x) <span class="cf">for</span> x <span class="kw">in</span> posts <span class="cf">if</span> x.get(<span class="st">"doi"</span>, <span class="va">None</span>) <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> ])</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'references.bib'</span>, <span class="st">'w'</span>) <span class="im">as</span> f:</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    f.write(bibtex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="results" class="level2">
@@ -243,95 +248,11 @@ Note
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<div class="cell" data-execution_count="6">
+<div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(posts_as_string)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>### Generating Overlay blog posts
-Published in Front Matter
-https://doi.org/10.53731/gzrse-p5d35
-On Monday the Rogue Scholar science blog archive launched a dedicated API.
-
-### Two new browser extensions that help with delivery or access - ebsco passport and GetFTR browser extension and other developments
-Published in Musings about Librarianship - Aaron Tay
-
-
-
-### (The?) 3 kinds of papermills
-Published in Stories by Adam Day on Medium
-https://doi.org/10.59350/dakrb-j7a75
-TL;DR: Join me at ConTech Live to hear about a recent project with Open Credo to see if we could detect unusual co-authorships in a dataset created by Anna Abalkina. Sign up&amp;nbsp;here! Papermilling has a few definitions which you see here and there.
-
-### This blog turned 15 (years old) this month
-Published in Front Matter
-https://doi.org/10.53731/bs60jms-sqaehsk
-The first post on this blog was published on August 3, 2007 (Open access may become mandatory for NIH-funded research). This is post number 465, and in the past 15 years the blog has seen changes in technology and hosting location – but I wrote all posts (with the exception of a few guest posts). The overall theme remained unchanged: technology used in scholarly communication.
-
-### When your journal reads you
-Published in Elephant in the Lab
-
-&lt;strong&gt;Introduction&lt;/strong&gt; Renke Siems  In December 2018, a University of Minnesota web librarian, Cody Hanson, participated in a workshop hosted by the Coalition for Networked Information. The topic of this, and a number of other events to date, is the drive by major scholarly publishers to more fully integrate authentication systems for accessing electronic media into their platforms.
-
-### What’s going on with &lt;i&gt;Oculudentavis&lt;/i&gt;?
-Published in Sauropod Vertebra Picture of the Week
-https://doi.org/10.59350/hk3jx-6sv77
-Back in March, Nature published “Hummingbird-sized dinosaur from the Cretaceous period of Myanmar” by Xing et al. (2020), which described and named a tiny putative bird that was preserved in amber from Myanmar (formerly Burma). It’s a pretty spectacular find. Today, though, that paper is retracted. That’s a very rare occurrence for a palaeontology paper.
-
-### Suppression as a form of liberation?
-Published in A blog by Ross Mounce
-https://doi.org/10.59350/v5rp0-nde12
-On Monday 29th June 2020, I learned from Retraction Watch that Clarivate, the for-profit proprietor of &lt;em&gt;Journal Impact Factor&lt;/em&gt; ™  has newly “suppressed”   33 journals from their indexing service.
-
-### The R2R debate, part 1: opening statement in support
-Published in Sauropod Vertebra Picture of the Week
-https://doi.org/10.59350/c8fz7-kyc20
-This Monday and Tuesday, I was at the R2R (Researcher to Reader) conference at BMA House in London.
-
-### Guest Blog: Data in the time of Coronavirus
-Published in GigaBlog
-https://doi.org/10.59350/qh3na-ehy20
-&lt;strong&gt;&lt;em&gt;With much of the GigaScience team spanning the Hong Kong-Shenzhen border and now confined to remote working, the current 2019-novel coronavirus outbreak has been particularly disruptive and close to home.
-
-### The lowest common denominator: marketing science with jIF
-Published in GigaBlog
-https://doi.org/10.59350/8wafm-6yc04
-&lt;strong&gt;Shallow Impact. Tis the season. &lt;/strong&gt;In case people didn’t know— the world of scientific publishing has seasons: There is the Inundation season, which starts in November as authors rush to submit their papers before the end of year. Then there is the Recovery season beginning in January as editors come back from holidays to tackle the glut.
-
-### My Blank Pages V: Raw Data
-Published in quantixed
-https://doi.org/10.59350/j2nba-89g15
-&lt;strong&gt;Raw Data: A novel on Life in Science&lt;/strong&gt; by &lt;strong&gt;Pernille Rørth&lt;/strong&gt; (Springer, 2016)    I was keen to read this “lab lit” novel written by renowned cell biologist Pernille Rørth.&nbsp;I’d seen&nbsp;lots of enthusiastic comments about the book, and it didn’t disappoint.
-
-### What Difference Does It Make?
-Published in quantixed
-https://doi.org/10.59350/cmyz9-ms451
-A few days ago, Retraction Watch published the top ten&nbsp;most-cited retracted papers. I saw this post with a bar chart to visualise these citations. It didn’t quite capture what the effect (if any) a retraction has on citations. I thought I’d quickly plot this out for the number one article on the list.    The plot is pretty depressing. The retraction has no effect on citations.
-
-### The &lt;i&gt;Medical Journal of Australia&lt;/i&gt; vs Elsevier
-Published in Sauropod Vertebra Picture of the Week
-https://doi.org/10.59350/6m0m9-bng28
-While Mike’s been off having fun at the Royal Society, this has been happening: Lots of feathers flying right now over the situation at the Medical Journal of Australia (MJA). The short, short version is that AMPCo, the company that publishes MJA, made plans to outsource production of the journal, and apparently some sub-editing and […]
-
-### Getting Techy With It: GigaScience Technology Update 2014
-Published in GigaBlog
-https://doi.org/10.59350/tzayy-hvn20
-When it comes to technology, &lt;em&gt;GigaScience&lt;/em&gt; has always been open and willing to embrace new ways of integrating technology in its publishing processes, with the ultimate goal of working towards more reproducible, interactive and executable papers.
-
-### Continuing the push beyond static documents. ISMB, and more on our “What Bioinformaticians need to know about digital publishing beyond the PDF2” workshop
-Published in GigaBlog
-https://doi.org/10.59350/gtw2x-fc921
-&lt;strong&gt;Boston 2014: More than a (Bioinformatics) Feeling&lt;/strong&gt; Following from our previous posting on BOSC, our birthday and the BMC Open Data award party in Boston, on top of having to dash between the many great talks and sessions at ISMB, we were kept even busier than usual helping to organize and present in a special Beyond-the-PDF inspired “What Bioinformaticians need to know about digital publishing beyond the PDF” workshop at the end
-
-### Rewarding Reproducibility: First Papers in our Galaxy Series utilizing our GigaGalaxy platform
-Published in GigaBlog
-https://doi.org/10.59350/w8kyr-0e629
-&lt;strong&gt;Push the button! &lt;em&gt;GigaScience&lt;/em&gt; moves toward more interactive articles&lt;/strong&gt; Research articles are being published with increasingly large and complicated supporting datasets, together with the software code used in analyses of the data.
-
-### The difficulties sharing neuroscience data: can data publishing help?
-Published in GigaBlog
-https://doi.org/10.59350/kmne3-5xg86
-Last week we published our first neuroscience data note containing 10GB of fMRI data hosted and integrated into the paper by a DOI to our GigaDB database. While we have published a number of genomics datasets and data notes (see the Puerto Rican Parrot genome data note and its associated data DOI), this is a nice example of us providing a home for “orphan data”, the long tail of data types without community agreed curated repositories.
-</code></pre>
-</div>
+</details>
 </div>
 
 
