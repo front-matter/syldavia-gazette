@@ -9,7 +9,7 @@ website:
   back-to-top-navigation: true
   open-graph: true
   site-url: https://notebooks.rogue-scholar.org
-  repo-url: https://github.com/front_matter/rogue-scholar-notebooks
+  repo-url: https://github.com/front-matter/rogue-scholar-notebooks
   repo-actions: [edit, issue]
   navbar:
     background: primary
