@@ -121,6 +121,8 @@ div.csl-indent {
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Rogue Scholar Notebooks - Retraction Watch">
@@ -280,7 +282,7 @@ Note
 </div>
 </div>
 </div>
-<div class="cell" data-scrolled="true" data-execution_count="17">
+<div class="cell" data-scrolled="true" data-execution_count="19">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -343,9 +345,9 @@ Note
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>Markdown(posts_as_string)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Found 22 out of 10560 results</code></pre>
+<pre><code>Found 22 out of 10560 results.</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <section id="generating-overlay-blog-posts" class="level3">
 <h3 class="anchored" data-anchor-id="generating-overlay-blog-posts"><a href="[https://doi.org/10.53731/gzrse-p5d35](https://doi.org/10.53731/gzrse-p5d35)">Generating Overlay blog posts</a></h3>
 <p><a href="https://doi.org/10.53731/gzrse-p5d35">https://doi.org/10.53731/gzrse-p5d35</a><br>Published October 11, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br><br>On Monday the Rogue Scholar science blog archive launched a dedicated API.</p>
@@ -422,6 +424,12 @@ Note
 <div id="ref-Day_2022" class="csl-entry" role="listitem">
 Day, A. (2022). <em>(The?) 3 kinds of papermills</em>. <a href="https://doi.org/10.59350/dakrb-j7a75">https://doi.org/10.59350/dakrb-j7a75</a>
 </div>
+<div id="ref-Edmunds_2013" class="csl-entry" role="listitem">
+Edmunds, S. (2013). <em>The difficulties sharing neuroscience data: Can data publishing help?</em> <a href="https://doi.org/10.59350/kmne3-5xg86">https://doi.org/10.59350/kmne3-5xg86</a>
+</div>
+<div id="ref-Edmunds_2014" class="csl-entry" role="listitem">
+Edmunds, S. (2014). <em>Rewarding reproducibility: First papers in our galaxy series utilizing our <span>GigaGalaxy</span> platform</em>. <a href="https://doi.org/10.59350/w8kyr-0e629">https://doi.org/10.59350/w8kyr-0e629</a>
+</div>
 <div id="ref-Edmunds_2016" class="csl-entry" role="listitem">
 Edmunds, S. (2016). <em>The lowest common denominator: Marketing science with <span class="nocase">jIF</span></em>. <a href="https://doi.org/10.59350/8wafm-6yc04">https://doi.org/10.59350/8wafm-6yc04</a>
 </div>
@@ -437,11 +445,17 @@ Fenner, M. (2023). <em>Generating overlay blog posts</em>. <a href="https://doi.
 <div id="ref-Mounce_2020" class="csl-entry" role="listitem">
 Mounce, R. (2020). <em>Suppression as a form of liberation?</em> <a href="https://doi.org/10.59350/v5rp0-nde12">https://doi.org/10.59350/v5rp0-nde12</a>
 </div>
+<div id="ref-Nogoy_2014" class="csl-entry" role="listitem">
+Nogoy, N. (2014). <em>Getting techy with it: <span>GigaScience</span> technology update 2014</em>. <a href="https://doi.org/10.59350/tzayy-hvn20">https://doi.org/10.59350/tzayy-hvn20</a>
+</div>
 <div id="ref-Royle_2016" class="csl-entry" role="listitem">
 Royle, S. (2016). <em>What difference does it make?</em> <a href="https://doi.org/10.59350/cmyz9-ms451">https://doi.org/10.59350/cmyz9-ms451</a>
 </div>
 <div id="ref-Taylor_2020" class="csl-entry" role="listitem">
 Taylor, M. (2020). <em>The R2R debate, part 1: Opening statement in support</em>. <a href="https://doi.org/10.59350/c8fz7-kyc20">https://doi.org/10.59350/c8fz7-kyc20</a>
+</div>
+<div id="ref-Wedel_2015" class="csl-entry" role="listitem">
+Wedel, M. (2015). <em>The <span>&amp;</span>lt<span class="math inline">\(\mathsemicolon\)</span>i<span>&amp;</span>gt<span class="math inline">\(\mathsemicolon\)</span>medical journal of australia<span>&amp;</span>lt<span class="math inline">\(\mathsemicolon\)</span>/i<span>&amp;</span>gt<span class="math inline">\(\mathsemicolon\)</span> vs elsevier</em>. <a href="https://doi.org/10.59350/6m0m9-bng28">https://doi.org/10.59350/6m0m9-bng28</a>
 </div>
 </div>
 
@@ -801,7 +815,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </em></strong></div><strong><em> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Copyright ©2023 The Rogue Scholar and respective authors.</div>   
+    <div class="nav-footer-left">Copyright ©2023 The Rogue Scholar.</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>

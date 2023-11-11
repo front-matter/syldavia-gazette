@@ -12,7 +12,7 @@ website:
   repo-url: https://github.com/front-matter/rogue-scholar-notebooks
   repo-actions: [edit, issue]
   navbar:
-    background: primary
+    background: light
     tools:
     - icon: github
       href: https://github.com/front-matter/rogue-scholar-notebooks
@@ -26,9 +26,7 @@ website:
           - retraction_watch.ipynb
           - weekly_digest.ipynb
   page-footer:
-    background: light
-    border: false
-    left: "Copyright &copy;2023 The Rogue Scholar and respective authors."
+    left: "Copyright &copy;2023 The Rogue Scholar."
     right:
       - icon: envelope
         href: mailto:info@front-matter.io

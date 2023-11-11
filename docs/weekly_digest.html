@@ -262,7 +262,7 @@ Note
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
 <p>This is a summary of the Rogue Scholar blog posts published last week. Find out more (including search for other posts) via <a href="https://rogue-scholar.org">Rogue Scholar</a>.</p>
-<div class="cell" data-execution_count="32">
+<div class="cell" data-execution_count="36">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -275,7 +275,7 @@ Note
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>locale.setlocale(locale.LC_ALL, <span class="st">"en_US"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2023-11-04"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> baseUrl <span class="op">+</span> <span class="ss">f"posts?&amp;published_since=</span><span class="sc">{</span>published_since<span class="sc">}</span><span class="ss">&amp;language=en&amp;sort=published_at&amp;order=asc&amp;per_page=50&amp;include_fields=</span><span class="sc">{</span>include_fields<span class="sc">}</span><span class="ss">"</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(url)</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> response.json()</span>
@@ -289,7 +289,7 @@ Note
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> <span class="ss">f"[</span><span class="sc">{</span>post[<span class="st">'title'</span>]<span class="sc">}</span><span class="ss">](</span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">)"</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    published_at <span class="op">=</span> datetime.datetime.utcfromtimestamp(post[<span class="st">"published_at"</span>]).strftime(<span class="st">"%B </span><span class="sc">%-d</span><span class="st">, %Y"</span>)</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    blog <span class="op">=</span> <span class="ss">f"[</span><span class="sc">{</span>post[<span class="st">'blog_name'</span>]<span class="sc">}</span><span class="ss">](https://rogue-scholar.org/blogs/</span><span class="sc">{</span>post[<span class="st">'blog_slug'</span>]<span class="sc">}</span><span class="ss">)"</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    author <span class="op">=</span> <span class="st">", "</span>.join([ <span class="ss">f"</span><span class="sc">{</span>x[<span class="st">'name'</span>]<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> x <span class="kw">in</span> post[<span class="st">"authors"</span>] ])</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    author <span class="op">=</span> <span class="st">", "</span>.join([ <span class="ss">f"</span><span class="sc">{</span>x[<span class="st">'name'</span>]<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> x <span class="kw">in</span> post.get(<span class="st">"authors"</span>, <span class="va">None</span>) <span class="kw">or</span> [] ])</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    summary <span class="op">=</span> post[<span class="st">"summary"</span>]</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f"### </span><span class="sc">{</span>title<span class="sc">}</span><span class="ch">\n</span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">&lt;br /&gt;Published </span><span class="sc">{</span>published_at<span class="sc">}</span><span class="ss"> in </span><span class="sc">{</span>blog<span class="sc">}</span><span class="ss">&lt;br /&gt;</span><span class="sc">{</span>author<span class="sc">}</span><span class="ss">&lt;br /&gt;&lt;br /&gt;</span><span class="sc">{</span>summary<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
@@ -316,52 +316,20 @@ Note
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'digest.bib'</span>, <span class="st">'w'</span>) <span class="im">as</span> f:</span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    f.write(bibtex)</span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>Markdown(posts_as_string)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>images <span class="op">=</span> [ x[<span class="st">"image"</span>] <span class="cf">for</span> x <span class="kw">in</span> posts <span class="cf">if</span> x.get(<span class="st">"image"</span>, <span class="va">None</span>) <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> ]</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>image <span class="op">=</span> py_.sample(images)</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>markdown <span class="op">=</span> <span class="ss">f"![](</span><span class="sc">{</span>image<span class="sc">}</span><span class="ss">)</span><span class="ch">\n\n</span><span class="ss">"</span> <span class="op">+</span> posts_as_string</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>Markdown(markdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="32">
-<section id="two-influential-textbooks-mee-and-mellor." class="level3">
-<h3 class="anchored" data-anchor-id="two-influential-textbooks-mee-and-mellor."><a href="[https://doi.org/10.59350/e3wmw-qwx29](https://doi.org/10.59350/e3wmw-qwx29)">Two influential textbooks – “Mee” and “Mellor”.</a></h3>
-<p><a href="https://doi.org/10.59350/e3wmw-qwx29">https://doi.org/10.59350/e3wmw-qwx29</a><br>Published November 11, 2023 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br><br>I am a member of the &nbsp;Royal Society of &nbsp;Chemistry’s Historical group. Amongst other activities, it publishes two editions&nbsp;of a newsletter each year for its members.</p>
+<div class="cell-output cell-output-display" data-execution_count="36">
+<p><img src="https://bjoern.brembs.net/wp/wp-content/uploads/2023/11/image-1-1024x683.png" class="img-fluid"></p>
+<section id="strategic-computings-machine-acquisition-program" class="level3">
+<h3 class="anchored" data-anchor-id="strategic-computings-machine-acquisition-program"><a href="[https://doi.org/10.59350/70d9r-c1s08](https://doi.org/10.59350/70d9r-c1s08)">Strategic Computing’s Machine Acquisition Program</a></h3>
+<p><a href="https://doi.org/10.59350/70d9r-c1s08">https://doi.org/10.59350/70d9r-c1s08</a><br>Published November 5, 2023 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br>Eric Gilliam<br><br>This piece is an accompaniment to today’s MOSIS piece. So please read the MOSIS piece before starting this one.</p>
 </section>
-<section id="archiving-rogue-scholar-blogs-with-the-internet-archive" class="level3">
-<h3 class="anchored" data-anchor-id="archiving-rogue-scholar-blogs-with-the-internet-archive"><a href="[https://doi.org/10.53731/g60vh-3ng48](https://doi.org/10.53731/g60vh-3ng48)">Archiving Rogue Scholar blogs with the Internet Archive</a></h3>
-<p><a href="https://doi.org/10.53731/g60vh-3ng48">https://doi.org/10.53731/g60vh-3ng48</a><br>Published November 9, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br><br>Blogs participating in the Rogue Scholar science blog archive are now archived in the Internet Archive. Starting November 1st, Rogue Scholar is participating in the Internet Archive Archive-It service and all archived blogs can be found here.</p>
-</section>
-<section id="from-ottawa-to-leiden-scholcommlabs-conference-highlights" class="level3">
-<h3 class="anchored" data-anchor-id="from-ottawa-to-leiden-scholcommlabs-conference-highlights"><a href="[https://doi.org/10.59350/vbp1j-f9j63](https://doi.org/10.59350/vbp1j-f9j63)">From Ottawa to Leiden: ScholCommLab’s Conference Highlights</a></h3>
-<p><a href="https://doi.org/10.59350/vbp1j-f9j63">https://doi.org/10.59350/vbp1j-f9j63</a><br>Published November 9, 2023 in <a href="https://rogue-scholar.org/blogs/scholcommlab">Scholarly Communications Lab | ScholCommLab</a><br>Olivia Aguiar<br><br>Over the last few months, ScholCommLab members took part in over six conferences, including the: International Conference on Science, Technology, and Innovation Indicators (STI 2023), International Communication Association Conference (ICA 2023), and Bibliometrics and Research Impact Community Conference (BRIC 2023). In this blog post, we’re sharing highlights from each event.</p>
-</section>
-<section id="biobanking-at-ggbn-2023-highlights-from-gigascience-press" class="level3">
-<h3 class="anchored" data-anchor-id="biobanking-at-ggbn-2023-highlights-from-gigascience-press"><a href="[https://doi.org/10.59350/ahnf6-e1m90](https://doi.org/10.59350/ahnf6-e1m90)">BioBanking at GGBN 2023: Highlights from GigaScience Press</a></h3>
-<p><a href="https://doi.org/10.59350/ahnf6-e1m90">https://doi.org/10.59350/ahnf6-e1m90</a><br>Published November 8, 2023 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Chris Armit<br><br><em>“Extinction is forever – so our action must be immediate.”</em> –<em>Sir David Attenborough, Sept 30th 2020</em> The fourth international Global Genome Biodiversity Network (GGBN) Conference took place in Aguascalientes, Mexico from October 17th to October 20th 2023 where it was hosted by the Universidad Autónoma de Aguascalientes.</p>
-</section>
-<section id="introducing-the-cwts-ecrphd-council" class="level3">
-<h3 class="anchored" data-anchor-id="introducing-the-cwts-ecrphd-council"><a href="[https://www.leidenmadtrics.nl/articles/introducing-the-cwts-ecr-phd-council](https://www.leidenmadtrics.nl/articles/introducing-the-cwts-ecr-phd-council)">Introducing the CWTS ECR/PhD Council</a></h3>
-<p><a href="https://www.leidenmadtrics.nl/articles/introducing-the-cwts-ecr-phd-council">https://www.leidenmadtrics.nl/articles/introducing-the-cwts-ecr-phd-council</a><br>Published November 8, 2023 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br><br>In this blog post, we’ll introduce you to the CWTS ECR/PhD Council, shedding light on its significance, objectives, and how it can serve as a crucial resource for early career researchers and PhDs at CWTS. CWTS is an interdisciplinary institute at Leiden University with a diverse multinational academic culture. PhD candidates, early career researchers, and visiting scholars from around the world gather at CWTS to pursue their research journeys.</p>
-</section>
-<section id="the-autonomous-land-vehicle-pilots-associate-and-battle-management" class="level3">
-<h3 class="anchored" data-anchor-id="the-autonomous-land-vehicle-pilots-associate-and-battle-management"><a href="[https://doi.org/10.59350/bts7h-31866](https://doi.org/10.59350/bts7h-31866)">The Autonomous Land Vehicle, Pilot’s Associate, and Battle Management</a></h3>
-<p><a href="https://doi.org/10.59350/bts7h-31866">https://doi.org/10.59350/bts7h-31866</a><br>Published November 7, 2023 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br>Eric Gilliam<br><br>Three North Star Applications Projects from DARPA’s Strategic Computing Portfolio</p>
-</section>
-<section id="heading-for-sfn23-with-two-posters" class="level3">
-<h3 class="anchored" data-anchor-id="heading-for-sfn23-with-two-posters"><a href="[https://doi.org/10.59350/832s7-0fz24](https://doi.org/10.59350/832s7-0fz24)">Heading for #SfN23 with two posters</a></h3>
-<p><a href="https://doi.org/10.59350/832s7-0fz24">https://doi.org/10.59350/832s7-0fz24</a><br>Published November 7, 2023 in <a href="https://rogue-scholar.org/blogs/brembs">bjoern.brembs.blog</a><br>Björn Brembs<br><br>It’s the time of the year again where 30,000 neuroscientists head to the US to talk neuroscience. This year the big annual conference is in Washington, DC, one of the three cities able to host this large event. Our first poster will be up on Tuesday morning and shows results from operant self-stimulation experiments using optogenetics and dopaminergic neurons.</p>
-</section>
-<section id="principles-of-open-scholarly-infrastructure-posi-version-1.1-reflections-from-adopters" class="level3">
-<h3 class="anchored" data-anchor-id="principles-of-open-scholarly-infrastructure-posi-version-1.1-reflections-from-adopters"><a href="[https://doi.org/10.54900/n6az7-4xb07](https://doi.org/10.54900/n6az7-4xb07)">Principles of Open Scholarly Infrastructure (POSI) version 1.1: Reflections from adopters</a></h3>
-<p><a href="https://doi.org/10.54900/n6az7-4xb07">https://doi.org/10.54900/n6az7-4xb07</a><br>Published November 7, 2023 in <a href="https://rogue-scholar.org/blogs/upstream">Upstream</a><br>Ginny Hendricks<br><br><em>The Upstream platform was created in order to discuss all things open. Open scholarly infrastructure and the need for the community to assess such infrastructures are surely at the heart of enabling the open research movement.</em></p>
-</section>
-<section id="type-i-error-rates-are-not-usually-inflated" class="level3">
-<h3 class="anchored" data-anchor-id="type-i-error-rates-are-not-usually-inflated"><a href="[https://doi.org/10.59350/88njp-0d573](https://doi.org/10.59350/88njp-0d573)">Type I Error Rates are Not Usually Inflated</a></h3>
-<p><a href="https://doi.org/10.59350/88njp-0d573">https://doi.org/10.59350/88njp-0d573</a><br>Published November 7, 2023 in <a href="https://rogue-scholar.org/blogs/markrubin">Critical Metascience</a><br>Mark Rubin<br><br>The inflation of Type I error rates is thought to be one of the causes of the replication crisis. Questionable research practices such as p-hacking are thought to inflate Type I error rates above their nominal level, leading to unexpectedly high levels of false positives in the literature and, consequently, unexpectedly low replication rates. In this new article, I offer an alternative view.</p>
-</section>
-<section id="what-happens-to-science-when-it-communicates" class="level3">
-<h3 class="anchored" data-anchor-id="what-happens-to-science-when-it-communicates"><a href="[https://elephantinthelab.org/what-happens-to-science-when-it-communicates](https://elephantinthelab.org/what-happens-to-science-when-it-communicates)">What happens to science when it communicates?</a></h3>
-<p><a href="https://elephantinthelab.org/what-happens-to-science-when-it-communicates">https://elephantinthelab.org/what-happens-to-science-when-it-communicates</a><br>Published November 7, 2023 in <a href="https://rogue-scholar.org/blogs/elephantinthelab">Elephant in the Lab</a><br>Sascha Schönig<br><br><strong>What actually happens to science when it opens up? From your perspective as a science researcher, can you describe why this perspective is important?</strong> I believe that science takes place in a social environment and certain images of science emerge or have emerged, which are questioned in many respects in a digital and now increasingly open context or are subject to tensions.</p>
-</section>
-<section id="book-review-hunt-gather-parent" class="level3">
-<h3 class="anchored" data-anchor-id="book-review-hunt-gather-parent"><a href="[https://doi.org/10.59350/yk9tw-49h03](https://doi.org/10.59350/yk9tw-49h03)">Book Review: Hunt, Gather, Parent</a></h3>
-<p><a href="https://doi.org/10.59350/yk9tw-49h03">https://doi.org/10.59350/yk9tw-49h03</a><br>Published November 6, 2023 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br><br>“Like arrows in the hand of a warrior are the children of one’s youth.” –Psalm 127:4 What if our most fundamental assumptions about parenting were wrong? That’s the question that Michaeleen Doucleff’s 2021 book Hunt, Gather, Parent tries to tackle.</p>
+<section id="mosis" class="level3">
+<h3 class="anchored" data-anchor-id="mosis"><a href="[https://doi.org/10.59350/xbf04-2d058](https://doi.org/10.59350/xbf04-2d058)">MOSIS</a></h3>
+<p><a href="https://doi.org/10.59350/xbf04-2d058">https://doi.org/10.59350/xbf04-2d058</a><br>Published November 5, 2023 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br>Eric Gilliam<br><br>The 1980s DARPA ‘Silicon Broker’</p>
 </section>
 <section id="the-skeuomorphic-fallacy" class="level3">
 <h3 class="anchored" data-anchor-id="the-skeuomorphic-fallacy"><a href="[https://doi.org/10.59350/k9kka-90x56](https://doi.org/10.59350/k9kka-90x56)">The skeuomorphic fallacy</a></h3>
@@ -371,13 +339,49 @@ Note
 <h3 class="anchored" data-anchor-id="the-ropensci-multiverse"><a href="[https://doi.org/10.59350/g7mpc-1ek03](https://doi.org/10.59350/g7mpc-1ek03)">The rOpenSci Multiverse</a></h3>
 <p><a href="https://doi.org/10.59350/g7mpc-1ek03">https://doi.org/10.59350/g7mpc-1ek03</a><br>Published November 6, 2023 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Alejandra Bellini, Yanina Bellini Saibene<br><br>The R-Universe is used by professionals from different fields, although they all pursue the same objective: <strong>to offer their R packages in a simple and accessible way</strong>. At rOpenSci we work to provide tools that facilitate access to data and research software generated with good software development practices and in a friendly community.</p>
 </section>
-<section id="mosis" class="level3">
-<h3 class="anchored" data-anchor-id="mosis"><a href="[https://doi.org/10.59350/xbf04-2d058](https://doi.org/10.59350/xbf04-2d058)">MOSIS</a></h3>
-<p><a href="https://doi.org/10.59350/xbf04-2d058">https://doi.org/10.59350/xbf04-2d058</a><br>Published November 5, 2023 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br>Eric Gilliam<br><br>The 1980s DARPA ‘Silicon Broker’</p>
+<section id="book-review-hunt-gather-parent" class="level3">
+<h3 class="anchored" data-anchor-id="book-review-hunt-gather-parent"><a href="[https://doi.org/10.59350/yk9tw-49h03](https://doi.org/10.59350/yk9tw-49h03)">Book Review: Hunt, Gather, Parent</a></h3>
+<p><a href="https://doi.org/10.59350/yk9tw-49h03">https://doi.org/10.59350/yk9tw-49h03</a><br>Published November 6, 2023 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br><br>“Like arrows in the hand of a warrior are the children of one’s youth.” –Psalm 127:4 What if our most fundamental assumptions about parenting were wrong? That’s the question that Michaeleen Doucleff’s 2021 book Hunt, Gather, Parent tries to tackle.</p>
 </section>
-<section id="strategic-computings-machine-acquisition-program" class="level3">
-<h3 class="anchored" data-anchor-id="strategic-computings-machine-acquisition-program"><a href="[https://doi.org/10.59350/70d9r-c1s08](https://doi.org/10.59350/70d9r-c1s08)">Strategic Computing’s Machine Acquisition Program</a></h3>
-<p><a href="https://doi.org/10.59350/70d9r-c1s08">https://doi.org/10.59350/70d9r-c1s08</a><br>Published November 5, 2023 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br>Eric Gilliam<br><br>This piece is an accompaniment to today’s MOSIS piece. So please read the MOSIS piece before starting this one.</p>
+<section id="what-happens-to-science-when-it-communicates" class="level3">
+<h3 class="anchored" data-anchor-id="what-happens-to-science-when-it-communicates"><a href="[https://elephantinthelab.org/what-happens-to-science-when-it-communicates](https://elephantinthelab.org/what-happens-to-science-when-it-communicates)">What happens to science when it communicates?</a></h3>
+<p><a href="https://elephantinthelab.org/what-happens-to-science-when-it-communicates">https://elephantinthelab.org/what-happens-to-science-when-it-communicates</a><br>Published November 7, 2023 in <a href="https://rogue-scholar.org/blogs/elephantinthelab">Elephant in the Lab</a><br>Sascha Schönig<br><br><strong>What actually happens to science when it opens up? From your perspective as a science researcher, can you describe why this perspective is important?</strong> I believe that science takes place in a social environment and certain images of science emerge or have emerged, which are questioned in many respects in a digital and now increasingly open context or are subject to tensions.</p>
+</section>
+<section id="type-i-error-rates-are-not-usually-inflated" class="level3">
+<h3 class="anchored" data-anchor-id="type-i-error-rates-are-not-usually-inflated"><a href="[https://doi.org/10.59350/88njp-0d573](https://doi.org/10.59350/88njp-0d573)">Type I Error Rates are Not Usually Inflated</a></h3>
+<p><a href="https://doi.org/10.59350/88njp-0d573">https://doi.org/10.59350/88njp-0d573</a><br>Published November 7, 2023 in <a href="https://rogue-scholar.org/blogs/markrubin">Critical Metascience</a><br>Mark Rubin<br><br>The inflation of Type I error rates is thought to be one of the causes of the replication crisis. Questionable research practices such as p-hacking are thought to inflate Type I error rates above their nominal level, leading to unexpectedly high levels of false positives in the literature and, consequently, unexpectedly low replication rates. In this new article, I offer an alternative view.</p>
+</section>
+<section id="principles-of-open-scholarly-infrastructure-posi-version-1.1-reflections-from-adopters" class="level3">
+<h3 class="anchored" data-anchor-id="principles-of-open-scholarly-infrastructure-posi-version-1.1-reflections-from-adopters"><a href="[https://doi.org/10.54900/n6az7-4xb07](https://doi.org/10.54900/n6az7-4xb07)">Principles of Open Scholarly Infrastructure (POSI) version 1.1: Reflections from adopters</a></h3>
+<p><a href="https://doi.org/10.54900/n6az7-4xb07">https://doi.org/10.54900/n6az7-4xb07</a><br>Published November 7, 2023 in <a href="https://rogue-scholar.org/blogs/upstream">Upstream</a><br>Ginny Hendricks<br><br><em>The Upstream platform was created in order to discuss all things open. Open scholarly infrastructure and the need for the community to assess such infrastructures are surely at the heart of enabling the open research movement.</em></p>
+</section>
+<section id="heading-for-sfn23-with-two-posters" class="level3">
+<h3 class="anchored" data-anchor-id="heading-for-sfn23-with-two-posters"><a href="[https://doi.org/10.59350/832s7-0fz24](https://doi.org/10.59350/832s7-0fz24)">Heading for #SfN23 with two posters</a></h3>
+<p><a href="https://doi.org/10.59350/832s7-0fz24">https://doi.org/10.59350/832s7-0fz24</a><br>Published November 7, 2023 in <a href="https://rogue-scholar.org/blogs/brembs">bjoern.brembs.blog</a><br>Björn Brembs<br><br>It’s the time of the year again where 30,000 neuroscientists head to the US to talk neuroscience. This year the big annual conference is in Washington, DC, one of the three cities able to host this large event. Our first poster will be up on Tuesday morning and shows results from operant self-stimulation experiments using optogenetics and dopaminergic neurons.</p>
+</section>
+<section id="the-autonomous-land-vehicle-pilots-associate-and-battle-management" class="level3">
+<h3 class="anchored" data-anchor-id="the-autonomous-land-vehicle-pilots-associate-and-battle-management"><a href="[https://doi.org/10.59350/bts7h-31866](https://doi.org/10.59350/bts7h-31866)">The Autonomous Land Vehicle, Pilot’s Associate, and Battle Management</a></h3>
+<p><a href="https://doi.org/10.59350/bts7h-31866">https://doi.org/10.59350/bts7h-31866</a><br>Published November 7, 2023 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br>Eric Gilliam<br><br>Three North Star Applications Projects from DARPA’s Strategic Computing Portfolio</p>
+</section>
+<section id="introducing-the-cwts-ecrphd-council" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-the-cwts-ecrphd-council"><a href="[https://www.leidenmadtrics.nl/articles/introducing-the-cwts-ecr-phd-council](https://www.leidenmadtrics.nl/articles/introducing-the-cwts-ecr-phd-council)">Introducing the CWTS ECR/PhD Council</a></h3>
+<p><a href="https://www.leidenmadtrics.nl/articles/introducing-the-cwts-ecr-phd-council">https://www.leidenmadtrics.nl/articles/introducing-the-cwts-ecr-phd-council</a><br>Published November 8, 2023 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br><br>In this blog post, we’ll introduce you to the CWTS ECR/PhD Council, shedding light on its significance, objectives, and how it can serve as a crucial resource for early career researchers and PhDs at CWTS. CWTS is an interdisciplinary institute at Leiden University with a diverse multinational academic culture. PhD candidates, early career researchers, and visiting scholars from around the world gather at CWTS to pursue their research journeys.</p>
+</section>
+<section id="biobanking-at-ggbn-2023-highlights-from-gigascience-press" class="level3">
+<h3 class="anchored" data-anchor-id="biobanking-at-ggbn-2023-highlights-from-gigascience-press"><a href="[https://doi.org/10.59350/ahnf6-e1m90](https://doi.org/10.59350/ahnf6-e1m90)">BioBanking at GGBN 2023: Highlights from GigaScience Press</a></h3>
+<p><a href="https://doi.org/10.59350/ahnf6-e1m90">https://doi.org/10.59350/ahnf6-e1m90</a><br>Published November 8, 2023 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Chris Armit<br><br><em>“Extinction is forever – so our action must be immediate.”</em> –<em>Sir David Attenborough, Sept 30th 2020</em> The fourth international Global Genome Biodiversity Network (GGBN) Conference took place in Aguascalientes, Mexico from October 17th to October 20th 2023 where it was hosted by the Universidad Autónoma de Aguascalientes.</p>
+</section>
+<section id="from-ottawa-to-leiden-scholcommlabs-conference-highlights" class="level3">
+<h3 class="anchored" data-anchor-id="from-ottawa-to-leiden-scholcommlabs-conference-highlights"><a href="[https://doi.org/10.59350/vbp1j-f9j63](https://doi.org/10.59350/vbp1j-f9j63)">From Ottawa to Leiden: ScholCommLab’s Conference Highlights</a></h3>
+<p><a href="https://doi.org/10.59350/vbp1j-f9j63">https://doi.org/10.59350/vbp1j-f9j63</a><br>Published November 9, 2023 in <a href="https://rogue-scholar.org/blogs/scholcommlab">Scholarly Communications Lab | ScholCommLab</a><br>Olivia Aguiar<br><br>Over the last few months, ScholCommLab members took part in over six conferences, including the: International Conference on Science, Technology, and Innovation Indicators (STI 2023), International Communication Association Conference (ICA 2023), and Bibliometrics and Research Impact Community Conference (BRIC 2023). In this blog post, we’re sharing highlights from each event.</p>
+</section>
+<section id="archiving-rogue-scholar-blogs-with-the-internet-archive" class="level3">
+<h3 class="anchored" data-anchor-id="archiving-rogue-scholar-blogs-with-the-internet-archive"><a href="[https://doi.org/10.53731/g60vh-3ng48](https://doi.org/10.53731/g60vh-3ng48)">Archiving Rogue Scholar blogs with the Internet Archive</a></h3>
+<p><a href="https://doi.org/10.53731/g60vh-3ng48">https://doi.org/10.53731/g60vh-3ng48</a><br>Published November 9, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br><br>Blogs participating in the Rogue Scholar science blog archive are now archived in the Internet Archive. Starting November 1st, Rogue Scholar is participating in the Internet Archive Archive-It service and all archived blogs can be found here.</p>
+</section>
+<section id="two-influential-textbooks-mee-and-mellor." class="level3">
+<h3 class="anchored" data-anchor-id="two-influential-textbooks-mee-and-mellor."><a href="[https://doi.org/10.59350/e3wmw-qwx29](https://doi.org/10.59350/e3wmw-qwx29)">Two influential textbooks – “Mee” and “Mellor”.</a></h3>
+<p><a href="https://doi.org/10.59350/e3wmw-qwx29">https://doi.org/10.59350/e3wmw-qwx29</a><br>Published November 11, 2023 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br><br>I am a member of the &nbsp;Royal Society of &nbsp;Chemistry’s Historical group. Amongst other activities, it publishes two editions&nbsp;of a newsletter each year for its members.</p>
 </section>
 </div>
 </div>
@@ -403,7 +407,7 @@ Csefalvay, C. von. (2023). <em>The skeuomorphic fallacy</em>. <a href="https://d
 Fenner, M. (2023). <em>Archiving rogue scholar blogs with the internet archive</em>. <a href="https://doi.org/10.53731/g60vh-3ng48">https://doi.org/10.53731/g60vh-3ng48</a>
 </div>
 <div id="ref-Gilliam_2023" class="csl-entry" role="listitem">
-Gilliam, E. (2023). <em>Strategic computing<span></span>s machine acquisition program</em>. <a href="https://doi.org/10.59350/70d9r-c1s08">https://doi.org/10.59350/70d9r-c1s08</a>
+Gilliam, E. (2023). <em>The autonomous land vehicle, pilot<span></span>s associate, and battle management</em>. <a href="https://doi.org/10.59350/bts7h-31866">https://doi.org/10.59350/bts7h-31866</a>
 </div>
 <div id="ref-Hendricks_2023" class="csl-entry" role="listitem">
 Hendricks, G. (2023). <em>Principles of open scholarly infrastructure (<span>POSI</span>) version 1.1: Reflections from adopters</em>. <a href="https://doi.org/10.54900/n6az7-4xb07">https://doi.org/10.54900/n6az7-4xb07</a>
@@ -772,7 +776,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Copyright ©2023 The Rogue Scholar and respective authors.</div>   
+    <div class="nav-footer-left">Copyright ©2023 The Rogue Scholar.</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
