@@ -1,1 +1,1 @@
-# rogue-scholar-quarto
+# rogue-scholar-notebooks
