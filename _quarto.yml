@@ -9,13 +9,13 @@ website:
   back-to-top-navigation: true
   open-graph: true
   site-url: https://notebooks.rogue-scholar.org
-  repo-url: https://github.com/front_matter/rogue-scholar-quarto
+  repo-url: https://github.com/front_matter/rogue-scholar-notebooks
   repo-actions: [edit, issue]
   navbar:
     background: primary
     tools:
     - icon: github
-      href: https://github.com/front-matter/rogue-scholar-quarto
+      href: https://github.com/front-matter/rogue-scholar-notebooks
   sidebar:
     style: "docked"
     border: true
