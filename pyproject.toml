@@ -17,6 +17,7 @@ jupyter-cache = "^0.6.1"
 pydash = "^6"
 markdown-it-py = "^3.0.0"
 commonmeta-py = "^0.8.5"
+pytz = "^2023.3.post1"
 
 
 [build-system]

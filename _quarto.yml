@@ -25,6 +25,7 @@ website:
         contents:
           - hello.ipynb
           - retraction_watch.ipynb
+          - weekly_digest.ipynb
   page-footer:
     background: light
     border: false
