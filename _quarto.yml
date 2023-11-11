@@ -23,7 +23,6 @@ website:
       - about.qmd
       - section: "Notebooks"
         contents:
-          - hello.ipynb
           - retraction_watch.ipynb
           - weekly_digest.ipynb
   page-footer:
