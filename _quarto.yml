@@ -3,3 +3,41 @@ project:
   output-dir: docs
 execute:
   freeze: auto
+website:
+  favicon: favicon.ico
+  title: "Rogue Scholar Notebooks"
+  back-to-top-navigation: true
+  open-graph: true
+  site-url: https://notebooks.rogue-scholar.org
+  repo-url: https://github.com/front_matter/rogue-scholar-quarto
+  repo-actions: [edit, issue]
+  navbar:
+    background: primary
+    tools:
+    - icon: github
+      href: https://github.com/front-matter/rogue-scholar-quarto
+  sidebar:
+    style: "docked"
+    border: true
+    contents:
+      - about.qmd
+      - hello.ipynb
+      - retraction_watch.ipynb
+  page-footer:
+    background: light
+    border: false
+    left: "Copyright &copy;2023 The Rogue Scholar and respective authors."
+    right:
+      - icon: envelope
+        href: mailto:info@front-matter.io
+      - icon: mastodon 
+        href: https://rogue-scholar.social/@admin 
+      - icon: github
+        href: https://github.com/front-matter/rogue-scholar
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true

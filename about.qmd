@@ -1,0 +1,5 @@
+---
+title: "About"
+---
+
+This website shows notebooks that use the [Rogue Scholar API](https://api.rogue-scholar.org) to search for science blog posts, retrieve the results, and format them as notebooks.
