@@ -282,7 +282,7 @@ Note
 </div>
 </div>
 </div>
-<div class="cell" data-scrolled="true" data-execution_count="19">
+<div class="cell" data-scrolled="true" data-execution_count="21">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -295,7 +295,7 @@ Note
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>locale.setlocale(locale.LC_ALL, <span class="st">"en_US"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"retraction watch"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> baseUrl <span class="op">+</span> <span class="ss">f"posts?query=</span><span class="sc">{</span>query<span class="sc">.</span>replace(<span class="st">' '</span>, <span class="st">'+'</span>)<span class="sc">}</span><span class="ss">&amp;published_since=2010&amp;language=en&amp;sort=published_at&amp;order=desc&amp;per_page=50&amp;include_fields=</span><span class="sc">{</span>include_fields<span class="sc">}</span><span class="ss">"</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(url)</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> response.json()</span>
@@ -342,12 +342,16 @@ Note
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'references.bib'</span>, <span class="st">'w'</span>) <span class="im">as</span> f:</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    f.write(bibtex)</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>Markdown(posts_as_string)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>images <span class="op">=</span> [ x[<span class="st">"image"</span>] <span class="cf">for</span> x <span class="kw">in</span> posts <span class="cf">if</span> x.get(<span class="st">"image"</span>, <span class="va">None</span>) <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> ]</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>image <span class="op">=</span> py_.sample(images)</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>markdown <span class="op">=</span> <span class="ss">f"![](</span><span class="sc">{</span>image<span class="sc">}</span><span class="ss">)</span><span class="ch">\n\n</span><span class="ss">"</span> <span class="op">+</span> posts_as_string</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>Markdown(markdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Found 22 out of 10560 results.</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="19">
+<div class="cell-output cell-output-display" data-execution_count="21">
+<p><img src="https://images.unsplash.com/flagged/photo-1552425083-0117136f7d67?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDIxfHxjYW5vcHl8ZW58MHx8fHwxNjk3MDQwMDk1fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" class="img-fluid"></p>
 <section id="generating-overlay-blog-posts" class="level3">
 <h3 class="anchored" data-anchor-id="generating-overlay-blog-posts"><a href="[https://doi.org/10.53731/gzrse-p5d35](https://doi.org/10.53731/gzrse-p5d35)">Generating Overlay blog posts</a></h3>
 <p><a href="https://doi.org/10.53731/gzrse-p5d35">https://doi.org/10.53731/gzrse-p5d35</a><br>Published October 11, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br><br>On Monday the Rogue Scholar science blog archive launched a dedicated API.</p>
