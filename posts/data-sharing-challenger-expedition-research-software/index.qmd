@@ -1,8 +1,13 @@
 ---
 title: "Data Sharing, Challenger Expedition, Research Software, Adornment, Prostate Cancer"
+description: |
+  The authors propose 10 (not so) simple rules for researchers wishing to share data, aligned on the clinical trial lifecycle.
 date: 2023-03-15
+doi: 10.53731/ejtg5cm-mtt292s
 categories: ["weekly"]
 image: "/images/journal.pcbi.1010879.g001.png"
+open-graph:
+  image: "/images/journal.pcbi.1010879.g001.png"
 ---
 
 ![](/images/journal.pcbi.1010879.g001.png)

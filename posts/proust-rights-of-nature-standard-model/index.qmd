@@ -1,10 +1,13 @@
 ---
 title: "Proust, Rights of Nature, Standard Model, Ranitidine, Open Scholarly Infrastructure"
 description: |
-  This is a summary of the Rogue Scholar blog posts published last week. Find out more (including search for other posts) via Rogue Scholar.
+  How Alzheimer’s caregivers are pulled into their patients’ worlds.
 date: 2023-03-01
+doi: 10.53731/a9p2vx8-8benr1q
 categories: ["weekly"]
 image: "/images/mar-menor.jpg-1.webp"
+open-graph:
+  image: "/images/mar-menor.jpg-1.webp"
 ---
 
 ![](/images/mar-menor.jpg-1.webp)
