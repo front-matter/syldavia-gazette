@@ -5,17 +5,17 @@ execute:
   freeze: auto
 website:
   favicon: favicon.ico
-  title: "Rogue Scholar Notebooks"
+  title: "Syldavia Gazette Beta"
   back-to-top-navigation: true
   open-graph: true
-  site-url: https://notebooks.rogue-scholar.org
-  repo-url: https://github.com/front-matter/rogue-scholar-notebooks
+  site-url: https://beta.syldavia-gazette.org
+  repo-url: https://github.com/front-matter/syldavia-gazette
   repo-actions: [edit, issue]
   navbar:
     background: light
     tools:
     - icon: github
-      href: https://github.com/front-matter/rogue-scholar-notebooks
+      href: https://github.com/front-matter/syldavia-gazette
   sidebar:
     style: "docked"
     border: true
@@ -31,9 +31,9 @@ website:
       - icon: envelope
         href: mailto:info@front-matter.io
       - icon: mastodon 
-        href: https://rogue-scholar.social/@admin 
+        href: https://rogue-scholar.social/@syldavia_gazette 
       - icon: github
-        href: https://github.com/front-matter/rogue-scholar
+        href: https://github.com/front-matter/syldavia-gazette
 format:
   html:
     theme:
