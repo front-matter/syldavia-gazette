@@ -1,0 +1,39 @@
+---
+title: "Oyster Mushrooms, Hearing, Accessibility, Obesity, Webb Space Telescope"
+date: 2023-02-08
+categories: ["weekly"]
+image: "/images/STScI-WebbSouthernRing.jpg"
+---
+
+### [Oyster mushroom fungus uses nerve gas to paralyse and eat tiny worms](https://www.newscientist.com/article/2355065-oyster-mushroom-fungus-uses-nerve-gas-to-paralyse-and-eat-tiny-worms/)
+
+Oyster mushroom fungus uses nerve gas to paralyse and eat tiny worms
+More detailed understanding of how oyster mushrooms, a carnivorous fungus, kill their prey to use them as nitrogen source.
+
+### [Hard of Hearing](https://occamstypewriter.org/cromercrox/2023/01/03/hard-of-hearing/)
+
+Henry Gee talks about the fascinating evolution of mammalian hearing and the revelation of starting to use a hearing aid himself.
+
+### [Access is not the same as accessibility: A framework for making research papers truly open](https://blog.arxiv.org/2023/01/19/access-is-not-the-same-as-accessibility-a-framework-for-making-research-papers-truly-open/)
+
+ArXiv completed intensive user research last year, looking into the accessibility of research papers. Offering well-formatted HTML in addition to PDF will lead to critical accessibility gains.
+
+### [The New Obesity Breakthrough Drugs](https://erictopol.substack.com/p/the-new-obesity-breakthrough-drugs)
+
+Two new drugs to treat obesity have recently been approved. They reduce body weight by 15-20% in placebo-controlled randomized clinical trials and work by mimicking gut hormones secreted after food intake.
+
+### [Two Weeks In, the Webb Space Telescope Is Reshaping Astronomy](https://www.quantamagazine.org/two-weeks-in-the-webb-space-telescope-is-reshaping-astronomy-20220725/)
+
+Report on the first research activities after the James Webb Telescope launched in July 2022.
+
+## References
+
+1. Oyster mushroom fungus uses nerve gas to paralyse and eat tiny worms. New Scientist. Accessed March 28, 2023. <https://www.newscientist.com/article/2355065-oyster-mushroom-fungus-uses-nerve-gas-to-paralyse-and-eat-tiny-worms/>
+
+1. Gee H. Hard of Hearing | The End Of The Pier Show. Accessed March 28, 2023. <https://occamstypewriter.org/cromercrox/2023/01/03/hard-of-hearing/>
+
+1. Access is not the same as accessibility: A framework for making research papers truly open – arXiv blog. Accessed March 28, 2023. <https://blog.arxiv.org/2023/01/19/access-is-not-the-same-as-accessibility-a-framework-for-making-research-papers-truly-open/>
+
+1. Topol E. The New Obesity Breakthrough Drugs. Ground Truths. Published December 10, 2022. Accessed March 28, 2023. <https://erictopol.substack.com/p/the-new-obesity-breakthrough-drugs>
+
+1. O’Callaghan J. Two Weeks In, the Webb Space Telescope Is Reshaping Astronomy. Quanta Magazine. Published July 25, 2022. Accessed March 28, 2023. <https://www.quantamagazine.org/two-weeks-in-the-webb-space-telescope-is-reshaping-astronomy-20220725/>

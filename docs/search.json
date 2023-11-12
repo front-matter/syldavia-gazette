@@ -39,7 +39,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Photo by Stanisław Gregor / Unsplash\n\n\nSyldavia Gazette is an independent publication launched in February 2023 by Martin Fenner. The gazette publishes summaries of science stories found elsewhere on the web. Starting in August 2023, the gazette curates blog posts from the Rogue Scholar science blog archive. You can browse the blog posts, use the RSS feed, subscribe to the newsletter, and/or follow the gazette in the Fediverse.\n\n\n\n Back to top"
+    "text": "Syldavia Gazette is an independent publication launched in February 2023 by Martin Fenner. The gazette publishes summaries of science stories found elsewhere on the web. Starting in August 2023, the gazette curates blog posts from the Rogue Scholar science blog archive. You can browse the blog posts, use the RSS feed, subscribe to the newsletter, and/or follow the gazette in the Fediverse.\n\n\n\n Back to top"
   },
   {
     "objectID": "newsletter.html",
@@ -75,5 +75,96 @@
     "title": "Privacy Policy",
     "section": "Disclosure",
     "text": "Disclosure\nWe may disclose your personal information if we are required by law to do so or if you violate our Terms of Service."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Syldavia Gazette",
+    "section": "",
+    "text": "Rogue Scholar Digest November 8, 2023\n\n\n\n\n\n\n\ndigest\n\n\n\n\n\n\n\n\n\n\n\nNov 8, 2023\n\n\nMartin Fenner\n\n\n\n\n\n\n  \n\n\n\n\nRogue Scholar Digest November 2, 2023\n\n\n\n\n\n\n\ndigest\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2023\n\n\nMartin Fenner\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-8-2023.html",
+    "href": "posts/rogue-scholar-digest-november-8-2023.html",
+    "title": "Rogue Scholar Digest November 8, 2023",
+    "section": "",
+    "text": "This is a summary of the Rogue Scholar blog posts published last week. Find out more (including search for other posts) via Rogue Scholar."
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-8-2023.html#haunted-by-juan-rulfo-on-books-as-inheritance-and-sites-for-remembrance",
+    "href": "posts/rogue-scholar-digest-november-8-2023.html#haunted-by-juan-rulfo-on-books-as-inheritance-and-sites-for-remembrance",
+    "title": "Rogue Scholar Digest November 8, 2023",
+    "section": "Haunted by Juan Rulfo: On Books as Inheritance and Sites for Remembrance",
+    "text": "Haunted by Juan Rulfo: On Books as Inheritance and Sites for Remembrance\nPublished November 2, 2023 in Everything is Connected Ernesto Priego https://doi.org/10.59350/4kf8n-jwz37\nWhere I write, being día de muertos, about my copies of Rulfo’s El llano en llamas and Pedro Páramo."
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-8-2023.html#rogue-scholar-blogs-are-now-searchable",
+    "href": "posts/rogue-scholar-digest-november-8-2023.html#rogue-scholar-blogs-are-now-searchable",
+    "title": "Rogue Scholar Digest November 8, 2023",
+    "section": "Rogue Scholar blogs are now searchable",
+    "text": "Rogue Scholar blogs are now searchable\nPublished November 3, 2023 in Front Matter Martin Fenner https://doi.org/10.53731/j4m27-bdw69\nWith an update launched yesterday, all blogs that participate in the Rogue Scholar science blog archive are now searchable by blog title, description, language, blogging platform, category (scientific field using the OECD Fields of Science and Technology), and ISSN."
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-8-2023.html#illiac-iv-and-the-connection-machine",
+    "href": "posts/rogue-scholar-digest-november-8-2023.html#illiac-iv-and-the-connection-machine",
+    "title": "Rogue Scholar Digest November 8, 2023",
+    "section": "ILLIAC IV and the Connection Machine",
+    "text": "ILLIAC IV and the Connection Machine\nPublished November 3, 2023 in FreakTakes Eric Gilliam https://doi.org/10.59350/ewpnk-67998\nDARPA’s varied approaches to developing early parallel computers"
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-8-2023.html#strategic-computings-machine-acquisition-program",
+    "href": "posts/rogue-scholar-digest-november-8-2023.html#strategic-computings-machine-acquisition-program",
+    "title": "Rogue Scholar Digest November 8, 2023",
+    "section": "Strategic Computing’s Machine Acquisition Program",
+    "text": "Strategic Computing’s Machine Acquisition Program\nPublished November 5, 2023 in FreakTakes Eric Gilliam https://doi.org/10.59350/70d9r-c1s08\nThis piece is an accompaniment to today’s MOSIS piece. So please read the MOSIS piece before starting this one."
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-8-2023.html#mosis",
+    "href": "posts/rogue-scholar-digest-november-8-2023.html#mosis",
+    "title": "Rogue Scholar Digest November 8, 2023",
+    "section": "MOSIS",
+    "text": "MOSIS\nPublished November 5, 2023 in FreakTakes Eric Gilliam https://doi.org/10.59350/xbf04-2d058\nThe 1980s DARPA ‘Silicon Broker’"
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-8-2023.html#the-ropensci-multiverse",
+    "href": "posts/rogue-scholar-digest-november-8-2023.html#the-ropensci-multiverse",
+    "title": "Rogue Scholar Digest November 8, 2023",
+    "section": "The rOpenSci Multiverse",
+    "text": "The rOpenSci Multiverse\nPublished November 6, 2023 in rOpenSci - open tools for open science Alejandra Bellini, Yanina Bellini Saibene https://doi.org/10.59350/g7mpc-1ek03\nThe R-Universe is used by professionals from different fields, although they all pursue the same objective: to offer their R packages in a simple and accessible way. At rOpenSci we work to provide tools that facilitate access to data and research software generated with good software development practices and in a friendly community."
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-8-2023.html#book-review-hunt-gather-parent",
+    "href": "posts/rogue-scholar-digest-november-8-2023.html#book-review-hunt-gather-parent",
+    "title": "Rogue Scholar Digest November 8, 2023",
+    "section": "Book Review: Hunt, Gather, Parent",
+    "text": "Book Review: Hunt, Gather, Parent\nPublished November 6, 2023 in Corin Wagen Corin Wagen https://doi.org/10.59350/yk9tw-49h03\n“Like arrows in the hand of a warrior are the children of one’s youth.” –Psalm 127:4 What if our most fundamental assumptions about parenting were wrong? That’s the question that Michaeleen Doucleff’s 2021 book Hunt, Gather, Parent tries to tackle."
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-8-2023.html#what-happens-to-science-when-it-communicates",
+    "href": "posts/rogue-scholar-digest-november-8-2023.html#what-happens-to-science-when-it-communicates",
+    "title": "Rogue Scholar Digest November 8, 2023",
+    "section": "What happens to science when it communicates?",
+    "text": "What happens to science when it communicates?\nPublished November 7, 2023 in Elephant in the Lab Sascha Schönig https://elephantinthelab.org/what-happens-to-science-when-it-communicates\nWhat actually happens to science when it opens up? From your perspective as a science researcher, can you describe why this perspective is important? I believe that science takes place in a social environment and certain images of science emerge or have emerged, which are questioned in many respects in a digital and now increasingly open context or are subject to tensions."
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-8-2023.html#type-i-error-rates-are-not-usually-inflated",
+    "href": "posts/rogue-scholar-digest-november-8-2023.html#type-i-error-rates-are-not-usually-inflated",
+    "title": "Rogue Scholar Digest November 8, 2023",
+    "section": "Type I Error Rates are Not Usually Inflated",
+    "text": "Type I Error Rates are Not Usually Inflated\nPublished November 7, 2023 in Critical Metascience Mark Rubin https://doi.org/10.59350/88njp-0d573\nThe inflation of Type I error rates is thought to be one of the causes of the replication crisis. Questionable research practices such as p-hacking are thought to inflate Type I error rates above their nominal level, leading to unexpectedly high levels of false positives in the literature and, consequently, unexpectedly low replication rates. In this new article, I offer an alternative view."
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-8-2023.html#principles-of-open-scholarly-infrastructure-posi-version-1.1-reflections-from-adopters",
+    "href": "posts/rogue-scholar-digest-november-8-2023.html#principles-of-open-scholarly-infrastructure-posi-version-1.1-reflections-from-adopters",
+    "title": "Rogue Scholar Digest November 8, 2023",
+    "section": "Principles of Open Scholarly Infrastructure (POSI) version 1.1: Reflections from adopters",
+    "text": "Principles of Open Scholarly Infrastructure (POSI) version 1.1: Reflections from adopters\nPublished November 7, 2023 in Upstream Ginny Hendricks https://doi.org/10.54900/n6az7-4xb07\nThe Upstream platform was created in order to discuss all things open. Open scholarly infrastructure and the need for the community to assess such infrastructures are surely at the heart of enabling the open research movement."
+  },
+  {
+    "objectID": "posts/rogue-scholar-digest-november-2-2023.html",
+    "href": "posts/rogue-scholar-digest-november-2-2023.html",
+    "title": "Rogue Scholar Digest November 2, 2023",
+    "section": "",
+    "text": "This is a summary of the Rogue Scholar blog posts published last week. Find out more (including search for other posts) via Rogue Scholar.\n\n\n\n Back to top"
   }
 ]

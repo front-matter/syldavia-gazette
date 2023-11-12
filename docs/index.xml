@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Syldavia Gazette Beta</title>
+<link>https://beta.syldavia-gazette.org/index.html</link>
+<atom:link href="https://beta.syldavia-gazette.org/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.3.450</generator>
+<lastBuildDate>Tue, 07 Nov 2023 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Rogue Scholar Digest November 8, 2023</title>
+  <dc:creator>Martin Fenner</dc:creator>
+  <link>https://beta.syldavia-gazette.org/posts/rogue-scholar-digest-november-8-2023.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>This is a summary of the Rogue Scholar blog posts published last week. Find out more (including search for other posts) via <a href="https://rogue-scholar.org">Rogue Scholar</a>.</p>
+<section id="haunted-by-juan-rulfo-on-books-as-inheritance-and-sites-for-remembrance" class="level2">
+<h2 class="anchored" data-anchor-id="haunted-by-juan-rulfo-on-books-as-inheritance-and-sites-for-remembrance">Haunted by Juan Rulfo: On Books as Inheritance and Sites for Remembrance</h2>
+<p>Published November 2, 2023 in Everything is Connected Ernesto Priego https://doi.org/10.59350/4kf8n-jwz37</p>
+<p>Where I write, being día de muertos, about my copies of Rulfo’s El llano en llamas and Pedro Páramo.</p>
+</section>
+<section id="rogue-scholar-blogs-are-now-searchable" class="level2">
+<h2 class="anchored" data-anchor-id="rogue-scholar-blogs-are-now-searchable">Rogue Scholar blogs are now searchable</h2>
+<p>Published November 3, 2023 in Front Matter Martin Fenner https://doi.org/10.53731/j4m27-bdw69</p>
+<p>With an update launched yesterday, all blogs that participate in the Rogue Scholar science blog archive are now searchable by blog title, description, language, blogging platform, category (scientific field using the OECD Fields of Science and Technology), and ISSN.</p>
+</section>
+<section id="illiac-iv-and-the-connection-machine" class="level2">
+<h2 class="anchored" data-anchor-id="illiac-iv-and-the-connection-machine">ILLIAC IV and the Connection Machine</h2>
+<p>Published November 3, 2023 in FreakTakes Eric Gilliam https://doi.org/10.59350/ewpnk-67998</p>
+<p>DARPA’s varied approaches to developing early parallel computers</p>
+</section>
+<section id="strategic-computings-machine-acquisition-program" class="level2">
+<h2 class="anchored" data-anchor-id="strategic-computings-machine-acquisition-program">Strategic Computing’s Machine Acquisition Program</h2>
+<p>Published November 5, 2023 in FreakTakes Eric Gilliam https://doi.org/10.59350/70d9r-c1s08</p>
+<p>This piece is an accompaniment to today’s MOSIS piece. So please read the MOSIS piece before starting this one.</p>
+</section>
+<section id="mosis" class="level2">
+<h2 class="anchored" data-anchor-id="mosis">MOSIS</h2>
+<p>Published November 5, 2023 in FreakTakes Eric Gilliam https://doi.org/10.59350/xbf04-2d058</p>
+<p>The 1980s DARPA ‘Silicon Broker’</p>
+</section>
+<section id="the-ropensci-multiverse" class="level2">
+<h2 class="anchored" data-anchor-id="the-ropensci-multiverse">The rOpenSci Multiverse</h2>
+<p>Published November 6, 2023 in rOpenSci - open tools for open science Alejandra Bellini, Yanina Bellini Saibene https://doi.org/10.59350/g7mpc-1ek03</p>
+<p>The R-Universe is used by professionals from different fields, although they all pursue the same objective: to offer their R packages in a simple and accessible way. At rOpenSci we work to provide tools that facilitate access to data and research software generated with good software development practices and in a friendly community.</p>
+</section>
+<section id="book-review-hunt-gather-parent" class="level2">
+<h2 class="anchored" data-anchor-id="book-review-hunt-gather-parent">Book Review: Hunt, Gather, Parent</h2>
+<p>Published November 6, 2023 in Corin Wagen Corin Wagen https://doi.org/10.59350/yk9tw-49h03</p>
+<p>“Like arrows in the hand of a warrior are the children of one’s youth.” –Psalm 127:4 What if our most fundamental assumptions about parenting were wrong? That’s the question that Michaeleen Doucleff’s 2021 book Hunt, Gather, Parent tries to tackle.</p>
+</section>
+<section id="what-happens-to-science-when-it-communicates" class="level2">
+<h2 class="anchored" data-anchor-id="what-happens-to-science-when-it-communicates">What happens to science when it communicates?</h2>
+<p>Published November 7, 2023 in Elephant in the Lab Sascha Schönig https://elephantinthelab.org/what-happens-to-science-when-it-communicates</p>
+<p>What actually happens to science when it opens up? From your perspective as a science researcher, can you describe why this perspective is important? I believe that science takes place in a social environment and certain images of science emerge or have emerged, which are questioned in many respects in a digital and now increasingly open context or are subject to tensions.</p>
+</section>
+<section id="type-i-error-rates-are-not-usually-inflated" class="level2">
+<h2 class="anchored" data-anchor-id="type-i-error-rates-are-not-usually-inflated">Type I Error Rates are Not Usually Inflated</h2>
+<p>Published November 7, 2023 in Critical Metascience Mark Rubin https://doi.org/10.59350/88njp-0d573</p>
+<p>The inflation of Type I error rates is thought to be one of the causes of the replication crisis. Questionable research practices such as p-hacking are thought to inflate Type I error rates above their nominal level, leading to unexpectedly high levels of false positives in the literature and, consequently, unexpectedly low replication rates. In this new article, I offer an alternative view.</p>
+</section>
+<section id="principles-of-open-scholarly-infrastructure-posi-version-1.1-reflections-from-adopters" class="level2">
+<h2 class="anchored" data-anchor-id="principles-of-open-scholarly-infrastructure-posi-version-1.1-reflections-from-adopters">Principles of Open Scholarly Infrastructure (POSI) version 1.1: Reflections from adopters</h2>
+<p>Published November 7, 2023 in Upstream Ginny Hendricks https://doi.org/10.54900/n6az7-4xb07</p>
+<p>The Upstream platform was created in order to discuss all things open. Open scholarly infrastructure and the need for the community to assess such infrastructures are surely at the heart of enabling the open research movement.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>digest</category>
+  <guid>https://beta.syldavia-gazette.org/posts/rogue-scholar-digest-november-8-2023.html</guid>
+  <pubDate>Tue, 07 Nov 2023 23:00:00 GMT</pubDate>
+  <media:content url="https://beta.syldavia-gazette.org/posts/ff6443ec-0fc2-4e3a-ac69-5f51e5b295cb_1515x1338.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Rogue Scholar Digest November 2, 2023</title>
+  <dc:creator>Martin Fenner</dc:creator>
+  <link>https://beta.syldavia-gazette.org/posts/rogue-scholar-digest-november-2-2023.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>This is a summary of the Rogue Scholar blog posts published last week. Find out more (including search for other posts) via <a href="https://rogue-scholar.org">Rogue Scholar</a>.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>digest</category>
+  <guid>https://beta.syldavia-gazette.org/posts/rogue-scholar-digest-november-2-2023.html</guid>
+  <pubDate>Wed, 01 Nov 2023 23:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

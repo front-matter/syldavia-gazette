@@ -1,6 +1,8 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: _site
+  preview:
+    port: 4200
 execute:
   freeze: auto
 website:
@@ -32,6 +34,8 @@ website:
   page-footer:
     left: "Copyright &copy;2023 Syldavia Gazette."
     right:
+      - icon: rss
+        href: index.xml
       - icon: envelope
         href: mailto:info@front-matter.io
       - icon: mastodon 
@@ -45,3 +49,6 @@ format:
       dark: darkly
     css: styles.css
     toc: true
+author: 
+  name: Martin Fenner
+  orcid: "0000-0003-1419-2405"
