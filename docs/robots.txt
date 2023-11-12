@@ -1,1 +1,1 @@
-Sitemap: https://notebooks.rogue-scholar.org/sitemap.xml
+Sitemap: https://unique-pika-831d66.netlify.app/sitemap.xml
