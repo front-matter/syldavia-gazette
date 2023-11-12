@@ -39,6 +39,41 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This website shows notebooks that use the Rogue Scholar API to search for science blog posts, retrieve the results, and format them as notebooks.\n\n\n\n Back to top"
+    "text": "Photo by Stanisław Gregor / Unsplash\n\n\nSyldavia Gazette is an independent publication launched in February 2023 by Martin Fenner. The gazette publishes summaries of science stories found elsewhere on the web. Starting in August 2023, the gazette curates blog posts from the Rogue Scholar science blog archive. You can browse the blog posts, use the RSS feed, subscribe to the newsletter, and/or follow the gazette in the Fediverse.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "newsletter.html",
+    "href": "newsletter.html",
+    "title": "Newsletter",
+    "section": "",
+    "text": "Photo by Mathyas Kurmann / Unsplash\n\n\nThe Syldavia Gazette Newsletter sends the blog posts of this blog via email. This includes a weekly digest of newly published science blog posts included in the Rogue Scholar science blog archive. To sign up for the newsletter, use the subscribe link that is on every Syldavia Gazette page.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "privacy-policy.html",
+    "href": "privacy-policy.html",
+    "title": "Privacy Policy",
+    "section": "",
+    "text": "This Privacy Policy (“Privacy Policy”) covers the information practices of https://syldavia-gazette.org. This blog is published by Front Matter, and questions regarding this statement should be e-mailed to info@front-matter.io. Front Matter has created this Privacy Policy to demonstrate our commitment to user and visitor privacy at our website (the “Site”) and within the services (the “Services”) delivered by Front Matter. This Privacy Policy describes how we collect, use, and share information. Our Privacy Policy applies whenever you visit the Site or use the Services."
+  },
+  {
+    "objectID": "privacy-policy.html#information-gathered",
+    "href": "privacy-policy.html#information-gathered",
+    "title": "Privacy Policy",
+    "section": "Information Gathered",
+    "text": "Information Gathered\n\nRegistration Information: No registration is needed to visit the content of Front matter sites. When a visitor to the Site decides to register to become a member of or contributor to the Services, we require that the visitor provide their email address as contact information plus additional optional information such as their name and location. Members and contributors can choose not to provide this additional information by not entering it when asked.\nLog Data and Activity Tracking: Plausible Analytics collects certain information automatically from visitors to the Site and users of the Services, such as Internet addresses, browser types, referring domains, timestamps (time page accessed as well as time spent per web page), as well as the specific pages the visitor has requested. This information is anonymized upon collection and no personalized data is stored from users. This information is logged to help deliver a better user experience, diagnose technical problems, support marketing activities and so that we may better administer the Site and the Services in order to improve the quality of the Site and Services. A summary of the anonymized information collected is publicly available at https://plausible.io/syldavia-gazette.org.\nCookies: Front Matter uses necessary cookies to enable your use of our website and its features as a member or contributor. Without these cookies, services we would provide (such as permitting login into the service and sending emails) cannot be provided. No additional cookies are used, and no cookies are used for visitors of the site who have not registered as a member or contributor."
+  },
+  {
+    "objectID": "privacy-policy.html#consent",
+    "href": "privacy-policy.html#consent",
+    "title": "Privacy Policy",
+    "section": "Consent",
+    "text": "Consent\nWhen you provide us with personal information to register as member or contributor, we imply that you consent to our collecting it and using it for that specific reason only.\nIf after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use, or disclosure of your information, at any time, by contacting us at info@front-matter.io. This action will also cancel your member and/or contributor account."
+  },
+  {
+    "objectID": "privacy-policy.html#disclosure",
+    "href": "privacy-policy.html#disclosure",
+    "title": "Privacy Policy",
+    "section": "Disclosure",
+    "text": "Disclosure\nWe may disclose your personal information if we are required by law to do so or if you violate our Terms of Service."
   }
 ]

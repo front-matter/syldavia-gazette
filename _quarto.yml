@@ -20,13 +20,17 @@ website:
     style: "docked"
     border: true
     contents:
-      - about.qmd
+      - section: "Pages"
+        contents:
+        - about.qmd
+        - newsletter.qmd
+        - privacy-policy.qmd
       - section: "Notebooks"
         contents:
           - retraction_watch.ipynb
           - weekly_digest.ipynb
   page-footer:
-    left: "Copyright &copy;2023 The Rogue Scholar."
+    left: "Copyright &copy;2023 Syldavia Gazette."
     right:
       - icon: envelope
         href: mailto:info@front-matter.io
