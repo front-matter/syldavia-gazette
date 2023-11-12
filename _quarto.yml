@@ -21,9 +21,7 @@ website:
       - text: "Blog"
         file: index.qmd
       - text: "Notebooks"
-        menu:
-          - retraction_watch.ipynb
-          - weekly_digest.ipynb
+        file: notebooks.qmd
     tools:
       - icon: rss
         href: index.xml
@@ -56,6 +54,9 @@ format:
     css: styles.css
     toc: true
     toc-location: left
+    comments:
+      giscus: 
+        repo: front-matter/syldavia-gazette
 author: 
   name: Martin Fenner
   orcid: "0000-0003-1419-2405"

@@ -1,0 +1,9 @@
+---
+title: "Notebooks"
+author: ""
+listing:
+  contents: notebooks
+  sort: "date desc"
+  page-size: 10
+  type: default
+---

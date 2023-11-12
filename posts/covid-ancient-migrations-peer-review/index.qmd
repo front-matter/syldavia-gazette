@@ -2,5 +2,34 @@
 title: "Covid, Ancient Migrations, Peer Review, Language, Nobel Prize"
 date: 2023-02-15
 categories: ["weekly"]
-title-block-banner: "photo-of-grave-credit-nadezhda-f-stepanova_web.jpg"
+image: "/images/photo-of-grave-credit-nadezhda-f-stepanova_web.jpg"
 ---
+
+![](/images/photo-of-grave-credit-nadezhda-f-stepanova_web.jpg)
+
+### [Football Euro: Study shows the impact on Covid-19 infections](https://healthcare-in-europe.com/en/news/football-euro-study-impact-covid-19-infections.html)
+The impact of the European Soccer (Football) Championship 2020 on the incidence of the Corona pandemic across Europe.
+
+### [Ancient DNA Charts Native Americans’ Journeys to Asia Thousands of Years Ago](ttps://www.smithsonianmag.com/science-nature/ancient-dna-evidence-charts-native-american-migrations-back-across-the-bering-sea-180981435/)
+Native Americans traveled back and forth to Asia thousands of years ago, well before Europeans discovered America.
+
+### [The rise and fall of peer review](https://experimentalhistory.substack.com/p/the-rise-and-fall-of-peer-review)
+Why the greatest scientific experiment in history failed, and why that's a great thing.
+
+### [Language Diversity in Scholarly Publishing](https://doi.org/10.54900/e2p16ak-k9cyjws)
+Study of the language diversity in scholarly publishing, using a sample of the more than 100 million publications with Crossref.
+
+### [Interview with Edmond Fischer: pianist, microbe hunter, pilot, and Napoleon expert](https://www.lindau-nobel.org/interview-with-edmond-fischer-pianist-microbe-hunter-pilot-and-napoleon-expert/1)
+Interview with Edmond Fisher who shared the 1992 Nobel Prize in Physiology or Medicine.
+
+## References
+
+1. Football Euro: Study shows impact on Covid-19 infections. Accessed March 28, 2023. <https://healthcare-in-europe.com/en/news/football-euro-study-impact-covid-19-infections.html>
+
+1. Magazine S, Handwerk B. Ancient DNA Charts Native Americans’ Journeys to Asia Thousands of Years Ago. Smithsonian Magazine. Accessed March 28, 2023. <https://www.smithsonianmag.com/science-nature/ancient-dna-evidence-charts-native-american-migrations-back-across-the-bering-sea-180981435/>
+
+1. Mastroianni A. The rise and fall of peer review. Experimental History. Published December 13, 2022. Accessed March 28, 2023. <https://experimentalhistory.substack.com/p/the-rise-and-fall-of-peer-review>
+
+1. Neylon C, Kramer B. Language Diversity in Scholarly Publishing. Upstream. Published online June 28, 2022. <https://doi.org/10.54900/e2p16ak-k9cyjws>
+
+1. Fenner M. Interview with Edmond Fischer: pianist, microbe hunter, pilot and Napoleon expert. Lindau Nobel Laureate Meetings. Published July 13, 2010. Accessed March 28, 2023. <https://www.lindau-nobel.org/interview-with-edmond-fischer-pianist-microbe-hunter-pilot-and-napoleon-expert/1>. 

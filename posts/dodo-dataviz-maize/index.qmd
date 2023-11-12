@@ -1,0 +1,35 @@
+---
+title: "Dodo, Dataviz, Maize, Da Vinci, Elements"
+date: 2023-02-22
+categories: ["weekly"]
+image: "/images/1280px-De_Alice-s_Abenteuer_im_Wunderland_Carroll_pic_10.jpg"
+---
+
+![](/images/1280px-De_Alice-s_Abenteuer_im_Wunderland_Carroll_pic_10.jpg)
+
+### [The next de-extinction target: The dodo](https://arstechnica.com/science/2023/01/the-next-de-extinction-target-the-dodo/)
+The startup Colossal announced plans to bring back the Dodo, a large flightless bird that inhabited the island of Mauritius before it went extinct in the late 17th century.
+
+### [The winners of the World Dataviz Prize 2023](https://informationisbeautiful.net/2023/the-winners-of-the-world-dataviz-prize-2023/)
+Conducted in partnership with the World Government Summit, the 2023 competition focuses on the past, present, and future of society and governments.
+
+### [What explains the unstoppable rise of maize in Asia?](https://aeon.co/essays/what-explains-the-unstoppable-rise-of-maize-in-asia)
+Maize is arguably the most important crop in the world. It is also, along with sugar cane and palm oil, among the most controversial crops, particularly to critics of industrial agriculture.
+
+### [500-year-old Leonardo da Vinci sketches show him grappling with gravity](https://www.gizmodo.com.au/2023/02/500-year-old-leonardo-da-vinci-sketches-show-him-grappling-with-gravity/)
+A team of engineers studying the writings of Leonardo da Vinci found evidence that he was working out gravity a century before its foundations were established by Galileo Galilei.
+
+### [The origin of elements](https://apod.nasa.gov/apod/ap200809.html)
+The featured periodic table is color coded to indicate humanity's best guess as to the nuclear origin of all known elements.
+
+## References
+
+1. The next de-extinction target: The dodo | Ars Technica. Accessed March 28, 2023. <https://arstechnica.com/science/2023/01/the-next-de-extinction-target-the-dodo/>
+
+1. Information is Beautiful. The Winners of the World Dataviz Prize 2023. Information is Beautiful. Accessed March 28, 2023. <https://informationisbeautiful.net/2023/the-winners-of-the-world-dataviz-prize-2023/>
+
+1. What explains the unstoppable rise of maize in Asia? | Aeon Essays. Aeon. Accessed March 28, 2023. <https://aeon.co/essays/what-explains-the-unstoppable-rise-of-maize-in-asia>
+
+1. 500-Year-Old Leonardo Da Vinci Sketches Show Him Grappling With Gravity. Accessed March 28, 2023. <https://www.gizmodo.com.au/2023/02/500-year-old-leonardo-da-vinci-sketches-show-him-grappling-with-gravity/>
+
+1. APOD: 2020 August 9 - The Origin of Elements. Accessed March 28, 2023. <https://apod.nasa.gov/apod/ap200809.html>

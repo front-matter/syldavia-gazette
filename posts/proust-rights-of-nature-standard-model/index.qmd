@@ -1,0 +1,37 @@
+---
+title: "Proust, Rights of Nature, Standard Model, Ranitidine, Open Scholarly Infrastructure"
+description: |
+  This is a summary of the Rogue Scholar blog posts published last week. Find out more (including search for other posts) via Rogue Scholar.
+date: 2023-03-01
+categories: ["weekly"]
+image: "/images/mar-menor.jpg-1.webp"
+---
+
+![](/images/mar-menor.jpg-1.webp)
+
+### [Dinner with Proust](https://www.theguardian.com/society/2023/feb/28/dinner-with-proust-how-alzheimers-caregivers-are-pulled-into-their-patients-worlds)
+How Alzheimer’s caregivers are pulled into their patients’ worlds.
+
+### [Rights of Nature Reach Europe]()
+In September 2022, the Spanish Senate in the "Mar Menor Act" recognized a natural entity as a subject of rights – for the first time in Europe.
+
+### [The standard model of particle physics passed one of its strictest tests yet](https://www.sciencenews.org/article/standard-model-particle-physics)
+New experiments accurately predict the magnetic properties of an electron, part of the standard model of particle physics.
+
+### [What We Know about the Possible Carcinogen Found in Zantac](https://www.scientificamerican.com/article/what-we-know-about-the-possible-carcinogen-found-in-zantac/)
+The widely used medication ranitidine for reducing gastric acid was withdrawn from most markets worldwide a few years ago.
+
+### [The Principles of Open Scholarly Infrastructure](https://doi.org/10.6084/M9.FIGSHARE.1314859)
+The original proposal for basic rules that open scholarly infrastructure should follow. Adopted by Crossref and an increasing number of infrastructure providers.
+
+## References
+
+1. Kiper D. Dinner with Proust: how Alzheimer’s caregivers are pulled into their patients’ worlds. The Guardian. Published February 28, 2023. Accessed March 28, 2023.<https://www.theguardian.com/society/2023/feb/28/dinner-with-proust-how-alzheimers-caregivers-are-pulled-into-their-patients-worlds>. 
+
+1. Fuchs MC. Rights of Nature Reach Europe: The Mar Menor Case in Spain in the Light of Latin American Precedents. Verfassungsblog. Published online February 24, 2023. <https://doi.org/10.17176/20230224-185211-0>
+
+1. Electrons’ magnetism confirms particle physics’ most precise prediction. Published February 23, 2023. Accessed March 28, 2023. <https://www.sciencenews.org/article/standard-model-particle-physics>
+
+1. Lewis T. What We Know about the Possible Carcinogen Found in Zantac. Scientific American. Accessed March 28, 2023. <https://www.scientificamerican.com/article/what-we-know-about-the-possible-carcinogen-found-in-zantac/>
+
+1. Bilder G, Lin J, Neylon C. Principles for Open Scholarly Infrastructures-v1. Published online 2015:35186 Bytes. <https://doi.org/10.6084/M9.FIGSHARE.1314859>
