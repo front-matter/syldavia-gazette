@@ -1,8 +1,10 @@
 ---
-title: "Syldavia Gazette"
+title: "Blog Posts"
+author: ""
 listing:
   contents: posts
   sort: "date desc"
+  page-size: 10
   type: default
   categories: true
   feed: true

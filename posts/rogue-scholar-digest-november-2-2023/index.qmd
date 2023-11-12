@@ -1,8 +1,11 @@
 ---
 title: "Rogue Scholar Digest November 2, 2023"
+description: |
+  This is a summary of the Rogue Scholar blog posts published last week. Find out more (including search for other posts) via Rogue Scholar.
 date: 2023-11-02
 categories: ["digest"]
 image: /images/03880260005fa86e78ddb88e645bfcef.jpg
 ---
 
-This is a summary of the Rogue Scholar blog posts published last week. Find out more (including search for other posts) via [Rogue Scholar](https://rogue-scholar.org).
+![](/images/03880260005fa86e78ddb88e645bfcef.jpg)
+

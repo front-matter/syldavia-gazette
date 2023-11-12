@@ -1,11 +1,13 @@
 ---
 title: "Rogue Scholar Digest November 8, 2023"
+description: |
+  This is a summary of the Rogue Scholar blog posts published since November 2, 2023. Find out more (including search for other posts) via Rogue Scholar.
 date: 2023-11-08
 categories: ["digest"]
 image: "/images/ff6443ec-0fc2-4e3a-ac69-5f51e5b295cb_1515x1338.jpeg"
 ---
 
-This is a summary of the Rogue Scholar blog posts published since November 2nd. Find out more (including search for other posts) via [Rogue Scholar](https://rogue-scholar.org).
+![](/images/ff6443ec-0fc2-4e3a-ac69-5f51e5b295cb_1515x1338.jpeg)
 
 ### Haunted by Juan Rulfo: On Books as Inheritance and Sites for Remembrance
 

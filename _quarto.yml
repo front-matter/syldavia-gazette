@@ -17,17 +17,18 @@ website:
     background: light
     logo: "/images/favicon.png"
     logo-alt: "Syldavia Gazette Beta"
-    tools:
-    - icon: github
-      href: https://github.com/front-matter/syldavia-gazette
-  sidebar:
-    style: "docked"
-    border: true
-    contents:
-      - section: "Notebooks"
-        contents:
+    left:
+      - text: "Blog"
+        file: index.qmd
+      - text: "Notebooks"
+        menu:
           - retraction_watch.ipynb
           - weekly_digest.ipynb
+    tools:
+      - icon: rss
+        href: index.xml
+      - icon: github
+        href: https://github.com/front-matter/syldavia-gazette
   page-footer:
     left: "Copyright &copy;2023 Syldavia Gazette."
     center:
@@ -49,10 +50,12 @@ website:
 format:
   html:
     theme:
-      light: flatly
+      light: [flatly, theme.scss]
       dark: darkly
+    linkcolor: "#b91c1c"
     css: styles.css
     toc: true
+    toc-location: left
 author: 
   name: Martin Fenner
   orcid: "0000-0003-1419-2405"

@@ -1,5 +1,7 @@
 ---
 title: "The Open Access Week in the Scholarly Blogosphere"
+description: |
+  Happy Birthday, Open Access! Last Sunday, the Berlin Declaration turned twenty years old. Its anniversary coincides with the international Open Access Week.
 author:
   name: "Heinz Pampel"
   orcid: "0000-0003-3334-2771"
@@ -7,6 +9,8 @@ date: 2023-10-24
 categories: ["special issue"]
 image: "/images/photo-1471094114392-6a87b3e78ee0.jpeg"
 ---
+
+![](/images/photo-1471094114392-6a87b3e78ee0.jpeg)
 
 Happy Birthday, Open Access! Last Sunday, the Berlin Declaration turned twenty years old (Pampel & Kindling, 2023). Its anniversary coincides with the international Open Access Week. During this action week, events promoting Open Access are organized worldwide (an overview can be found at openaccessweek.org. Another list of events in Germany is available at open-access.network). In panel discussions or digital formats, such as blog posts, the current state and future of Open Access are examined.
 
