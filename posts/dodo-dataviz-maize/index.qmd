@@ -8,6 +8,8 @@ categories: ["weekly"]
 image: "/images/1280px-De_Alice-s_Abenteuer_im_Wunderland_Carroll_pic_10.jpg"
 open-graph:
   image: "/images/1280px-De_Alice-s_Abenteuer_im_Wunderland_Carroll_pic_10.jpg"
+aliases: 
+  - /dodo-dataviz-maize
 ---
 
 ![](/images/1280px-De_Alice-s_Abenteuer_im_Wunderland_Carroll_pic_10.jpg)

@@ -8,6 +8,8 @@ categories: ["weekly"]
 image: "/images/Elgin_Marbles_east_pediment.jpg"
 open-graph:
   image: "/images/Elgin_Marbles_east_pediment.jpg"
+aliases: 
+  - /planetary-defense-healthy-food-slime
 ---
 
 ![](/images/Elgin_Marbles_east_pediment.jpg)

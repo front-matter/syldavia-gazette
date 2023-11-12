@@ -8,6 +8,8 @@ categories: ["weekly"]
 image: "/images/photo-of-grave-credit-nadezhda-f-stepanova_web.jpg"
 open-graph:
   image:  "/images/photo-of-grave-credit-nadezhda-f-stepanova_web.jpg"
+aliases:
+  - /covid-ancient-migrations-peer-review
 ---
 
 ![](/images/photo-of-grave-credit-nadezhda-f-stepanova_web.jpg)

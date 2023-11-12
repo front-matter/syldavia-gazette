@@ -8,6 +8,8 @@ categories: ["weekly"]
 image: "/images/STScI-WebbSouthernRing.jpg"
 open-graph:
   image: "/images/STScI-WebbSouthernRing.jpg"
+aliases: 
+  - /oyster-mushrooms-hearing-accessibility
 ---
 
 ![](/images/STScI-WebbSouthernRing.jpg)

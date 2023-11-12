@@ -5,6 +5,8 @@ description: |
 date: 2023-11-02
 categories: ["digest"]
 image: /images/03880260005fa86e78ddb88e645bfcef.jpg
+aliases: 
+  - /rogue-scholar-digest-november-2-2023
 ---
 
 ![](/images/03880260005fa86e78ddb88e645bfcef.jpg)

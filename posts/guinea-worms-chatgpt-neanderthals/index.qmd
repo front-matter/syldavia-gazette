@@ -8,6 +8,8 @@ categories: ["weekly"]
 image: "/images/gw-release-2023.jpg"
 open-graph:
   image: "/images/gw-release-2023.jpg"
+aliases: 
+  - /guinea-worms-chatgpt-neanderthals
 ---
 
 ![](/images/gw-release-2023.jpg)

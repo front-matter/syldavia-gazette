@@ -8,6 +8,8 @@ categories: ["weekly"]
 image: "/images/journal.pcbi.1010879.g001.png"
 open-graph:
   image: "/images/journal.pcbi.1010879.g001.png"
+aliases:
+  - /data-sharing-challenger-expedition-research-software
 ---
 
 ![](/images/journal.pcbi.1010879.g001.png)

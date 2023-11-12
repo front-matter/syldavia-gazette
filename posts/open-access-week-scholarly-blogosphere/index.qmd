@@ -9,6 +9,8 @@ date: 2023-10-24
 doi: "10.53731/xs2mj-epe20"
 categories: ["special issue"]
 image: "/images/photo-1471094114392-6a87b3e78ee0.jpeg"
+aliases: 
+  - /open-access-week-scholarly-blogosphere
 ---
 
 ![](/images/photo-1471094114392-6a87b3e78ee0.jpeg)

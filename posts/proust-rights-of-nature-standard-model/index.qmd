@@ -8,6 +8,8 @@ categories: ["weekly"]
 image: "/images/mar-menor.jpg-1.webp"
 open-graph:
   image: "/images/mar-menor.jpg-1.webp"
+aliases: 
+  - /proust-rights-of-nature-standard-model
 ---
 
 ![](/images/mar-menor.jpg-1.webp)
