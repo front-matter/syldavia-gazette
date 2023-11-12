@@ -12,20 +12,20 @@ image: "/images/photo-1471094114392-6a87b3e78ee0.jpeg"
 
 ![](/images/photo-1471094114392-6a87b3e78ee0.jpeg)
 
-Happy Birthday, Open Access! Last Sunday, the Berlin Declaration turned twenty years old (Pampel & Kindling, 2023). Its anniversary coincides with the international Open Access Week. During this action week, events promoting Open Access are organized worldwide (an overview can be found at openaccessweek.org. Another list of events in Germany is available at open-access.network). In panel discussions or digital formats, such as blog posts, the current state and future of Open Access are examined.
+Happy Birthday, Open Access! Last Sunday, the Berlin Declaration turned twenty years old ([Pampel & Kindling, 2023](https://www.tagesspiegel.de/wissen/20-jahre-open-access-wie-berlin-das-offene-publizieren-pragte-10657489.html)). Its anniversary coincides with the international Open Access Week. During this action week, events promoting Open Access are organized worldwide (an overview can be found at openaccessweek.org. Another list of events in Germany is available at open-access.network). In panel discussions or digital formats, such as blog posts, the current state and future of Open Access are examined.
 
-This action week is a good opportunity to take a look at the Rogue Scholar Science Blog Archive (Di Giambattista 2023). A search in the archive of English-language blogs archived by Rogue Scholar yields 493 hits for the term open access week. The same search for German-language blogs resulted in 44 hits (as of October 22, 2023).
+This action week is a good opportunity to take a look at the Rogue Scholar Science Blog Archive ([Di Giambattista 2023](https://doi.org/10.59350/vwajv-ym488)). A search in the archive of English-language blogs archived by Rogue Scholar yields 493 hits for the term open access week. The same search for German-language blogs resulted in 44 hits (as of October 22, 2023).
 
 In the following, I will introduce some of the posts. To do this, I will use the Five Ws method and will present a blog post for each W.
 
 ### Who?
-In 2009, Martin Fenner discussed the perspective of researchers on Open Access in a blog post titled Open Access Week: A researcher’s perspective (Fenner, 2009). He emphasized the potential for the reuse of scholarly articles.
+In 2009, Martin Fenner discussed the perspective of researchers on Open Access in a blog post titled Open Access Week: A researcher’s perspective ([Fenner, 2009](https://doi.org/10.53731/r294649-6f79289-8cw3b)). He emphasized the potential for the reuse of scholarly articles.
 
 ### Why?
-The question of the motivations behind Open Access is addressed in several parts of the blog post Twitter interview with Open Access Nigeria by Mike Taylor (2014). This post is a transcript of a Twitter interview. Still worth reading!
+The question of the motivations behind Open Access is addressed in several parts of the blog post Twitter interview with Open Access Nigeria by Mike Taylor ([2014](https://doi.org/10.59350/4v1nk-69837)). This post is a transcript of a Twitter interview. Still worth reading!
 
 ### What?
-Georg Fischer (2023) provides suggestions for those who decide at the last minute to celebrate Open Access Week with an event or another format in his German-language blog post Veranstaltungen in Berlin und Brandenburg (English translation: Events in Berlin and Brandenburg). He provides an overview of activities in the Berlin-Brandenburg area for this year's Open Access Week. There is also a reference to a panel discussion taking place in Berlin (at the Zuse Institute Berlin) on Tuesday, in which I am also involved, and which deals with the current state and future of Open Access in Germany (Kindling, 2023).
+Georg Fischer ([2023](https://doi.org/10.59350/7hdpg-hm144)) provides suggestions for those who decide at the last minute to celebrate Open Access Week with an event or another format in his German-language blog post Veranstaltungen in Berlin und Brandenburg (English translation: Events in Berlin and Brandenburg). He provides an overview of activities in the Berlin-Brandenburg area for this year's Open Access Week. There is also a reference to a panel discussion taking place in Berlin (at the Zuse Institute Berlin) on Tuesday, in which I am also involved, and which deals with the current state and future of Open Access in Germany ([Kindling, 2023](https://doi.org/10.59350/trt30-p4845)).
 
 ### When?
 One must discuss preprints when addressing the question of “When” in the context of Open Access. A noteworthy post in the archive, written by Scott Edmunds in 2021, is titled Preprints Meet Open Peer Review (Edmunds, 2021).
