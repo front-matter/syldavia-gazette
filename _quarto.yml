@@ -54,6 +54,7 @@ format:
     css: styles.css
     toc: true
     toc-location: left
+    include-before-body: plausible.html
     comments:
       giscus: 
         repo: front-matter/syldavia-gazette
