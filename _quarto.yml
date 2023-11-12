@@ -49,7 +49,7 @@ format:
   html:
     theme:
       light: [flatly, theme.scss]
-      dark: darkly
+      dark: [darkly, theme.scss]
     linkcolor: "#b91c1c"
     css: styles.css
     toc: true
