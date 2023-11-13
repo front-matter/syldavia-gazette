@@ -1,0 +1,74 @@
+---
+title: "Rogue Scholar Digest October 19, 2023"
+description: |
+  This is a summary of the Rogue Scholar blog posts published since October 12, 2023.
+date: 2023-10-12
+categories: ["digest"]
+image: "/images/tree-736885.jpg"
+aliases: 
+  - /rogue-scholar-digest-october-19-2023
+---
+
+![](/images/tree-736885.jpg)
+
+### [More examples of “double-headed” curly arrows: S and C Nucleophiles attacking acetyl chloride](https://doi.org/10.59350/h7vdj-cky15)
+<https://doi.org/10.59350/h7vdj-cky15>\
+Published October 12, 2023 in Henry Rzepa's Blog\
+Henry Rzepa
+
+In an earlier post on this topic, I described how the curly-arrows describing the mechanism of a nucleophilic addition at a carbonyl group choreograph in two distinct ways, as seen in red or blue below. The arrows in red can be described as firstly addition to the carbonyl group to form either a transient intermediate (a two-step process) or instead a formal transition state state as a concerted single-step mechanism.
+
+### [How to do a SkiErg marathon entirely the wrong way (but still finish)](https://doi.org/10.59350/68s7b-8c778)
+<https://doi.org/10.59350/68s7b-8c778>\
+Published October 13, 2023 in Chris von Csefalvay\
+Chris von Csefalvay
+
+Yesterday, I completed a marathon on the SkiErg, with a pretty respectable time (see results here). I know I can do better, and I know I will do better. On the other hand, this was a marathon where I pretty much did everything wrong. And that was sort of an instructive experience in its own right. The title is somewhat misleading. Not much went wrong – the marathon itself was smooth sailing.
+
+### [Beyond Broca](https://doi.org/10.59350/vynvf-0k137)
+<https://doi.org/10.59350/vynvf-0k137>\
+Published October 15, 2023 in Chris von Csefalvay\
+Chris von Csefalvay
+
+There’s something special about language. It is ‘our own’, it is ‘us’, in a profound way, and quite surprisingly, more so than art. I was deeply struck by this when I first saw reactions to large generative language models that created realistic, human-ish prose.
+
+### [Networking, For Skeptics](https://doi.org/10.59350/m6bp0-gn270)
+<https://doi.org/10.59350/m6bp0-gn270>\
+Published October 16, 2023 in Corin Wagen\
+Corin Wagen
+
+Scientists, engineers, and other technical people often make fun of networking. Until a few years ago, I did this too: I thought networking was some dumb activity done by business students who didn’t have actual work to do, or something exploitative focused on pure self-advancement.
+
+### [Clustering Book editions](https://doi.org/10.59350/4hd4r-1tk44)
+<https://doi.org/10.59350/4hd4r-1tk44>\
+Published October 16, 2023 in Sven Lieber\
+Sven Lieber
+
+What do the books “The invention of Nature” and “De uitvinder van de natuur” have in common? Well, they are both different versions of the same work, “The invention of nature” by Andrea Wulf, whether it is in a different format or a different language. In this blog post I will briefly introduce the advantages of keeping work-level records in library catalogs.
+
+### [Science and Society need more interaction instead of mere communication. An Interview with Volker Meyer-Guckel](https://elephantinthelab.org/science-and-society-need-more-interaction-instead-of-mere-communication-an-interview-with-volker-meyer-guckel)
+Published October 17, 2023 in Elephant in the Lab\
+Sascha Schönig
+
+_Science communication is often considered equal with public relations or media coverage. However, the phenomenon is significantly more complex, and its most important aspects are not given enough attention. For instance, science includes how science can not only communicate but also interact with societal groups, and the potential impacts this can have on the perception of research in the public eye._
+
+### [FAIR Data Digest #19](https://doi.org/10.59350/x2wm8-5qn53)
+<https://doi.org/10.59350/x2wm8-5qn53>\
+Published October 17, 2023 in FAIR Data Digest\
+Sven Lieber
+
+Hi everyone, welcome back to today’s edition in which I share a work update related to bibliographic data and provide information to an upcoming interesting talk. Thanks for reading FAIR Data Digest! Subscribe for free to receive new posts and support my work. 🏢 Books exist in many different versions. The same book might be published as paperback or as ebook and that even in different translations.
+
+### [Building a Community of Practice: Observations of the Current Use of DataCite DOIs as Project IDs](https://doi.org/10.54900/g4928-wva21)
+<https://doi.org/10.54900/g4928-wva21>\
+Published October 17, 2023 in Upstream\
+Erin Robinson, Ted Habermann
+
+We analyse samples of DataCite metadata from ten repositories that have already created >100k project IDs. The FAIR Island Project will provide working examples that demonstrate how DataCite and other existing infrastructure are being used and can be leveraged to support project-level metadata.
+
+### [OpenCitations needs you: support the change in research practices](https://doi.org/10.59350/canw4-3xd10)
+<https://doi.org/10.59350/canw4-3xd10>\
+Published October 17, 2023 in OpenCitations Blog\
+Chiara Di Giambattista
+
+In OpenCitations, we like to define our infrastructure organization as “community-based” and “community-driven”, and we really mean it. The support coming from the number of academic libraries and consortia coming after OpenCitations’ involvement in the 2nd SCOSS funding cycle has made it possible, starting from 2020, to make OpenCitations develop from a small university project based on time-limited grant incomes to being an open infrastructure.
