@@ -54,7 +54,8 @@ format:
     css: styles.css
     toc: true
     toc-location: left
-    include-before-body: plausible.html
+    include-after-body: plausible.html
+    fig_caption: yes
     comments:
       giscus: 
         repo: front-matter/syldavia-gazette

@@ -1,5 +1,6 @@
 ---
 title: "Newsletter"
+author: ""
 ---
 
 ![Photo by [Mathyas Kurmann / Unsplash](https://unsplash.com/@mathyaskurmann)](images/photo-1466096115517-bceecbfb6fde.jpeg)
