@@ -1,0 +1,82 @@
+---
+title: "Rogue Scholar Digest October 25, 2023"
+description: |
+  This is a summary of the Rogue Scholar blog posts published since October 19, 2023.
+date: 2023-10-24
+categories: ["digest"]
+image: "/images/nVsRank.webp"
+aliases: 
+  - /rogue-scholar-digest-october-25-2023
+---
+
+![](/images/nVsRank.webp)
+
+### [Some professional updates](https://doi.org/10.59350/kc1dk-htq60)
+<https://doi.org/10.59350/kc1dk-htq60>\
+Published October 19, 2023 in Chris Hartgerink\
+Chris Hartgerink
+
+I have been a bit stuck in my head over the past few months. The world's changing so rapidly, it is increasingly hard to come to grips with things big and small. This even though there is a desire to jump to quick conclusions (a typical sign of overconfidence!). As a result of being stuck in my head, I have been absent on here. I am getting back in a habit of writing, although this simple post took me almost a week to write.
+
+### [rOpenSci News Digest, October 2023](https://doi.org/10.59350/c6935-n5w84)
+<https://doi.org/10.59350/c6935-n5w84>\
+Published October 20, 2023 in rOpenSci - open tools for open science\
+The rOpenSci Team
+
+Dear rOpenSci friends, it’s time for our monthly news roundup!
+
+### [What’s up with your crazy-ass hands, Utahraptor?](https://doi.org/10.59350/5yxcy-xkn46)
+<https://doi.org/10.59350/5yxcy-xkn46>\
+Published October 20, 2023 in Sauropod Vertebra Picture of the Week\
+Mike Taylor
+
+What’s up with your crazy-ass hands, Utahraptor?
+
+### [Organic Chemistry’s Wish List, Four Years Later](https://doi.org/10.59350/nk2jt-mjv94)
+<https://doi.org/10.59350/nk2jt-mjv94>\
+Published October 20, 2023 in Corin Wagen\
+Corin Wagen
+
+In 2019, ChemistryWorld published a “wish list” of reactions for organic chemistry, describing five hypothetical reactions which were particularly desirable for medicinal chemistry.
+
+### [All The Right Friends: how does Google Scholar rank co-authors?](https://doi.org/10.59350/gf1j9-s3e70)
+<https://doi.org/10.59350/gf1j9-s3e70>\
+Published October 21, 2023 in quantixed\
+Stephen Royle
+
+On a scientist’s Google Scholar page, there is a list of co-authors in the sidebar. I’ve often wondered how Google determines in what order these co-authors appear. The list of co-authors on a primary author’s page is not exhaustive. It only lists co-authors who also have a Google Scholar profile.
+
+### [Quarto project scripts are awesomeness](https://doi.org/10.59350/b4qyq-70w75)
+<https://doi.org/10.59350/b4qyq-70w75>\
+Published October 22, 2023 in Chris von Csefalvay\
+Chris von Csefalvay
+
+Quarto is a great tool for reproducible research. It is also a great tool for building websites. After about a decade of Wordpress-based websites, I’ve moved to Quarto primarily for two reasons.
+
+### [Burden of open research (s03e17)](https://doi.org/10.59350/avszv-k9g53)
+https://doi.org/10.59350/avszv-k9g53\
+Published October 24, 2023 in Liberate Science\
+Chris Hartgerink
+
+🔈This is a transcript - listen to the original podcast on Anchor. [00:00:00]. Hi, and welcome to the Open Update.
+
+### [The Open Access Week in the Scholarly Blogosphere](https://doi.org/10.53731/xs2mj-epe20)
+<https://doi.org/10.53731/xs2mj-epe20>\
+Published October 24, 2023 in Syldavia Gazette\
+Heinz Pampel
+
+Happy Birthday, Open Access! Last Sunday, the Berlin Declaration turned twenty years old (Pampel & Kindling, 2023). Its anniversary coincides with the international Open Access Week.
+
+### [The Rogue Scholar API now automatically indexes blog posts](https://doi.org/10.53731/qq4a5-6zc45)
+<https://doi.org/10.53731/qq4a5-6zc45>\
+Published October 24, 2023 in Front Matter\
+Martin Fenner
+
+The dedicated API for the Rogue Scholar science blog archive launched two weeks ago. The initial release supported fetching metadata and content from Rogue Scholar.
+
+### [Crosstown Traffic: new paper on vesicle transport](https://doi.org/10.59350/vwdz4-z7t38)
+<https://doi.org/10.59350/vwdz4-z7t38>\
+Published October 25, 2023 in quantixed\
+Stephen Royle
+
+We have a new paper out describing how vesicles move inside cells. The paper in a nutshell In science-speak We analysed how small vesicles are transported in cells.
