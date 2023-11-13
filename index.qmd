@@ -15,4 +15,5 @@ listing:
     description: "The Syldavia Gazette is a newsletter highlighting interesting science stories from around the web."
     image: "/images/favicon.png"
     language: en
+    categories: [digest]
 ---
