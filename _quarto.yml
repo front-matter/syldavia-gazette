@@ -7,16 +7,16 @@ execute:
   freeze: auto
 website:
   favicon: favicon.ico
-  title: "Syldavia Gazette Beta"
+  title: "Syldavia Gazette"
   back-to-top-navigation: true
   open-graph: true
-  site-url: https://beta.syldavia-gazette.org
+  site-url: https://syldavia-gazette.org
   repo-url: https://github.com/front-matter/syldavia-gazette
   repo-actions: [edit, issue]
   navbar:
     background: light
     logo: "/images/favicon.png"
-    logo-alt: "Syldavia Gazette Beta"
+    logo-alt: "Syldavia Gazette"
     left:
       - text: "Blog"
         file: index.qmd

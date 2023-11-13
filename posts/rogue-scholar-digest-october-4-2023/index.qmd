@@ -4,7 +4,7 @@ description: |
   This is a summary of the Rogue Scholar blog posts published since September 27, 2023.
 date: 2023-10-03
 categories: ["digest"]
-image: "/images/images/8071729256_19fe2e444c.jpg"
+image: "/images/8071729256_19fe2e444c.jpg"
 aliases: 
   - /rogue-scholar-digest-october-4-2023
 ---
