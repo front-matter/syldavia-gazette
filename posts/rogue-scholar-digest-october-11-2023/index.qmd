@@ -1,0 +1,75 @@
+---
+title: "Rogue Scholar Digest October 11, 2023"
+description: |
+  This is a summary of the Rogue Scholar blog posts published since October 4, 2023.
+date: 2023-10-10
+categories: ["digest"]
+image: "/images/feature-image-lange_2023.png"
+aliases: 
+  - /rogue-scholar-digest-october-11-2023
+---
+
+![](/images/feature-image-lange_2023.png)
+
+### [The rise of the (science) newsletter](https://doi.org/10.53731/ybhah-9jy85)
+<https://doi.org/10.53731/ybhah-9jy85>\
+Published October 4, 2023 in Front Matter\
+Martin Fenner
+
+Newsletters have been around forever, but their popularity has significantly increased in the past few years, also thanks to platforms such as Ghost, Medium, and Substack. Which of course also includes science newsletters. Failure of advertising as a revenue model The most important driver of this trend is probably the realization that advertising is a poor revenue model for content published on the web, including blogs.
+
+### [Working at Fred Hutchinson Cancer Center](https://doi.org/10.59350/pqhby-f4h19)
+<https://doi.org/10.59350/pqhby-f4h19>\
+Published October 6, 2023 in recology\
+Scott Chamberlain
+
+Soooo, my last job at Deck was amazing. I loved it. I was doing data engineer stuff there, mostly maintaining infrastructure for data pipelines. Everyone was great and the mission was amazing: helping Democrats win. Yet the company was shut down about a month ago, sending me on another job search, the 3rd since early/mid 2021.
+
+### [Job searching notes](https://doi.org/10.59350/x9ts7-g5a56)
+<https://doi.org/10.59350/x9ts7-g5a56>\
+Published October 9, 2023 in recology\
+Scott Chamberlain
+
+notes to self for next job hunt (some of which may be generally useful): don’t apply to general tech companies anymore for many reasons.
+
+### [Call for editors](https://doi.org/10.59349/j47z9-5d536)
+<https://doi.org/10.59349/j47z9-5d536>\
+Published October 9, 2023 in Journal of Open Source Software Blog\
+Arfon M. Smith
+
+Once again, we’re looking to grow our editorial team at JOSS! Since our launch in May 2016, our existing editorial team has handled nearly 3000 submissions (2182 published at the time of writing, 265 under review) and the demand from the community continues to be strong. JOSS now consistently publishes a little over one paper per day, and we see no sign of this demand dropping.
+
+### [Stasis. An Academic Blog on Ancient Civil War](https://doi.org/10.59350/377m7-vkt78)
+<https://doi.org/10.59350/377m7-vkt78>\
+Published October 9, 2023 in Stasis\
+Johannes Wienand
+
+Welcome to Stasis, an academic blog on polarization, internal conflict, and reconciliation in antiquity. Internal conflict has shaped the course of civilizations, and studying this multifaceted phenomenon offers invaluable insight into the cohesive forces and disintegrative potentials of human culture.
+
+### [Rogue Scholar has an API](https://doi.org/10.53731/ar11b-5ea39)
+<https://doi.org/10.53731/ar11b-5ea39>\
+Published October 9, 2023 in Front Matter\
+Martin Fenner
+
+The Rogue Scholar science blog archive has launched a dedicated API today, publicly available at https://api.rogue-scholar.org and complementing the website.
+
+### [Do you have any questions for me?](https://doi.org/10.59350/j9n6a-q8036)
+<https://doi.org/10.59350/j9n6a-q8036>\
+Published October 9, 2023 in I.D.E.A.S.\
+Tejas S. Sathe
+
+Recently, Asim A, MD had a thoughtful post on X about a question he thinks that applicants should ask interviewers in the 2024 Match.
+
+### [Civil War Seen Through the Lens of Ancient History](https://doi.org/10.59350/5b9hv-1xz57)
+<https://doi.org/10.59350/5b9hv-1xz57>\
+Published October 10, 2023 in Stasis\
+Carsten Hjort Lange
+
+The words and concepts we use to describe a particular war speak volumes about who we are as individuals and as a community, and where we stand in an unfolding conflict. Concepts have always been used to occupy the moral high ground. Rebellion, for example, is used to delegitimise those who rebel.
+
+### [Onboarding with confidence in open research (s03e16)](https://doi.org/10.59350/wk19c-zqs88)
+<https://doi.org/10.59350/wk19c-zqs88>\
+Published October 10, 2023 in Liberate Science\
+Chris Hartgerink
+
+🔈This is a transcript of the Open Update podcast. Listen to the original audio on Anchor.fm. [00:00:00] Welcome back to the Open Update. We're back in the series talking about the decade of open science in the last 10 years, and then also this week we're gonna be talking a bit about, what do we foresee for the next 10 years?
