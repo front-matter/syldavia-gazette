@@ -8,6 +8,7 @@ execute:
 website:
   favicon: favicon.ico
   title: "Syldavia Gazette"
+  margin-header: subscribe.html
   back-to-top-navigation: true
   open-graph: true
   site-url: https://syldavia-gazette.org
