@@ -37,6 +37,8 @@ website:
         href: privacy-policy.qmd
       - text: "Newsletter"
         href: newsletter.qmd
+      - text: "Usage Stats"
+        href: "https://plausible.io/syldavia-gazette.org"
     right:
       - icon: rss
         href: index.xml
@@ -60,6 +62,4 @@ format:
     comments:
       giscus: 
         repo: front-matter/syldavia-gazette
-author: 
-  name: Martin Fenner
-  orcid: "0000-0003-1419-2405"
+

@@ -19,7 +19,6 @@ markdown-it-py = "^3.0.0"
 commonmeta-py = "^0.8.5"
 pytz = "^2023.3.post1"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

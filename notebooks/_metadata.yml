@@ -1,0 +1,9 @@
+author: 
+  name: Martin Fenner
+  orcid: "0000-0003-1419-2405"
+date-format: long
+format: 
+  html:
+    code-fold: true
+jupyter: python3
+csl: apa.csl

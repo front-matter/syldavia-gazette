@@ -1,6 +1,5 @@
 ---
 title: "About"
-author: ""
 ---
 
 ![Photo by [Stanislaw Gregor / Unsplash](https://unsplash.com/@staszek998)](images/photo-1609081704841-37b6ea9a2b7b.jpeg)

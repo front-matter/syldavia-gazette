@@ -1,8 +1,6 @@
 ---
-title: ""
 subtitle: "The Syldavia Gazette is a newsletter highlighting interesting science stories from around the web."
 title-block-banner: images/syldavia-gazette.png
-author: ""
 listing:
   contents: posts
   sort: "date desc"
