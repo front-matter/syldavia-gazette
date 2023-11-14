@@ -1,6 +1,5 @@
 ---
 title: "Privacy Policy"
-author: ""
 ---
 
 This Privacy Policy ("Privacy Policy") covers the information practices of <https://syldavia-gazette.org>. This blog is published by Front Matter, and questions regarding this statement should be e-mailed to <info@front-matter.io>. Front Matter has created this Privacy Policy to demonstrate our commitment to user and visitor privacy at our website (the "Site") and within the services (the "Services") delivered by Front Matter. This Privacy Policy describes how we collect, use, and share information. Our Privacy Policy applies whenever you visit the Site or use the Services.
