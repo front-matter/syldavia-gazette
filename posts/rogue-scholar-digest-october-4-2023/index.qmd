@@ -12,28 +12,28 @@ aliases:
 ![](/images/8071729256_19fe2e444c.jpg)
 
 ### [The Leiden Ranking goes beyond ranking](https://www.leidenmadtrics.nl/articles/the-leiden-ranking-goes-beyond-ranking)
-Published September 27, 2023 in Leiden Madtrics\
-Leiden Madtrics
+| Published September 27, 2023 in Leiden Madtrics
+| Leiden Madtrics
 
 Today the CWTS Leiden Ranking and the INORMS More Than Our Rank initiative announce a new partnership, aimed at highlighting the accomplishments of universities beyond what is captured in university rankings. The CWTS Leiden Ranking has always been a bit different from other university rankings.
 
 ### [Peer Review Week 2023: GigaByte joins the ‘Publish, Review, Curate’ Revolution using Sciety](https://doi.org/10.59350/2dgj4-s0053)
-<https://doi.org/10.59350/2dgj4-s0053>\
-Published September 27, 2023 in GigaBlog\
-Scott Edmunds
+| <https://doi.org/10.59350/2dgj4-s0053>
+| Published September 27, 2023 in GigaBlog
+| Scott Edmunds
 
 Timed for Peer Review Week 2023, we’d like to announce that GigaByte Journal has integrated a novel ‘Publish, Review, Curate’ (PRC) peer-review model, in partnership with eLife. Using eLife’s Sciety platform GigaByte is now offering a highlighted editor’s assessment of each reviewed preprint, this endorsement helps readers gauge the interest and importance of the work, while also throwing light on the review and assessment process of research.
 
 ### [No Evilsevier DEAL!](https://doi.org/10.59350/s2frx-79339)
-<https://doi.org/10.59350/s2frx-79339>\
-Published September 28, 2023 in bjoern.brembs.blog\
-Björn Brembs
+| <https://doi.org/10.59350/s2frx-79339>
+| Published September 28, 2023 in bjoern.brembs.blog
+| Björn Brembs
 
 No matter how well-intended (and we all know to which place the road leads that is paved with good intentions!), transformative agreements (such as DEAL in Germany) are generally the wrong tool at the wrong time for making publicly funded science accessible to the public.
 
 ### [Collecting metadata for science blog posts](https://doi.org/10.53731/yaws9-eyt23)
-<https://doi.org/10.53731/yaws9-eyt23>\
-Published October 2, 2023 in Front Matter\
-Martin Fenner
+| <https://doi.org/10.53731/yaws9-eyt23>
+| Published October 2, 2023 in Front Matter
+| Martin Fenner
 
 Metadata are an important feature of every scholarly resource. For science blog posts – which are published with far fewer resources than for example journal articles or books – there is an additional requirement: make the metadata collection as painless as possible. In this post, I describe the lessons learned over the years, including recent work on the Rogue Scholar science blog archive.

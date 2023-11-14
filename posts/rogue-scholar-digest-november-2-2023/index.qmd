@@ -12,64 +12,64 @@ aliases:
 ![](/images/03880260005fa86e78ddb88e645bfcef.jpg)
 
 ### [Where are the plant type specimens? Mapping JSTOR Global Plants to GBIF](https://doi.org/10.59350/m59qn-22v52)
-<https://doi.org/10.59350/m59qn-22v52>\
-Published October 26, 2023 in iPhylo\
-Roderic Page
+| <https://doi.org/10.59350/m59qn-22v52>
+| Published October 26, 2023 in iPhylo
+| Roderic Page
 
 This blog post documents my attempts to create links between two major resources for plant taxonomy: JSTOR’s Global Plants and GBIF, specifically between type specimens in JSTOR and the corresponding occurrence in GBIF. The TL;DR is that I have tried to map 1,354,861 records for type specimens from JSTOR to the equivalent record in GBIF, and managed to find 903,945 (67%) matches. Why do this?
 
 ### [Morphological convergence in tendaguriid dorsal vertebrae and cephalopods](https://doi.org/10.59350/yjdha-3sq58)
-<https://doi.org/10.59350/yjdha-3sq58>\
-Published October 26, 2023 in Sauropod Vertebra Picture of the Week\
-Mike Taylor
+| <https://doi.org/10.59350/yjdha-3sq58>
+| Published October 26, 2023 in Sauropod Vertebra Picture of the Week
+| Mike Taylor
 
 I’ve been away for two weeks with Fiona in Kefalonia, one of the Greek islands. While we were there, we ate this excellent meal: As we made our way through the calamari, we noticed this chunk: Take a closer look and I think you will be struck, as I was,
 
 ### [Quantum Computing for Quantum Chemistry: Short-Term Pessimism](https://doi.org/10.59350/5efg9-xnx27)
-<https://doi.org/10.59350/5efg9-xnx27>\
-Published October 27, 2023 in Corin Wagen\
-Corin Wagen
+| <https://doi.org/10.59350/5efg9-xnx27>
+| Published October 27, 2023 in Corin Wagen
+| Corin Wagen
 
 Quantum computing gets a lot of attention these days. In this post, I want to examine the application of quantum computing to quantum chemistry, with a focus on determining whether there are any business-viable applications today. My conclusion is that while quantum computing is a very exciting scientific direction for chemistry, it’s still very much a realm where basic research and development is needed,
 
 ### [Facial hair of the Mesozoic: Bob Nicholls edition, part 2 (only ten years late)](https://doi.org/10.59350/tfpdy-zkt79)
-<https://doi.org/10.59350/tfpdy-zkt79>\
-Published October 28, 2023 in Sauropod Vertebra Picture of the Week\
-Mike Taylor
+| <https://doi.org/10.59350/tfpdy-zkt79>
+| Published October 28, 2023 in Sauropod Vertebra Picture of the Week
+| Mike Taylor
 
 Back in 2013, we showed you Bob Nicholls’ beautiful sketch “The Giant & Company”, featuring a giant Apatosaurus with a shaggy beard running along its neck. In the years since, I’d forgotten that he drew another sketch at the same time showing … well, he’s just posted both sketches on Mastodon,
 
 ### [Prompt Engineering: The Art of Yesterday](https://doi.org/10.59350/keztr-yx081)
-<https://doi.org/10.59350/keztr-yx081>\
-Published October 29, 2023 in Chris von Csefalvay\
-Chris von Csefalvay
+| <https://doi.org/10.59350/keztr-yx081>
+| Published October 29, 2023 in Chris von Csefalvay
+| Chris von Csefalvay
 
 There’s a style of visual design I’m inordinately fond of called Raygun Gothic. It’s hard to describe what the hell exactly one needs to be on to enjoy it, but think of it like the aesthetic from the latter Fallout games with a more optimistic outlook on the future. Gibson described it as “the future that never was”, and I think that’s a pretty apt description. The future we were all promised, in all its Raygun Gothic glory.
 
 ### [All The Right Friends II: clustering papers using Google Scholar data](https://doi.org/10.59350/6gpp6-ffv5)
-<https://doi.org/10.59350/6gpp6-ffv59>\
-Published October 29, 2023 in quantixed\
-Stephen Royle
+| <https://doi.org/10.59350/6gpp6-ffv59>
+| Published October 29, 2023 in quantixed
+| Stephen Royle
 
 In a previous post, I looked at how Google Scholar ranks co-authors. While I had the data available I wondered whether paper authorship could be used in other ways. A few months back, John Cook posted about using Jaccard index and jazz albums. The idea is to look at the players on two jazz albums and examine the overlap.
 
 ### [Scanning QR codes in R](https://doi.org/10.59350/cwnhn-jx736)
-<https://doi.org/10.59350/cwnhn-jx736>\
-Published October 30, 2023 in rOpenSci - open tools for open science\
-Jeroen Ooms
+| <https://doi.org/10.59350/cwnhn-jx736>
+| Published October 30, 2023 in rOpenSci - open tools for open science
+| Jeroen Ooms
 
 The latest version of the opencv R package can detect and decode QR codes!# Install latest opencvinstall.packages("opencv", repos = "https://ropensci.r-universe.dev") There are two ways of using this: the ocv_qr_detect function tries to find the QR in an image file.
 
 ### [Starting November, all Rogue Scholar blog posts will be archived by the Internet Archive](https://doi.org/10.53731/hhtx0-wb293)
-<https://doi.org/10.53731/hhtx0-wb293>\
-Published October 30, 2023 in Front Matter\
-Martin Fenner
+| <https://doi.org/10.53731/hhtx0-wb293>
+| Published October 30, 2023 in Front Matter
+| Martin Fenner
 
 Today I am happy to announce an important milestone for the Rogue Scholar science blog archive. Starting November 1st, all blog posts from participating blogs will automatically be archived by the Internet Archive. Front Matter has signed a contract with Internet Archive to use their Archive-It service, and archiving will start in November.
 
 ### [What’s so bad about consolidation in academic publishing?](https://doi.org/10.59350/z8017-00204)
-<https://doi.org/10.59350/z8017-00204>\
-Published October 30, 2023 in Samuel Moore\
-Samuel Moore
+| <https://doi.org/10.59350/z8017-00204>
+| Published October 30, 2023 in Samuel Moore
+| Samuel Moore
 
 Today’s Scholarly Kitchen blog post is an attempt by David Crotty — the blog’s editor — to quantify the increasing consolidation of the academic publishing industry.
