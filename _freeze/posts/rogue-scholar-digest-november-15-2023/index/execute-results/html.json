@@ -1,0 +1,12 @@
+{
+  "hash": "3c40088c5675a5511ca717349b029c52",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Rogue Scholar Digest November 15, 2023\"\ndescription: |\n  This is a summary of the Rogue Scholar blog posts published since November 8, 2023.\ndate: 2023-11-15\ncategories: [\"digest\"]\nimage: \"/images/STI2023-group-photo.jpg\"\nnotebook-links: global\n---\n\n::: {#9c79a3ed .cell tags='[\"parameters\"]' execution_count=1}\n``` {.python .cell-code}\npublished_since = \"2023-11-08\"\npublished_until = \"2023-11-14\"\nfeatured_image = 2\n```\n:::\n\n\n{{< embed ../../notebooks/weekly_digest.ipynb#query >}}\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

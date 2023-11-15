@@ -1,0 +1,11 @@
+{
+  "hash": "8633afba2a8e1613b4d650b61792a4bf",
+  "result": {
+    "markdown": "---\ntitle: Retraction Watch\ndescription: |\n  This notebook finds Rogue Scholar blog posts about the Retraction Watch\n  project using the Rogue Scholar API.\ndate: '2023-11-15'\nbibliography: references.bib\nformat:\n  html:\n    toc: true\n    code-fold: true\nnocite: |\n  @*\n---\n\n## Introduction\n\nThis notebook finds Rogue Scholar blog posts about the Retraction Watch project using the [Rogue Scholar API](https://api.rogue-scholar.org/posts). [Retraction Watch](https://retractionwatch.com/) reports on retractions of scientific papers. the project was started in 2010 by Ivan Oransky and Adam Marcus.\n\n## Workflow\n\n\n```{mermaid}\nflowchart LR\n  A[\"Posts in Rogue Scholar: 10560\"] --> B(\"Query retraction watch: 22\")\n  B --> C(\"Manual curation: 12\")\n```\n\n\n## Results\n\n<!-- 12A0366C|/Users/mfenner/Documents/syldavia-gazette/notebooks/retraction_watch/index.ipynb|:../retraction_watch.ipynb#query-retraction-watch |  | echo:false,warning:false,asis:true,eval:false -->\n\n### References\n\n::: {#refs}\n:::\n\n",
+    "supporting": [
+      "index_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
