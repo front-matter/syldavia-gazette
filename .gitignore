@@ -163,3 +163,4 @@ cython_debug/
 /_site/
 /_freeze/
 .Rproj.user
+.Rhistory
