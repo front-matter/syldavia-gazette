@@ -5,6 +5,7 @@ project:
     port: 4200
 execute:
   freeze: auto
+lightbox: true
 website:
   favicon: favicon.ico
   title: "Syldavia Gazette"
