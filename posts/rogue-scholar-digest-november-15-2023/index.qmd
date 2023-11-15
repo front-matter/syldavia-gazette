@@ -5,15 +5,6 @@ description: |
 date: 2023-11-15
 categories: ["digest"]
 image: "/images/STI2023-group-photo.jpg"
-notebook-links: global
 ---
 
-```{python}
-#| tags: [parameters]
-
-published_since = "2023-11-08"
-published_until = "2023-11-14"
-featured_image = 2
-```
-
-{{< embed ../../notebooks/weekly_digest.ipynb#query >}}
+{{< embed ../../notebooks/weekly_digest.ipynb#query echo=true >}}

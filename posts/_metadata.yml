@@ -7,4 +7,5 @@ format:
   html:
     code-fold: true
 jupyter: python3
+notebook-links: false
 csl: apa.csl
