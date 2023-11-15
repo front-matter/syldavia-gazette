@@ -6,8 +6,6 @@ date: 2023-11-15
 categories: ["digest"]
 image: "/images/STI2023-group-photo.jpg"
 notebook-links: global
-execute:
-  echo: false
 ---
 
 ```{python}
