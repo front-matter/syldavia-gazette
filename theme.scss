@@ -1,7 +1,11 @@
 /*-- scss:defaults --*/
 $toc-color: #b91c1c;
+$header-margin-bottom: 0;
 $link-hover-color: #7f1d1d;
 $link-decoration: none;
+h3.anchored {
+  margin-bottom: 0;
+}
 .quarto-title-banner {
   height: 400px;
 }
