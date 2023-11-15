@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "rogue-scholar-notebooks"
-version = "0.1.0"
+name = "syldavia-gazette"
+version = "0.2.0"
 description = ""
 authors = ["Martin Fenner <martin@front-matter.io>"]
 license = "MIT"
@@ -18,6 +18,7 @@ pydash = "^6"
 markdown-it-py = "^3.0.0"
 commonmeta-py = "^0.8.5"
 pytz = "^2023.3.post1"
+comm = "^0.2.0"
 
 [build-system]
 requires = ["poetry-core"]
