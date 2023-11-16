@@ -1,0 +1,1203 @@
+[
+{
+  "institution": [
+    {
+      "name": "GigaBlog"
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        9
+      ]
+    ],
+    "date-time": "2023-11-09T00:36:43Z",
+    "timestamp": 1699490203139
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        8
+      ]
+    ]
+  },
+  "group-title": "Biological sciences",
+  "reference-count": 0,
+  "publisher": "Front Matter",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "abstract": "<p>&lt;em&gt;\u201cExtinction is forever \u2013 so our action must be immediate.\u201d&lt;/em&gt; \u2013&lt;em&gt;Sir David Attenborough, Sept 30th 2020&lt;/em&gt; The fourth international Global Genome Biodiversity Network (GGBN) Conference took place in Aguascalientes, Mexico from October 17th to October 20th 2023 where it was hosted by the Universidad Aut\u00f3noma de Aguascalientes.</p>",
+  "DOI": "10.59350/ahnf6-e1m90",
+  "type": "article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        8
+      ]
+    ],
+    "date-time": "2023-11-08T10:27:26Z",
+    "timestamp": 1699439246000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": "BioBanking at GGBN 2023: Highlights from GigaScience Press",
+  "prefix": "10.59350",
+  "author": [
+    {
+      "ORCID": "http://orcid.org/0000-0002-9952-8141",
+      "authenticated-orcid": false,
+      "given": "Chris",
+      "family": "Armit",
+      "sequence": "first",
+      "affiliation": []
+    }
+  ],
+  "member": "31795",
+  "container-title": "GigaBlog",
+  "link": [
+    {
+      "URL": "http://gigasciencejournal.com/blog/biobanking-at-ggbn-2023",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        8
+      ]
+    ],
+    "date-time": "2023-11-08T12:07:03Z",
+    "timestamp": 1699445223000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://gigasciencejournal.com/blog/biobanking-at-ggbn-2023"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        8
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "http://dx.doi.org/10.59350/ahnf6-e1m90",
+  "relation": {},
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        8
+      ]
+    ]
+  },
+  "subtype": "other",
+  "id": "https://doi.org/10.59350/ahnf6-e1m90"
+},
+{
+  "institution": [
+    {
+      "name": "Scholarly Communications Lab | ScholCommLab"
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        10
+      ]
+    ],
+    "date-time": "2023-11-10T00:43:21Z",
+    "timestamp": 1699577001777
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        9
+      ]
+    ]
+  },
+  "group-title": "Social sciences",
+  "reference-count": 0,
+  "publisher": "Front Matter",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "abstract": "<p>Over the last few months, ScholCommLab members took part in over six conferences, including the: International Conference on Science, Technology, and Innovation Indicators (STI 2023), International Communication Association Conference (ICA 2023), and Bibliometrics and Research Impact Community Conference (BRIC 2023). In this blog post, we\u2019re sharing highlights from each event.</p>",
+  "DOI": "10.59350/vbp1j-f9j63",
+  "type": "article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        9
+      ]
+    ],
+    "date-time": "2023-11-09T14:43:15Z",
+    "timestamp": 1699540995000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": "From Ottawa to Leiden: ScholCommLab\u2019s Conference Highlights",
+  "prefix": "10.59350",
+  "author": [
+    {
+      "ORCID": "http://orcid.org/0000-0001-9131-9049",
+      "authenticated-orcid": false,
+      "given": "Olivia",
+      "family": "Aguiar",
+      "sequence": "first",
+      "affiliation": []
+    }
+  ],
+  "member": "31795",
+  "container-title": "Scholarly Communications Lab | ScholCommLab",
+  "link": [
+    {
+      "URL": "https://www.scholcommlab.ca/2023/11/09/from-ottawa-to-leiden-scholcommlabs-conference-highlights",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        9
+      ]
+    ],
+    "date-time": "2023-11-09T14:43:16Z",
+    "timestamp": 1699540996000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.scholcommlab.ca/2023/11/09/from-ottawa-to-leiden-scholcommlabs-conference-highlights"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        9
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "http://dx.doi.org/10.59350/vbp1j-f9j63",
+  "relation": {},
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        9
+      ]
+    ]
+  },
+  "subtype": "other",
+  "id": "https://doi.org/10.59350/vbp1j-f9j63"
+},
+{
+  "institution": [
+    {
+      "name": "Front Matter"
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        10
+      ]
+    ],
+    "date-time": "2023-11-10T00:37:16Z",
+    "timestamp": 1699576636002
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        9
+      ]
+    ]
+  },
+  "group-title": "Computer and information sciences",
+  "reference-count": 1,
+  "publisher": "Front Matter",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "abstract": "<p>Blogs participating in the Rogue Scholar science blog archive are now archived in the Internet Archive. Starting November 1st, Rogue Scholar is participating in the Internet Archive Archive-It service and all archived blogs can be found here.</p>",
+  "DOI": "10.53731/g60vh-3ng48",
+  "type": "article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        9
+      ]
+    ],
+    "date-time": "2023-11-09T17:11:02Z",
+    "timestamp": 1699549862000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": "Archiving Rogue Scholar blogs with the Internet Archive",
+  "prefix": "10.53731",
+  "author": [
+    {
+      "ORCID": "http://orcid.org/0000-0003-1419-2405",
+      "authenticated-orcid": false,
+      "given": "Martin",
+      "family": "Fenner",
+      "sequence": "first",
+      "affiliation": []
+    }
+  ],
+  "member": "31795",
+  "reference": [
+    {
+      "key": "ref1",
+      "doi-asserted-by": "publisher",
+      "article-title": "Starting November, all Rogue Scholar blog posts will be archived by the Internet Archive",
+      "year": "2023",
+      "DOI": "10.53731/hhtx0-wb293"
+    }
+  ],
+  "container-title": "Front Matter",
+  "link": [
+    {
+      "URL": "https://blog.front-matter.io/posts/archiving-rogue-scholar-blogs-with-the-internet-archive",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        9
+      ]
+    ],
+    "date-time": "2023-11-09T18:18:45Z",
+    "timestamp": 1699553925000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://blog.front-matter.io/posts/archiving-rogue-scholar-blogs-with-the-internet-archive"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        9
+      ]
+    ]
+  },
+  "references-count": 1,
+  "URL": "http://dx.doi.org/10.53731/g60vh-3ng48",
+  "relation": {},
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        9
+      ]
+    ]
+  },
+  "subtype": "other",
+  "id": "https://doi.org/10.53731/g60vh-3ng48"
+},
+{
+  "institution": [
+    {
+      "name": "Henry Rzepa's Blog"
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        12
+      ]
+    ],
+    "date-time": "2023-11-12T00:29:07Z",
+    "timestamp": 1699748947370
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        11
+      ]
+    ]
+  },
+  "group-title": "Chemical sciences",
+  "reference-count": 0,
+  "publisher": "Front Matter",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "abstract": "<p>I am a member of the Royal Society of Chemistry\u2019s Historical group. Amongst other activities, it publishes two editions of a newsletter each year for its members.</p>",
+  "DOI": "10.59350/e3wmw-qwx29",
+  "type": "article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        11
+      ]
+    ],
+    "date-time": "2023-11-11T08:04:21Z",
+    "timestamp": 1699689861000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": "Two influential textbooks \u2013 \u201cMee\u201d  and \u201cMellor\u201d.",
+  "prefix": "10.59350",
+  "author": [
+    {
+      "ORCID": "http://orcid.org/0000-0002-8635-8390",
+      "authenticated-orcid": false,
+      "given": "Henry",
+      "family": "Rzepa",
+      "sequence": "first",
+      "affiliation": []
+    }
+  ],
+  "member": "31795",
+  "container-title": "Henry Rzepa's Blog",
+  "link": [
+    {
+      "URL": "https://www.ch.imperial.ac.uk/rzepa/blog?p=26561",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        11
+      ]
+    ],
+    "date-time": "2023-11-11T08:04:22Z",
+    "timestamp": 1699689862000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.ch.imperial.ac.uk/rzepa/blog?p=26561"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        11
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "http://dx.doi.org/10.59350/e3wmw-qwx29",
+  "relation": {},
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        11
+      ]
+    ]
+  },
+  "subtype": "other",
+  "id": "https://doi.org/10.59350/e3wmw-qwx29"
+},
+{
+  "institution": [
+    {
+      "name": "Chris von Csefalvay"
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ],
+    "date-time": "2023-11-14T17:24:48Z",
+    "timestamp": 1699982688109
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        13
+      ]
+    ]
+  },
+  "group-title": "Natural sciences",
+  "reference-count": 0,
+  "publisher": "Front Matter",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "abstract": "<p>I love posts that allow me to merge some of my addictions.</p>",
+  "DOI": "10.59350/5hxdg-fz574",
+  "type": "article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        13
+      ]
+    ],
+    "date-time": "2023-11-13T22:15:37Z",
+    "timestamp": 1699913737000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": "Auto-DOI for Quarto posts via Rogue Scholar",
+  "prefix": "10.59350",
+  "author": [
+    {
+      "given": "Chris",
+      "family": "von Csefalvay",
+      "sequence": "first",
+      "affiliation": []
+    }
+  ],
+  "member": "31795",
+  "container-title": "Chris von Csefalvay",
+  "link": [
+    {
+      "URL": "https://chrisvoncsefalvay.com/posts/auto-doi",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        13
+      ]
+    ],
+    "date-time": "2023-11-13T22:15:37Z",
+    "timestamp": 1699913737000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://chrisvoncsefalvay.com/posts/auto-doi"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        13
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "http://dx.doi.org/10.59350/5hxdg-fz574",
+  "relation": {},
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        13
+      ]
+    ]
+  },
+  "subtype": "other",
+  "id": "https://doi.org/10.59350/5hxdg-fz574"
+},
+{
+  "institution": [
+    {
+      "name": "Jabberwocky Ecology"
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ],
+    "date-time": "2023-11-14T00:34:34Z",
+    "timestamp": 1699922074871
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        13
+      ]
+    ]
+  },
+  "group-title": "Biological sciences",
+  "reference-count": 0,
+  "publisher": "Front Matter",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "abstract": "<p>We\u2019re excited to announce the initial release of crown maps for 100 million trees in the National Ecological Observatory Network (NEON) with information on location, species identify, size, and alive/dead status.</p>",
+  "DOI": "10.59350/6vjpn-ky077",
+  "type": "article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        13
+      ]
+    ],
+    "date-time": "2023-11-13T13:09:00Z",
+    "timestamp": 1699880940000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": "Data on 100 million individual trees in the National Ecological Observatory Network",
+  "prefix": "10.59350",
+  "author": [
+    {
+      "ORCID": "http://orcid.org/0000-0001-6728-7745",
+      "authenticated-orcid": false,
+      "given": "Ethan",
+      "family": "White",
+      "sequence": "first",
+      "affiliation": []
+    }
+  ],
+  "member": "31795",
+  "container-title": "Jabberwocky Ecology",
+  "link": [
+    {
+      "URL": "https://jabberwocky.weecology.org/2023/11/13/data-on-100-million-individual-trees-in-the-national-ecological-observatory-network",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        13
+      ]
+    ],
+    "date-time": "2023-11-13T17:16:48Z",
+    "timestamp": 1699895808000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://jabberwocky.weecology.org/2023/11/13/data-on-100-million-individual-trees-in-the-national-ecological-observatory-network"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        13
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "http://dx.doi.org/10.59350/6vjpn-ky077",
+  "relation": {},
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        13
+      ]
+    ]
+  },
+  "subtype": "other",
+  "id": "https://doi.org/10.59350/6vjpn-ky077"
+},
+{
+  "institution": [
+    {
+      "name": "Liberate Science"
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        15
+      ]
+    ],
+    "date-time": "2023-11-15T00:13:15Z",
+    "timestamp": 1700007195548
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "group-title": "Social sciences",
+  "reference-count": 0,
+  "publisher": "Front Matter",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "abstract": "<p>In 2022, we did our first self-evaluation according to the Principles of Open Scholarly Infrastructure (POSI). In this blog, we take stock ~1 year later, based on POSI v1.1, and reevaluate how we're doing and where there's still room for improvement. Summary \ud83d\udc9a = aligned; \ud83d\udc9b = less aligned;</p>",
+  "DOI": "10.59350/z537h-xsd22",
+  "type": "article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ],
+    "date-time": "2023-11-14T08:16:39Z",
+    "timestamp": 1699949799000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": "Reevaluating POSI: 2023 evolution",
+  "prefix": "10.59350",
+  "author": [
+    {
+      "name": "Liberate Science",
+      "sequence": "first",
+      "affiliation": []
+    }
+  ],
+  "member": "31795",
+  "container-title": "Liberate Science",
+  "link": [
+    {
+      "URL": "https://libscie.org/reevaluating-posi-2023-evolution",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ],
+    "date-time": "2023-11-14T08:16:39Z",
+    "timestamp": 1699949799000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://libscie.org/reevaluating-posi-2023-evolution"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "http://dx.doi.org/10.59350/z537h-xsd22",
+  "relation": {},
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "subtype": "other",
+  "id": "https://doi.org/10.59350/z537h-xsd22"
+},
+{
+  "institution": [
+    {
+      "name": "Chris Hartgerink"
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        15
+      ]
+    ],
+    "date-time": "2023-11-15T00:13:49Z",
+    "timestamp": 1700007229801
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "group-title": "Social sciences",
+  "reference-count": 0,
+  "publisher": "Front Matter",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "abstract": "<p>Recently, I left the Upstream editorial team as a result of changing priorities. I figured it would be a good idea to reflect before I forget.</p>",
+  "DOI": "10.59350/qxhxa-kac46",
+  "type": "article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ],
+    "date-time": "2023-11-14T10:16:22Z",
+    "timestamp": 1699956982000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": "Upstream reflections",
+  "prefix": "10.59350",
+  "author": [
+    {
+      "given": "Chris",
+      "family": "Hartgerink",
+      "sequence": "first",
+      "affiliation": []
+    }
+  ],
+  "member": "31795",
+  "container-title": "Chris Hartgerink",
+  "link": [
+    {
+      "URL": "https://www.chjh.nl/upstream-reflections",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ],
+    "date-time": "2023-11-14T10:16:22Z",
+    "timestamp": 1699956982000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.chjh.nl/upstream-reflections"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "http://dx.doi.org/10.59350/qxhxa-kac46",
+  "relation": {},
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "subtype": "other",
+  "id": "https://doi.org/10.59350/qxhxa-kac46"
+},
+{
+  "institution": [
+    {
+      "name": "Sauropod Vertebra Picture of the Week"
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        15
+      ]
+    ],
+    "date-time": "2023-11-15T00:15:19Z",
+    "timestamp": 1700007319596
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "group-title": "Earth and related environmental sciences",
+  "reference-count": 2,
+  "publisher": "Front Matter",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "abstract": "<p>New paper out today in PeerJ: Lei R, Tschopp E, Hendrickx C, Wedel MJ, Norell M, Hone DWE. 2023. Bite and tooth marks on sauropod dinosaurs from the Morrison Formation. PeerJ 11:e16327 http://doi.org/10.7717/peerj.16327 This one had a long gestation.</p>",
+  "DOI": "10.59350/txkht-ewp95",
+  "type": "article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ],
+    "date-time": "2023-11-14T10:53:00Z",
+    "timestamp": 1699959180000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": "New paper: theropod bite marks on Morrison sauropod bones",
+  "prefix": "10.59350",
+  "author": [
+    {
+      "given": "Matt",
+      "family": "Wedel",
+      "sequence": "first",
+      "affiliation": []
+    }
+  ],
+  "member": "31795",
+  "reference": [
+    {
+      "key": "ref1",
+      "unstructured": "https://journals.plos.org/plosone/article?id=10.1371%2fjournal.pone.0233115"
+    },
+    {
+      "key": "ref3",
+      "unstructured": "https://peerj.com/articles/9510"
+    }
+  ],
+  "container-title": "Sauropod Vertebra Picture of the Week",
+  "link": [
+    {
+      "URL": "https://svpow.com/2023/11/14/new-paper-theropod-bite-marks-on-morrison-sauropod-bones",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ],
+    "date-time": "2023-11-14T10:53:01Z",
+    "timestamp": 1699959181000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://svpow.com/2023/11/14/new-paper-theropod-bite-marks-on-morrison-sauropod-bones"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "references-count": 2,
+  "URL": "http://dx.doi.org/10.59350/txkht-ewp95",
+  "relation": {},
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "subtype": "other",
+  "id": "https://doi.org/10.59350/txkht-ewp95"
+},
+{
+  "institution": [
+    {
+      "name": "Front Matter"
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        15
+      ]
+    ],
+    "date-time": "2023-11-15T00:20:07Z",
+    "timestamp": 1700007607317
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "group-title": "Computer and information sciences",
+  "reference-count": 7,
+  "publisher": "Front Matter",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "abstract": "<p>Today I am relaunching the Syldavia Gazette blog on a new blogging platform, switching from Ghost to Quarto. This allows me to use Jupyter notebooks in the blog to help generate blog posts. The Syldavia Gazette (the other blog I manage besides the Front Matter blog) description says The Syldavia Gazette is a newsletter highlighting interesting science stories from around the web.</p>",
+  "DOI": "10.53731/ch2e1-1cm64",
+  "type": "article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ],
+    "date-time": "2023-11-14T16:26:14Z",
+    "timestamp": 1699979174000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": "The programmable blog",
+  "prefix": "10.53731",
+  "author": [
+    {
+      "ORCID": "http://orcid.org/0000-0003-1419-2405",
+      "authenticated-orcid": false,
+      "given": "Martin",
+      "family": "Fenner",
+      "sequence": "first",
+      "affiliation": []
+    }
+  ],
+  "member": "31795",
+  "reference": [
+    {
+      "key": "ref1",
+      "doi-asserted-by": "publisher",
+      "article-title": "The Rogue Scholar weekly newsletter launches on Wednesday",
+      "year": "2023",
+      "DOI": "10.53731/9cdnt-2k006"
+    },
+    {
+      "key": "ref2",
+      "doi-asserted-by": "publisher",
+      "article-title": "Full-text search added to the Rogue Scholar science blog archive",
+      "year": "2023",
+      "DOI": "10.53731/80awr-zcc48"
+    },
+    {
+      "key": "ref3",
+      "doi-asserted-by": "publisher",
+      "article-title": "Starting November, all Rogue Scholar blog posts will be archived by the Internet Archive",
+      "year": "2023",
+      "DOI": "10.53731/hhtx0-wb293"
+    },
+    {
+      "key": "ref4",
+      "doi-asserted-by": "publisher",
+      "article-title": "Rogue Scholar has an API",
+      "year": "2023",
+      "DOI": "10.53731/ar11b-5ea39"
+    },
+    {
+      "key": "ref5",
+      "doi-asserted-by": "publisher",
+      "article-title": "Generating Overlay blog posts",
+      "year": "2023",
+      "DOI": "10.53731/gzrse-p5d35"
+    },
+    {
+      "key": "ref6",
+      "doi-asserted-by": "publisher",
+      "article-title": "The Open Access Week in the Scholarly Blogosphere",
+      "year": "2023",
+      "DOI": "10.53731/xs2mj-epe20"
+    },
+    {
+      "key": "ref7",
+      "doi-asserted-by": "publisher",
+      "article-title": "Auto-DOI for Quarto posts via Rogue Scholar",
+      "year": "2023",
+      "DOI": "10.59350/5hxdg-fz574"
+    }
+  ],
+  "container-title": "Front Matter",
+  "link": [
+    {
+      "URL": "https://blog.front-matter.io/posts/programmable-blog",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ],
+    "date-time": "2023-11-14T16:44:15Z",
+    "timestamp": 1699980255000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://blog.front-matter.io/posts/programmable-blog"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "references-count": 7,
+  "URL": "http://dx.doi.org/10.53731/ch2e1-1cm64",
+  "relation": {},
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        14
+      ]
+    ]
+  },
+  "subtype": "other",
+  "id": "https://doi.org/10.53731/ch2e1-1cm64"
+}
+]
