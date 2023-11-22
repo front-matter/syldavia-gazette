@@ -13,9 +13,49 @@ date: 2023-10-24
 doi: "10.53731/xs2mj-epe20"
 categories: ["special issue"]
 image: "/images/photo-1471094114392-6a87b3e78ee0.jpeg"
+bibliography: references.json
 aliases: 
   - /open-access-week-scholarly-blogosphere
 ---
+
+```{python}
+
+import requests
+import locale
+import html
+import json
+import re
+from typing import Optional
+import datetime
+import pydash as py_
+from IPython.display import Markdown
+
+locale.setlocale(locale.LC_ALL, "en_US")
+
+
+references = ["10.59350/9abst-wk467", "10.59350/vwajv-ym488", "10.59350/j2nnd-43b72", "10.53731/r294649-6f79289-8cw3b", "10.53731/gzrse-p5d35", "10.59350/7hdpg-hm144", "10.59350/trt30-p4845", "10.7717/peerj.4375", "10.59350/4v1nk-69837"]
+
+def retrieve_post(doi):
+    url = f"https://api.rogue-scholar.org/posts/{doi}"
+    response = requests.get(url)
+    return response.json()
+
+def format_post(post):
+    doi = post.get("doi", None)
+    url = f"[{doi}]({doi})\n<br />" if doi else ""
+    title = f"[{post['title']}]({doi})" if doi else f"[{post['title']}]({post['url']})"
+    published_at = datetime.datetime.utcfromtimestamp(post["published_at"]).strftime(
+        "%B %-d, %Y"
+    )
+    blog = f"[{post['blog_name']}](https://rogue-scholar.org/blogs/{post['blog_slug']})"
+    author = ", ".join([f"{x['name']}" for x in post.get("authors", None) or []])
+    summary = post["summary"]
+    return f"### {title}\n{url}Published {published_at} in {blog}<br />{author}<br /><br />{summary}\n"
+
+posts = [retrieve_post(x) for x in references]
+posts_as_string = "\n".join([format_post(x) for x in posts])
+print(posts_as_string)
+```
 
 ![](/images/photo-1471094114392-6a87b3e78ee0.jpeg)
 
