@@ -13,7 +13,6 @@ date: 2023-10-24
 doi: "10.53731/xs2mj-epe20"
 categories: ["special issue"]
 image: "/images/photo-1471094114392-6a87b3e78ee0.jpeg"
-bibliography: references.json
 aliases: 
   - /open-access-week-scholarly-blogosphere
 ---
@@ -55,7 +54,7 @@ This subjective selection of articles from the Rogue Scholar Archive demonstrate
 
 1. Fenner, M. (2023). Generating Overlay blog posts. Front Matter. <https://doi.org/10.53731/gzrse-p5d35>
 
-1. Fischer, G. (2023). 23. bis 29. Oktober: International Open Access Week 2023 „Community over Commercialization“ – Veranstaltungen in Berlin und Brandenburg. Other humanities. <https://doi.org/10.59350/7hdpg-hm144>
+1. Fischer, G. (2023). 23. bis 29. Oktober: International Open Access Week 2023 „Community over Commercialization“ – Veranstaltungen in Berlin und Brandenburg. Open Access Blog Berlin. <https://doi.org/10.59350/7hdpg-hm144>
 
 1. Kindling, M. (2023). Podiumsdiskussion: Open Access in der Region Berlin-Brandenburg: Was wurde erreicht und wo geht es hin? (Hybrid). Open Access Blog Berlin. <https://doi.org/10.59350/trt30-p4845>
 
