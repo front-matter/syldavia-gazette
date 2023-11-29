@@ -1,0 +1,10 @@
+---
+title: "Rogue Scholar Digest November 29, 2023"
+description: |
+  This is a summary of the Rogue Scholar blog posts published since November 22, 2023.
+date: 2023-11-29
+categories: ["digest"]
+image: "/images/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.webp"
+---
+
+{{< embed ../../notebooks/digest-2023-11-29.ipynb#query echo=true >}}
