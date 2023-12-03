@@ -4,7 +4,7 @@ project:
   preview:
     port: 4200
 execute:
-  freeze: auto
+  freeze: true
 lightbox: true
 website:
   favicon: favicon.ico
