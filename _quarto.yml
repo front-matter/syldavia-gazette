@@ -14,17 +14,12 @@ website:
   open-graph: true
   site-url: https://syldavia-gazette.org
   repo-url: https://github.com/front-matter/syldavia-gazette
-  repo-actions: [edit, issue]
+  repo-actions: [source]
   navbar:
     background: light
     logo: "/images/favicon.png"
     logo-alt: "Syldavia Gazette"
-    left:
-      - text: "Blog"
-        file: index.qmd
-      - text: "Notebooks"
-        file: notebooks.qmd
-    tools:
+    right:
       - icon: rss
         href: index.xml
       - icon: github
@@ -41,14 +36,10 @@ website:
       - text: "Usage Stats"
         href: "https://plausible.io/syldavia-gazette.org"
     right:
-      - icon: rss
-        href: index.xml
       - icon: envelope
         href: mailto:info@front-matter.io
       - icon: mastodon 
         href: https://rogue-scholar.social/@syldavia_gazette 
-      - icon: github
-        href: https://github.com/front-matter/syldavia-gazette
 format:
   html:
     theme:

@@ -7,4 +7,70 @@ categories: ["digest"]
 image: "/images/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.webp"
 ---
 
-{{< embed ../../notebooks/digest-2023-11-29.ipynb#query echo=true >}}
+:::{.callout-tip collapse="true"}
+## This post finds Rogue Scholar blog posts published the last seven days using the Rogue Scholar API.
+
+* Results are filtered by posts published between `2023-11-22` and `2023-11-28` and `en` as language.
+* We retrieve the `title`, `authors`, `publication date`, `abstract`, `blog name`, `blog_slug`, and `doi`.
+* We sort the results in chronological order (oldest first).
+* We format the results and generate markdown output.
+:::
+
+```{python}
+import requests
+import locale
+import re
+from typing import Optional
+import datetime
+from IPython.display import Markdown
+
+locale.setlocale(locale.LC_ALL, "en_US")
+baseUrl = "https://api.rogue-scholar.org/"
+published_since = "2023-11-22"
+published_until = "2023-11-28"
+feature_image = 0
+include_fields = "title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"
+url = (
+    baseUrl
+    + f"posts?&published_since={published_since}&published_until={published_until}&language=en&sort=published_at&order=asc&per_page=50&include_fields={include_fields}"
+)
+response = requests.get(url)
+result = response.json()
+
+
+def get_post(post):
+    return post["document"]
+
+
+def format_post(post):
+    doi = post.get("doi", None)
+    url = f"[{doi}]({doi})\n<br />" if doi else ""
+    title = f"[{post['title']}]({doi})" if doi else f"[{post['title']}]({post['url']})"
+    published_at = datetime.datetime.utcfromtimestamp(post["published_at"]).strftime(
+        "%B %-d, %Y"
+    )
+    blog = f"[{post['blog_name']}](https://rogue-scholar.org/blogs/{post['blog_slug']})"
+    author = ", ".join([f"{x['name']}" for x in post.get("authors", None) or []])
+    summary = post["summary"]
+    return f"### {title}\n{url}Published {published_at} in {blog}<br />{author}<br />{summary}\n"
+
+
+posts = [get_post(x) for i, x in enumerate(result["hits"])]
+posts_as_string = "\n\n".join([format_post(x) for x in posts])
+
+def doi_from_url(url: str) -> Optional[str]:
+    """Return a DOI from a URL"""
+    match = re.search(
+        r"\A(?:(http|https)://(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.\d{4,5}/.+)\Z",
+        url,
+    )
+    if match is None:
+        return None
+    return match.group(5).lower()
+
+images = [x["image"] for x in posts if x.get("image", None) is not None]
+image = images[feature_image]
+markdown = f"![]({image})\n\n"
+markdown += posts_as_string
+Markdown(markdown)
+```
