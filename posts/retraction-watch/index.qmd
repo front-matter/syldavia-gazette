@@ -1,0 +1,33 @@
+---
+title: Retraction Watch
+description: |
+  This notebook finds Rogue Scholar blog posts about the Retraction Watch 
+  project using the Rogue Scholar API.
+date: "2023-11-10"
+image: "/images/photo-1552425083-0117136f7d67.jpeg"
+bibliography: references.json
+nocite: |
+  @*
+draft: true
+---
+
+## Introduction
+
+This notebook finds Rogue Scholar blog posts about the Retraction Watch project using the [Rogue Scholar API](https://api.rogue-scholar.org/posts). [Retraction Watch](https://retractionwatch.com/) reports on retractions of scientific papers. the project was started in 2010 by Ivan Oransky and Adam Marcus.
+
+:::{.callout-note}
+* We use the query `retraction watch`.
+* We limit results to posts published since `2010` (the year Retraction Watch launched) and `en` as language.
+* We retrieve the `title`, `authors`, `publication date`, `abstract`, `blog name`, `blog_slug`, and `doi`
+* We sort the results in reverse chronological order (newest first)
+:::
+
+## Results
+
+We found 22 blog posts mentioning `retraction watch` out of 10560 total posts, and ended up with 12 posts after manual curation:
+
+```{mermaid}
+flowchart LR
+  A[10560] -- Query: retraction watch --> B(22)
+  B -- Manual curation --> C(12)
+```

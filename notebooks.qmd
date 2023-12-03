@@ -1,8 +1,0 @@
----
-title: "Notebooks"
-listing:
-  contents: notebooks
-  sort: "date desc"
-  page-size: 10
-  type: default
----
