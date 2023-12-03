@@ -7,5 +7,4 @@ date-format: long
 format: 
   html:
     code-fold: true
-jupyter: python3
 csl: apa.csl

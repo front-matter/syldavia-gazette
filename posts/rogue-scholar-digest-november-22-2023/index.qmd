@@ -7,7 +7,6 @@ categories: ["digest"]
 image: "/images/OPEN_OR_OPEN.png"
 ---
 
-
 :::{.callout-tip collapse="true"}
 ## This post finds Rogue Scholar blog posts published the last seven days using the Rogue Scholar API.
 
