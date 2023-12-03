@@ -19,6 +19,7 @@ jobs:
           poetry-version: '1.7.1'
       - name: Install the project dependencies
         run: poetry install
+      - run: pip install jupyter 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
