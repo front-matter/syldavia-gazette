@@ -7,7 +7,7 @@ categories: ["digest"]
 image: "/images/OPEN_OR_OPEN.png"
 ---
 
-:::{.callout-tip collapse="true"}
+:::{.callout-tip}
 ## This post finds Rogue Scholar blog posts published the last seven days using the Rogue Scholar API.
 
 * Results are filtered by posts published between `2023-11-15` and `2023-11-21` and `en` as language.

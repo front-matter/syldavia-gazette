@@ -7,7 +7,7 @@ categories: ["digest"]
 image: "/images/STI2023-group-photo.jpg"
 ---
 
-:::{.callout-tip collapse="true"}
+:::{.callout-tip}
 ## This post finds Rogue Scholar blog posts published the last seven days using the Rogue Scholar API.
 
 * Results are filtered by posts published between `2023-11-22` and `2023-11-28` and `en` as language.

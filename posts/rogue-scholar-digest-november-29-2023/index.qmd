@@ -5,10 +5,11 @@ description: |
 date: 2023-11-29
 categories: ["digest"]
 image: "/images/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.webp"
-jupyter: python3
+execute: 
+  enabled: true
 ---
 
-:::{.callout-tip collapse="true"}
+:::{.callout-tip}
 ## This post finds Rogue Scholar blog posts published the last seven days using the Rogue Scholar API.
 
 * Results are filtered by posts published between `2023-11-22` and `2023-11-28` and `en` as language.
