@@ -5,10 +5,6 @@ description: |
 date: 2023-11-29
 categories: ["digest"]
 image: "/images/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.webp"
-format:
-  html:
-    code-fold: true
-jupyter: python3
 ---
 
 :::{.callout-tip}
