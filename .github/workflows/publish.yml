@@ -11,15 +11,13 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      - name: Install poetry
+        run: pipx install poetry
       - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - uses: abatilo/actions-poetry@v2
-        with:
-          poetry-version: '1.7.1'
-      - name: Install the project dependencies
-        run: poetry install
-      - run: pip install jupyter 
+          cache: 'poetry'
+      - run: poetry install
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
