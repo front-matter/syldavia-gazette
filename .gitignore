@@ -160,6 +160,5 @@ cython_debug/
 #.idea/
 
 /.quarto/
-/_site/
 .Rproj.user
 .Rhistory
