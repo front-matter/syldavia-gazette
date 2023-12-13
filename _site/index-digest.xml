@@ -26,7 +26,7 @@
 
 
 
-<div id="dfc2bfb3" class="cell" data-execution_count="1">
+<div id="145e3ed4" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
@@ -420,7 +420,7 @@ background-color: null;
 font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
 <p><a href="https://chrisvoncsefalvay.com/posts/academic-generative-ai/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://chrisvoncsefalvay.com/posts/academic-generative-ai/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp" class="img-fluid"></a></p>
 <section id="navigating-the-unseen-unveiling-the-scope-of-african-research-software-and-systems-engineering" class="level3">
 <h3 class="anchored" data-anchor-id="navigating-the-unseen-unveiling-the-scope-of-african-research-software-and-systems-engineering"><a href="https://doi.org/10.59350/48yxv-sr505">Navigating the Unseen: Unveiling the Scope of African Research Software and Systems Engineering</a></h3>
@@ -503,7 +503,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-december-13-2023/</guid>
   <pubDate>Tue, 12 Dec 2023 23:00:00 GMT</pubDate>
-  <media:content url="https://syldavia-gazette.org/images/photo-1533073526757-2c8ca1df9f1c.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="https://syldavia-gazette.org/images/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Rogue Scholar Digest December 6, 2023</title>

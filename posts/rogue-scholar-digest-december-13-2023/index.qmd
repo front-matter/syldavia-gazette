@@ -4,7 +4,7 @@ description: |
   This is a summary of the Rogue Scholar blog posts published December 6 - December 12, 2023.
 date: 2023-12-13
 categories: ["digest"]
-image: "/images/photo-1533073526757-2c8ca1df9f1c.jpeg"
+image: "/images/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp"
 ---
 
 ```{python}
