@@ -1,4 +1,4 @@
-author: 
+author:
   name: Martin Fenner
   affiliations: 
     - Front Matter
@@ -8,4 +8,3 @@ format:
     code-fold: true
 jupyter: python3
 notebook-links: false
-csl: apa.csl
