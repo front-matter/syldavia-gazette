@@ -1,10 +1,10 @@
 ---
-title: "Rogue Scholar Digest January 3, 2024"
+title: "Rogue Scholar Digest January 10, 2024"
 description: |
-  This is a summary of the Rogue Scholar blog posts published December 29, 2023 - January 2, 2023.
-date: 2024-01-03
+  This is a summary of the Rogue Scholar blog posts published January 3 - January 9, 2024.
+date: 2024-01-10
 categories: ["digest"]
-image: "/images/figure-2-rib-a.webp"
+image: "/images/bookcase.png"
 ---
 
 ```{python}
@@ -17,9 +17,9 @@ from IPython.display import Markdown
 
 locale.setlocale(locale.LC_ALL, "en_US")
 baseUrl = "https://api.rogue-scholar.org/"
-published_since = "2023-12-29"
-published_until = "2024-01-02"
-feature_image = 1
+published_since = "2024-01-03"
+published_until = "2024-01-09"
+feature_image = 4
 include_fields = "title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"
 url = (
     baseUrl

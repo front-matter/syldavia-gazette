@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Fenner">
-<meta name="dcterms.date" content="2024-01-03">
-<meta name="description" content="This is a summary of the Rogue Scholar blog posts published December 29, 2023 - January 2, 2023.">
+<meta name="dcterms.date" content="2024-01-10">
+<meta name="description" content="This is a summary of the Rogue Scholar blog posts published January 3 - January 9, 2024.">
 
-<title>Syldavia Gazette - Rogue Scholar Digest January 3, 2024</title>
+<title>Syldavia Gazette - Rogue Scholar Digest January 10, 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,10 +111,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest January 3, 2024">
-<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published December 29, 2023 - January 2, 2023.">
-<meta property="og:image" content="https://syldavia-gazette.org/images/figure-2-rib-a.webp">
+<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest January 10, 2024">
+<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published January 3 - January 9, 2024.">
+<meta property="og:image" content="https://syldavia-gazette.org/images/bookcase.png">
 <meta property="og:site_name" content="Syldavia Gazette">
+<meta property="og:image:height" content="808">
+<meta property="og:image:width" content="1444">
 </head>
 
 <body class="floating nav-fixed">
@@ -1051,7 +1053,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rogue Scholar Digest January 3, 2024</h1>
+<h1 class="title">Rogue Scholar Digest January 10, 2024</h1>
   <div class="quarto-categories">
     <div class="quarto-category">digest</div>
   </div>
@@ -1059,7 +1061,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    <p>This is a summary of the Rogue Scholar blog posts published December 29, 2023 - January 2, 2023.</p>
+    <p>This is a summary of the Rogue Scholar blog posts published January 3 - January 9, 2024.</p>
   </div>
 </div>
 
@@ -1083,7 +1085,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 3, 2024</p>
+      <p class="date">January 10, 2024</p>
     </div>
   </div>
   
@@ -1095,7 +1097,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="a6c76254" class="cell" data-execution_count="1">
+<div id="a7f3d6a1" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -1107,9 +1109,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>locale.setlocale(locale.LC_ALL, <span class="st">"en_US"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2023-12-29"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2024-01-02"</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2024-01-03"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2024-01-09"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    baseUrl</span>
@@ -1155,31 +1157,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>markdown <span class="op">+=</span> posts_as_string</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Markdown(markdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
-<p><a href="https://svpow.files.wordpress.com/2023/12/figure-2-rib-a.jpeg?w=480&amp;h=353" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://svpow.files.wordpress.com/2023/12/figure-2-rib-a.jpeg?w=480&amp;h=353" class="img-fluid"></a></p>
-<section id="molecules-of-the-year-2023-part-2.-a-fair-data-comment-on-a-strontium-metallocene." class="level3">
-<h3 class="anchored" data-anchor-id="molecules-of-the-year-2023-part-2.-a-fair-data-comment-on-a-strontium-metallocene."><a href="https://doi.org/10.59350/cvzze-k0171">Molecules of the year 2023 – part 2. A FAIR data comment on a Strontium Metallocene.</a></h3>
-<p><a href="https://doi.org/10.59350/cvzze-k0171">https://doi.org/10.59350/cvzze-k0171</a> <br>Published December 29, 2023 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>I will approach this example of a molecule-of-the-year candidate – in fact the eventual winner in the reader poll – from the point of view of data. Its a metallocene arranged in the form of a ring comprising 18 sub-units.[1] Big enough to deserve a 3D model rather than the static images you almost invariably get in journals (and C&amp;EN). So how does one go to the journal and acquire the coordinates for such a model?</p>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
+<p><a href="https://blog.front-matter.io/content/images/2024/01/bookcase.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.front-matter.io/content/images/2024/01/bookcase.png" class="img-fluid"></a></p>
+<section id="looking-back-on-the-norbornyl-cation" class="level3">
+<h3 class="anchored" data-anchor-id="looking-back-on-the-norbornyl-cation"><a href="https://doi.org/10.59350/h94q8-1cs70">Looking Back on the Norbornyl Cation</a></h3>
+<p><a href="https://doi.org/10.59350/h94q8-1cs70">https://doi.org/10.59350/h94q8-1cs70</a> <br>Published January 3, 2024 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>In this post, I’m trying something new and embedding calculations on Rowan alongside the text. You can view the structures and energies right in the page, or you can follow a link and view the full data in a new tab.</p>
 </section>
-<section id="the-ribs-of-brachiosaurus-stranger-than-you-thought" class="level3">
-<h3 class="anchored" data-anchor-id="the-ribs-of-brachiosaurus-stranger-than-you-thought"><a href="https://doi.org/10.59350/kyae8-p9k09">The ribs of <i>Brachiosaurus</i>: stranger than you thought</a></h3>
-<p><a href="https://doi.org/10.59350/kyae8-p9k09">https://doi.org/10.59350/kyae8-p9k09</a> <br>Published December 30, 2023 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>As we’ve often observed, it’s a funny thing that incredibly well-known dinosaur specimens can sit around for decades, or for more than a century, before someone notices something fascinating about them. One lesson to learn from this is the importance of collections — their creation, maintenance and accessibility.</p>
+<section id="tips-from-the-blog-xvi-getting-fasta-sequences" class="level3">
+<h3 class="anchored" data-anchor-id="tips-from-the-blog-xvi-getting-fasta-sequences"><a href="https://doi.org/10.59350/57w5w-bk852">Tips from the Blog XVI: getting FASTA sequences</a></h3>
+<p><a href="https://doi.org/10.59350/57w5w-bk852">https://doi.org/10.59350/57w5w-bk852</a> <br>Published January 4, 2024 in <a href="https://rogue-scholar.org/blogs/quantixed">quantixed</a><br>Stephen Royle<br>I am having some fun running AlphaPulldown on a computing cluster. A requirement is to have input sequences in FASTA format. I found that I needed to get ~600 sequences. I had a list of the relevant Uniprot IDs. Surely getting the sequences for these proteins should be straightforward? Solution The Uniprot IDs can be converted – using the ID Mapping Tool on the Uniprot website – into any number of other IDs.</p>
 </section>
-<section id="running-around-2023-running-dataviz-in-r" class="level3">
-<h3 class="anchored" data-anchor-id="running-around-2023-running-dataviz-in-r"><a href="https://doi.org/10.59350/mw56m-xhs52">Running Around: 2023 running dataviz in R</a></h3>
-<p><a href="https://doi.org/10.59350/mw56m-xhs52">https://doi.org/10.59350/mw56m-xhs52</a> <br>Published December 31, 2023 in <a href="https://rogue-scholar.org/blogs/quantixed">quantixed</a><br>Stephen Royle<br>2023 has been a great year in running for me. Previous running round-ups are here (2022, 2021). My two main goals for 2023 were to run 3000 km and also to run 50 HM-or-more distance runs. I managed both with a couple of weeks left. I also bagged new PBs for 5K, 10K and half marathon as well as a handful of segments on Strava. I won no races but I did win two little running competitions at work.</p>
+<section id="physical-organic-chemistry-alive-or-dead" class="level3">
+<h3 class="anchored" data-anchor-id="physical-organic-chemistry-alive-or-dead"><a href="https://doi.org/10.59350/5nybg-w2n59">Physical Organic Chemistry: Alive or Dead?</a></h3>
+<p><a href="https://doi.org/10.59350/5nybg-w2n59">https://doi.org/10.59350/5nybg-w2n59</a> <br>Published January 5, 2024 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>In Wednesday’s post, I wrote that “traditional physical organic chemistry is barely practiced today,” which attracted some controversy on X. Here are some responses: “POC has evolved in many directions and its concepts are widely used, e.g., in host-guest chem, org syn, materials sci, drug discovery.” -</p>
 </section>
-<section id="citation.js-2023-in-review" class="level3">
-<h3 class="anchored" data-anchor-id="citation.js-2023-in-review"><a href="https://doi.org/10.59350/n40n3-r6b47">Citation.js: 2023 in review</a></h3>
-<p><a href="https://doi.org/10.59350/n40n3-r6b47">https://doi.org/10.59350/n40n3-r6b47</a> <br>Published December 31, 2023 in <a href="https://rogue-scholar.org/blogs/syntaxus_baccata">Syntaxus baccata</a><br>Lars Willighagen<br>This past year was relatively quiet for Citation.js, as changes to the more prominent components (BibTeX, RIS, Wikidata) start to slow down. I believe this is a good sign, and that it indicates the quality of the mappings is high.</p>
+<section id="lair---language-as-intermediate-representation" class="level3">
+<h3 class="anchored" data-anchor-id="lair---language-as-intermediate-representation"><a href="https://doi.org/10.59350/qg7b3-crs97">LAIR - Language As Intermediate Representation</a></h3>
+<p><a href="https://doi.org/10.59350/qg7b3-crs97">https://doi.org/10.59350/qg7b3-crs97</a> <br>Published January 6, 2024 in <a href="https://rogue-scholar.org/blogs/chrisvoncsefalvay">Chris von Csefalvay</a><br>Chris von Csefalvay<br>The awesome thing about language is that, well, we all mostly speak it, to some extent or another. This gives us an immensely powerful tool to manipulate transformational tasks. For the purposes of this post, I consider a transformational task to be essentially anything that takes an input and is largel intended to return some version of the same thing. This is not a very precise definition, but it will have to do for now.</p>
 </section>
-<section id="books-for-2023" class="level3">
-<h3 class="anchored" data-anchor-id="books-for-2023"><a href="https://doi.org/10.59350/r4za3-n4562">Books for 2023</a></h3>
-<p><a href="https://doi.org/10.59350/r4za3-n4562">https://doi.org/10.59350/r4za3-n4562</a> <br>Published December 31, 2023 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>(Previously: 2022) #1. Tony Fadell, Build #2. Giff Constable, Talking To Humans #3. Ben Horowitz, The Hard Thing About Doing Hard Things #4. Dale Carnegie, How To Win Friends And Influence People Sounds Machiavellian, but actually quite wholesome: a “dad book,” as my friend called it.</p>
+<section id="every-rogue-scholar-blog-post-now-available-in-markdown-epub-and-pdf-formats" class="level3">
+<h3 class="anchored" data-anchor-id="every-rogue-scholar-blog-post-now-available-in-markdown-epub-and-pdf-formats"><a href="https://doi.org/10.53731/1dfxr-hs665">Every Rogue Scholar blog post now available in Markdown, ePub, and PDF formats</a></h3>
+<p><a href="https://doi.org/10.53731/1dfxr-hs665">https://doi.org/10.53731/1dfxr-hs665</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>The Rogue Scholar science blog archive starts 2024 with an important release: all blog posts (more than 13,000) are now available for download in Markdown, ePub, and PDF formats. This builds on work completed in December to store the full text of every Rogue Scholar blog post in Markdown format in the Rogue Scholar backend. Combined with the metadata in YAML format, these posts can now be downloaded via the Rogue Scholar API, e.g.</p>
 </section>
-<section id="large-language-publishing" class="level3">
-<h3 class="anchored" data-anchor-id="large-language-publishing"><a href="https://doi.org/10.54900/zg929-e9595">Large Language Publishing</a></h3>
-<p><a href="https://doi.org/10.54900/zg929-e9595">https://doi.org/10.54900/zg929-e9595</a> <br>Published January 2, 2024 in <a href="https://rogue-scholar.org/blogs/upstream">Upstream</a><br>Jeff Pooley<br><em> The New York Times </em> ushered in the New Year with a lawsuit against OpenAI and Microsoft. The paper covered the suit, fittingly, as a major business story.</p>
+<section id="return-to-and-of-the-ecology-blogosphere" class="level3">
+<h3 class="anchored" data-anchor-id="return-to-and-of-the-ecology-blogosphere"><a href="https://doi.org/10.59350/ftfvp-2yp03">Return to (and of?) the ecology blogosphere</a></h3>
+<p><a href="https://doi.org/10.59350/ftfvp-2yp03">https://doi.org/10.59350/ftfvp-2yp03</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/jabberwocky_ecology">Jabberwocky Ecology</a><br>Ethan White<br>We started Jabberwocky Ecology back in 2008 when blogs were becoming the dominant medium for informal (online) academic discussions.</p>
+</section>
+<section id="macrocyclic-peptide-antibiotics-now-zosurabalpin-then-antibacterial-agents-based-on-cyclic-dl-α-peptide-architectures." class="level3">
+<h3 class="anchored" data-anchor-id="macrocyclic-peptide-antibiotics-now-zosurabalpin-then-antibacterial-agents-based-on-cyclic-dl-α-peptide-architectures."><a href="https://doi.org/10.59350/fadrq-1x843">Macrocyclic peptide antibiotics – now Zosurabalpin – then antibacterial agents based on cyclic D,L-α-peptide architectures.</a></h3>
+<p><a href="https://doi.org/10.59350/fadrq-1x843">https://doi.org/10.59350/fadrq-1x843</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>Zosurabalbin[1],[2], is receiving a great deal of attention as a new class of antibiotic which can target infections for which&nbsp;current treatment options are inadequate.</p>
+</section>
+<section id="papers-for-md9a8-2024-edition" class="level3">
+<h3 class="anchored" data-anchor-id="papers-for-md9a8-2024-edition"><a href="https://doi.org/10.59350/wzzny-4hm48">Papers for MD9A8 – 2024 edition</a></h3>
+<p><a href="https://doi.org/10.59350/wzzny-4hm48">https://doi.org/10.59350/wzzny-4hm48</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/quantixed">quantixed</a><br>Stephen Royle<br>It is time for my annual post of the papers I selected for a module that I teach (MD9A8, the module formerly known as MD997). Previous selections are grouped&nbsp;here&nbsp;or&nbsp;here. <strong> The list serves as a snapshot of interesting papers published in the previous 12 months or so. </strong> I hope it is useful to others who are looking for lists of papers to read, for student selections or for anything else.</p>
+</section>
+<section id="some-sea-cucumbers-like-it-hot" class="level3">
+<h3 class="anchored" data-anchor-id="some-sea-cucumbers-like-it-hot"><a href="https://doi.org/10.59350/vf5xp-jfw28">Some sea cucumbers like it hot</a></h3>
+<p><a href="https://doi.org/10.59350/vf5xp-jfw28">https://doi.org/10.59350/vf5xp-jfw28</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Hans Zauner<br><strong> We start the new year with news from the deep, published in GigaScience: The genome of a sea cucumber, collected at a depth of 2400 m during a submarine trip to a hydrothermal vent, helps scientists to understand how marine animals can survive in extreme conditions. </strong> Hydrothermal vents are an unlikely environment for animals to flourish.</p>
+</section>
+<section id="research-software-alliance-community-report-2023" class="level3">
+<h3 class="anchored" data-anchor-id="research-software-alliance-community-report-2023"><a href="https://doi.org/10.59350/n4epb-gxm91">Research Software Alliance Community Report 2023</a></h3>
+<p><a href="https://doi.org/10.59350/n4epb-gxm91">https://doi.org/10.59350/n4epb-gxm91</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/researchsoft">Research Software Alliance</a><br>Research Software Alliance<br>January 2024 This downloadable report features ReSA’s engagement in 2023 with key decision makers and influencers involved with research software across the globe, as well as the broader research software community. Citation: Hartley, Kim &amp; Barker, Michelle (2024). Research Software Alliance Community Report 2023. Zenodo.</p>
+</section>
+<section id="rusting-away-or-packing-the-entire-crossref-database-into-a-sqlite-file" class="level3">
+<h3 class="anchored" data-anchor-id="rusting-away-or-packing-the-entire-crossref-database-into-a-sqlite-file"><a href="https://doi.org/10.59348/5tkbp-dpa74">Rusting Away (or: packing the entire Crossref database into a SQLite file)</a></h3>
+<p><a href="https://doi.org/10.59348/5tkbp-dpa74">https://doi.org/10.59348/5tkbp-dpa74</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/eve">Martin Paul Eve</a><br>Martin Paul Eve<br>Over the past few weeks I’ve been working to pack the entire Crossref database into a distributable SQLite file. While this sounds somewhat insane – the resulting file is 900GB – it’s quite a cool project for, say, embedded systems work in situations where no internet connection is available. It also provides speedy local indexed lookups, working faster than the internet-dependent API ever could.</p>
+</section>
+<section id="it-really-is-the-return-of-the-ecology-blogosphere" class="level3">
+<h3 class="anchored" data-anchor-id="it-really-is-the-return-of-the-ecology-blogosphere"><a href="https://doi.org/10.59350/abmvx-e2989">It really is the return of the ecology blogosphere!</a></h3>
+<p><a href="https://doi.org/10.59350/abmvx-e2989">https://doi.org/10.59350/abmvx-e2989</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/jabberwocky_ecology">Jabberwocky Ecology</a><br>Ethan White<br>After posting yesterday that we were ramping up the blog again, my RSS feed let me know that arguably the most impactful ecology blog of all time, Dynamic Ecology, was doing the same thing!</p>
+</section>
+<section id="regime-shift-cometh" class="level3">
+<h3 class="anchored" data-anchor-id="regime-shift-cometh"><a href="https://doi.org/10.59350/7bkhw-q2y44">Regime Shift Cometh?</a></h3>
+<p><a href="https://doi.org/10.59350/7bkhw-q2y44">https://doi.org/10.59350/7bkhw-q2y44</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/jabberwocky_ecology">Jabberwocky Ecology</a><br>Morgan Ernest<br>We’ve been studying how rodent communities change through time in the Arizona desert for 40 years. About once a decade we see a rapid change. Is the next one about to happen? It might be!</p>
+</section>
+<section id="an-interview-with-chuck-thorpe-on-cmu-operating-an-autonomous-vehicle-research-powerhouse" class="level3">
+<h3 class="anchored" data-anchor-id="an-interview-with-chuck-thorpe-on-cmu-operating-an-autonomous-vehicle-research-powerhouse"><a href="https://doi.org/10.59350/cqp6w-bq710">An Interview with Chuck Thorpe on CMU: Operating an autonomous vehicle research powerhouse</a></h3>
+<p><a href="https://doi.org/10.59350/cqp6w-bq710">https://doi.org/10.59350/cqp6w-bq710</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br><br>Listen now | The centerpiece of today’s post is an extensive interview with Chuck Thorpe. Thorpe, now President of Clarkson University, spent over two decades at Carnegie Mellon University. These years were largely spent as a student, project manager, and PI working on Carnegie Mellon’s autonomous vehicle vision research.</p>
 </section>
 </div>
 </div>
@@ -1763,7 +1797,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-3-january-2024/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-january-10-2024/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1782,7 +1816,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 

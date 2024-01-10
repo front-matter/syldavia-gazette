@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Fenner">
-<meta name="dcterms.date" content="2023-12-29">
-<meta name="description" content="This is a summary of the Rogue Scholar blog posts published December 21 - December 28, 2023.">
+<meta name="dcterms.date" content="2024-01-03">
+<meta name="description" content="This is a summary of the Rogue Scholar blog posts published December 29, 2023 - January 2, 2024.">
 
-<title>Syldavia Gazette - Rogue Scholar Digest December 29, 2023</title>
+<title>Syldavia Gazette - Rogue Scholar Digest January 3, 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,12 +111,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest December 29, 2023">
-<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published December 21 - December 28, 2023.">
-<meta property="og:image" content="https://syldavia-gazette.org/images/sti2023_header_2023-12-20-092141_bdrw.png">
+<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest January 3, 2024">
+<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published December 29, 2023 - January 2, 2024.">
+<meta property="og:image" content="https://syldavia-gazette.org/images/figure-2-rib-a.webp">
 <meta property="og:site_name" content="Syldavia Gazette">
-<meta property="og:image:height" content="300">
-<meta property="og:image:width" content="450">
 </head>
 
 <body class="floating nav-fixed">
@@ -1053,7 +1051,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rogue Scholar Digest December 29, 2023</h1>
+<h1 class="title">Rogue Scholar Digest January 3, 2024</h1>
   <div class="quarto-categories">
     <div class="quarto-category">digest</div>
   </div>
@@ -1061,7 +1059,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    <p>This is a summary of the Rogue Scholar blog posts published December 21 - December 28, 2023.</p>
+    <p>This is a summary of the Rogue Scholar blog posts published December 29, 2023 - January 2, 2024.</p>
   </div>
 </div>
 
@@ -1085,7 +1083,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 29, 2023</p>
+      <p class="date">January 3, 2024</p>
     </div>
   </div>
   
@@ -1097,7 +1095,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="3908d907" class="cell" data-execution_count="1">
+<div id="aee98424" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -1109,8 +1107,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>locale.setlocale(locale.LC_ALL, <span class="st">"en_US"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2023-12-21"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2023-12-28"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2023-12-29"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2024-01-02"</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
@@ -1157,47 +1155,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>markdown <span class="op">+=</span> posts_as_string</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Markdown(markdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<p><a href="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/sti2023_header_2023-12-20-092141_bdrw.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/sti2023_header_2023-12-20-092141_bdrw.png" class="img-fluid"></a></p>
-<section id="open-science-community-leiden-supports-researchequals" class="level3">
-<h3 class="anchored" data-anchor-id="open-science-community-leiden-supports-researchequals"><a href="https://doi.org/10.59350/14xbj-h0257">Open Science Community Leiden supports ResearchEquals</a></h3>
-<p><a href="https://doi.org/10.59350/14xbj-h0257">https://doi.org/10.59350/14xbj-h0257</a> <br>Published December 21, 2023 in <a href="https://rogue-scholar.org/blogs/libscie">Liberate Science</a><br>Chris Hartgerink<br>Open Science Community Leiden (OSCL), with assistance from Leiden University Library, is now a supporting member of ResearchEquals, sustaining and governing the development of modular publishing. OSCL joins as the fourth institutional supporter, alongside Tilburg University, KU Leuven, and VU Amsterdam.</p>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
+<p><a href="https://svpow.files.wordpress.com/2023/12/figure-2-rib-a.jpeg?w=480&amp;h=353" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://svpow.files.wordpress.com/2023/12/figure-2-rib-a.jpeg?w=480&amp;h=353" class="img-fluid"></a></p>
+<section id="molecules-of-the-year-2023-part-2.-a-fair-data-comment-on-a-strontium-metallocene." class="level3">
+<h3 class="anchored" data-anchor-id="molecules-of-the-year-2023-part-2.-a-fair-data-comment-on-a-strontium-metallocene."><a href="https://doi.org/10.59350/cvzze-k0171">Molecules of the year 2023 – part 2. A FAIR data comment on a Strontium Metallocene.</a></h3>
+<p><a href="https://doi.org/10.59350/cvzze-k0171">https://doi.org/10.59350/cvzze-k0171</a> <br>Published December 29, 2023 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>I will approach this example of a molecule-of-the-year candidate – in fact the eventual winner in the reader poll – from the point of view of data. Its a metallocene arranged in the form of a ring comprising 18 sub-units.[1] Big enough to deserve a 3D model rather than the static images you almost invariably get in journals (and C&amp;EN). So how does one go to the journal and acquire the coordinates for such a model?</p>
 </section>
-<section id="new-horizons-a-reflection-on-the-scientometrics-summer-school-and-the-sti-2023-conference" class="level3">
-<h3 class="anchored" data-anchor-id="new-horizons-a-reflection-on-the-scientometrics-summer-school-and-the-sti-2023-conference"><a href="https://www.leidenmadtrics.nl/articles/exploring-new-horizons-in-scientometrics-a-reflection-on-the-scientometrics-summer-school-and-sti-2023-conference">New Horizons: A reflection on the Scientometrics Summer School and the STI 2023 Conference</a></h3>
-<p>Published December 21, 2023 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>In September 2023, the city of Leiden in the Netherlands was the venue for not just one, but two scientometrics-related events: the CWTS Scientometrics Summer School and the STI 2023 conference. Our author attended both and reflects on his experience.</p>
+<section id="the-ribs-of-brachiosaurus-stranger-than-you-thought" class="level3">
+<h3 class="anchored" data-anchor-id="the-ribs-of-brachiosaurus-stranger-than-you-thought"><a href="https://doi.org/10.59350/kyae8-p9k09">The ribs of <i>Brachiosaurus</i>: stranger than you thought</a></h3>
+<p><a href="https://doi.org/10.59350/kyae8-p9k09">https://doi.org/10.59350/kyae8-p9k09</a> <br>Published December 30, 2023 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>As we’ve often observed, it’s a funny thing that incredibly well-known dinosaur specimens can sit around for decades, or for more than a century, before someone notices something fascinating about them. One lesson to learn from this is the importance of collections — their creation, maintenance and accessibility.</p>
 </section>
-<section id="how-i-gpt-it-development-of-custom-ai-chatbots-for-surgical-education" class="level3">
-<h3 class="anchored" data-anchor-id="how-i-gpt-it-development-of-custom-ai-chatbots-for-surgical-education"><a href="https://doi.org/10.59350/606fc-4cj20">How I GPT It: Development of Custom AI Chatbots for Surgical Education</a></h3>
-<p><a href="https://doi.org/10.59350/606fc-4cj20">https://doi.org/10.59350/606fc-4cj20</a> <br>Published December 21, 2023 in <a href="https://rogue-scholar.org/blogs/ideas">I.D.E.A.S.</a><br>Tejas S. Sathe<br>We are amidst a revolution in artificial intelligence (AI). In this paper, we aim to share our early experience with creating custom AI-powered chatbots in surgical education. While our versions are prototypes, we hypothesize that similar chatbots will one day play a significant role in the field. In brief, AI is the ability of a computer to perform human-like tasks.</p>
+<section id="running-around-2023-running-dataviz-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="running-around-2023-running-dataviz-in-r"><a href="https://doi.org/10.59350/mw56m-xhs52">Running Around: 2023 running dataviz in R</a></h3>
+<p><a href="https://doi.org/10.59350/mw56m-xhs52">https://doi.org/10.59350/mw56m-xhs52</a> <br>Published December 31, 2023 in <a href="https://rogue-scholar.org/blogs/quantixed">quantixed</a><br>Stephen Royle<br>2023 has been a great year in running for me. Previous running round-ups are here (2022, 2021). My two main goals for 2023 were to run 3000 km and also to run 50 HM-or-more distance runs. I managed both with a couple of weeks left. I also bagged new PBs for 5K, 10K and half marathon as well as a handful of segments on Strava. I won no races but I did win two little running competitions at work.</p>
 </section>
-<section id="ropensci-news-digest-december-2023" class="level3">
-<h3 class="anchored" data-anchor-id="ropensci-news-digest-december-2023"><a href="https://doi.org/10.59350/p9jf2-7d310">rOpenSci News Digest, December 2023</a></h3>
-<p><a href="https://doi.org/10.59350/p9jf2-7d310">https://doi.org/10.59350/p9jf2-7d310</a> <br>Published December 22, 2023 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>The rOpenSci Team<br>Dear rOpenSci friends, it’s time for our monthly news roundup! You can read this post on our blog.Now let’s dive into the activity at and around rOpenSci!rOpenSci HQ Reminder about giving season: consider donating to rOpenSci This Giving Season consider donating to rOpenSci to support our mission of empowering Open Science.</p>
+<section id="citation.js-2023-in-review" class="level3">
+<h3 class="anchored" data-anchor-id="citation.js-2023-in-review"><a href="https://doi.org/10.59350/n40n3-r6b47">Citation.js: 2023 in review</a></h3>
+<p><a href="https://doi.org/10.59350/n40n3-r6b47">https://doi.org/10.59350/n40n3-r6b47</a> <br>Published December 31, 2023 in <a href="https://rogue-scholar.org/blogs/syntaxus_baccata">Syntaxus baccata</a><br>Lars Willighagen<br>This past year was relatively quiet for Citation.js, as changes to the more prominent components (BibTeX, RIS, Wikidata) start to slow down. I believe this is a good sign, and that it indicates the quality of the mappings is high.</p>
 </section>
-<section id="a-look-back-at-2023" class="level3">
-<h3 class="anchored" data-anchor-id="a-look-back-at-2023"><a href="https://doi.org/10.59350/yyt3s-47966">A look back at 2023</a></h3>
-<p><a href="https://doi.org/10.59350/yyt3s-47966">https://doi.org/10.59350/yyt3s-47966</a> <br>Published December 22, 2023 in <a href="https://rogue-scholar.org/blogs/scidebug">Sci:Debug</a><br>Ulrich Herb<br>As the year nears its end, it’s time for a look back at 2023 … “look back.” by barbasia. is licensed under CC BY 2.0 My university job Summa cum Fraude In 2023, a project funded by the German Research Foundation (DFG) entitled Summa cum Fraude ended, which was dedicated to the question of how journals/publishers react to reports of obviously faked/erroneous publications – usually, soberingly, not at all.</p>
+<section id="books-for-2023" class="level3">
+<h3 class="anchored" data-anchor-id="books-for-2023"><a href="https://doi.org/10.59350/r4za3-n4562">Books for 2023</a></h3>
+<p><a href="https://doi.org/10.59350/r4za3-n4562">https://doi.org/10.59350/r4za3-n4562</a> <br>Published December 31, 2023 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>(Previously: 2022) #1. Tony Fadell, Build #2. Giff Constable, Talking To Humans #3. Ben Horowitz, The Hard Thing About Doing Hard Things #4. Dale Carnegie, How To Win Friends And Influence People Sounds Machiavellian, but actually quite wholesome: a “dad book,” as my friend called it.</p>
 </section>
-<section id="a-comics-grid-2023-submissions-update-and-seasons-greetings" class="level3">
-<h3 class="anchored" data-anchor-id="a-comics-grid-2023-submissions-update-and-seasons-greetings"><a href="https://doi.org/10.59350/s9ttr-abv05">A Comics Grid 2023 Submissions Update and Season’s Greetings</a></h3>
-<p><a href="https://doi.org/10.59350/s9ttr-abv05">https://doi.org/10.59350/s9ttr-abv05</a> <br>Published December 22, 2023 in <a href="https://rogue-scholar.org/blogs/ernestopriego">Everything is Connected</a><br>Ernesto Priego<br>I repeat and update on the journal’s news section and Comics Grid’s end-of-year newsletter and wish this blog’s readers happy holidays.</p>
-</section>
-<section id="strangford-lough-flora-an-update" class="level3">
-<h3 class="anchored" data-anchor-id="strangford-lough-flora-an-update"><a href="https://doi.org/10.59350/ejjk2-4ta37">Strangford Lough flora: an update</a></h3>
-<p><a href="https://doi.org/10.59350/ejjk2-4ta37">https://doi.org/10.59350/ejjk2-4ta37</a> <br>Published December 22, 2023 in <a href="https://rogue-scholar.org/blogs/irishplants">Irish Plants</a><br>Jake Dalzell<br>Since 2022 I have been recording the flora of some islands in Strangford Lough. I received a Plant Study Grant from the BSBI to work on this in the Summer of 2022 but as it turned out I had committed to a much bigger project than I first thought! I recently submitted my records and can now finally say I have finished my first large recording project.</p>
-</section>
-<section id="the-german-deal-contracts" class="level3">
-<h3 class="anchored" data-anchor-id="the-german-deal-contracts"><a href="https://doi.org/10.59350/vfqbq-13430">The German DEAL contracts</a></h3>
-<p><a href="https://doi.org/10.59350/vfqbq-13430">https://doi.org/10.59350/vfqbq-13430</a> <br>Published December 28, 2023 in <a href="https://rogue-scholar.org/blogs/scidebug">Sci:Debug</a><br>Ulrich Herb<br>As some people abroad were interested in my earlier posts on the German DEAL contracts, I have decided to summarise here some key points of the new contracts with Wiley, Springer Nature and Elsevier.</p>
-</section>
-<section id="molecules-of-the-year-2023" class="level3">
-<h3 class="anchored" data-anchor-id="molecules-of-the-year-2023"><a href="https://doi.org/10.59350/38f12-9qe48">Molecules of the year: 2023</a></h3>
-<p><a href="https://doi.org/10.59350/38f12-9qe48">https://doi.org/10.59350/38f12-9qe48</a> <br>Published December 28, 2023 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>The Science education unit at the ACS publication C&amp;EN publishes its list of molecules of the year (as selected by the editors and voted upon by the readers) in December. Here are some observations about three of this year’s batch. Diberyllocene[1] with its unusual Be-Be bond has already beeen covered on this blog.[2], where I commented that lithioborocene should be possible to make as well.</p>
-</section>
-<section id="three-new-userscripts-for-wikidata" class="level3">
-<h3 class="anchored" data-anchor-id="three-new-userscripts-for-wikidata"><a href="https://doi.org/10.59350/2nwnz-8h307">Three new userscripts for Wikidata</a></h3>
-<p><a href="https://doi.org/10.59350/2nwnz-8h307">https://doi.org/10.59350/2nwnz-8h307</a> <br>Published December 28, 2023 in <a href="https://rogue-scholar.org/blogs/syntaxus_baccata">Syntaxus baccata</a><br>Lars Willighagen<br>Today I worked on three user scripts for Wikidata. Together, these tools hopefully make the data in Wikidata more accessible and make it easier to navigate between items. To enable these, include one or more of the following lines in your common.js (depending on which script(s) you want): mw.loader.load(‘//www.wikidata.org/w/index.php?title=User:Lagewi/properties.js&amp;oldid=2039401177&amp;action=raw&amp;ctype=text/javascript’);</p>
+<section id="large-language-publishing" class="level3">
+<h3 class="anchored" data-anchor-id="large-language-publishing"><a href="https://doi.org/10.54900/zg929-e9595">Large Language Publishing</a></h3>
+<p><a href="https://doi.org/10.54900/zg929-e9595">https://doi.org/10.54900/zg929-e9595</a> <br>Published January 2, 2024 in <a href="https://rogue-scholar.org/blogs/upstream">Upstream</a><br>Jeff Pooley<br><em> The New York Times </em> ushered in the New Year with a lawsuit against OpenAI and Microsoft. The paper covered the suit, fittingly, as a major business story.</p>
 </section>
 </div>
 </div>
@@ -1781,7 +1763,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-december-29-2023/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-january-3-2024/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1800,7 +1782,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 

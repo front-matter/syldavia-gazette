@@ -16,17 +16,489 @@
 <link>https://syldavia-gazette.org/</link>
 </image>
 <generator>quarto-1.4.504</generator>
-<lastBuildDate>Tue, 02 Jan 2024 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 09 Jan 2024 23:00:00 GMT</lastBuildDate>
 <item>
-  <title>Rogue Scholar Digest January 3, 2024</title>
+  <title>Rogue Scholar Digest January 10, 2024</title>
   <dc:creator>Martin Fenner</dc:creator>
-  <link>https://syldavia-gazette.org/posts/rogue-scholar-digest-3-january-2024/</link>
+  <link>https://syldavia-gazette.org/posts/rogue-scholar-digest-january-10-2024/</link>
   <description><![CDATA[ 
 
 
 
 
-<div id="a6c76254" class="cell" data-execution_count="1">
+<div id="a7f3d6a1" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> requests</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> locale</span>
+<span id="cb1-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> re</span>
+<span id="cb1-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> typing <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Optional</span>
+<span id="cb1-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> datetime</span>
+<span id="cb1-6"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> IPython.display <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Markdown</span>
+<span id="cb1-7"></span>
+<span id="cb1-8">locale.setlocale(locale.LC_ALL, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"en_US"</span>)</span>
+<span id="cb1-9">baseUrl <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://api.rogue-scholar.org/"</span></span>
+<span id="cb1-10">published_since <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2024-01-03"</span></span>
+<span id="cb1-11">published_until <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2024-01-09"</span></span>
+<span id="cb1-12">feature_image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span>
+<span id="cb1-13">include_fields <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
+<span id="cb1-14">url <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (</span>
+<span id="cb1-15">    baseUrl</span>
+<span id="cb1-16">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"posts?&amp;published_since=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_since<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&amp;published_until=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_until<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&amp;language=en&amp;sort=published_at&amp;order=asc&amp;per_page=50&amp;include_fields=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>include_fields<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-17">)</span>
+<span id="cb1-18">response <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> requests.get(url)</span>
+<span id="cb1-19">result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> response.json()</span>
+<span id="cb1-20"></span>
+<span id="cb1-21"></span>
+<span id="cb1-22"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> get_post(post):</span>
+<span id="cb1-23">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"document"</span>]</span>
+<span id="cb1-24"></span>
+<span id="cb1-25"></span>
+<span id="cb1-26"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> format_post(post):</span>
+<span id="cb1-27">    doi <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> post.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"doi"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>)</span>
+<span id="cb1-28">    url <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> doi <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span></span>
+<span id="cb1-29">    title <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'title'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> doi <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'title'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'url'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span></span>
+<span id="cb1-30">    published_at <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> datetime.datetime.utcfromtimestamp(post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"published_at"</span>]).strftime(</span>
+<span id="cb1-31">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%B </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%-d</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">, %Y"</span></span>
+<span id="cb1-32">    )</span>
+<span id="cb1-33">    blog <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blog_name'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](https://rogue-scholar.org/blogs/</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blog_slug'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span></span>
+<span id="cb1-34">    author <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">", "</span>.join([<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>x[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'name'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> post.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"authors"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> []])</span>
+<span id="cb1-35">    summary <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"summary"</span>]</span>
+<span id="cb1-36">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"### </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>title<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>url<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">Published </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_at<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> in </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>blog<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>author<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>summary<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-37"></span>
+<span id="cb1-38"></span>
+<span id="cb1-39">posts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [get_post(x) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i, x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">enumerate</span>(result[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hits"</span>])]</span>
+<span id="cb1-40">posts_as_string <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>.join([format_post(x) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> posts])</span>
+<span id="cb1-41"></span>
+<span id="cb1-42"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> doi_from_url(url: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> Optional[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>]:</span>
+<span id="cb1-43">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""Return a DOI from a URL"""</span></span>
+<span id="cb1-44">    match <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> re.search(</span>
+<span id="cb1-45">        <span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">r"\A(?:(http|https)://(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.\d{4,5}/.+)\Z"</span>,</span>
+<span id="cb1-46">        url,</span>
+<span id="cb1-47">    )</span>
+<span id="cb1-48">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> match <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">is</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb1-49">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb1-50">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> match.group(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>).lower()</span>
+<span id="cb1-51"></span>
+<span id="cb1-52">images <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [x[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"image"</span>] <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> posts <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> x.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"image"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">is</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">not</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>]</span>
+<span id="cb1-53">image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> images[feature_image]</span>
+<span id="cb1-54">markdown <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"![](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>image<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-55">markdown <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> posts_as_string</span>
+<span id="cb1-56">Markdown(markdown)</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
+<p><a href="https://blog.front-matter.io/content/images/2024/01/bookcase.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.front-matter.io/content/images/2024/01/bookcase.png" class="img-fluid"></a></p>
+<section id="looking-back-on-the-norbornyl-cation" class="level3">
+<h3 class="anchored" data-anchor-id="looking-back-on-the-norbornyl-cation"><a href="https://doi.org/10.59350/h94q8-1cs70">Looking Back on the Norbornyl Cation</a></h3>
+<p><a href="https://doi.org/10.59350/h94q8-1cs70">https://doi.org/10.59350/h94q8-1cs70</a> <br>Published January 3, 2024 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>In this post, I’m trying something new and embedding calculations on Rowan alongside the text. You can view the structures and energies right in the page, or you can follow a link and view the full data in a new tab.</p>
+</section>
+<section id="tips-from-the-blog-xvi-getting-fasta-sequences" class="level3">
+<h3 class="anchored" data-anchor-id="tips-from-the-blog-xvi-getting-fasta-sequences"><a href="https://doi.org/10.59350/57w5w-bk852">Tips from the Blog XVI: getting FASTA sequences</a></h3>
+<p><a href="https://doi.org/10.59350/57w5w-bk852">https://doi.org/10.59350/57w5w-bk852</a> <br>Published January 4, 2024 in <a href="https://rogue-scholar.org/blogs/quantixed">quantixed</a><br>Stephen Royle<br>I am having some fun running AlphaPulldown on a computing cluster. A requirement is to have input sequences in FASTA format. I found that I needed to get ~600 sequences. I had a list of the relevant Uniprot IDs. Surely getting the sequences for these proteins should be straightforward? Solution The Uniprot IDs can be converted – using the ID Mapping Tool on the Uniprot website – into any number of other IDs.</p>
+</section>
+<section id="physical-organic-chemistry-alive-or-dead" class="level3">
+<h3 class="anchored" data-anchor-id="physical-organic-chemistry-alive-or-dead"><a href="https://doi.org/10.59350/5nybg-w2n59">Physical Organic Chemistry: Alive or Dead?</a></h3>
+<p><a href="https://doi.org/10.59350/5nybg-w2n59">https://doi.org/10.59350/5nybg-w2n59</a> <br>Published January 5, 2024 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>In Wednesday’s post, I wrote that “traditional physical organic chemistry is barely practiced today,” which attracted some controversy on X. Here are some responses: “POC has evolved in many directions and its concepts are widely used, e.g., in host-guest chem, org syn, materials sci, drug discovery.” -</p>
+</section>
+<section id="lair---language-as-intermediate-representation" class="level3">
+<h3 class="anchored" data-anchor-id="lair---language-as-intermediate-representation"><a href="https://doi.org/10.59350/qg7b3-crs97">LAIR - Language As Intermediate Representation</a></h3>
+<p><a href="https://doi.org/10.59350/qg7b3-crs97">https://doi.org/10.59350/qg7b3-crs97</a> <br>Published January 6, 2024 in <a href="https://rogue-scholar.org/blogs/chrisvoncsefalvay">Chris von Csefalvay</a><br>Chris von Csefalvay<br>The awesome thing about language is that, well, we all mostly speak it, to some extent or another. This gives us an immensely powerful tool to manipulate transformational tasks. For the purposes of this post, I consider a transformational task to be essentially anything that takes an input and is largel intended to return some version of the same thing. This is not a very precise definition, but it will have to do for now.</p>
+</section>
+<section id="every-rogue-scholar-blog-post-now-available-in-markdown-epub-and-pdf-formats" class="level3">
+<h3 class="anchored" data-anchor-id="every-rogue-scholar-blog-post-now-available-in-markdown-epub-and-pdf-formats"><a href="https://doi.org/10.53731/1dfxr-hs665">Every Rogue Scholar blog post now available in Markdown, ePub, and PDF formats</a></h3>
+<p><a href="https://doi.org/10.53731/1dfxr-hs665">https://doi.org/10.53731/1dfxr-hs665</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>The Rogue Scholar science blog archive starts 2024 with an important release: all blog posts (more than 13,000) are now available for download in Markdown, ePub, and PDF formats. This builds on work completed in December to store the full text of every Rogue Scholar blog post in Markdown format in the Rogue Scholar backend. Combined with the metadata in YAML format, these posts can now be downloaded via the Rogue Scholar API, e.g.</p>
+</section>
+<section id="return-to-and-of-the-ecology-blogosphere" class="level3">
+<h3 class="anchored" data-anchor-id="return-to-and-of-the-ecology-blogosphere"><a href="https://doi.org/10.59350/ftfvp-2yp03">Return to (and of?) the ecology blogosphere</a></h3>
+<p><a href="https://doi.org/10.59350/ftfvp-2yp03">https://doi.org/10.59350/ftfvp-2yp03</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/jabberwocky_ecology">Jabberwocky Ecology</a><br>Ethan White<br>We started Jabberwocky Ecology back in 2008 when blogs were becoming the dominant medium for informal (online) academic discussions.</p>
+</section>
+<section id="macrocyclic-peptide-antibiotics-now-zosurabalpin-then-antibacterial-agents-based-on-cyclic-dl-α-peptide-architectures." class="level3">
+<h3 class="anchored" data-anchor-id="macrocyclic-peptide-antibiotics-now-zosurabalpin-then-antibacterial-agents-based-on-cyclic-dl-α-peptide-architectures."><a href="https://doi.org/10.59350/fadrq-1x843">Macrocyclic peptide antibiotics – now Zosurabalpin – then antibacterial agents based on cyclic D,L-α-peptide architectures.</a></h3>
+<p><a href="https://doi.org/10.59350/fadrq-1x843">https://doi.org/10.59350/fadrq-1x843</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>Zosurabalbin[1],[2], is receiving a great deal of attention as a new class of antibiotic which can target infections for which&nbsp;current treatment options are inadequate.</p>
+</section>
+<section id="papers-for-md9a8-2024-edition" class="level3">
+<h3 class="anchored" data-anchor-id="papers-for-md9a8-2024-edition"><a href="https://doi.org/10.59350/wzzny-4hm48">Papers for MD9A8 – 2024 edition</a></h3>
+<p><a href="https://doi.org/10.59350/wzzny-4hm48">https://doi.org/10.59350/wzzny-4hm48</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/quantixed">quantixed</a><br>Stephen Royle<br>It is time for my annual post of the papers I selected for a module that I teach (MD9A8, the module formerly known as MD997). Previous selections are grouped&nbsp;here&nbsp;or&nbsp;here. <strong> The list serves as a snapshot of interesting papers published in the previous 12 months or so. </strong> I hope it is useful to others who are looking for lists of papers to read, for student selections or for anything else.</p>
+</section>
+<section id="some-sea-cucumbers-like-it-hot" class="level3">
+<h3 class="anchored" data-anchor-id="some-sea-cucumbers-like-it-hot"><a href="https://doi.org/10.59350/vf5xp-jfw28">Some sea cucumbers like it hot</a></h3>
+<p><a href="https://doi.org/10.59350/vf5xp-jfw28">https://doi.org/10.59350/vf5xp-jfw28</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Hans Zauner<br><strong> We start the new year with news from the deep, published in GigaScience: The genome of a sea cucumber, collected at a depth of 2400 m during a submarine trip to a hydrothermal vent, helps scientists to understand how marine animals can survive in extreme conditions. </strong> Hydrothermal vents are an unlikely environment for animals to flourish.</p>
+</section>
+<section id="research-software-alliance-community-report-2023" class="level3">
+<h3 class="anchored" data-anchor-id="research-software-alliance-community-report-2023"><a href="https://doi.org/10.59350/n4epb-gxm91">Research Software Alliance Community Report 2023</a></h3>
+<p><a href="https://doi.org/10.59350/n4epb-gxm91">https://doi.org/10.59350/n4epb-gxm91</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/researchsoft">Research Software Alliance</a><br>Research Software Alliance<br>January 2024 This downloadable report features ReSA’s engagement in 2023 with key decision makers and influencers involved with research software across the globe, as well as the broader research software community. Citation: Hartley, Kim &amp; Barker, Michelle (2024). Research Software Alliance Community Report 2023. Zenodo.</p>
+</section>
+<section id="rusting-away-or-packing-the-entire-crossref-database-into-a-sqlite-file" class="level3">
+<h3 class="anchored" data-anchor-id="rusting-away-or-packing-the-entire-crossref-database-into-a-sqlite-file"><a href="https://doi.org/10.59348/5tkbp-dpa74">Rusting Away (or: packing the entire Crossref database into a SQLite file)</a></h3>
+<p><a href="https://doi.org/10.59348/5tkbp-dpa74">https://doi.org/10.59348/5tkbp-dpa74</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/eve">Martin Paul Eve</a><br>Martin Paul Eve<br>Over the past few weeks I’ve been working to pack the entire Crossref database into a distributable SQLite file. While this sounds somewhat insane – the resulting file is 900GB – it’s quite a cool project for, say, embedded systems work in situations where no internet connection is available. It also provides speedy local indexed lookups, working faster than the internet-dependent API ever could.</p>
+</section>
+<section id="it-really-is-the-return-of-the-ecology-blogosphere" class="level3">
+<h3 class="anchored" data-anchor-id="it-really-is-the-return-of-the-ecology-blogosphere"><a href="https://doi.org/10.59350/abmvx-e2989">It really is the return of the ecology blogosphere!</a></h3>
+<p><a href="https://doi.org/10.59350/abmvx-e2989">https://doi.org/10.59350/abmvx-e2989</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/jabberwocky_ecology">Jabberwocky Ecology</a><br>Ethan White<br>After posting yesterday that we were ramping up the blog again, my RSS feed let me know that arguably the most impactful ecology blog of all time, Dynamic Ecology, was doing the same thing!</p>
+</section>
+<section id="regime-shift-cometh" class="level3">
+<h3 class="anchored" data-anchor-id="regime-shift-cometh"><a href="https://doi.org/10.59350/7bkhw-q2y44">Regime Shift Cometh?</a></h3>
+<p><a href="https://doi.org/10.59350/7bkhw-q2y44">https://doi.org/10.59350/7bkhw-q2y44</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/jabberwocky_ecology">Jabberwocky Ecology</a><br>Morgan Ernest<br>We’ve been studying how rodent communities change through time in the Arizona desert for 40 years. About once a decade we see a rapid change. Is the next one about to happen? It might be!</p>
+</section>
+<section id="an-interview-with-chuck-thorpe-on-cmu-operating-an-autonomous-vehicle-research-powerhouse" class="level3">
+<h3 class="anchored" data-anchor-id="an-interview-with-chuck-thorpe-on-cmu-operating-an-autonomous-vehicle-research-powerhouse"><a href="https://doi.org/10.59350/cqp6w-bq710">An Interview with Chuck Thorpe on CMU: Operating an autonomous vehicle research powerhouse</a></h3>
+<p><a href="https://doi.org/10.59350/cqp6w-bq710">https://doi.org/10.59350/cqp6w-bq710</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br><br>Listen now | The centerpiece of today’s post is an extensive interview with Chuck Thorpe. Thorpe, now President of Clarkson University, spent over two decades at Carnegie Mellon University. These years were largely spent as a student, project manager, and PI working on Carnegie Mellon’s autonomous vehicle vision research.</p>
+</section>
+</div>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>digest</category>
+  <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-january-10-2024/</guid>
+  <pubDate>Tue, 09 Jan 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://syldavia-gazette.org/images/bookcase.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>Rogue Scholar Digest January 3, 2024</title>
+  <dc:creator>Martin Fenner</dc:creator>
+  <link>https://syldavia-gazette.org/posts/rogue-scholar-digest-january-3-2024/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div id="aee98424" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
@@ -420,7 +892,7 @@ background-color: null;
 font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
 <p><a href="https://svpow.files.wordpress.com/2023/12/figure-2-rib-a.jpeg?w=480&amp;h=353" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://svpow.files.wordpress.com/2023/12/figure-2-rib-a.jpeg?w=480&amp;h=353" class="img-fluid"></a></p>
 <section id="molecules-of-the-year-2023-part-2.-a-fair-data-comment-on-a-strontium-metallocene." class="level3">
 <h3 class="anchored" data-anchor-id="molecules-of-the-year-2023-part-2.-a-fair-data-comment-on-a-strontium-metallocene."><a href="https://doi.org/10.59350/cvzze-k0171">Molecules of the year 2023 – part 2. A FAIR data comment on a Strontium Metallocene.</a></h3>
@@ -453,7 +925,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
-  <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-3-january-2024/</guid>
+  <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-january-3-2024/</guid>
   <pubDate>Tue, 02 Jan 2024 23:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/figure-2-rib-a.webp" medium="image" type="image/webp"/>
 </item>
