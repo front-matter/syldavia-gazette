@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Fenner">
-<meta name="dcterms.date" content="2023-11-29">
-<meta name="description" content="This is a summary of the Rogue Scholar blog posts published since November 22, 2023.">
+<meta name="dcterms.date" content="2024-01-17">
+<meta name="description" content="This is a summary of the Rogue Scholar blog posts published January 10 - January 16, 2024.">
 
-<title>Syldavia Gazette - Rogue Scholar Digest November 29, 2023</title>
+<title>Syldavia Gazette - Rogue Scholar Digest January 17, 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,10 +111,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest November 29, 2023">
-<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published since November 22, 2023.">
-<meta property="og:image" content="https://syldavia-gazette.org/images/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.webp">
+<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest January 17, 2024">
+<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published January 10 - January 16, 2024.">
+<meta property="og:image" content="https://syldavia-gazette.org/images/Untitled-1024x614.png">
 <meta property="og:site_name" content="Syldavia Gazette">
+<meta property="og:image:height" content="614">
+<meta property="og:image:width" content="1024">
 </head>
 
 <body class="floating nav-fixed">
@@ -1051,7 +1053,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rogue Scholar Digest November 29, 2023</h1>
+<h1 class="title">Rogue Scholar Digest January 17, 2024</h1>
   <div class="quarto-categories">
     <div class="quarto-category">digest</div>
   </div>
@@ -1059,7 +1061,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    <p>This is a summary of the Rogue Scholar blog posts published since November 22, 2023.</p>
+    <p>This is a summary of the Rogue Scholar blog posts published January 10 - January 16, 2024.</p>
   </div>
 </div>
 
@@ -1083,7 +1085,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 29, 2023</p>
+      <p class="date">January 17, 2024</p>
     </div>
   </div>
   
@@ -1095,25 +1097,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-This post finds Rogue Scholar blog posts published the last seven days using the Rogue Scholar API.
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Results are filtered by posts published between <code>2023-11-22</code> and <code>2023-11-28</code> and <code>en</code> as language.</li>
-<li>We retrieve the <code>title</code>, <code>authors</code>, <code>publication date</code>, <code>abstract</code>, <code>blog name</code>, <code>blog_slug</code>, and <code>doi</code>.</li>
-<li>We sort the results in chronological order (oldest first).</li>
-<li>We format the results and generate markdown output.</li>
-</ul>
-</div>
-</div>
-<div id="2812989b" class="cell" data-execution_count="1">
+<div id="7f05fa37" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -1125,9 +1109,9 @@ This post finds Rogue Scholar blog posts published the last seven days using the
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>locale.setlocale(locale.LC_ALL, <span class="st">"en_US"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2023-11-22"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2023-11-28"</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2024-01-10"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2024-01-16"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    baseUrl</span>
@@ -1174,54 +1158,90 @@ This post finds Rogue Scholar blog posts published the last seven days using the
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Markdown(markdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<p><a href="https://epriego.files.wordpress.com/2021/01/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.jpg?w=656" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://epriego.files.wordpress.com/2021/01/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.jpg?w=656" class="img-fluid"></a></p>
-<section id="uk-covid-inquiry-eoho-hate-to-say-we-told-you-so" class="level3">
-<h3 class="anchored" data-anchor-id="uk-covid-inquiry-eoho-hate-to-say-we-told-you-so"><a href="https://doi.org/10.59350/ckhj4-ty439">UK Covid Inquiry: EOHO, Hate to Say We Told You So</a></h3>
-<p><a href="https://doi.org/10.59350/ckhj4-ty439">https://doi.org/10.59350/ckhj4-ty439</a> <br>Published November 22, 2023 in <a href="https://rogue-scholar.org/blogs/ernestopriego">Everything is Connected</a><br>Ernesto Priego<br>Eat Out to Help Out reversed social distancing guidance and contributed to a second Covid wave. Hate to say we told you so.</p>
+<p><a href="https://bjoern.brembs.net/wp/wp-content/uploads/2024/01/Untitled-1024x614.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://bjoern.brembs.net/wp/wp-content/uploads/2024/01/Untitled-1024x614.png" class="img-fluid"></a></p>
+<section id="evolutionary-biology-goes-asia-the-3rd-asiaevo-conference" class="level3">
+<h3 class="anchored" data-anchor-id="evolutionary-biology-goes-asia-the-3rd-asiaevo-conference"><a href="https://doi.org/10.59350/y7w78-b1m95">Evolutionary Biology goes Asia: the 3rd AsiaEvo Conference</a></h3>
+<p><a href="https://doi.org/10.59350/y7w78-b1m95">https://doi.org/10.59350/y7w78-b1m95</a> <br>Published January 10, 2024 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Chris Hunter<br>The group photo of most of the participants at AsiaEvo 2023. In the beginning <em> GigaScience </em> was at the first AsiaEvo conference, which took place in Shenzhen, China in 2019.</p>
 </section>
-<section id="rogue-scholar-updates-guids-and-fields-of-science" class="level3">
-<h3 class="anchored" data-anchor-id="rogue-scholar-updates-guids-and-fields-of-science"><a href="https://doi.org/10.53731/fy5gh-g0w69">Rogue Scholar updates: GUIDs and fields of science</a></h3>
-<p><a href="https://doi.org/10.53731/fy5gh-g0w69">https://doi.org/10.53731/fy5gh-g0w69</a> <br>Published November 22, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>The Rogue Scholar science blog archive launched two new features today: GUIDs (globally unique identifiers) and support for OECD Fields of Science and Technology. Globally unique identifiers (GUIDs) GUIDs are used to globally identify a blog post and are part of the RSS, Atom, and JSON Feed specifications.</p>
+<section id="the-papermill-alarm" class="level3">
+<h3 class="anchored" data-anchor-id="the-papermill-alarm"><a href="https://doi.org/10.59350/pac0v-vc203">The Papermill Alarm</a></h3>
+<p><a href="https://doi.org/10.59350/pac0v-vc203">https://doi.org/10.59350/pac0v-vc203</a> <br>Published January 10, 2024 in <a href="https://rogue-scholar.org/blogs/clearskiesadam">Stories by Adam Day on Medium</a><br>Adam Day<br>There’s this phrase used by some technologists: ‘epistemic security’. Epistemic security has to do with things like the spreading of misinformation on social media. I.e. if we spend enough time on social media reading unreliable information, how does that influence us? That’s a matter of epistemic security. Epistemic security is interesting because if you start a conversation about epistemic security at a party, they don’t invite you&nbsp;back.</p>
 </section>
-<section id="jstor-generative-ai-pilot---or-is-semantic-search-coming-for-academic-databases" class="level3">
-<h3 class="anchored" data-anchor-id="jstor-generative-ai-pilot---or-is-semantic-search-coming-for-academic-databases"><a href="https://doi.org/10.59350/d6m23-vk771">JSTOR generative AI pilot - Or is Semantic Search coming for academic databases?</a></h3>
-<p><a href="https://doi.org/10.59350/d6m23-vk771">https://doi.org/10.59350/d6m23-vk771</a> <br>Published November 22, 2023 in <a href="https://rogue-scholar.org/blogs/musings">Aaron Tay’s Musings about librarianship</a><br>Aaron Tay<br>A decade ago in 2012, I observed how the dominance of Google had slowly affected how Academic databases and OPACs/ catalogues (now discovery services) work.</p>
+<section id="every-rogue-scholar-blog-post-now-also-available-in-jats-xml-format" class="level3">
+<h3 class="anchored" data-anchor-id="every-rogue-scholar-blog-post-now-also-available-in-jats-xml-format"><a href="https://doi.org/10.53731/3w1ye-q6z42">Every Rogue Scholar blog post now also available in JATS XML format</a></h3>
+<p><a href="https://doi.org/10.53731/3w1ye-q6z42">https://doi.org/10.53731/3w1ye-q6z42</a> <br>Published January 10, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>On Monday the Rogue Scholar science blog archive added support for exporting the blog posts in various formats: markdown, ePub, and PDF. Today I am adding another export format: JATS XML, the standard format for scholarly articles. JATS is again automatically generated with the Pandoc universal document converter, with some initial tweaks of the Rogue Scholar metadata.</p>
 </section>
-<section id="introducing-the-cwts-focal-area-engagement-and-inclusion-a-vision-and-roadmap" class="level3">
-<h3 class="anchored" data-anchor-id="introducing-the-cwts-focal-area-engagement-and-inclusion-a-vision-and-roadmap"><a href="https://www.leidenmadtrics.nl/articles/introducing-the-cwts-focal-area-engagement-and-inclusion-a-vision-and-roadmap">Introducing the CWTS Focal Area Engagement and Inclusion: A vision and roadmap</a></h3>
-<p>Published November 23, 2023 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>The new Focal Area Engagement &amp; Inclusion at CWTS aims to create a more diverse, inclusive and engaging science ecosystem. This blogpost introduces our main vision and roadmap for the future. We welcome any person or organisation interested in these topics to reach out to us!To develop our CWTS knowledge agenda we formed three focal areas at the start of this year to organise our activities.</p>
+<section id="type-i-error-rates-are-not-usually-inflated" class="level3">
+<h3 class="anchored" data-anchor-id="type-i-error-rates-are-not-usually-inflated"><a href="https://doi.org/10.59350/88njp-0d573">Type I Error Rates are Not Usually Inflated</a></h3>
+<p><a href="https://doi.org/10.59350/88njp-0d573">https://doi.org/10.59350/88njp-0d573</a> <br>Published January 11, 2024 in <a href="https://rogue-scholar.org/blogs/markrubin">Critical Metascience</a><br>Mark Rubin<br>The inflation of Type I error rates is thought to be one of the causes of the replication crisis. Questionable research practices such as p-hacking are thought to inflate Type I error rates above their nominal level, leading to unexpectedly high levels of false positives in the literature and, consequently, unexpectedly low replication rates. In this article, I offer an alternative view.</p>
 </section>
-<section id="ropensci-news-digest-november-2023" class="level3">
-<h3 class="anchored" data-anchor-id="ropensci-news-digest-november-2023"><a href="https://doi.org/10.59350/e961a-yxp83">rOpenSci News Digest, November 2023</a></h3>
-<p><a href="https://doi.org/10.59350/e961a-yxp83">https://doi.org/10.59350/e961a-yxp83</a> <br>Published November 24, 2023 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>The rOpenSci Team<br>Dear rOpenSci friends, it’s time for our monthly news roundup! You can read this post on our blog.Now let’s dive into the activity at and around rOpenSci!rOpenSci HQ Giving season: consider donating to rOpenSci This Giving Season consider donating to rOpenSci to support our mission of empowering Open Science.</p>
+<section id="the-speed-or-lack-thereof-of-science" class="level3">
+<h3 class="anchored" data-anchor-id="the-speed-or-lack-thereof-of-science"><a href="https://doi.org/10.59350/nktxq-g6v29">The speed (or lack thereof) of science</a></h3>
+<p><a href="https://doi.org/10.59350/nktxq-g6v29">https://doi.org/10.59350/nktxq-g6v29</a> <br>Published January 11, 2024 in <a href="https://rogue-scholar.org/blogs/brembs">bjoern.brembs.blog</a><br>Björn Brembs<br>It was my freshman year, 1991. I was enthusiastic to finally be learning about biology, after being forced to waste a year in the German army’s compulsory service at the time. Little did I know that it was the same year a research paper was published that would guide the direction of my career to this day, more than 30 years later. Many of the links in this post will go to old web pages I created while learning about this research.</p>
 </section>
-<section id="rogue-scholar-updates-documentation-and-comments" class="level3">
-<h3 class="anchored" data-anchor-id="rogue-scholar-updates-documentation-and-comments"><a href="https://doi.org/10.53731/7qcr3-0m590">Rogue Scholar updates: documentation and comments</a></h3>
-<p><a href="https://doi.org/10.53731/7qcr3-0m590">https://doi.org/10.53731/7qcr3-0m590</a> <br>Published November 24, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Shortly following an update earlier this week, the Rogue Scholar science blog archive has updated or added two features today: better documentation and new comments.Documentation The Rogue Scholar documentation site was launched with the service but hasn’t seen any updates in several months. Today I updated the platforms page, explaining what blogging platforms are used by the blogs participating in Rogue Scholar and how they are integrated.</p>
+<section id="ropensci-2023-code-of-conduct-transparency-report" class="level3">
+<h3 class="anchored" data-anchor-id="ropensci-2023-code-of-conduct-transparency-report"><a href="https://doi.org/10.59350/k1t8d-pem58">rOpenSci 2023 Code of Conduct Transparency Report</a></h3>
+<p><a href="https://doi.org/10.59350/k1t8d-pem58">https://doi.org/10.59350/k1t8d-pem58</a> <br>Published January 12, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Yanina Bellini Saibene, Mark Padgham, Kara Woo<br>The rOpenSci community is supported by our Code of Conduct with a clear description of unacceptable behaviors,instructions on how to make a report, and information on how reports are handled. We, the Code of Conduct Committee,are responsible for receiving, investigating, deciding, enforcing and reporting on all reports of potentialviolations of our Code.</p>
 </section>
-<section id="book-review-working-backwards" class="level3">
-<h3 class="anchored" data-anchor-id="book-review-working-backwards"><a href="https://doi.org/10.59350/16tt5-31h26">Book Review: Working Backwards</a></h3>
-<p><a href="https://doi.org/10.59350/16tt5-31h26">https://doi.org/10.59350/16tt5-31h26</a> <br>Published November 25, 2023 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>I took a pistol course in undergrad, and while I was a poor marksman I enjoyed the experience. In particular, I was surprised by how meditative the act of shooting was. As our instructor explained, much of good shooting comes down to not doing anything when you pull the trigger.</p>
+<section id="diy-api-with-make-and-plumber" class="level3">
+<h3 class="anchored" data-anchor-id="diy-api-with-make-and-plumber"><a href="https://doi.org/10.59350/pe5s8-e0f47">DIY API with Make and {plumber}</a></h3>
+<p><a href="https://doi.org/10.59350/pe5s8-e0f47">https://doi.org/10.59350/pe5s8-e0f47</a> <br>Published January 12, 2024 in <a href="https://rogue-scholar.org/blogs/andrewheiss">Andrew Heiss’s blog</a><br>Andrew Heiss<br><i> </i> Complete tutorial and code See the full tutorial here. You can also see the tutorial’s code here and the code for the final API here.</p>
 </section>
-<section id="a-new-revolutionary-workflow-for-a-unified-collection-of-citations-say-hello-to-the-opencitations-index" class="level3">
-<h3 class="anchored" data-anchor-id="a-new-revolutionary-workflow-for-a-unified-collection-of-citations-say-hello-to-the-opencitations-index"><a href="https://doi.org/10.59350/r0rjh-a4885">A new revolutionary workflow for a unified collection of citations: say hello to the OpenCitations Index</a></h3>
-<p><a href="https://doi.org/10.59350/r0rjh-a4885">https://doi.org/10.59350/r0rjh-a4885</a> <br>Published November 27, 2023 in <a href="https://rogue-scholar.org/blogs/opencitations">OpenCitations blog</a><br>Chiara Di Giambattista<br><em> Blog post by Ivan Heibi (University of Bologna), Arianna Moretti (University of Bologna) and Chiara Di Giambattista (University of Bologna). </em> In the past five years, the OpenCitations data has been enriched with numerous new indexes of open citation data from different sources.</p>
+<section id="opportunism-helpfulness-disappointment-persistence-the-genesis-of-the-brachiosaurus-rib-paper" class="level3">
+<h3 class="anchored" data-anchor-id="opportunism-helpfulness-disappointment-persistence-the-genesis-of-the-brachiosaurus-rib-paper"><a href="https://doi.org/10.59350/94e75-sw667">Opportunism, helpfulness, disappointment, persistence: the genesis of the <i>Brachiosaurus</i> rib paper</a></h3>
+<p><a href="https://doi.org/10.59350/94e75-sw667">https://doi.org/10.59350/94e75-sw667</a> <br>Published January 12, 2024 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>Just a quick post about the genesis of the Brachiosaurus rib paper (Taylor and Wedel 2023) that I wrote about at the very end of last year. Although this is in some respects a minor paper, I’m fond of it because it fell into place so quickly and easily.</p>
 </section>
-<section id="a-simple-old-school-paper-about-bifurcated-cervical-ribs" class="level3">
-<h3 class="anchored" data-anchor-id="a-simple-old-school-paper-about-bifurcated-cervical-ribs"><a href="https://doi.org/10.59350/wm7d1-tb814">A simple, old-school paper about bifurcated cervical ribs</a></h3>
-<p><a href="https://doi.org/10.59350/wm7d1-tb814">https://doi.org/10.59350/wm7d1-tb814</a> <br>Published November 27, 2023 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>Everybody(<em>) knows that the turiasaurian sauropod Moabosaurus has bifurcated cervical ribs: it was all anyone was talking about back when that animal was described (Britt et al.&nbsp;2017). We’ve featured the best rib here before, and here it is again: (</em>) All right, but you know what I mean.</p>
+<section id="scholarly-journals-vs-scholarly-blogs." class="level3">
+<h3 class="anchored" data-anchor-id="scholarly-journals-vs-scholarly-blogs."><a href="https://doi.org/10.59350/yt66x-pe726">Scholarly journals vs Scholarly Blogs.</a></h3>
+<p><a href="https://doi.org/10.59350/yt66x-pe726">https://doi.org/10.59350/yt66x-pe726</a> <br>Published January 12, 2024 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>First, a very brief history of scholarly publishing, starting in 1665[1] when scientific journals started to be published by learned societies. This model continued until the 1950s, when commercial publishers such as Pergamon Press started with their USP (unique selling point) of rapid time to publication of ~3 months,[2] compared to typical times for many learned society publishers of 2 years or longer.</p>
 </section>
-<section id="our-2022-emission-estimates" class="level3">
-<h3 class="anchored" data-anchor-id="our-2022-emission-estimates"><a href="https://doi.org/10.59350/p4e8v-kmt48">Our 2022 emission estimates</a></h3>
-<p><a href="https://doi.org/10.59350/p4e8v-kmt48">https://doi.org/10.59350/p4e8v-kmt48</a> <br>Published November 28, 2023 in <a href="https://rogue-scholar.org/blogs/libscie">Liberate Science</a><br>Liberate Science<br>The climate crisis demands immediate action, in order to prevent every bit of warming we can. Organizations are big emitters, because they consume, spend, and grow — a lot. All of those economic activities are strongly coupled with emissions. We do our emission assessments because that information is key to taking informed action. Our previous assessments in 2019, 2020, and 2021 already influenced our equipment policy and event policy.</p>
+<section id="improved-pdf-formatted-rogue-scholar-blog-posts" class="level3">
+<h3 class="anchored" data-anchor-id="improved-pdf-formatted-rogue-scholar-blog-posts"><a href="https://doi.org/10.53731/mndd9-1d509">Improved PDF-formatted Rogue Scholar blog posts</a></h3>
+<p><a href="https://doi.org/10.53731/mndd9-1d509">https://doi.org/10.53731/mndd9-1d509</a> <br>Published January 12, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>On Monday the Rogue Scholar science blog archive launched the export of blog posts in PDF and other formats. Over the last few days I have been busy improving the PDF output, and today I am releasing a new version, available for all the more than 13K science blog posts archived by Rogue Scholar. The PDF is generated using the open source Pandoc universal document converter in combination with the Weasyprint library.</p>
 </section>
-<section id="fair-data-digest-22" class="level3">
-<h3 class="anchored" data-anchor-id="fair-data-digest-22"><a href="https://doi.org/10.59350/ph09x-ncj11">FAIR Data Digest #22</a></h3>
-<p><a href="https://doi.org/10.59350/ph09x-ncj11">https://doi.org/10.59350/ph09x-ncj11</a> <br>Published November 28, 2023 in <a href="https://rogue-scholar.org/blogs/fairdata">FAIR Data Digest</a><br>Sven Lieber<br>How I solved data integration performance problems by rewriting SPARQL queries or changing the approach. Food for thought that might help you too!</p>
+<section id="a-decade-of-fair-what-happens-next-qa-on-fair-workflows-with-the-netherlands-x-omics-initiative" class="level3">
+<h3 class="anchored" data-anchor-id="a-decade-of-fair-what-happens-next-qa-on-fair-workflows-with-the-netherlands-x-omics-initiative"><a href="https://doi.org/10.59350/ps8tw-rpk77">A Decade of FAIR – what happens next? Q&amp;A on FAIR workflows with the Netherlands X-omics Initiative</a></h3>
+<p><a href="https://doi.org/10.59350/ps8tw-rpk77">https://doi.org/10.59350/ps8tw-rpk77</a> <br>Published January 13, 2024 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Scott Edmunds<br><em> Marking the 10 <sup> th </sup> anniversary of the formulation of the FAIR principles, we have one of our GigaBlog Q&amp;A’s with </em> <em> Peter-Bram ’t Hoen, Alain van Gool, </em> <em> Anna Niehues and Casper de Visser </em> <em> from the Netherlands X-omics Initiative and Radboud University Medical Center in </em> <em> Nijmegen, authors of a new paper on publishing FAIR workflows. </em></p>
 </section>
-<section id="what-dorsal-processes-on-cervical-ribs-tell-us-about-neck-muscles-and-their-functions" class="level3">
-<h3 class="anchored" data-anchor-id="what-dorsal-processes-on-cervical-ribs-tell-us-about-neck-muscles-and-their-functions"><a href="https://doi.org/10.59350/ehs80-z5462">What dorsal processes on cervical ribs tell us about neck muscles and their functions</a></h3>
-<p><a href="https://doi.org/10.59350/ehs80-z5462">https://doi.org/10.59350/ehs80-z5462</a> <br>Published November 28, 2023 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Matt Wedel<br>Here are some cervical ribs of sauropods that show a spectrum of morphologies, from a low dorsal process that makes an obtuse angle with the shaft of the rib in Dicraeosaurus (upper right), to one that makes a right angle in Brontosaurus (center), to a prominent spike of bone in Apatosaurus (bottom left), to a […]</p>
+<section id="r-universe-now-builds-macos-arm64-binaries-for-use-on-apple-silicon-aka-m1m2m3-systems" class="level3">
+<h3 class="anchored" data-anchor-id="r-universe-now-builds-macos-arm64-binaries-for-use-on-apple-silicon-aka-m1m2m3-systems"><a href="https://doi.org/10.59350/6vc6t-0xw03">R-universe now builds MacOS ARM64 binaries for use on Apple Silicon (aka M1/M2/M3) systems</a></h3>
+<p><a href="https://doi.org/10.59350/6vc6t-0xw03">https://doi.org/10.59350/6vc6t-0xw03</a> <br>Published January 14, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Jeroen Ooms<br>Abstract / TLDR R-universe now provides MacOS arm64 binaries for all R packages.</p>
+</section>
+<section id="on-rheumatoid-arthritis-and-the-things-most-people-dont-know-about-it" class="level3">
+<h3 class="anchored" data-anchor-id="on-rheumatoid-arthritis-and-the-things-most-people-dont-know-about-it"><a href="https://doi.org/10.59348/n4bg4-zaj76">On Rheumatoid Arthritis and the Things Most People Don’t Know About It</a></h3>
+<p><a href="https://doi.org/10.59348/n4bg4-zaj76">https://doi.org/10.59348/n4bg4-zaj76</a> <br>Published January 14, 2024 in <a href="https://rogue-scholar.org/blogs/eve">Martin Paul Eve</a><br>Martin Paul Eve<br>I have suffered from rheumatoid arthritis (RA) for almost twenty years now, which is almost half my life. If I had known back at the start of my diagnosis what I know now, I do not know for sure that things would be very different, but there was a heck of a lot I did not know. How complex is this disease and the things it does? This complex: “Rheumatoid arthritis” sounds like the sort of disease that old people get that isn’t very serious.</p>
+</section>
+<section id="scopus-caught-out-and-shirking-responsibility" class="level3">
+<h3 class="anchored" data-anchor-id="scopus-caught-out-and-shirking-responsibility"><a href="https://doi.org/10.59350/dc6zg-vk273">Scopus: caught-out and shirking responsibility</a></h3>
+<p><a href="https://doi.org/10.59350/dc6zg-vk273">https://doi.org/10.59350/dc6zg-vk273</a> <br>Published January 14, 2024 in <a href="https://rogue-scholar.org/blogs/rossmounce">A blog by Ross Mounce</a><br>Ross Mounce<br>In December last year, it was widely publicized e.g.&nbsp;in <em> Science </em> magazine [1], that Scopus has been instrumental in legitimizing publication scams whereby authors pay to bypass real scholarly peer review and have their work published on a website that looks like a real scholarly journal but is in fact not a proper journal, merely an impersonation of one.</p>
+</section>
+<section id="how-to-update-a-translation-with-babeldown" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-update-a-translation-with-babeldown"><a href="https://doi.org/10.59350/3w9fd-8d411">How to Update a Translation with Babeldown</a></h3>
+<p><a href="https://doi.org/10.59350/3w9fd-8d411">https://doi.org/10.59350/3w9fd-8d411</a> <br>Published January 16, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Maëlle Salmon<br>As part of rOpenSci’s multilingual publishing project <sup> 1 </sup> , we have been developing the babeldown R package, for translating Markdown-based content using the DeepL API.</p>
+</section>
+<section id="starting-at-data.org" class="level3">
+<h3 class="anchored" data-anchor-id="starting-at-data.org"><a href="https://doi.org/10.59350/5a08g-z5214">Starting at data.org</a></h3>
+<p><a href="https://doi.org/10.59350/5a08g-z5214">https://doi.org/10.59350/5a08g-z5214</a> <br>Published January 16, 2024 in <a href="https://rogue-scholar.org/blogs/chjh">Chris Hartgerink</a><br>Chris Hartgerink<br>In October, I shared I started to look for a regular job — last week, I started as a senior software engineer for data.org until end of 2025. In this role, I will be contributing to digital public goods using data for social impact.</p>
+</section>
+<section id="need-for-consistent-and-uniform-guidelines-regarding-the-use-and-disclosure-of-ai-generated-scholarly-content" class="level3">
+<h3 class="anchored" data-anchor-id="need-for-consistent-and-uniform-guidelines-regarding-the-use-and-disclosure-of-ai-generated-scholarly-content"><a href="https://doi.org/10.54900/sdgvx-tty28">Need for Consistent and Uniform Guidelines Regarding the Use and Disclosure of AI-generated Scholarly Content</a></h3>
+<p><a href="https://doi.org/10.54900/sdgvx-tty28">https://doi.org/10.54900/sdgvx-tty28</a> <br>Published January 16, 2024 in <a href="https://rogue-scholar.org/blogs/upstream">Upstream</a><br>Uttkarsha Bhosale, Gayatri Phadke, Anupama Kapadia<br>As we witness the ever-evolving landscape of technology, we realize that artificial intelligence (AI) is not just a buzzword anymore; it’s a reality that is already leading to transformation in how scholarly research is published and disseminated.</p>
+</section>
+<section id="improving-rogue-scholar-metadata-conversions" class="level3">
+<h3 class="anchored" data-anchor-id="improving-rogue-scholar-metadata-conversions"><a href="https://doi.org/10.53731/n4vfp-nwb08">Improving Rogue Scholar metadata conversions</a></h3>
+<p><a href="https://doi.org/10.53731/n4vfp-nwb08">https://doi.org/10.53731/n4vfp-nwb08</a> <br>Published January 16, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Last week the Rogue Scholar science blog archive added export of blog post content in various formats (Markdown, ePub, PDF, JATS XML). This week Rogue Scholar is improving the existing metadata export, and adding metadata export in Schema.org JSON-LD format.</p>
+</section>
+<section id="years-of-citcom-ellipsis-and-underworld" class="level3">
+<h3 class="anchored" data-anchor-id="years-of-citcom-ellipsis-and-underworld"><a href="https://doi.org/10.59350/hsp06-ag431">30 Years of Citcom, Ellipsis and Underworld</a></h3>
+<p><a href="https://doi.org/10.59350/hsp06-ag431">https://doi.org/10.59350/hsp06-ag431</a> <br>Published January 16, 2024 in <a href="https://rogue-scholar.org/blogs/underworldcode">Underworld Geodynamics Community</a><br>Louis Moresi<br>CITCOM is a geodynamics modelling code based on the finite element method that is designed for planetary evolution modelling where large spatial variations and strong non-linearities occur in the material properties.</p>
+</section>
+<section id="how-has-the-carpentries-made-an-impact-on-me" class="level3">
+<h3 class="anchored" data-anchor-id="how-has-the-carpentries-made-an-impact-on-me"><a href="https://doi.org/10.59350/r9pph-19985">How has The Carpentries made an impact (on me)</a></h3>
+<p><a href="https://doi.org/10.59350/r9pph-19985">https://doi.org/10.59350/r9pph-19985</a> <br>Published January 16, 2024 in <a href="https://rogue-scholar.org/blogs/jabberwocky_ecology">Jabberwocky Ecology</a><br>Ethan White<br>What impact did The Carpentries have on me? As a learner, it taught me most of my essential day-to-day computational tools. As an Instructor, it changed how I teach, allowing me to reach more students including those that need help the most. As an organiser, it taught me skills that are essential to collaborating and to managing teams. As a creator, it taught me how to hand off the work to the next leg in the never-ending relay race.</p>
+</section>
+<section id="understanding-misinformation-and-science-in-societal-debates" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-misinformation-and-science-in-societal-debates"><a href="https://www.leidenmadtrics.nl/articles/understanding-misinformation-and-science-in-societal-debates">Understanding Misinformation and Science in Societal Debates</a></h3>
+<p>Published January 16, 2024 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>In a new research project, we explore the interaction between misinformation and science on social media during COVID-19. This is part of the new research line on the role of science in societal debates of our Focal Area Engagement &amp; Inclusion. The past years have shown that science can play an important role in societal debates. Science was clearly pivotal in the development of COVID-19 vaccines.</p>
 </section>
 </div>
 </div>
@@ -1805,7 +1825,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-november-29-2023/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-january-17-2024/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1824,7 +1844,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 
