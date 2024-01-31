@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Fenner">
-<meta name="dcterms.date" content="2023-12-13">
-<meta name="description" content="This is a summary of the Rogue Scholar blog posts published December 6 - December 12, 2023.">
+<meta name="dcterms.date" content="2024-01-31">
+<meta name="description" content="This is a summary of the Rogue Scholar blog posts published January 24 - January 30, 2024.">
 
-<title>Syldavia Gazette - Rogue Scholar Digest December 13, 2023</title>
+<title>Syldavia Gazette - Rogue Scholar Digest January 31, 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,10 +112,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest December 13, 2023">
-<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published December 6 - December 12, 2023.">
-<meta property="og:image" content="https://syldavia-gazette.org/images/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp">
+<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest January 31, 2024">
+<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published January 24 - January 30, 2024.">
+<meta property="og:image" content="https://syldavia-gazette.org/images/1_Gzmbpq5qJUz2W1zpHd1XGA.png">
 <meta property="og:site_name" content="Syldavia Gazette">
+<meta property="og:image:height" content="585">
+<meta property="og:image:width" content="1024">
 </head>
 
 <body class="floating nav-fixed">
@@ -1052,7 +1054,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rogue Scholar Digest December 13, 2023</h1>
+<h1 class="title">Rogue Scholar Digest January 31, 2024</h1>
   <div class="quarto-categories">
     <div class="quarto-category">digest</div>
   </div>
@@ -1060,7 +1062,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    <p>This is a summary of the Rogue Scholar blog posts published December 6 - December 12, 2023.</p>
+    <p>This is a summary of the Rogue Scholar blog posts published January 24 - January 30, 2024.</p>
   </div>
 </div>
 
@@ -1084,7 +1086,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 13, 2023</p>
+      <p class="date">January 31, 2024</p>
     </div>
   </div>
   
@@ -1096,7 +1098,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="145e3ed4" class="cell" data-execution_count="1">
+<div id="bd7c32fa" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -1108,8 +1110,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>locale.setlocale(locale.LC_ALL, <span class="st">"en_US"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2023-12-06"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2023-12-12"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2024-01-24"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2024-01-30"</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
@@ -1156,83 +1158,83 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>markdown <span class="op">+=</span> posts_as_string</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Markdown(markdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
 <div>
 <figure class="figure">
-<p><a href="https://chrisvoncsefalvay.com/posts/academic-generative-ai/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://chrisvoncsefalvay.com/posts/academic-generative-ai/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp" class="img-fluid figure-img"></a></p>
+<p><a href="https://cdn-images-1.medium.com/max/1024/1*Gzmbpq5qJUz2W1zpHd1XGA.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://cdn-images-1.medium.com/max/1024/1*Gzmbpq5qJUz2W1zpHd1XGA.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<section id="navigating-the-unseen-unveiling-the-scope-of-african-research-software-and-systems-engineering" class="level3">
-<h3 class="anchored" data-anchor-id="navigating-the-unseen-unveiling-the-scope-of-african-research-software-and-systems-engineering"><a href="https://doi.org/10.59350/48yxv-sr505">Navigating the Unseen: Unveiling the Scope of African Research Software and Systems Engineering</a></h3>
-<p><a href="https://doi.org/10.59350/48yxv-sr505">https://doi.org/10.59350/48yxv-sr505</a> <br>Published December 6, 2023 in <a href="https://rogue-scholar.org/blogs/researchsoft">Research Software Alliance</a><br>Anelda Van der Walt<br>Participants of the first Research Software Indaba held in Cape Town, South Africa in May 2023. <em> (Photo credit: Noxolo Chalale) </em> By Anelda Van der Walt (Director, Talarify) 6 December 2023 The African continent is home to some of the world’s most significant multi-country research projects.</p>
+<section id="an-open-approach-for-classifying-research-publications" class="level3">
+<h3 class="anchored" data-anchor-id="an-open-approach-for-classifying-research-publications"><a href="https://www.leidenmadtrics.nl/articles/an-open-approach-for-classifying-research-publications">An open approach for classifying research publications</a></h3>
+<p>Published January 24, 2024 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>In this post Nees Jan van Eck and Ludo Waltman introduce an open approach for classifying research publications, contributing to a broader development toward open approaches to bibliometrics.Classifying research publications into research topics or research areas is crucial for many bibliometric analyses. While there are lots of approaches for classifying publications, most of these approaches lack transparency.</p>
 </section>
-<section id="stochastic-parrots-cap-and-gown-edition" class="level3">
-<h3 class="anchored" data-anchor-id="stochastic-parrots-cap-and-gown-edition"><a href="https://doi.org/10.59350/412q0-sbn89">Stochastic parrots, cap and gown edition</a></h3>
-<p><a href="https://doi.org/10.59350/412q0-sbn89">https://doi.org/10.59350/412q0-sbn89</a> <br>Published December 6, 2023 in <a href="https://rogue-scholar.org/blogs/chrisvoncsefalvay">Chris von Csefalvay</a><br>Chris von Csefalvay<br>It’s not every day that you find out you have climbed the exalted heights of another discipline. My work is pretty interdisciplinary, but it shocked me, too, that I’m apparently holding forth on neoliberalism and the epistemic question in African universities (archive link): Figure&nbsp;1: Apparently, I’m commenting on neoliberalism in African universities.</p>
+<section id="josscast-2-astronomy-in-the-open-dr.-taylor-james-bell-on-eureka" class="level3">
+<h3 class="anchored" data-anchor-id="josscast-2-astronomy-in-the-open-dr.-taylor-james-bell-on-eureka"><a href="https://doi.org/10.59349/hg16v-pxx10">JOSSCast #2: Astronomy in the Open – Dr.&nbsp;Taylor James Bell on Eureka!</a></h3>
+<p><a href="https://doi.org/10.59349/hg16v-pxx10">https://doi.org/10.59349/hg16v-pxx10</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/joss">Journal of Open Source Software Blog |</a><br>Arfon M. Smith<br><strong> Subscribe Now: </strong> Apple, Spotify, YouTube, Stitcher In this episode of Open Source for Researchers hosts Abby and Arfon explore the world of open source software in astronomy with Dr.&nbsp;Taylor James Bell, a BAER Institute postdoc at NASA Ames. Eureka! is an end-to-end pipeline designed for JWST (James Webb Space Telescope) time series observations.</p>
 </section>
-<section id="googles-search-generative-experience-sge-is-now-available-in-120-countres.-what-you-need-to-know" class="level3">
-<h3 class="anchored" data-anchor-id="googles-search-generative-experience-sge-is-now-available-in-120-countres.-what-you-need-to-know"><a href="https://doi.org/10.59350/cmexr-nyv90">Google’s Search Generative Experience (SGE) is now available in 120+ countres. What you need to know</a></h3>
-<p><a href="https://doi.org/10.59350/cmexr-nyv90">https://doi.org/10.59350/cmexr-nyv90</a> <br>Published December 7, 2023 in <a href="https://rogue-scholar.org/blogs/musings">Aaron Tay’s Musings about librarianship</a><br>Aaron Tay<br>Note: This is a lightly edited piece of something I wrote for my institution <strong> What is Google’s Search Generative Experience (SGE)? </strong> In past ResearchRadar pieces, we have discussed about how search engines both general (e.g.&nbsp;Bing Chat, Perplexity) and academic (e.g Elicit, Scite Assistant, Scopus (upcoming)) are integrating search with generative AI (via Large Language Models) using techniques like RAG (Retrieval Augmented</p>
+<section id="introducing-josscast-open-source-for-researchers" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-josscast-open-source-for-researchers"><a href="https://doi.org/10.59349/96nng-1rg33">Introducing JOSSCast: Open Source for Researchers 🎉</a></h3>
+<p><a href="https://doi.org/10.59349/96nng-1rg33">https://doi.org/10.59349/96nng-1rg33</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/joss">Journal of Open Source Software Blog |</a><br>Arfon M. Smith<br><strong> Subscribe Now: </strong> Apple, Spotify, YouTube, Stitcher We’re thrilled to announce the launch of “JOSSCast: Open Source for Researchers” - a podcast exploring new ways open source can accelerate your work. Hosted by Arfon Smith and Abby Cabunoc Mayes, each episode features an interview with different authors of published papers in JOSS. There are 3 episodes available for you to listen to today!</p>
 </section>
-<section id="a-trip-down-memory-lane-an-online-departmental-connection-map-from-1989." class="level3">
-<h3 class="anchored" data-anchor-id="a-trip-down-memory-lane-an-online-departmental-connection-map-from-1989."><a href="https://doi.org/10.59350/85xp6-2sy65">A trip down memory lane: An online departmental connection map from 1989.</a></h3>
-<p><a href="https://doi.org/10.59350/85xp6-2sy65">https://doi.org/10.59350/85xp6-2sy65</a> <br>Published December 7, 2023 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>In 2023, we very much take for granted that everyone and pretty much everything is online. But it was not always so and when I came across an old plan indicating how the chemistry department at Imperial College was connected in 1989, I was struck by how much has happened in the 34 years since. Nowadays all the infrastructures needed are effectively “built in” to the building when it is constructed and few are even aware of them.</p>
+<section id="josscast-1-eva-maxfield-brown-on-speakerbox-open-source-speaker-identification-for-political-science" class="level3">
+<h3 class="anchored" data-anchor-id="josscast-1-eva-maxfield-brown-on-speakerbox-open-source-speaker-identification-for-political-science"><a href="https://doi.org/10.59349/h0hf5-w2786">JOSSCast #1: Eva Maxfield Brown on Speakerbox – Open Source Speaker Identification for Political Science</a></h3>
+<p><a href="https://doi.org/10.59349/h0hf5-w2786">https://doi.org/10.59349/h0hf5-w2786</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/joss">Journal of Open Source Software Blog |</a><br>Arfon M. Smith<br><strong> Subscribe Now: </strong> Apple, Spotify, YouTube, Stitcher In the first episode of Open Source for Researchers, hosts Arfon and Abby sit down with Eva Maxfield Brown to discuss Speakerbox, an open source speaker identification tool. Originally part of the Council Data Project, Speakerbox was used to train models to identify city council members speaking in transcripts, starting with cities like Seattle.</p>
 </section>
-<section id="documentation-documentation-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="documentation-documentation-documentation"><a href="https://doi.org/10.53731/fgyjr-hg721">Documentation, documentation, documentation</a></h3>
-<p><a href="https://doi.org/10.53731/fgyjr-hg721">https://doi.org/10.53731/fgyjr-hg721</a> <br>Published December 7, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Writing software is more than writing code – good documentation is one essential aspect. A lot of the tools and libraries that make writing documentation easier use markdown as a file format, combined with metadata in yaml format and optionally some additional functionality, e.g.&nbsp;mdx – which combines markdown with jsx for JSX-based projects such as React.</p>
+<section id="ropensci-news-digest-january-2024" class="level3">
+<h3 class="anchored" data-anchor-id="ropensci-news-digest-january-2024"><a href="https://doi.org/10.59350/jps9f-gsh89">rOpenSci News Digest, January 2024</a></h3>
+<p><a href="https://doi.org/10.59350/jps9f-gsh89">https://doi.org/10.59350/jps9f-gsh89</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>The rOpenSci Team<br>Dear rOpenSci friends, it’s time for our monthly news roundup! You can read this post on our blog.Now let’s dive into the activity at and around rOpenSci!rOpenSci HQ R-Universe The R-Universe now builds MacOS ARM64 binaries for use on Apple Silicon (aka M1/M2/M3) systems! Find out more in the related tech note.Coworking Read all about coworking in our recent post! Join us for social coworking &amp;</p>
 </section>
-<section id="make-or-buy-decisions-in-research-and-research-software" class="level3">
-<h3 class="anchored" data-anchor-id="make-or-buy-decisions-in-research-and-research-software"><a href="https://doi.org/10.59350/6q2e5-hhs87">Make-or-buy decisions in research and research software</a></h3>
-<p><a href="https://doi.org/10.59350/6q2e5-hhs87">https://doi.org/10.59350/6q2e5-hhs87</a> <br>Published December 7, 2023 in <a href="https://rogue-scholar.org/blogs/danielskatz">Daniel S. Katz’s blog</a><br>Daniel S. Katz<br>Make-or-buy decisions are common in business and research. They often involve an analysis of the pros and cons of creating something (e.g., a physical item, software, a service) vs.&nbsp;acquiring it from someone else.</p>
+<section id="mini-rag-using-neo4j" class="level3">
+<h3 class="anchored" data-anchor-id="mini-rag-using-neo4j"><a href="https://doi.org/10.59350/4hcyx-g4j10">Mini RAG using Neo4j</a></h3>
+<p><a href="https://doi.org/10.59350/4hcyx-g4j10">https://doi.org/10.59350/4hcyx-g4j10</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Research Graph</a><br>Research Graph<br>Authors: Nakul Nambiar, Amir&nbsp;Aryani Knowledge graphs, which offer a structured representation of data and its relationships, are revolutionising how we organise and access information. With large amounts of data, it sometimes becomes difficult to draw insights from it. This blog article examines how to combine Neo4j, a graph database, with OpenAI’s Retrieval-Augmented Generation (RAG) model to build a robust knowledge management system.</p>
 </section>
-<section id="how-sauropods-increased-the-size-of-ventral-neck-muscles" class="level3">
-<h3 class="anchored" data-anchor-id="how-sauropods-increased-the-size-of-ventral-neck-muscles"><a href="https://doi.org/10.59350/7ppge-gpg13">How sauropods increased the size of ventral neck muscles</a></h3>
-<p><a href="https://doi.org/10.59350/7ppge-gpg13">https://doi.org/10.59350/7ppge-gpg13</a> <br>Published December 8, 2023 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>Last time I promised you exciting news about sauropod neck-muscle mass. Let none say that I do not fulfil covenents. And, as usual, when talking about sauropod neck muscle mass, I’m going to start by talking about bird legs. Look at this flamingo: Ridiculous, right? Those legs are like matchsticks. How can they possibly work.</p>
+<section id="adding-automated-end-to-end-testing-to-rogue-scholar" class="level3">
+<h3 class="anchored" data-anchor-id="adding-automated-end-to-end-testing-to-rogue-scholar"><a href="https://doi.org/10.53731/bxgh0-dhj87">Adding automated end-to-end testing to Rogue Scholar</a></h3>
+<p><a href="https://doi.org/10.53731/bxgh0-dhj87">https://doi.org/10.53731/bxgh0-dhj87</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Last week I reported a small change to the Rogue Scholar science blog submission form. By asking for the homepage URL of the blog instead of the feed URL, I hope to make it easier for users to register their blog. At the same time, I fixed a bug in the submission form, caused by an issue with the database backend. Unfortunately, that bug fix didn’t work as expected.</p>
 </section>
-<section id="brief-thoughts-on-qualitative-and-quantitative-projects" class="level3">
-<h3 class="anchored" data-anchor-id="brief-thoughts-on-qualitative-and-quantitative-projects"><a href="https://doi.org/10.59350/tpx31-qby94">Brief thoughts on qualitative and quantitative projects</a></h3>
-<p><a href="https://doi.org/10.59350/tpx31-qby94">https://doi.org/10.59350/tpx31-qby94</a> <br>Published December 10, 2023 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>Back in the first post about our recent paper on bifurcated cervical ribs in apatosaurines, I noted: I’m fond of this one because it’s pleasingly low-tech and traditional.</p>
+<section id="the-macintosh-computer-at-40." class="level3">
+<h3 class="anchored" data-anchor-id="the-macintosh-computer-at-40."><a href="https://doi.org/10.59350/f11dr-93t29">The Macintosh computer at 40.</a></h3>
+<p><a href="https://doi.org/10.59350/f11dr-93t29">https://doi.org/10.59350/f11dr-93t29</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>On 24th January 1984, the Macintosh computer was released, as all the media are informing us. Apparently, some are still working. I thought I would give my own personal recollections of that period. In fact, the Mac reached UK stores via a dealership only in 1985.</p>
 </section>
-<section id="the-journey-from-journal-esi-to-fair-data-objects-an-eighteen-year-old-continuing-experiment." class="level3">
-<h3 class="anchored" data-anchor-id="the-journey-from-journal-esi-to-fair-data-objects-an-eighteen-year-old-continuing-experiment."><a href="https://doi.org/10.59350/g2p77-78m14">The journey from Journal “ESI” to FAIR data objects: An eighteen year old (continuing) experiment.</a></h3>
-<p><a href="https://doi.org/10.59350/g2p77-78m14">https://doi.org/10.59350/g2p77-78m14</a> <br>Published December 10, 2023 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>Around 1996, journals started publishing what became known as “ESI” or electronic supporting information, alongside the articles themselves, as a mechanism for exposing the data associated with the research being reported and exploiting some of the new opportunities offered by the World Wide Web. From the outset, such ESI was expressed as a paginated Acrobat file, with the Web being merely a convenient document delivery mechanism.</p>
+<section id="commonmeta-adds-datacite-schema-4.5-support" class="level3">
+<h3 class="anchored" data-anchor-id="commonmeta-adds-datacite-schema-4.5-support"><a href="https://doi.org/10.53731/293b8-kbq75">Commonmeta adds DataCite schema 4.5 support</a></h3>
+<p><a href="https://doi.org/10.53731/293b8-kbq75">https://doi.org/10.53731/293b8-kbq75</a> <br>Published January 26, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>On Wednesday DataCite released version 4.5 of the DataCite metadata schema. Today I released updated versions of the commonmeta Ruby and Python libraries that fully support the new schema. You can install them via Rubygems and PyPI, respectively.</p>
 </section>
-<section id="type-i-error-rates-are-not-usually-inflated" class="level3">
-<h3 class="anchored" data-anchor-id="type-i-error-rates-are-not-usually-inflated"><a href="https://doi.org/10.59350/88njp-0d573">Type I Error Rates are Not Usually Inflated</a></h3>
-<p><a href="https://doi.org/10.59350/88njp-0d573">https://doi.org/10.59350/88njp-0d573</a> <br>Published December 10, 2023 in <a href="https://rogue-scholar.org/blogs/markrubin">Critical Metascience</a><br>Mark Rubin<br>The inflation of Type I error rates is thought to be one of the causes of the replication crisis. Questionable research practices such as p-hacking are thought to inflate Type I error rates above their nominal level, leading to unexpectedly high levels of false positives in the literature and, consequently, unexpectedly low replication rates. In this new article, I offer an alternative view.</p>
+<section id="things-i-am-still-wondering-about-generative-ai-search-in-2024---impact-of-semantic-search-generation-of-answers-with-citations-and-more.." class="level3">
+<h3 class="anchored" data-anchor-id="things-i-am-still-wondering-about-generative-ai-search-in-2024---impact-of-semantic-search-generation-of-answers-with-citations-and-more.."><a href="https://doi.org/10.59350/vh0zy-9k287">Things I am still wondering about generative AI + Search in 2024 - impact of semantic search, generation of answers with citations and more..</a></h3>
+<p><a href="https://doi.org/10.59350/vh0zy-9k287">https://doi.org/10.59350/vh0zy-9k287</a> <br>Published January 26, 2024 in <a href="https://rogue-scholar.org/blogs/musings">Aaron Tay’s Musings about librarianship</a><br>Aaron Tay<br><i> Earlier related pieces -&nbsp;How Q&amp;A systems based on large language models (eg GPT4) will change things if they become the dominant search paradigm - 9 implications for libraries </i> In the ever-evolving landscape of information retrieval and library science, the emergence of large language models, particularly those based on the transformer architecture like GPT-4, has opened up a Pandora’s box of possibilities and challenges.</p>
 </section>
-<section id="no-synths-use-of-ai-in-scientific-publications" class="level3">
-<h3 class="anchored" data-anchor-id="no-synths-use-of-ai-in-scientific-publications"><a href="https://doi.org/10.59350/axrsb-4kz33">No Synths! Use of AI in scientific publications</a></h3>
-<p><a href="https://doi.org/10.59350/axrsb-4kz33">https://doi.org/10.59350/axrsb-4kz33</a> <br>Published December 10, 2023 in <a href="https://rogue-scholar.org/blogs/quantixed">quantixed</a><br>Stephen Royle<br>Bands have been known to declare “No Synths!” on their albums. This statement was a badge of pride indicating that the artists hadn’t used any modern trickery in their recordings. Today, the growing use of artificial intelligence (AI) and large language models (LLMs) in science has created a similar scenario. Advocates argue that these tools improve every aspect of science, including the publication process.</p>
+<section id="lessons-answer.ai-can-learn-from-historys-greatest-rd-labs" class="level3">
+<h3 class="anchored" data-anchor-id="lessons-answer.ai-can-learn-from-historys-greatest-rd-labs"><a href="https://doi.org/10.59350/tc7xn-gnn19">Lessons Answer.AI can learn from history’s greatest R&amp;D labs</a></h3>
+<p><a href="https://doi.org/10.59350/tc7xn-gnn19">https://doi.org/10.59350/tc7xn-gnn19</a> <br>Published January 26, 2024 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br>Eric Gilliam<br>Today’s piece was put together with the help of several conversations with Answer.AI co-founder Jeremy Howard. It is not a “traditional” FreakTakes piece; the research and advice are much more tailored to a specific group of individuals than usual.</p>
 </section>
-<section id="how-to-create-separate-bibliographies-in-a-quarto-document" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-create-separate-bibliographies-in-a-quarto-document"><a href="https://doi.org/10.59350/5dvez-q6817">How to create separate bibliographies in a Quarto document</a></h3>
-<p><a href="https://doi.org/10.59350/5dvez-q6817">https://doi.org/10.59350/5dvez-q6817</a> <br>Published December 11, 2023 in <a href="https://rogue-scholar.org/blogs/andrewheiss">Andrew Heiss’s blog</a><br>Andrew Heiss<br><i> </i> tl;dr If you want to skip the explanation and justification for why you might want separate bibliographies, you can skip down to the example section, or just go see some example files at GitHub. Why use separate bibliographies? In academic articles, it’s common to have a supplemental appendix with extra tables, figures, robustness checks, additional math, proofs, and other details.</p>
+<section id="d-molecular-model-visualisation-3-million-atoms" class="level3">
+<h3 class="anchored" data-anchor-id="d-molecular-model-visualisation-3-million-atoms"><a href="https://doi.org/10.59350/d20n9-rbx62">3D Molecular model visualisation: 3 Million atoms +</a></h3>
+<p><a href="https://doi.org/10.59350/d20n9-rbx62">https://doi.org/10.59350/d20n9-rbx62</a> <br>Published January 27, 2024 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>In the late 1980s, as I recollected here[1] the equipment needed for real time molecular visualisation as it became known as was still expensive, requiring custom systems such as Evans and Sutherland PS390 workstations.</p>
 </section>
-<section id="archiving-individual-science-blog-posts" class="level3">
-<h3 class="anchored" data-anchor-id="archiving-individual-science-blog-posts"><a href="https://doi.org/10.53731/5vvnh-tnm55">Archiving individual science blog posts</a></h3>
-<p><a href="https://doi.org/10.53731/5vvnh-tnm55">https://doi.org/10.53731/5vvnh-tnm55</a> <br>Published December 11, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Sometimes we want to preserve a blog post to read or reuse later. There are generic tools for that purpose, including read-it-later apps such as Instapaper or Pocket. For scholarly blog posts, the right place can also be a reference manager, which stores the content and the metadata, especially if a DOI was registered for each blog post. Reference managers can store full-text documents and typically use PDF as the file format.</p>
+<section id="grab-bag-post-parapropalaehoplophorus-a-favorite-book-tate-2024" class="level3">
+<h3 class="anchored" data-anchor-id="grab-bag-post-parapropalaehoplophorus-a-favorite-book-tate-2024"><a href="https://doi.org/10.59350/j5jfg-n3k62">Grab-bag post: <i>Parapropalaehoplophorus</i>, a favorite book, Tate 2024</a></h3>
+<p><a href="https://doi.org/10.59350/j5jfg-n3k62">https://doi.org/10.59350/j5jfg-n3k62</a> <br>Published January 29, 2024 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Matt Wedel<br><strong> <em> Eoneophron </em> , <em> Parapropalaehoplophorus </em> , <em> Ia io </em> , and friends </strong> The other day Mike wrote to me about the new Hell Creek oviraptorosaur <em> Eoneophron </em> (Atkins-Weltman et al.&nbsp;2024), commenting that he liked the ‘eoneo’ — old new — part of the name. That sent me down a little etymological rabbit hole.</p>
 </section>
-<section id="what-i-learned-from-getting-bodied-by-a-robot." class="level3">
-<h3 class="anchored" data-anchor-id="what-i-learned-from-getting-bodied-by-a-robot."><a href="https://doi.org/10.59350/r8k9q-zdm06">What I learned from getting bodied by a robot.</a></h3>
-<p><a href="https://doi.org/10.59350/r8k9q-zdm06">https://doi.org/10.59350/r8k9q-zdm06</a> <br>Published December 12, 2023 in <a href="https://rogue-scholar.org/blogs/chrisvoncsefalvay">Chris von Csefalvay</a><br>Chris von Csefalvay<br>Say you’re busing tables and you’re trying to pass someone in a wheelchair. What do you do? Do you say “excuse me” and wait for them to move? Do you say “excuse me” and then try to pass them? Do you just try to pass them? Do you say nothing and just try to pass them? All of these are, actually, pretty legitimate answers. Now, say you’re a robot.</p>
+<section id="an-update-on-rogue-scholar-in-the-fediverse" class="level3">
+<h3 class="anchored" data-anchor-id="an-update-on-rogue-scholar-in-the-fediverse"><a href="https://doi.org/10.53731/dnfg0-hge29">An update on Rogue Scholar in the fediverse</a></h3>
+<p><a href="https://doi.org/10.53731/dnfg0-hge29">https://doi.org/10.53731/dnfg0-hge29</a> <br>Published January 29, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>The Rogue Scholar science blogging archive joined the fediverse in August of last year. This week I want to report on an updated strategy for Rogue Scholar, and what it means for science blogs participating in Rogue Scholar. In August&nbsp;I launched a Mastodon instance at&nbsp;Rogue Scholar Social&nbsp;that accepted Science Blog bots as accounts, (semi-)automatically publishing summaries of blog posts via Rogue Scholar.</p>
 </section>
-<section id="vu-amsterdam-supports-researchequals" class="level3">
-<h3 class="anchored" data-anchor-id="vu-amsterdam-supports-researchequals"><a href="https://doi.org/10.59350/tx9hq-akz97">VU Amsterdam supports ResearchEquals</a></h3>
-<p><a href="https://doi.org/10.59350/tx9hq-akz97">https://doi.org/10.59350/tx9hq-akz97</a> <br>Published December 12, 2023 in <a href="https://rogue-scholar.org/blogs/libscie">Liberate Science</a><br>Chris Hartgerink<br>VU Amsterdam is now a supporting member of ResearchEquals, sustaining and governing the development of modular publishing. VU Amsterdam joins as the third institutional supporter, alongside Tilburg University and KU Leuven. VU Amsterdam supports new research initiatives through their VU Open Access Innovation Fund. They support open, free and fair publishing alternatives set up by and for researchers.</p>
+<section id="open-sourcing-the-news" class="level3">
+<h3 class="anchored" data-anchor-id="open-sourcing-the-news"><a href="https://doi.org/10.59350/1fv7c-7c536">Open sourcing the news</a></h3>
+<p><a href="https://doi.org/10.59350/1fv7c-7c536">https://doi.org/10.59350/1fv7c-7c536</a> <br>Published January 30, 2024 in <a href="https://rogue-scholar.org/blogs/chjh">Chris Hartgerink</a><br>Chris Hartgerink<br>I read a lot of news, but I do not like being consumed by it. The balance between what’s happening now (news), the short or long past (history), and potential futures (foresight or analysis) is a rough one to keep. This post is about making sure that sources are readily accessible where possible, straight from the news. Part of not becoming consumed by the news and its biases is doing source research and verifying information.</p>
 </section>
-<section id="fair-data-digest-23" class="level3">
-<h3 class="anchored" data-anchor-id="fair-data-digest-23"><a href="https://doi.org/10.59350/j92en-x6n14">FAIR Data Digest #23</a></h3>
-<p><a href="https://doi.org/10.59350/j92en-x6n14">https://doi.org/10.59350/j92en-x6n14</a> <br>Published December 12, 2023 in <a href="https://rogue-scholar.org/blogs/fairdata">FAIR Data Digest</a><br>Sven Lieber<br>Open data of 16.2 million Dutch vehicles that can be used to enrich Wikidata</p>
+<section id="looking-back-to-look-ahead-opencitations-achievements-in-2023" class="level3">
+<h3 class="anchored" data-anchor-id="looking-back-to-look-ahead-opencitations-achievements-in-2023"><a href="https://doi.org/10.59350/2v9xz-dxv31">Looking back to look ahead: OpenCitations’ achievements in 2023</a></h3>
+<p><a href="https://doi.org/10.59350/2v9xz-dxv31">https://doi.org/10.59350/2v9xz-dxv31</a> <br>Published January 30, 2024 in <a href="https://rogue-scholar.org/blogs/opencitations">OpenCitations blog</a><br>Chiara Di Giambattista<br>The first month of the new year has almost come to an end, and we at OpenCitations have dedicated these weeks after the holiday season to retrace the progress we reached as an open infrastructure throughout 2023, an activity that has become a tradition in the past few years.</p>
 </section>
-<section id="sc23-whpc-workshop-paper-opengpt-x-novel-architecture-exploration" class="level3">
-<h3 class="anchored" data-anchor-id="sc23-whpc-workshop-paper-opengpt-x-novel-architecture-exploration"><a href="https://doi.org/10.34732/xdvblg-0xczeh">SC23 WHPC Workshop Paper: OpenGPT-X – Novel Architecture Exploration</a></h3>
-<p><a href="https://doi.org/10.34732/xdvblg-0xczeh">https://doi.org/10.34732/xdvblg-0xczeh</a> <br>Published December 12, 2023 in <a href="https://rogue-scholar.org/blogs/x_dev">JSC Accelerating Devices Lab</a><br>Chelsea John<br>The Supercomputing Conference 2023 took place in Denver, Colorado, from November 12th to 17th. For the <em> Women in HPC </em> workshop, we submitted a paper, which focused on benchmarking different accelerators for AI. The paper was accepted and I was invited to hold a lightning talk to show the work, spun off our OpenGPT-X project.</p>
+<section id="opening-up-the-cwts-leiden-ranking-toward-a-decentralized-and-open-model-for-data-curation" class="level3">
+<h3 class="anchored" data-anchor-id="opening-up-the-cwts-leiden-ranking-toward-a-decentralized-and-open-model-for-data-curation"><a href="https://www.leidenmadtrics.nl/articles/opening-up-the-cwts-leiden-ranking-toward-a-decentralized-and-open-model-for-data-curation">Opening up the CWTS Leiden Ranking: Toward a decentralized and open model for data curation</a></h3>
+<p>Published January 30, 2024 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>Today, CWTS released the Open Edition of the Leiden Ranking.</p>
 </section>
-<section id="abschied-von-jenny-delasalle-what-will-survive-of-us-is-love" class="level3">
-<h3 class="anchored" data-anchor-id="abschied-von-jenny-delasalle-what-will-survive-of-us-is-love"><a href="https://doi.org/10.59350/7cw3g-fxz50">Abschied von Jenny Delasalle: „What will survive of us is love“</a></h3>
-<p><a href="https://doi.org/10.59350/7cw3g-fxz50">https://doi.org/10.59350/7cw3g-fxz50</a> <br>Published December 12, 2023 in <a href="https://rogue-scholar.org/blogs/oaberlin">Open Access Blog Berlin</a><br>Maxi Kindling<br>– English below –Die Nachricht, dass Jenny Delasalle am vergangenen Freitag, den 8. Dezember 2023, nach schwerer Krankheit verstorben ist, haben wir mit großer Betroffenheit gelesen. Für die Open Access Community in Berlin und weit darüber hinaus ist ihr Tod ein großer Verlust.</p>
+<section id="introducing-the-leiden-ranking-open-edition" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-the-leiden-ranking-open-edition"><a href="https://www.leidenmadtrics.nl/articles/introducing-the-leiden-ranking-open-edition">Introducing the Leiden Ranking Open Edition</a></h3>
+<p>Published January 30, 2024 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>This post introduces the Open Edition of the CWTS Leiden Ranking, published today by CWTS in collaboration with the Curtin Open Knowledge Initiative, Sesame Open Science, and OurResearch.</p>
 </section>
 </div>
 </div>
@@ -1806,7 +1808,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-december-13-2023/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-january-31-2024/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1825,7 +1827,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

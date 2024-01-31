@@ -16,7 +16,499 @@
 <link>https://syldavia-gazette.org/</link>
 </image>
 <generator>quarto-1.4.549</generator>
-<lastBuildDate>Tue, 23 Jan 2024 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 30 Jan 2024 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Rogue Scholar Digest January 31, 2024</title>
+  <dc:creator>Martin Fenner</dc:creator>
+  <link>https://syldavia-gazette.org/posts/rogue-scholar-digest-january-31-2024/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div id="bd7c32fa" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> requests</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> locale</span>
+<span id="cb1-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> re</span>
+<span id="cb1-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> typing <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Optional</span>
+<span id="cb1-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> datetime</span>
+<span id="cb1-6"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> IPython.display <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Markdown</span>
+<span id="cb1-7"></span>
+<span id="cb1-8">locale.setlocale(locale.LC_ALL, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"en_US"</span>)</span>
+<span id="cb1-9">baseUrl <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://api.rogue-scholar.org/"</span></span>
+<span id="cb1-10">published_since <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2024-01-24"</span></span>
+<span id="cb1-11">published_until <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2024-01-30"</span></span>
+<span id="cb1-12">feature_image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-13">include_fields <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
+<span id="cb1-14">url <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (</span>
+<span id="cb1-15">    baseUrl</span>
+<span id="cb1-16">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"posts?&amp;published_since=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_since<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&amp;published_until=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_until<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&amp;language=en&amp;sort=published_at&amp;order=asc&amp;per_page=50&amp;include_fields=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>include_fields<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-17">)</span>
+<span id="cb1-18">response <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> requests.get(url)</span>
+<span id="cb1-19">result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> response.json()</span>
+<span id="cb1-20"></span>
+<span id="cb1-21"></span>
+<span id="cb1-22"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> get_post(post):</span>
+<span id="cb1-23">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"document"</span>]</span>
+<span id="cb1-24"></span>
+<span id="cb1-25"></span>
+<span id="cb1-26"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> format_post(post):</span>
+<span id="cb1-27">    doi <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> post.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"doi"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>)</span>
+<span id="cb1-28">    url <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> doi <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span></span>
+<span id="cb1-29">    title <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'title'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> doi <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'title'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'url'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span></span>
+<span id="cb1-30">    published_at <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> datetime.datetime.utcfromtimestamp(post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"published_at"</span>]).strftime(</span>
+<span id="cb1-31">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%B </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%-d</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">, %Y"</span></span>
+<span id="cb1-32">    )</span>
+<span id="cb1-33">    blog <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blog_name'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](https://rogue-scholar.org/blogs/</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blog_slug'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span></span>
+<span id="cb1-34">    author <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">", "</span>.join([<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>x[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'name'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> post.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"authors"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> []])</span>
+<span id="cb1-35">    summary <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"summary"</span>]</span>
+<span id="cb1-36">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"### </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>title<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>url<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">Published </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_at<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> in </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>blog<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>author<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>summary<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-37"></span>
+<span id="cb1-38"></span>
+<span id="cb1-39">posts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [get_post(x) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i, x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">enumerate</span>(result[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hits"</span>])]</span>
+<span id="cb1-40">posts_as_string <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>.join([format_post(x) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> posts])</span>
+<span id="cb1-41"></span>
+<span id="cb1-42"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> doi_from_url(url: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> Optional[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>]:</span>
+<span id="cb1-43">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""Return a DOI from a URL"""</span></span>
+<span id="cb1-44">    match <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> re.search(</span>
+<span id="cb1-45">        <span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">r"\A(?:(http|https)://(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.\d{4,5}/.+)\Z"</span>,</span>
+<span id="cb1-46">        url,</span>
+<span id="cb1-47">    )</span>
+<span id="cb1-48">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> match <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">is</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb1-49">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb1-50">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> match.group(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>).lower()</span>
+<span id="cb1-51"></span>
+<span id="cb1-52">images <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [x[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"image"</span>] <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> posts <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> x.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"image"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">is</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">not</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>]</span>
+<span id="cb1-53">image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> images[feature_image]</span>
+<span id="cb1-54">markdown <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"![](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>image<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-55">markdown <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> posts_as_string</span>
+<span id="cb1-56">Markdown(markdown)</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<div>
+<figure class="figure">
+<p><a href="https://cdn-images-1.medium.com/max/1024/1*Gzmbpq5qJUz2W1zpHd1XGA.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://cdn-images-1.medium.com/max/1024/1*Gzmbpq5qJUz2W1zpHd1XGA.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<section id="an-open-approach-for-classifying-research-publications" class="level3">
+<h3 class="anchored" data-anchor-id="an-open-approach-for-classifying-research-publications"><a href="https://www.leidenmadtrics.nl/articles/an-open-approach-for-classifying-research-publications">An open approach for classifying research publications</a></h3>
+<p>Published January 24, 2024 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>In this post Nees Jan van Eck and Ludo Waltman introduce an open approach for classifying research publications, contributing to a broader development toward open approaches to bibliometrics.Classifying research publications into research topics or research areas is crucial for many bibliometric analyses. While there are lots of approaches for classifying publications, most of these approaches lack transparency.</p>
+</section>
+<section id="josscast-2-astronomy-in-the-open-dr.-taylor-james-bell-on-eureka" class="level3">
+<h3 class="anchored" data-anchor-id="josscast-2-astronomy-in-the-open-dr.-taylor-james-bell-on-eureka"><a href="https://doi.org/10.59349/hg16v-pxx10">JOSSCast #2: Astronomy in the Open – Dr.&nbsp;Taylor James Bell on Eureka!</a></h3>
+<p><a href="https://doi.org/10.59349/hg16v-pxx10">https://doi.org/10.59349/hg16v-pxx10</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/joss">Journal of Open Source Software Blog |</a><br>Arfon M. Smith<br><strong> Subscribe Now: </strong> Apple, Spotify, YouTube, Stitcher In this episode of Open Source for Researchers hosts Abby and Arfon explore the world of open source software in astronomy with Dr.&nbsp;Taylor James Bell, a BAER Institute postdoc at NASA Ames. Eureka! is an end-to-end pipeline designed for JWST (James Webb Space Telescope) time series observations.</p>
+</section>
+<section id="introducing-josscast-open-source-for-researchers" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-josscast-open-source-for-researchers"><a href="https://doi.org/10.59349/96nng-1rg33">Introducing JOSSCast: Open Source for Researchers 🎉</a></h3>
+<p><a href="https://doi.org/10.59349/96nng-1rg33">https://doi.org/10.59349/96nng-1rg33</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/joss">Journal of Open Source Software Blog |</a><br>Arfon M. Smith<br><strong> Subscribe Now: </strong> Apple, Spotify, YouTube, Stitcher We’re thrilled to announce the launch of “JOSSCast: Open Source for Researchers” - a podcast exploring new ways open source can accelerate your work. Hosted by Arfon Smith and Abby Cabunoc Mayes, each episode features an interview with different authors of published papers in JOSS. There are 3 episodes available for you to listen to today!</p>
+</section>
+<section id="josscast-1-eva-maxfield-brown-on-speakerbox-open-source-speaker-identification-for-political-science" class="level3">
+<h3 class="anchored" data-anchor-id="josscast-1-eva-maxfield-brown-on-speakerbox-open-source-speaker-identification-for-political-science"><a href="https://doi.org/10.59349/h0hf5-w2786">JOSSCast #1: Eva Maxfield Brown on Speakerbox – Open Source Speaker Identification for Political Science</a></h3>
+<p><a href="https://doi.org/10.59349/h0hf5-w2786">https://doi.org/10.59349/h0hf5-w2786</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/joss">Journal of Open Source Software Blog |</a><br>Arfon M. Smith<br><strong> Subscribe Now: </strong> Apple, Spotify, YouTube, Stitcher In the first episode of Open Source for Researchers, hosts Arfon and Abby sit down with Eva Maxfield Brown to discuss Speakerbox, an open source speaker identification tool. Originally part of the Council Data Project, Speakerbox was used to train models to identify city council members speaking in transcripts, starting with cities like Seattle.</p>
+</section>
+<section id="ropensci-news-digest-january-2024" class="level3">
+<h3 class="anchored" data-anchor-id="ropensci-news-digest-january-2024"><a href="https://doi.org/10.59350/jps9f-gsh89">rOpenSci News Digest, January 2024</a></h3>
+<p><a href="https://doi.org/10.59350/jps9f-gsh89">https://doi.org/10.59350/jps9f-gsh89</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>The rOpenSci Team<br>Dear rOpenSci friends, it’s time for our monthly news roundup! You can read this post on our blog.Now let’s dive into the activity at and around rOpenSci!rOpenSci HQ R-Universe The R-Universe now builds MacOS ARM64 binaries for use on Apple Silicon (aka M1/M2/M3) systems! Find out more in the related tech note.Coworking Read all about coworking in our recent post! Join us for social coworking &amp;</p>
+</section>
+<section id="mini-rag-using-neo4j" class="level3">
+<h3 class="anchored" data-anchor-id="mini-rag-using-neo4j"><a href="https://doi.org/10.59350/4hcyx-g4j10">Mini RAG using Neo4j</a></h3>
+<p><a href="https://doi.org/10.59350/4hcyx-g4j10">https://doi.org/10.59350/4hcyx-g4j10</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Research Graph</a><br>Research Graph<br>Authors: Nakul Nambiar, Amir&nbsp;Aryani Knowledge graphs, which offer a structured representation of data and its relationships, are revolutionising how we organise and access information. With large amounts of data, it sometimes becomes difficult to draw insights from it. This blog article examines how to combine Neo4j, a graph database, with OpenAI’s Retrieval-Augmented Generation (RAG) model to build a robust knowledge management system.</p>
+</section>
+<section id="adding-automated-end-to-end-testing-to-rogue-scholar" class="level3">
+<h3 class="anchored" data-anchor-id="adding-automated-end-to-end-testing-to-rogue-scholar"><a href="https://doi.org/10.53731/bxgh0-dhj87">Adding automated end-to-end testing to Rogue Scholar</a></h3>
+<p><a href="https://doi.org/10.53731/bxgh0-dhj87">https://doi.org/10.53731/bxgh0-dhj87</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Last week I reported a small change to the Rogue Scholar science blog submission form. By asking for the homepage URL of the blog instead of the feed URL, I hope to make it easier for users to register their blog. At the same time, I fixed a bug in the submission form, caused by an issue with the database backend. Unfortunately, that bug fix didn’t work as expected.</p>
+</section>
+<section id="the-macintosh-computer-at-40." class="level3">
+<h3 class="anchored" data-anchor-id="the-macintosh-computer-at-40."><a href="https://doi.org/10.59350/f11dr-93t29">The Macintosh computer at 40.</a></h3>
+<p><a href="https://doi.org/10.59350/f11dr-93t29">https://doi.org/10.59350/f11dr-93t29</a> <br>Published January 25, 2024 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>On 24th January 1984, the Macintosh computer was released, as all the media are informing us. Apparently, some are still working. I thought I would give my own personal recollections of that period. In fact, the Mac reached UK stores via a dealership only in 1985.</p>
+</section>
+<section id="commonmeta-adds-datacite-schema-4.5-support" class="level3">
+<h3 class="anchored" data-anchor-id="commonmeta-adds-datacite-schema-4.5-support"><a href="https://doi.org/10.53731/293b8-kbq75">Commonmeta adds DataCite schema 4.5 support</a></h3>
+<p><a href="https://doi.org/10.53731/293b8-kbq75">https://doi.org/10.53731/293b8-kbq75</a> <br>Published January 26, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>On Wednesday DataCite released version 4.5 of the DataCite metadata schema. Today I released updated versions of the commonmeta Ruby and Python libraries that fully support the new schema. You can install them via Rubygems and PyPI, respectively.</p>
+</section>
+<section id="things-i-am-still-wondering-about-generative-ai-search-in-2024---impact-of-semantic-search-generation-of-answers-with-citations-and-more.." class="level3">
+<h3 class="anchored" data-anchor-id="things-i-am-still-wondering-about-generative-ai-search-in-2024---impact-of-semantic-search-generation-of-answers-with-citations-and-more.."><a href="https://doi.org/10.59350/vh0zy-9k287">Things I am still wondering about generative AI + Search in 2024 - impact of semantic search, generation of answers with citations and more..</a></h3>
+<p><a href="https://doi.org/10.59350/vh0zy-9k287">https://doi.org/10.59350/vh0zy-9k287</a> <br>Published January 26, 2024 in <a href="https://rogue-scholar.org/blogs/musings">Aaron Tay’s Musings about librarianship</a><br>Aaron Tay<br><i> Earlier related pieces -&nbsp;How Q&amp;A systems based on large language models (eg GPT4) will change things if they become the dominant search paradigm - 9 implications for libraries </i> In the ever-evolving landscape of information retrieval and library science, the emergence of large language models, particularly those based on the transformer architecture like GPT-4, has opened up a Pandora’s box of possibilities and challenges.</p>
+</section>
+<section id="lessons-answer.ai-can-learn-from-historys-greatest-rd-labs" class="level3">
+<h3 class="anchored" data-anchor-id="lessons-answer.ai-can-learn-from-historys-greatest-rd-labs"><a href="https://doi.org/10.59350/tc7xn-gnn19">Lessons Answer.AI can learn from history’s greatest R&amp;D labs</a></h3>
+<p><a href="https://doi.org/10.59350/tc7xn-gnn19">https://doi.org/10.59350/tc7xn-gnn19</a> <br>Published January 26, 2024 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br>Eric Gilliam<br>Today’s piece was put together with the help of several conversations with Answer.AI co-founder Jeremy Howard. It is not a “traditional” FreakTakes piece; the research and advice are much more tailored to a specific group of individuals than usual.</p>
+</section>
+<section id="d-molecular-model-visualisation-3-million-atoms" class="level3">
+<h3 class="anchored" data-anchor-id="d-molecular-model-visualisation-3-million-atoms"><a href="https://doi.org/10.59350/d20n9-rbx62">3D Molecular model visualisation: 3 Million atoms +</a></h3>
+<p><a href="https://doi.org/10.59350/d20n9-rbx62">https://doi.org/10.59350/d20n9-rbx62</a> <br>Published January 27, 2024 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>In the late 1980s, as I recollected here[1] the equipment needed for real time molecular visualisation as it became known as was still expensive, requiring custom systems such as Evans and Sutherland PS390 workstations.</p>
+</section>
+<section id="grab-bag-post-parapropalaehoplophorus-a-favorite-book-tate-2024" class="level3">
+<h3 class="anchored" data-anchor-id="grab-bag-post-parapropalaehoplophorus-a-favorite-book-tate-2024"><a href="https://doi.org/10.59350/j5jfg-n3k62">Grab-bag post: <i>Parapropalaehoplophorus</i>, a favorite book, Tate 2024</a></h3>
+<p><a href="https://doi.org/10.59350/j5jfg-n3k62">https://doi.org/10.59350/j5jfg-n3k62</a> <br>Published January 29, 2024 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Matt Wedel<br><strong> <em> Eoneophron </em> , <em> Parapropalaehoplophorus </em> , <em> Ia io </em> , and friends </strong> The other day Mike wrote to me about the new Hell Creek oviraptorosaur <em> Eoneophron </em> (Atkins-Weltman et al.&nbsp;2024), commenting that he liked the ‘eoneo’ — old new — part of the name. That sent me down a little etymological rabbit hole.</p>
+</section>
+<section id="an-update-on-rogue-scholar-in-the-fediverse" class="level3">
+<h3 class="anchored" data-anchor-id="an-update-on-rogue-scholar-in-the-fediverse"><a href="https://doi.org/10.53731/dnfg0-hge29">An update on Rogue Scholar in the fediverse</a></h3>
+<p><a href="https://doi.org/10.53731/dnfg0-hge29">https://doi.org/10.53731/dnfg0-hge29</a> <br>Published January 29, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>The Rogue Scholar science blogging archive joined the fediverse in August of last year. This week I want to report on an updated strategy for Rogue Scholar, and what it means for science blogs participating in Rogue Scholar. In August&nbsp;I launched a Mastodon instance at&nbsp;Rogue Scholar Social&nbsp;that accepted Science Blog bots as accounts, (semi-)automatically publishing summaries of blog posts via Rogue Scholar.</p>
+</section>
+<section id="open-sourcing-the-news" class="level3">
+<h3 class="anchored" data-anchor-id="open-sourcing-the-news"><a href="https://doi.org/10.59350/1fv7c-7c536">Open sourcing the news</a></h3>
+<p><a href="https://doi.org/10.59350/1fv7c-7c536">https://doi.org/10.59350/1fv7c-7c536</a> <br>Published January 30, 2024 in <a href="https://rogue-scholar.org/blogs/chjh">Chris Hartgerink</a><br>Chris Hartgerink<br>I read a lot of news, but I do not like being consumed by it. The balance between what’s happening now (news), the short or long past (history), and potential futures (foresight or analysis) is a rough one to keep. This post is about making sure that sources are readily accessible where possible, straight from the news. Part of not becoming consumed by the news and its biases is doing source research and verifying information.</p>
+</section>
+<section id="looking-back-to-look-ahead-opencitations-achievements-in-2023" class="level3">
+<h3 class="anchored" data-anchor-id="looking-back-to-look-ahead-opencitations-achievements-in-2023"><a href="https://doi.org/10.59350/2v9xz-dxv31">Looking back to look ahead: OpenCitations’ achievements in 2023</a></h3>
+<p><a href="https://doi.org/10.59350/2v9xz-dxv31">https://doi.org/10.59350/2v9xz-dxv31</a> <br>Published January 30, 2024 in <a href="https://rogue-scholar.org/blogs/opencitations">OpenCitations blog</a><br>Chiara Di Giambattista<br>The first month of the new year has almost come to an end, and we at OpenCitations have dedicated these weeks after the holiday season to retrace the progress we reached as an open infrastructure throughout 2023, an activity that has become a tradition in the past few years.</p>
+</section>
+<section id="opening-up-the-cwts-leiden-ranking-toward-a-decentralized-and-open-model-for-data-curation" class="level3">
+<h3 class="anchored" data-anchor-id="opening-up-the-cwts-leiden-ranking-toward-a-decentralized-and-open-model-for-data-curation"><a href="https://www.leidenmadtrics.nl/articles/opening-up-the-cwts-leiden-ranking-toward-a-decentralized-and-open-model-for-data-curation">Opening up the CWTS Leiden Ranking: Toward a decentralized and open model for data curation</a></h3>
+<p>Published January 30, 2024 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>Today, CWTS released the Open Edition of the Leiden Ranking.</p>
+</section>
+<section id="introducing-the-leiden-ranking-open-edition" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-the-leiden-ranking-open-edition"><a href="https://www.leidenmadtrics.nl/articles/introducing-the-leiden-ranking-open-edition">Introducing the Leiden Ranking Open Edition</a></h3>
+<p>Published January 30, 2024 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>This post introduces the Open Edition of the CWTS Leiden Ranking, published today by CWTS in collaboration with the Curtin Open Knowledge Initiative, Sesame Open Science, and OurResearch.</p>
+</section>
+</div>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>digest</category>
+  <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-january-31-2024/</guid>
+  <pubDate>Tue, 30 Jan 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://syldavia-gazette.org/images/1_Gzmbpq5qJUz2W1zpHd1XGA.png" medium="image" type="image/png" height="82" width="144"/>
+</item>
 <item>
   <title>Rogue Scholar Digest January 24, 2024</title>
   <dc:creator>Martin Fenner</dc:creator>
