@@ -3,7 +3,7 @@ title: "Guinea Worms, ChatGPT, Neanderthals, Plagiarism, Tidyverse"
 description: |
   Only 13 human cases of Guinea worm disease were reported worldwide in 2022. This Neglected Tropical Disease is on the WHO 2030 roadmap to become only the second human disease in history to be eradicated, after smallpox.
 date: 2023-02-01
-doi: 10.53731/ffbx660-083tnag
+doi: https://doi.org/10.53731/ffbx660-083tnag
 categories: ["weekly"]
 image: "/images/gw-release-2023.jpg"
 open-graph:

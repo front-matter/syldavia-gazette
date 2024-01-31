@@ -3,7 +3,7 @@ title: "Proust, Rights of Nature, Standard Model, Ranitidine, Open Scholarly Inf
 description: |
   How Alzheimer’s caregivers are pulled into their patients’ worlds.
 date: 2023-03-01
-doi: 10.53731/a9p2vx8-8benr1q
+doi: https://doi.org/10.53731/a9p2vx8-8benr1q
 categories: ["weekly"]
 image: "/images/mar-menor.jpg-1.webp"
 open-graph:

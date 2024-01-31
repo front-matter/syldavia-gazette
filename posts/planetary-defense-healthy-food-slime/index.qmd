@@ -3,7 +3,7 @@ title: "Planetary Defense, Healthy Food, Slime, Software Citation, Parthenon Mar
 description: |
   In their textbook Modern Principles of Economics, Tyler and Tabarrok use asteroid defense as an example of a public good.
 date: 2023-03-08
-doi: 10.53731/fearkb7-7wz03w9
+doi: https://doi.org/10.53731/fearkb7-7wz03w9
 categories: ["weekly"]
 image: "/images/Elgin_Marbles_east_pediment.jpg"
 open-graph:

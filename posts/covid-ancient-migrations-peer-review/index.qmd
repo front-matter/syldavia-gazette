@@ -3,7 +3,7 @@ title: "Covid, Ancient Migrations, Peer Review, Language, Nobel Prize"
 description: |
   The impact of the European Soccer (Football) Championship 2020 on the incidence of the Corona pandemic across Europe.
 date: 2023-02-15
-doi: 10.53731/9zjeesz-zbq8vh0
+doi: https://doi.org/10.53731/9zjeesz-zbq8vh0
 categories: ["weekly"]
 image: "/images/photo-of-grave-credit-nadezhda-f-stepanova_web.jpg"
 open-graph:

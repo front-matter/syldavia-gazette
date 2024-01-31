@@ -15,7 +15,7 @@
 <title>Syldavia Gazette</title>
 <link>https://syldavia-gazette.org/#category=digest</link>
 </image>
-<generator>quarto-1.4.504</generator>
+<generator>quarto-1.4.549</generator>
 <lastBuildDate>Tue, 23 Jan 2024 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Rogue Scholar Digest January 24, 2024</title>
@@ -421,7 +421,11 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
-<p><a href="https://substack-post-media.s3.amazonaws.com/public/images/b72f8a6c-a35f-4d53-9829-060696e7b5a5_390x259.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://substack-post-media.s3.amazonaws.com/public/images/b72f8a6c-a35f-4d53-9829-060696e7b5a5_390x259.webp" class="img-fluid"></a></p>
+<div>
+<figure class="figure">
+<p><a href="https://substack-post-media.s3.amazonaws.com/public/images/b72f8a6c-a35f-4d53-9829-060696e7b5a5_390x259.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://substack-post-media.s3.amazonaws.com/public/images/b72f8a6c-a35f-4d53-9829-060696e7b5a5_390x259.webp" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <section id="making-it-easier-to-register-a-science-blog-with-rogue-scholar" class="level3">
 <h3 class="anchored" data-anchor-id="making-it-easier-to-register-a-science-blog-with-rogue-scholar"><a href="https://doi.org/10.53731/sgavn-wr288">Making it easier to register a science blog with Rogue Scholar</a></h3>
 <p><a href="https://doi.org/10.53731/sgavn-wr288">https://doi.org/10.53731/sgavn-wr288</a> <br>Published January 17, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Yesterday I had to fix a bug in the Rogue Scholar registration form (a software regression that happened over the holidays related to database row level security). This was a reminder that registering a science blog with the Rogue Scholar science blog archive should be quick and painless. Today I made one change that hopefully simplifies registration: Ask for the blog homepage instead of the RSS feed URL.</p>
@@ -861,7 +865,11 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<p><a href="https://bjoern.brembs.net/wp/wp-content/uploads/2024/01/Untitled-1024x614.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://bjoern.brembs.net/wp/wp-content/uploads/2024/01/Untitled-1024x614.png" class="img-fluid"></a></p>
+<div>
+<figure class="figure">
+<p><a href="https://bjoern.brembs.net/wp/wp-content/uploads/2024/01/Untitled-1024x614.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://bjoern.brembs.net/wp/wp-content/uploads/2024/01/Untitled-1024x614.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <section id="evolutionary-biology-goes-asia-the-3rd-asiaevo-conference" class="level3">
 <h3 class="anchored" data-anchor-id="evolutionary-biology-goes-asia-the-3rd-asiaevo-conference"><a href="https://doi.org/10.59350/y7w78-b1m95">Evolutionary Biology goes Asia: the 3rd AsiaEvo Conference</a></h3>
 <p><a href="https://doi.org/10.59350/y7w78-b1m95">https://doi.org/10.59350/y7w78-b1m95</a> <br>Published January 10, 2024 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Chris Hunter<br>The group photo of most of the participants at AsiaEvo 2023. In the beginning <em> GigaScience </em> was at the first AsiaEvo conference, which took place in Shenzhen, China in 2019.</p>
@@ -1361,7 +1369,11 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<p><a href="https://blog.front-matter.io/content/images/2024/01/bookcase.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.front-matter.io/content/images/2024/01/bookcase.png" class="img-fluid"></a></p>
+<div>
+<figure class="figure">
+<p><a href="https://blog.front-matter.io/content/images/2024/01/bookcase.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.front-matter.io/content/images/2024/01/bookcase.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <section id="looking-back-on-the-norbornyl-cation" class="level3">
 <h3 class="anchored" data-anchor-id="looking-back-on-the-norbornyl-cation"><a href="https://doi.org/10.59350/h94q8-1cs70">Looking Back on the Norbornyl Cation</a></h3>
 <p><a href="https://doi.org/10.59350/h94q8-1cs70">https://doi.org/10.59350/h94q8-1cs70</a> <br>Published January 3, 2024 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>In this post, I’m trying something new and embedding calculations on Rowan alongside the text. You can view the structures and energies right in the page, or you can follow a link and view the full data in a new tab.</p>
@@ -1833,7 +1845,11 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
-<p><a href="https://svpow.files.wordpress.com/2023/12/figure-2-rib-a.jpeg?w=480&amp;h=353" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://svpow.files.wordpress.com/2023/12/figure-2-rib-a.jpeg?w=480&amp;h=353" class="img-fluid"></a></p>
+<div>
+<figure class="figure">
+<p><a href="https://svpow.files.wordpress.com/2023/12/figure-2-rib-a.jpeg?w=480&amp;h=353" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://svpow.files.wordpress.com/2023/12/figure-2-rib-a.jpeg?w=480&amp;h=353" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <section id="molecules-of-the-year-2023-part-2.-a-fair-data-comment-on-a-strontium-metallocene." class="level3">
 <h3 class="anchored" data-anchor-id="molecules-of-the-year-2023-part-2.-a-fair-data-comment-on-a-strontium-metallocene."><a href="https://doi.org/10.59350/cvzze-k0171">Molecules of the year 2023 – part 2. A FAIR data comment on a Strontium Metallocene.</a></h3>
 <p><a href="https://doi.org/10.59350/cvzze-k0171">https://doi.org/10.59350/cvzze-k0171</a> <br>Published December 29, 2023 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>I will approach this example of a molecule-of-the-year candidate – in fact the eventual winner in the reader poll – from the point of view of data. Its a metallocene arranged in the form of a ring comprising 18 sub-units.[1] Big enough to deserve a 3D model rather than the static images you almost invariably get in journals (and C&amp;EN). So how does one go to the journal and acquire the coordinates for such a model?</p>
@@ -2273,7 +2289,11 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<p><a href="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/sti2023_header_2023-12-20-092141_bdrw.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/sti2023_header_2023-12-20-092141_bdrw.png" class="img-fluid"></a></p>
+<div>
+<figure class="figure">
+<p><a href="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/sti2023_header_2023-12-20-092141_bdrw.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/sti2023_header_2023-12-20-092141_bdrw.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <section id="open-science-community-leiden-supports-researchequals" class="level3">
 <h3 class="anchored" data-anchor-id="open-science-community-leiden-supports-researchequals"><a href="https://doi.org/10.59350/14xbj-h0257">Open Science Community Leiden supports ResearchEquals</a></h3>
 <p><a href="https://doi.org/10.59350/14xbj-h0257">https://doi.org/10.59350/14xbj-h0257</a> <br>Published December 21, 2023 in <a href="https://rogue-scholar.org/blogs/libscie">Liberate Science</a><br>Chris Hartgerink<br>Open Science Community Leiden (OSCL), with assistance from Leiden University Library, is now a supporting member of ResearchEquals, sustaining and governing the development of modular publishing. OSCL joins as the fourth institutional supporter, alongside Tilburg University, KU Leuven, and VU Amsterdam.</p>
@@ -2729,7 +2749,11 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<p><a href="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/CWTS-at-EASST-4s.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/CWTS-at-EASST-4s.png" class="img-fluid"></a></p>
+<div>
+<figure class="figure">
+<p><a href="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/CWTS-at-EASST-4s.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/CWTS-at-EASST-4s.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <section id="a-year-of-looking-in-on-academia" class="level3">
 <h3 class="anchored" data-anchor-id="a-year-of-looking-in-on-academia"><a href="https://doi.org/10.59348/kd07y-z3g36">A year of looking in on academia</a></h3>
 <p><a href="https://doi.org/10.59348/kd07y-z3g36">https://doi.org/10.59348/kd07y-z3g36</a> <br>Published December 13, 2023 in <a href="https://rogue-scholar.org/blogs/eve">Martin Paul Eve</a><br>Martin Paul Eve<br>As many of you know, I took secondment from my academic role this year to work on research and development at Crossref. A variety of factors inspired this, not least my health and wanting to be able to work from home. After a year, I have reflected on my experience of transferring to a very good employer outside of academia. If you did the same, your mileage might vary, because it all depends where you end up working and for whom.</p>
@@ -3189,7 +3213,11 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<p><a href="https://chrisvoncsefalvay.com/posts/academic-generative-ai/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://chrisvoncsefalvay.com/posts/academic-generative-ai/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp" class="img-fluid"></a></p>
+<div>
+<figure class="figure">
+<p><a href="https://chrisvoncsefalvay.com/posts/academic-generative-ai/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://chrisvoncsefalvay.com/posts/academic-generative-ai/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <section id="navigating-the-unseen-unveiling-the-scope-of-african-research-software-and-systems-engineering" class="level3">
 <h3 class="anchored" data-anchor-id="navigating-the-unseen-unveiling-the-scope-of-african-research-software-and-systems-engineering"><a href="https://doi.org/10.59350/48yxv-sr505">Navigating the Unseen: Unveiling the Scope of African Research Software and Systems Engineering</a></h3>
 <p><a href="https://doi.org/10.59350/48yxv-sr505">https://doi.org/10.59350/48yxv-sr505</a> <br>Published December 6, 2023 in <a href="https://rogue-scholar.org/blogs/researchsoft">Research Software Alliance</a><br>Anelda Van der Walt<br>Participants of the first Research Software Indaba held in Cape Town, South Africa in May 2023. <em> (Photo credit: Noxolo Chalale) </em> By Anelda Van der Walt (Director, Talarify) 6 December 2023 The African continent is home to some of the world’s most significant multi-country research projects.</p>
@@ -3677,7 +3705,11 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<p><a href="https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNoYW5nZXxlbnwwfHx8fDE3MDEyMTAwNjN8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNoYW5nZXxlbnwwfHx8fDE3MDEyMTAwNjN8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" class="img-fluid"></a></p>
+<div>
+<figure class="figure">
+<p><a href="https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNoYW5nZXxlbnwwfHx8fDE3MDEyMTAwNjN8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNoYW5nZXxlbnwwfHx8fDE3MDEyMTAwNjN8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <section id="introducing-ropensci-mentors---cohort-2023-2024" class="level3">
 <h3 class="anchored" data-anchor-id="introducing-ropensci-mentors---cohort-2023-2024"><a href="https://doi.org/10.59350/h1bg1-3xv48">Introducing rOpenSci Mentors - Cohort 2023-2024</a></h3>
 <p><a href="https://doi.org/10.59350/h1bg1-3xv48">https://doi.org/10.59350/h1bg1-3xv48</a> <br>Published November 29, 2023 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Apoorv Anand, Bruna Wundervald, Eunseop Kim, Emi Tanaka, François Michonneau, Francisco Cardozo, Erle Holgersen, Marie Vendettuoli, Jonathan Keane, Yanina Bellini Saibene<br>One important aspect of rOpenSci’s mission is to build capacity and promote passionate community members who help the open science and open source software community grow and improve. The rOpenSci Champions Program is a unique opportunity for us to identify, recognize, and reward such individuals and support them in their work to improve their communities and the wider ecosystem.</p>
@@ -4175,7 +4207,11 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<p><a href="https://epriego.files.wordpress.com/2021/01/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.jpg?w=656" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://epriego.files.wordpress.com/2021/01/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.jpg?w=656" class="img-fluid"></a></p>
+<div>
+<figure class="figure">
+<p><a href="https://epriego.files.wordpress.com/2021/01/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.jpg?w=656" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://epriego.files.wordpress.com/2021/01/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.jpg?w=656" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <section id="uk-covid-inquiry-eoho-hate-to-say-we-told-you-so" class="level3">
 <h3 class="anchored" data-anchor-id="uk-covid-inquiry-eoho-hate-to-say-we-told-you-so"><a href="https://doi.org/10.59350/ckhj4-ty439">UK Covid Inquiry: EOHO, Hate to Say We Told You So</a></h3>
 <p><a href="https://doi.org/10.59350/ckhj4-ty439">https://doi.org/10.59350/ckhj4-ty439</a> <br>Published November 22, 2023 in <a href="https://rogue-scholar.org/blogs/ernestopriego">Everything is Connected</a><br>Ernesto Priego<br>Eat Out to Help Out reversed social distancing guidance and contributed to a second Covid wave. Hate to say we told you so.</p>
@@ -4657,7 +4693,11 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<p><a href="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/OPEN_OR_OPEN.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/OPEN_OR_OPEN.png" class="img-fluid"></a></p>
+<div>
+<figure class="figure">
+<p><a href="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/OPEN_OR_OPEN.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.leidenmadtrics.nl/images/uploads/_articleThumb/OPEN_OR_OPEN.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <section id="has-open-access-become-a-band-aid-for-an-historical-innovation-gone-wrong" class="level3">
 <h3 class="anchored" data-anchor-id="has-open-access-become-a-band-aid-for-an-historical-innovation-gone-wrong"><a href="https://www.leidenmadtrics.nl/articles/has-open-access-become-a-band-aid-for-an-historical-innovation-gone-wrong">Has Open Access become a ‘band-aid’ for an historical ‘innovation-gone-wrong’?</a></h3>
 <p>Published November 16, 2023 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>In this blog post, we examine key historical moments in research assessment, access to, and affordability of published research, to explain why Open Access and its economic models have become an incremental solution to a problem requiring a revolutionary change. <strong> Open access: a change in publishing with a limited reach </strong> Open Access is a movement and policy directive dedicated to reforming the closed or subscription-based</p>
@@ -5127,7 +5167,11 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <span id="cb1-56">Markdown(markdown)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<p><a href="https://www.scholcommlab.ca/wp-content/uploads/2023/11/STI2023-group-photo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.scholcommlab.ca/wp-content/uploads/2023/11/STI2023-group-photo.jpg" class="img-fluid"></a></p>
+<div>
+<figure class="figure">
+<p><a href="https://www.scholcommlab.ca/wp-content/uploads/2023/11/STI2023-group-photo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.scholcommlab.ca/wp-content/uploads/2023/11/STI2023-group-photo.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <section id="introducing-the-cwts-ecrphd-council" class="level3">
 <h3 class="anchored" data-anchor-id="introducing-the-cwts-ecrphd-council"><a href="https://www.leidenmadtrics.nl/articles/introducing-the-cwts-ecr-phd-council">Introducing the CWTS ECR/PhD Council</a></h3>
 <p>Published November 8, 2023 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>In this blog post, we’ll introduce you to the CWTS ECR/PhD Council, shedding light on its significance, objectives, and how it can serve as a crucial resource for early career researchers and PhDs at CWTS. CWTS is an interdisciplinary institute at Leiden University with a diverse multinational academic culture. PhD candidates, early career researchers, and visiting scholars from around the world gather at CWTS to pursue their research journeys.</p>

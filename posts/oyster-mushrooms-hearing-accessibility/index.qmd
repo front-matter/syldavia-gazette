@@ -3,7 +3,7 @@ title: "Oyster Mushrooms, Hearing, Accessibility, Obesity, Webb Space Telescope"
 description: |
   Oyster mushroom fungus uses nerve gas to paralyse and eat tiny worms More detailed understanding of how oyster mushrooms, a carnivorous fungus, kill their prey to use them as nitrogen source.
 date: 2023-02-08
-doi: 10.53731/cykt71w-www44bb
+doi: https://doi.org/10.53731/cykt71w-www44bb
 categories: ["weekly"]
 image: "/images/STScI-WebbSouthernRing.jpg"
 open-graph:

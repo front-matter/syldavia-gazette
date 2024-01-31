@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.504">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,6 +65,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -111,8 +112,35 @@ background-size: cover;
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Syldavia Gazette" href="index.xml" data-external="1"><meta property="og:title" content="">
+<link rel="alternate" type="application/rss+xml" title="Syldavia Gazette" href="index.xml" data-external="1"><meta property="og:title" content="Syldavia Gazette">
 <meta property="og:description" content="The Syldavia Gazette is a newsletter highlighting interesting science stories from around the web.">
 <meta property="og:site_name" content="Syldavia Gazette">
 </head>
@@ -120,7 +148,7 @@ background-size: cover;
 <body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -1440,7 +1468,7 @@ Martin Fenner
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="special issue" data-listing-date-sort="1698098400000" data-listing-file-modified-sort="1700645584572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="811">
+<div class="quarto-post image-right" data-index="13" data-categories="special issue" data-listing-date-sort="1698098400000" data-listing-file-modified-sort="1706683617755" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="811">
 <div class="thumbnail">
 <p><a href="./posts/open-access-week-scholarly-blogosphere/index.html" class="no-external"></a></p><a href="./posts/open-access-week-scholarly-blogosphere/index.html" class="no-external">
 <p><img data-src="./images/photo-1471094114392-6a87b3e78ee0.jpeg" class="thumbnail-image"></p>
@@ -1580,7 +1608,7 @@ Martin Fenner
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="weekly" data-listing-date-sort="1678834800000" data-listing-file-modified-sort="1699830948003" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="222">
+<div class="quarto-post image-right" data-index="18" data-categories="weekly" data-listing-date-sort="1678834800000" data-listing-file-modified-sort="1706683575873" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="222">
 <div class="thumbnail">
 <p><a href="./posts/data-sharing-challenger-expedition-research-software/index.html" class="no-external"></a></p><a href="./posts/data-sharing-challenger-expedition-research-software/index.html" class="no-external">
 <p><img data-src="./images/journal.pcbi.1010879.g001.png" class="thumbnail-image"></p>
@@ -1608,7 +1636,7 @@ Martin Fenner
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="weekly" data-listing-date-sort="1678230000000" data-listing-file-modified-sort="1699831089312" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="227">
+<div class="quarto-post image-right" data-index="19" data-categories="weekly" data-listing-date-sort="1678230000000" data-listing-file-modified-sort="1706683639790" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="227">
 <div class="thumbnail">
 <p><a href="./posts/planetary-defense-healthy-food-slime/index.html" class="no-external"></a></p><a href="./posts/planetary-defense-healthy-food-slime/index.html" class="no-external">
 <p><img data-src="./images/Elgin_Marbles_east_pediment.jpg" class="thumbnail-image"></p>
@@ -1636,7 +1664,7 @@ Martin Fenner
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="weekly" data-listing-date-sort="1677625200000" data-listing-file-modified-sort="1699831114552" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="230">
+<div class="quarto-post image-right" data-index="20" data-categories="weekly" data-listing-date-sort="1677625200000" data-listing-file-modified-sort="1706683496386" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="230">
 <div class="thumbnail">
 <p><a href="./posts/proust-rights-of-nature-standard-model/index.html" class="no-external"></a></p><a href="./posts/proust-rights-of-nature-standard-model/index.html" class="no-external">
 <p><img data-src="./images/mar-menor.jpg-1.webp" class="thumbnail-image"></p>
@@ -1664,7 +1692,7 @@ Martin Fenner
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="weekly" data-listing-date-sort="1677020400000" data-listing-file-modified-sort="1699830976990" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="240">
+<div class="quarto-post image-right" data-index="21" data-categories="weekly" data-listing-date-sort="1677020400000" data-listing-file-modified-sort="1706683588639" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="240">
 <div class="thumbnail">
 <p><a href="./posts/dodo-dataviz-maize/index.html" class="no-external"></a></p><a href="./posts/dodo-dataviz-maize/index.html" class="no-external">
 <p><img data-src="./images/1280px-De_Alice-s_Abenteuer_im_Wunderland_Carroll_pic_10.jpg" class="thumbnail-image"></p>
@@ -1692,7 +1720,7 @@ Martin Fenner
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="weekly" data-listing-date-sort="1676415600000" data-listing-file-modified-sort="1700000774154" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="213">
+<div class="quarto-post image-right" data-index="22" data-categories="weekly" data-listing-date-sort="1676415600000" data-listing-file-modified-sort="1706683568600" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="213">
 <div class="thumbnail">
 <p><a href="./posts/covid-ancient-migrations-peer-review/index.html" class="no-external"></a></p><a href="./posts/covid-ancient-migrations-peer-review/index.html" class="no-external">
 <p><img data-src="./images/photo-of-grave-credit-nadezhda-f-stepanova_web.jpg" class="thumbnail-image"></p>
@@ -1720,7 +1748,7 @@ Martin Fenner
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="weekly" data-listing-date-sort="1675810800000" data-listing-file-modified-sort="1699831064343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="254">
+<div class="quarto-post image-right" data-index="23" data-categories="weekly" data-listing-date-sort="1675810800000" data-listing-file-modified-sort="1706683628044" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="254">
 <div class="thumbnail">
 <p><a href="./posts/oyster-mushrooms-hearing-accessibility/index.html" class="no-external"></a></p><a href="./posts/oyster-mushrooms-hearing-accessibility/index.html" class="no-external">
 <p><img data-src="./images/STScI-WebbSouthernRing.jpg" class="thumbnail-image"></p>
@@ -1748,7 +1776,7 @@ Martin Fenner
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="weekly" data-listing-date-sort="1675206000000" data-listing-file-modified-sort="1699831003050" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="289">
+<div class="quarto-post image-right" data-index="24" data-categories="weekly" data-listing-date-sort="1675206000000" data-listing-file-modified-sort="1706683598648" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="289">
 <div class="thumbnail">
 <p><a href="./posts/guinea-worms-chatgpt-neanderthals/index.html" class="no-external"></a></p><a href="./posts/guinea-worms-chatgpt-neanderthals/index.html" class="no-external">
 <p><img data-src="./images/gw-release-2023.jpg" class="thumbnail-image"></p>
@@ -2058,27 +2086,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -2093,10 +2100,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -2105,8 +2116,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
