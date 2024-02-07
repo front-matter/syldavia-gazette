@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Fenner">
-<meta name="dcterms.date" content="2023-11-15">
-<meta name="description" content="This is a summary of the Rogue Scholar blog posts published since November 8, 2023.">
+<meta name="dcterms.date" content="2024-02-07">
+<meta name="description" content="This is a summary of the Rogue Scholar blog posts published January 31 - February 6, 2024.">
 
-<title>Syldavia Gazette - Rogue Scholar Digest November 15, 2023</title>
+<title>Syldavia Gazette - Rogue Scholar Digest February 7, 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,10 +112,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest November 15, 2023">
-<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published since November 8, 2023.">
-<meta property="og:image" content="https://syldavia-gazette.org/images/STI2023-group-photo.jpg">
+<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest February 7, 2024">
+<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published January 31 - February 6, 2024.">
+<meta property="og:image" content="https://syldavia-gazette.org/images/Preprint-Review-Advantages-Infographic-1024x538.png">
 <meta property="og:site_name" content="Syldavia Gazette">
+<meta property="og:image:height" content="538">
+<meta property="og:image:width" content="1024">
 </head>
 
 <body class="floating nav-fixed">
@@ -1052,7 +1054,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rogue Scholar Digest November 15, 2023</h1>
+<h1 class="title">Rogue Scholar Digest February 7, 2024</h1>
   <div class="quarto-categories">
     <div class="quarto-category">digest</div>
   </div>
@@ -1060,7 +1062,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    <p>This is a summary of the Rogue Scholar blog posts published since November 8, 2023.</p>
+    <p>This is a summary of the Rogue Scholar blog posts published January 31 - February 6, 2024.</p>
   </div>
 </div>
 
@@ -1084,7 +1086,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 15, 2023</p>
+      <p class="date">February 7, 2024</p>
     </div>
   </div>
   
@@ -1096,25 +1098,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-This post finds Rogue Scholar blog posts published the last seven days using the Rogue Scholar API.
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Results are filtered by posts published between <code>2023-11-22</code> and <code>2023-11-28</code> and <code>en</code> as language.</li>
-<li>We retrieve the <code>title</code>, <code>authors</code>, <code>publication date</code>, <code>abstract</code>, <code>blog name</code>, <code>blog_slug</code>, and <code>doi</code>.</li>
-<li>We sort the results in chronological order (oldest first).</li>
-<li>We format the results and generate markdown output.</li>
-</ul>
-</div>
-</div>
-<div id="ccf340d9" class="cell" data-execution_count="1">
+<div id="8ef27231" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -1126,9 +1110,9 @@ This post finds Rogue Scholar blog posts published the last seven days using the
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>locale.setlocale(locale.LC_ALL, <span class="st">"en_US"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2023-11-08"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2023-11-14"</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2024-01-31"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2024-02-06"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    baseUrl</span>
@@ -1174,63 +1158,51 @@ This post finds Rogue Scholar blog posts published the last seven days using the
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>markdown <span class="op">+=</span> posts_as_string</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Markdown(markdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
 <div>
 <figure class="figure">
-<p><a href="https://www.scholcommlab.ca/wp-content/uploads/2023/11/STI2023-group-photo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.scholcommlab.ca/wp-content/uploads/2023/11/STI2023-group-photo.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="https://blog.europepmc.org/wp-content/uploads/2024/01/Preprint-Review-Advantages-Infographic-1024x538.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.europepmc.org/wp-content/uploads/2024/01/Preprint-Review-Advantages-Infographic-1024x538.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<section id="introducing-the-cwts-ecrphd-council" class="level3">
-<h3 class="anchored" data-anchor-id="introducing-the-cwts-ecrphd-council"><a href="https://www.leidenmadtrics.nl/articles/introducing-the-cwts-ecr-phd-council">Introducing the CWTS ECR/PhD Council</a></h3>
-<p>Published November 8, 2023 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>In this blog post, we’ll introduce you to the CWTS ECR/PhD Council, shedding light on its significance, objectives, and how it can serve as a crucial resource for early career researchers and PhDs at CWTS. CWTS is an interdisciplinary institute at Leiden University with a diverse multinational academic culture. PhD candidates, early career researchers, and visiting scholars from around the world gather at CWTS to pursue their research journeys.</p>
+<section id="discovering-reviewed-preprints" class="level3">
+<h3 class="anchored" data-anchor-id="discovering-reviewed-preprints"><a href="https://doi.org/10.59350/0cp6h-62434">Discovering reviewed preprints</a></h3>
+<p><a href="https://doi.org/10.59350/0cp6h-62434">https://doi.org/10.59350/0cp6h-62434</a> <br>Published January 31, 2024 in <a href="https://rogue-scholar.org/blogs/europepmc">Europe PMC News Blog</a><br>Summer Rosonovski<br>Preprinting has soared in popularity in the life sciences and is increasingly recognised as an excellent method to share research outputs quickly and freely. While preprints have gained popularity, an important consideration is ensuring their scientific quality. This prompted the development of platforms where researchers can comment on, evaluate, and review preprints.</p>
 </section>
-<section id="biobanking-at-ggbn-2023-highlights-from-gigascience-press" class="level3">
-<h3 class="anchored" data-anchor-id="biobanking-at-ggbn-2023-highlights-from-gigascience-press"><a href="https://doi.org/10.59350/ahnf6-e1m90">BioBanking at GGBN 2023: Highlights from GigaScience Press</a></h3>
-<p><a href="https://doi.org/10.59350/ahnf6-e1m90">https://doi.org/10.59350/ahnf6-e1m90</a> <br>Published November 8, 2023 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Chris Armit<br><em> “Extinction is forever – so our action must be immediate.” </em> – <em> Sir David Attenborough, Sept 30th 2020 </em> The fourth international Global Genome Biodiversity Network (GGBN) Conference took place in Aguascalientes, Mexico from October 17th to October 20th 2023 where it was hosted by the Universidad Autónoma de Aguascalientes.</p>
+<section id="new-vinyl-only-session-en-el-mundo-de-afuera-todo-cambia" class="level3">
+<h3 class="anchored" data-anchor-id="new-vinyl-only-session-en-el-mundo-de-afuera-todo-cambia"><a href="https://doi.org/10.59350/7p62q-g0778">New Vinyl-only Session: En el mundo de afuera (todo cambia)</a></h3>
+<p><a href="https://doi.org/10.59350/7p62q-g0778">https://doi.org/10.59350/7p62q-g0778</a> <br>Published February 1, 2024 in <a href="https://rogue-scholar.org/blogs/ernestopriego">Everything is Connected</a><br>Ernesto Priego<br>“En el mundo de afuera todo cambia” – Guadalupe Dueñas, 1958 “El cuatrapeo es parte de la improvisación; la improvisación es parte del selector”. -Arturo Villamil, 2024, friend and fellow collector and DJ It’s finally February!</p>
 </section>
-<section id="from-ottawa-to-leiden-scholcommlabs-conference-highlights" class="level3">
-<h3 class="anchored" data-anchor-id="from-ottawa-to-leiden-scholcommlabs-conference-highlights"><a href="https://doi.org/10.59350/vbp1j-f9j63">From Ottawa to Leiden: ScholCommLab’s Conference Highlights</a></h3>
-<p><a href="https://doi.org/10.59350/vbp1j-f9j63">https://doi.org/10.59350/vbp1j-f9j63</a> <br>Published November 9, 2023 in <a href="https://rogue-scholar.org/blogs/scholcommlab">Scholarly Communications Lab | ScholCommLab</a><br>Olivia Aguiar<br>Over the last few months, ScholCommLab members took part in over six conferences, including the: International Conference on Science, Technology, and Innovation Indicators (STI 2023), International Communication Association Conference (ICA 2023), and Bibliometrics and Research Impact Community Conference (BRIC 2023). In this blog post, we’re sharing highlights from each event.</p>
+<section id="the-unesco-open-science-outlook-there-is-progress-but-it-is-unequal" class="level3">
+<h3 class="anchored" data-anchor-id="the-unesco-open-science-outlook-there-is-progress-but-it-is-unequal"><a href="https://doi.org/10.59350/91td8-0bv95">The UNESCO Open Science Outlook: there is progress, but it is unequal</a></h3>
+<p><a href="https://doi.org/10.59350/91td8-0bv95">https://doi.org/10.59350/91td8-0bv95</a> <br>Published February 1, 2024 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Ismael Rafols<br><strong> <strong> A value-led perspective on Open Science </strong> </strong> In 2021, UNESCO approved its Recommendation on Open Science (OS). By signing this recommendation, 193 countries made a commitment to support the development of OS with a vision of science as a global public good.</p>
 </section>
-<section id="archiving-rogue-scholar-blogs-with-the-internet-archive" class="level3">
-<h3 class="anchored" data-anchor-id="archiving-rogue-scholar-blogs-with-the-internet-archive"><a href="https://doi.org/10.53731/g60vh-3ng48">Archiving Rogue Scholar blogs with the Internet Archive</a></h3>
-<p><a href="https://doi.org/10.53731/g60vh-3ng48">https://doi.org/10.53731/g60vh-3ng48</a> <br>Published November 9, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Blogs participating in the Rogue Scholar science blog archive are now archived in the Internet Archive. Starting November 1st, Rogue Scholar is participating in the Internet Archive Archive-It service and all archived blogs can be found here.</p>
+<section id="plant-and-animal-genomes-pag-31st-annual-conference" class="level3">
+<h3 class="anchored" data-anchor-id="plant-and-animal-genomes-pag-31st-annual-conference"><a href="https://doi.org/10.59350/2f91q-cxa49">Plant and Animal Genomes (PAG) 31st annual conference</a></h3>
+<p><a href="https://doi.org/10.59350/2f91q-cxa49">https://doi.org/10.59350/2f91q-cxa49</a> <br>Published February 2, 2024 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Chris Hunter<br>PAG (Plant and Animal Genomes conference) returned to the Town and Country resort San Diego for its 31st installment this January (Jan 12-17, 2024), bigger and better than ever before! The GigaScience Press team are regular attendees of the meeting (see last years write-up), and this year members of our Editorial and Curation teams joined nearly 3000 delegates from over 60 countries.</p>
 </section>
-<section id="two-influential-textbooks-mee-and-mellor." class="level3">
-<h3 class="anchored" data-anchor-id="two-influential-textbooks-mee-and-mellor."><a href="https://doi.org/10.59350/e3wmw-qwx29">Two influential textbooks – “Mee” and “Mellor”.</a></h3>
-<p><a href="https://doi.org/10.59350/e3wmw-qwx29">https://doi.org/10.59350/e3wmw-qwx29</a> <br>Published November 11, 2023 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>I am a member of the &nbsp;Royal Society of &nbsp;Chemistry’s Historical group. Amongst other activities, it publishes two editions&nbsp;of a newsletter each year for its members.</p>
+<section id="three-new-userscripts-for-wikidata" class="level3">
+<h3 class="anchored" data-anchor-id="three-new-userscripts-for-wikidata"><a href="https://doi.org/10.59350/2nwnz-8h307">Three new userscripts for Wikidata</a></h3>
+<p><a href="https://doi.org/10.59350/2nwnz-8h307">https://doi.org/10.59350/2nwnz-8h307</a> <br>Published February 2, 2024 in <a href="https://rogue-scholar.org/blogs/syntaxus_baccata">Syntaxus baccata</a><br>Lars Willighagen<br>Today I worked on three user scripts for Wikidata. Together, these tools hopefully make the data in Wikidata more accessible and make it easier to navigate between items. To enable these, include one or more of the following lines in your common.js (depending on which script(s) you want): mw.loader.load(‘//www.wikidata.org/w/index.php?title=User:Lagewi/properties.js&amp;oldid=2039401177&amp;action=raw&amp;ctype=text/javascript’);</p>
 </section>
-<section id="auto-doi-for-quarto-posts-via-rogue-scholar" class="level3">
-<h3 class="anchored" data-anchor-id="auto-doi-for-quarto-posts-via-rogue-scholar"><a href="https://doi.org/10.59350/5hxdg-fz574">Auto-DOI for Quarto posts via Rogue Scholar</a></h3>
-<p><a href="https://doi.org/10.59350/5hxdg-fz574">https://doi.org/10.59350/5hxdg-fz574</a> <br>Published November 13, 2023 in <a href="https://rogue-scholar.org/blogs/chrisvoncsefalvay">Chris von Csefalvay</a><br>Chris von Csefalvay<br>I love posts that allow me to merge some of my addictions.</p>
+<section id="using-nextcloud-as-project-management-system" class="level3">
+<h3 class="anchored" data-anchor-id="using-nextcloud-as-project-management-system"><a href="https://doi.org/10.59350/m1pc3-3jb42">Using Nextcloud as project management system</a></h3>
+<p><a href="https://doi.org/10.59350/m1pc3-3jb42">https://doi.org/10.59350/m1pc3-3jb42</a> <br>Published February 3, 2024 in <a href="https://rogue-scholar.org/blogs/kalz">Posts | Prof.&nbsp;Dr.&nbsp;Marco Kalz</a><br>Marco Kalz<br>Due to lack of good open source project management systems and deficiencies of federal solutions and lack of a local system, I have explored again Nextcloud as an open source option for project management. While an initial search mostly delivers integrations to Open Project into Nextcloud, I had the goal to model a workflow of a project fully in Nextcloud.</p>
 </section>
-<section id="data-on-100-million-individual-trees-in-the-national-ecological-observatory-network" class="level3">
-<h3 class="anchored" data-anchor-id="data-on-100-million-individual-trees-in-the-national-ecological-observatory-network"><a href="https://doi.org/10.59350/6vjpn-ky077">Data on 100 million individual trees in the National Ecological Observatory Network</a></h3>
-<p><a href="https://doi.org/10.59350/6vjpn-ky077">https://doi.org/10.59350/6vjpn-ky077</a> <br>Published November 13, 2023 in <a href="https://rogue-scholar.org/blogs/jabberwocky_ecology">Jabberwocky Ecology</a><br>Ethan White<br>We’re excited to announce the initial release of crown maps for 100 million trees in the National Ecological Observatory Network (NEON) with information on location, species identify, size, and alive/dead status.</p>
+<section id="scholarly-blogging-now-with-dois" class="level3">
+<h3 class="anchored" data-anchor-id="scholarly-blogging-now-with-dois"><a href="https://doi.org/10.59350/s8kvg-9nx69">Scholarly blogging, now with DOIs</a></h3>
+<p><a href="https://doi.org/10.59350/s8kvg-9nx69">https://doi.org/10.59350/s8kvg-9nx69</a> <br>Published February 5, 2024 in <a href="https://rogue-scholar.org/blogs/ideophone">The Ideophone</a><br>Mark Dingemanse<br>I have been blogging at <em> The Ideophone </em> since 2007, and not all of it has been as ephemeral as my PhD promotor once feared. My short post documenting the etymology of Zotero is apparently the only scientific documentation of where Zotero’s name comes from; it has served as a source in Wikipedia for ages and has received over 15 scholarly citations.</p>
 </section>
-<section id="do-you-dare-what-female-scientists-expect-when-communicating" class="level3">
-<h3 class="anchored" data-anchor-id="do-you-dare-what-female-scientists-expect-when-communicating"><a href="https://elephantinthelab.org/do-you-dare-what-female-scientists-expect-when-communicating">Do you dare? What female scientists expect when communicating</a></h3>
-<p>Published November 14, 2023 in <a href="https://rogue-scholar.org/blogs/elephantinthelab">Elephant in the Lab</a><br>Sascha Schönig<br><strong> The expectation to communicate </strong> In 2019, the German Federal Ministry of Education and Research called for a cultural shift toward communicating science (Bundesministerium für Bildung und Forschung, 2019). The former Federal Minister of Education and Research, Anja Karliczek, urged scientists to communicate their research continuously and classified communication as a central task for universities and research organizations</p>
+<section id="new-version-of-commonmeta-py-library-for-scholarly-metadata" class="level3">
+<h3 class="anchored" data-anchor-id="new-version-of-commonmeta-py-library-for-scholarly-metadata"><a href="https://doi.org/10.53731/918y1-v4d08">New version of commonmeta-py library for scholarly metadata</a></h3>
+<p><a href="https://doi.org/10.53731/918y1-v4d08">https://doi.org/10.53731/918y1-v4d08</a> <br>Published February 5, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Yesterday I released version 0.13 of the commonmeta-py library on PyPi. The major new feature is a command-line interface for all metadata conversions, and the metadata validation with the Commonmeta JSON Schema has finally been fixed. The command-line interface takes any supported persistent identifier or file as input, and returns the metadata in the desired format as output.</p>
 </section>
-<section id="reevaluating-posi-2023-evolution" class="level3">
-<h3 class="anchored" data-anchor-id="reevaluating-posi-2023-evolution"><a href="https://doi.org/10.59350/z537h-xsd22">Reevaluating POSI: 2023 evolution</a></h3>
-<p><a href="https://doi.org/10.59350/z537h-xsd22">https://doi.org/10.59350/z537h-xsd22</a> <br>Published November 14, 2023 in <a href="https://rogue-scholar.org/blogs/libscie">Liberate Science</a><br>Liberate Science<br>In 2022, we did our first self-evaluation according to the Principles of Open Scholarly Infrastructure (POSI). In this blog, we take stock ~1 year later, based on POSI v1.1, and reevaluate how we’re doing and where there’s still room for improvement. Summary 💚 = aligned; 💛 = less aligned;</p>
+<section id="please-shut-up-verbosity-control-in-packages" class="level3">
+<h3 class="anchored" data-anchor-id="please-shut-up-verbosity-control-in-packages"><a href="https://doi.org/10.59350/a7t5m-cy325">Please Shut Up! Verbosity Control in Packages</a></h3>
+<p><a href="https://doi.org/10.59350/a7t5m-cy325">https://doi.org/10.59350/a7t5m-cy325</a> <br>Published February 6, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Mark Padgham, Maëlle Salmon<br>We recently introduced a new paragraph to the development version of our dev guide This complements the statistical software review requirement for Bayesian software.</p>
 </section>
-<section id="fair-data-digest-21" class="level3">
-<h3 class="anchored" data-anchor-id="fair-data-digest-21"><a href="https://doi.org/10.59350/5m34e-f6d14">FAIR Data Digest #21</a></h3>
-<p><a href="https://doi.org/10.59350/5m34e-f6d14">https://doi.org/10.59350/5m34e-f6d14</a> <br>Published November 14, 2023 in <a href="https://rogue-scholar.org/blogs/fairdata">FAIR Data Digest</a><br>Sven Lieber<br>on the meeting point of cultural heritage and technology: Heritage Science. Looking at the European Research Infrastructure for Heritage Science and the need for FAIR data not only coming from digitized content but also from measurements of specialized scientific instruments.</p>
-</section>
-<section id="upstream-reflections" class="level3">
-<h3 class="anchored" data-anchor-id="upstream-reflections"><a href="https://doi.org/10.59350/qxhxa-kac46">Upstream reflections</a></h3>
-<p><a href="https://doi.org/10.59350/qxhxa-kac46">https://doi.org/10.59350/qxhxa-kac46</a> <br>Published November 14, 2023 in <a href="https://rogue-scholar.org/blogs/chjh">Chris Hartgerink</a><br>Chris Hartgerink<br>Recently, I left the Upstream editorial team as a result of changing priorities.&nbsp; I figured it would be a good idea to reflect before I forget.</p>
-</section>
-<section id="new-paper-theropod-bite-marks-on-morrison-sauropod-bones" class="level3">
-<h3 class="anchored" data-anchor-id="new-paper-theropod-bite-marks-on-morrison-sauropod-bones"><a href="https://doi.org/10.59350/txkht-ewp95">New paper: theropod bite marks on Morrison sauropod bones</a></h3>
-<p><a href="https://doi.org/10.59350/txkht-ewp95">https://doi.org/10.59350/txkht-ewp95</a> <br>Published November 14, 2023 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Matt Wedel<br>New paper out today in PeerJ: Lei R, Tschopp E, Hendrickx C, Wedel MJ, Norell M, Hone DWE. 2023. Bite and tooth marks on sauropod dinosaurs from the Morrison Formation. PeerJ 11:e16327 http://doi.org/10.7717/peerj.16327 This one had a long gestation.</p>
-</section>
-<section id="the-programmable-blog" class="level3">
-<h3 class="anchored" data-anchor-id="the-programmable-blog"><a href="https://doi.org/10.53731/ch2e1-1cm64">The programmable blog</a></h3>
-<p><a href="https://doi.org/10.53731/ch2e1-1cm64">https://doi.org/10.53731/ch2e1-1cm64</a> <br>Published November 14, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Today I am relaunching the Syldavia Gazette blog on a new blogging platform, switching from Ghost to Quarto. This allows me to use Jupyter notebooks in the blog to help generate blog posts. The Syldavia Gazette (the other blog I manage besides the Front Matter blog) description says The Syldavia Gazette is a newsletter highlighting interesting science stories from around the web.</p>
+<section id="how-to-use-gpt-api-to-export-a-research-graph-from-pdf-publications" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-use-gpt-api-to-export-a-research-graph-from-pdf-publications"><a href="https://doi.org/10.59350/sqrk6-1bj22">How to use GPT API to export a research graph from PDF publications</a></h3>
+<p><a href="https://doi.org/10.59350/sqrk6-1bj22">https://doi.org/10.59350/sqrk6-1bj22</a> <br>Published February 6, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br><strong> Authors: </strong> Nakul Nambiar (0009–0009–9720–9233)Zhuochen Wu (0009–0000–5642–5348) Research Graph is a structured representation of research objects that captures information about entities and the relationships between Researcher, Organisation, Publication, Grant and Research Data.</p>
 </section>
 </div>
 </div>
@@ -1804,7 +1776,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-november-15-2023/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-february-7-2024/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1823,7 +1795,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
