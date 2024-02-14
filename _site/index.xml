@@ -16,7 +16,447 @@
 <link>https://syldavia-gazette.org/</link>
 </image>
 <generator>quarto-1.4.549</generator>
-<lastBuildDate>Tue, 06 Feb 2024 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 14 Feb 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Rogue Scholar Digest February 14, 2024</title>
+  <dc:creator>Martin Fenner</dc:creator>
+  <link>https://syldavia-gazette.org/posts/rogue-scholar-digest-february-14-2024/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div id="7c97f520" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> requests</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> locale</span>
+<span id="cb1-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> re</span>
+<span id="cb1-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> typing <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Optional</span>
+<span id="cb1-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> datetime</span>
+<span id="cb1-6"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> IPython.display <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Markdown</span>
+<span id="cb1-7"></span>
+<span id="cb1-8">locale.setlocale(locale.LC_ALL, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"en_US"</span>)</span>
+<span id="cb1-9">baseUrl <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://api.rogue-scholar.org/"</span></span>
+<span id="cb1-10">published_since <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2024-02-07"</span></span>
+<span id="cb1-11">published_until <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2024-02-13"</span></span>
+<span id="cb1-12">feature_image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb1-13">include_fields <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
+<span id="cb1-14">url <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (</span>
+<span id="cb1-15">    baseUrl</span>
+<span id="cb1-16">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"posts?&amp;published_since=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_since<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&amp;published_until=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_until<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&amp;language=en&amp;sort=published_at&amp;order=asc&amp;per_page=50&amp;include_fields=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>include_fields<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-17">)</span>
+<span id="cb1-18">response <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> requests.get(url)</span>
+<span id="cb1-19">result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> response.json()</span>
+<span id="cb1-20"></span>
+<span id="cb1-21"></span>
+<span id="cb1-22"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> get_post(post):</span>
+<span id="cb1-23">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"document"</span>]</span>
+<span id="cb1-24"></span>
+<span id="cb1-25"></span>
+<span id="cb1-26"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> format_post(post):</span>
+<span id="cb1-27">    doi <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> post.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"doi"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>)</span>
+<span id="cb1-28">    url <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> doi <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span></span>
+<span id="cb1-29">    title <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'title'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> doi <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'title'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'url'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span></span>
+<span id="cb1-30">    published_at <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> datetime.datetime.utcfromtimestamp(post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"published_at"</span>]).strftime(</span>
+<span id="cb1-31">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%B </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%-d</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">, %Y"</span></span>
+<span id="cb1-32">    )</span>
+<span id="cb1-33">    blog <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blog_name'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](https://rogue-scholar.org/blogs/</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blog_slug'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span></span>
+<span id="cb1-34">    author <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">", "</span>.join([<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>x[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'name'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> post.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"authors"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> []])</span>
+<span id="cb1-35">    summary <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"summary"</span>]</span>
+<span id="cb1-36">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"### </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>title<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>url<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">Published </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_at<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> in </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>blog<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>author<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>summary<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-37"></span>
+<span id="cb1-38"></span>
+<span id="cb1-39">posts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [get_post(x) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i, x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">enumerate</span>(result[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hits"</span>])]</span>
+<span id="cb1-40">posts_as_string <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>.join([format_post(x) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> posts])</span>
+<span id="cb1-41"></span>
+<span id="cb1-42"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> doi_from_url(url: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> Optional[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>]:</span>
+<span id="cb1-43">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""Return a DOI from a URL"""</span></span>
+<span id="cb1-44">    match <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> re.search(</span>
+<span id="cb1-45">        <span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">r"\A(?:(http|https)://(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.\d{4,5}/.+)\Z"</span>,</span>
+<span id="cb1-46">        url,</span>
+<span id="cb1-47">    )</span>
+<span id="cb1-48">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> match <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">is</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb1-49">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb1-50">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> match.group(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>).lower()</span>
+<span id="cb1-51"></span>
+<span id="cb1-52">images <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [x[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"image"</span>] <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> posts <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> x.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"image"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">is</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">not</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>]</span>
+<span id="cb1-53">image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> images[feature_image]</span>
+<span id="cb1-54">markdown <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"![](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>image<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-55">markdown <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> posts_as_string</span>
+<span id="cb1-56">Markdown(markdown)</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
+<div>
+<figure class="figure">
+<p><a href="https://blog.front-matter.io/content/images/2024/02/photo-1579052511406-ebe4c90f299f.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.front-matter.io/content/images/2024/02/photo-1579052511406-ebe4c90f299f.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<section id="josscast-3-studying-superbugs-juliette-hayer-on-baargin" class="level3">
+<h3 class="anchored" data-anchor-id="josscast-3-studying-superbugs-juliette-hayer-on-baargin"><a href="https://doi.org/10.59349/x672c-6ep91">JOSSCast #3: Studying Superbugs – Juliette Hayer on Baargin</a></h3>
+<p><a href="https://doi.org/10.59349/x672c-6ep91">https://doi.org/10.59349/x672c-6ep91</a> <br>Published February 8, 2024 in <a href="https://rogue-scholar.org/blogs/joss">Journal of Open Source Software Blog |</a><br>Arfon M. Smith<br><strong> Subscribe Now: </strong> Apple, Spotify, YouTube, RSS Juliette Hayer joins Arfon and Abby to discuss Baargin, an open source tool she created to analyze bacterial genomes, especially those resistant to antibiotics.</p>
+</section>
+<section id="introducing-the-rogue-scholar-advisory-board" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-the-rogue-scholar-advisory-board"><a href="https://doi.org/10.53731/9yf86-p8541">Introducing the Rogue Scholar Advisory Board</a></h3>
+<p><a href="https://doi.org/10.53731/9yf86-p8541">https://doi.org/10.53731/9yf86-p8541</a> <br>Published February 8, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>In January 2024 the new Rogue Scholar Advisory Board had its first meeting. It consists of six people with diverse expertise in scholarly blogging. Advisory Board members come from different scholarly disciplines and geographic regions, write in several languages besides English, and have different levels of technical expertise.</p>
+</section>
+<section id="announcing-rogue-scholar-preview" class="level3">
+<h3 class="anchored" data-anchor-id="announcing-rogue-scholar-preview"><a href="https://doi.org/10.53731/xwxf3-92j40">Announcing Rogue Scholar Preview</a></h3>
+<p><a href="https://doi.org/10.53731/xwxf3-92j40">https://doi.org/10.53731/xwxf3-92j40</a> <br>Published February 12, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Today the Rogue Scholar science blog archive launched a new feature: <strong> Rogue Scholar Preview </strong> . This new functionality enables the import of new science blogs into the preview version of the production service, located at https://preview.rogue-scholar.org. This allows users to see how their blog posts will look like in the Rogue Scholar service, and to resolve issues if necessary.</p>
+</section>
+<section id="how-to-use-grobid" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-use-grobid"><a href="https://doi.org/10.59350/hz1er-vrh59">How to use GROBID</a></h3>
+<p><a href="https://doi.org/10.59350/hz1er-vrh59">https://doi.org/10.59350/hz1er-vrh59</a> <br>Published February 12, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br><strong> How to use GROBID to extract text from&nbsp;PDF </strong> Author: Aland Astudillo https://orcid.org/0009-0008-8672-3168 GROBID is a powerful and useful tool based on machine learning that can extract text information from PDF files and other files to a structured format. One of the key challenges in knowledge mining from academic articles is reading the content of PDF files.</p>
+</section>
+<section id="informate-when-are-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="informate-when-are-the-data"><a href="https://doi.org/10.54900/08pke-hyy45">INFORMATE: When Are the Data?</a></h3>
+<p><a href="https://doi.org/10.54900/08pke-hyy45">https://doi.org/10.54900/08pke-hyy45</a> <br>Published February 13, 2024 in <a href="https://rogue-scholar.org/blogs/upstream">Upstream</a><br>Ted Habermann, Jamaica Jones, Howard Ratner, Tara Packer<br>In a recent Upstream blog post we explored where data connected to papers funded by several U.S. Federal Agencies are published. Different data sharing practices across these agencies led to very different distributions of datasets across various repositories. We used CHORUS reports that combine linked article and dataset metadata as input for that work.</p>
+</section>
+</div>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>digest</category>
+  <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-february-14-2024/</guid>
+  <pubDate>Wed, 14 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://syldavia-gazette.org/images/photo-1579052511406-ebe4c90f299f.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Rogue Scholar Digest February 7, 2024</title>
   <dc:creator>Martin Fenner</dc:creator>
@@ -474,7 +914,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-february-7-2024/</guid>
-  <pubDate>Tue, 06 Feb 2024 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/Preprint-Review-Advantages-Infographic-1024x538.png" medium="image" type="image/png" height="76" width="144"/>
 </item>
 <item>
@@ -966,7 +1406,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-january-31-2024/</guid>
-  <pubDate>Tue, 30 Jan 2024 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/1_Gzmbpq5qJUz2W1zpHd1XGA.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 <item>
@@ -1410,7 +1850,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-january-24-2024/</guid>
-  <pubDate>Tue, 23 Jan 2024 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 24 Jan 2024 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/b72f8a6c-a35f-4d53-9829-060696e7b5a5_390x259.webp" medium="image" type="image/webp"/>
 </item>
 <item>
@@ -1914,7 +2354,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-january-17-2024/</guid>
-  <pubDate>Tue, 16 Jan 2024 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 17 Jan 2024 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/Untitled-1024x614.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 <item>
@@ -2390,7 +2830,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-january-10-2024/</guid>
-  <pubDate>Tue, 09 Jan 2024 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 10 Jan 2024 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/bookcase.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
@@ -2834,7 +3274,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-january-3-2024/</guid>
-  <pubDate>Tue, 02 Jan 2024 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 03 Jan 2024 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/figure-2-rib-a.webp" medium="image" type="image/webp"/>
 </item>
 <item>
@@ -3294,7 +3734,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-december-29-2023/</guid>
-  <pubDate>Thu, 28 Dec 2023 23:00:00 GMT</pubDate>
+  <pubDate>Fri, 29 Dec 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/sti2023_header_2023-12-20-092141_bdrw.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
@@ -3758,7 +4198,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-december-21-2023/</guid>
-  <pubDate>Wed, 20 Dec 2023 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 21 Dec 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/38a29992-eede-4e6b-a1ca-f6f2328f3e9f_1124x869.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -4250,7 +4690,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-december-13-2023/</guid>
-  <pubDate>Tue, 12 Dec 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 13 Dec 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/4ae87543-b5d3-4373-b691-3fb71d8cf1d0.webp" medium="image" type="image/webp"/>
 </item>
 <item>
@@ -4734,7 +5174,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-december-6-2023/</guid>
-  <pubDate>Tue, 05 Dec 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 06 Dec 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/photo-1533073526757-2c8ca1df9f1c.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -5220,7 +5660,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-november-29-2023/</guid>
-  <pubDate>Tue, 28 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 29 Nov 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.webp" medium="image" type="image/webp"/>
 </item>
 <item>
@@ -5694,7 +6134,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-november-22-2023/</guid>
-  <pubDate>Tue, 21 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 22 Nov 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/OPEN_OR_OPEN.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
@@ -6184,7 +6624,7 @@ font-style: inherit;">+=</span> posts_as_string</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-november-15-2023/</guid>
-  <pubDate>Tue, 14 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 15 Nov 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/STI2023-group-photo.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -6272,7 +6712,7 @@ Ginny Hendricks</p>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-november-8-2023/</guid>
-  <pubDate>Tue, 07 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 08 Nov 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/ff6443ec-0fc2-4e3a-ac69-5f51e5b295cb_1515x1338.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -6354,7 +6794,7 @@ Samuel Moore</div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-november-2-2023/</guid>
-  <pubDate>Wed, 01 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 02 Nov 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/03880260005fa86e78ddb88e645bfcef.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -6415,7 +6855,7 @@ Samuel Moore</div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>special issue</category>
   <guid>https://syldavia-gazette.org/posts/open-access-week-scholarly-blogosphere/</guid>
-  <pubDate>Mon, 23 Oct 2023 22:00:00 GMT</pubDate>
+  <pubDate>Mon, 23 Oct 2023 23:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/photo-1471094114392-6a87b3e78ee0.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -6504,7 +6944,7 @@ Stephen Royle</p>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-october-25-2023/</guid>
-  <pubDate>Mon, 23 Oct 2023 22:00:00 GMT</pubDate>
+  <pubDate>Mon, 23 Oct 2023 23:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/nVsRank.webp" medium="image" type="image/webp"/>
 </item>
 <item>
@@ -6585,7 +7025,7 @@ Chiara Di Giambattista</p>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-october-19-2023/</guid>
-  <pubDate>Wed, 11 Oct 2023 22:00:00 GMT</pubDate>
+  <pubDate>Wed, 11 Oct 2023 23:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/tree-736885.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -6667,7 +7107,7 @@ Chris Hartgerink</p>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-october-11-2023/</guid>
-  <pubDate>Mon, 09 Oct 2023 22:00:00 GMT</pubDate>
+  <pubDate>Mon, 09 Oct 2023 23:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/feature-image-lange_2023.png" medium="image" type="image/png" height="88" width="144"/>
 </item>
 <item>
@@ -6713,7 +7153,7 @@ Martin Fenner</div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>digest</category>
   <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-october-4-2023/</guid>
-  <pubDate>Mon, 02 Oct 2023 22:00:00 GMT</pubDate>
+  <pubDate>Mon, 02 Oct 2023 23:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/8071729256_19fe2e444c.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -6762,7 +7202,7 @@ Martin Fenner</div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>weekly</category>
   <guid>https://syldavia-gazette.org/posts/data-sharing-challenger-expedition-research-software/</guid>
-  <pubDate>Tue, 14 Mar 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/journal.pcbi.1010879.g001.png" medium="image" type="image/png" height="150" width="144"/>
 </item>
 <item>
@@ -6811,7 +7251,7 @@ Martin Fenner</div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>weekly</category>
   <guid>https://syldavia-gazette.org/posts/planetary-defense-healthy-food-slime/</guid>
-  <pubDate>Tue, 07 Mar 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 08 Mar 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/Elgin_Marbles_east_pediment.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -6860,7 +7300,7 @@ Martin Fenner</div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>weekly</category>
   <guid>https://syldavia-gazette.org/posts/proust-rights-of-nature-standard-model/</guid>
-  <pubDate>Tue, 28 Feb 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/mar-menor.jpg-1.webp" medium="image" type="image/webp"/>
 </item>
 <item>
@@ -6909,7 +7349,7 @@ Martin Fenner</div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>weekly</category>
   <guid>https://syldavia-gazette.org/posts/dodo-dataviz-maize/</guid>
-  <pubDate>Tue, 21 Feb 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 22 Feb 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/1280px-De_Alice-s_Abenteuer_im_Wunderland_Carroll_pic_10.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -6958,7 +7398,7 @@ Martin Fenner</div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>weekly</category>
   <guid>https://syldavia-gazette.org/posts/covid-ancient-migrations-peer-review/</guid>
-  <pubDate>Tue, 14 Feb 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 15 Feb 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/photo-of-grave-credit-nadezhda-f-stepanova_web.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -7007,7 +7447,7 @@ Martin Fenner</div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>weekly</category>
   <guid>https://syldavia-gazette.org/posts/oyster-mushrooms-hearing-accessibility/</guid>
-  <pubDate>Tue, 07 Feb 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 08 Feb 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/STScI-WebbSouthernRing.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -7056,7 +7496,7 @@ Martin Fenner</div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>weekly</category>
   <guid>https://syldavia-gazette.org/posts/guinea-worms-chatgpt-neanderthals/</guid>
-  <pubDate>Tue, 31 Jan 2023 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 01 Feb 2023 00:00:00 GMT</pubDate>
   <media:content url="https://syldavia-gazette.org/images/gw-release-2023.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
