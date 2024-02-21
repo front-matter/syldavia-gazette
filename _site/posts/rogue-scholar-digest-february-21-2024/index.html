@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Fenner">
-<meta name="dcterms.date" content="2023-12-06">
-<meta name="description" content="This is a summary of the Rogue Scholar blog posts published November 29 - December 5, 2023.">
+<meta name="dcterms.date" content="2024-02-21">
+<meta name="description" content="This is a summary of the Rogue Scholar blog posts published February 14 - February 20, 2024.">
 
-<title>Syldavia Gazette - Rogue Scholar Digest December 6, 2023</title>
+<title>Syldavia Gazette - Rogue Scholar Digest February 21, 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,9 +112,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest December 6, 2023">
-<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published November 29 - December 5, 2023.">
-<meta property="og:image" content="https://syldavia-gazette.org/images/photo-1533073526757-2c8ca1df9f1c.jpeg">
+<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest February 21, 2024">
+<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published February 14 - February 20, 2024.">
+<meta property="og:image" content="https://syldavia-gazette.org/images/grubbs.svg">
 <meta property="og:site_name" content="Syldavia Gazette">
 </head>
 
@@ -1052,7 +1052,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rogue Scholar Digest December 6, 2023</h1>
+<h1 class="title">Rogue Scholar Digest February 21, 2024</h1>
   <div class="quarto-categories">
     <div class="quarto-category">digest</div>
   </div>
@@ -1060,7 +1060,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    <p>This is a summary of the Rogue Scholar blog posts published November 29 - December 5, 2023.</p>
+    <p>This is a summary of the Rogue Scholar blog posts published February 14 - February 20, 2024.</p>
   </div>
 </div>
 
@@ -1084,7 +1084,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 6, 2023</p>
+      <p class="date">February 21, 2024</p>
     </div>
   </div>
   
@@ -1096,7 +1096,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="651e4939" class="cell" data-execution_count="1">
+<div id="ca27d858" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -1108,9 +1108,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>locale.setlocale(locale.LC_ALL, <span class="st">"en_US"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2023-11-29"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2023-12-05"</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2024-02-14"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2024-02-20"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    baseUrl</span>
@@ -1159,72 +1159,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
 <div>
 <figure class="figure">
-<p><a href="https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNoYW5nZXxlbnwwfHx8fDE3MDEyMTAwNjN8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNoYW5nZXxlbnwwfHx8fDE3MDEyMTAwNjN8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" class="img-fluid figure-img"></a></p>
+<p><a href="https://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2024/02/grubbs.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2024/02/grubbs.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<section id="introducing-ropensci-mentors---cohort-2023-2024" class="level3">
-<h3 class="anchored" data-anchor-id="introducing-ropensci-mentors---cohort-2023-2024"><a href="https://doi.org/10.59350/h1bg1-3xv48">Introducing rOpenSci Mentors - Cohort 2023-2024</a></h3>
-<p><a href="https://doi.org/10.59350/h1bg1-3xv48">https://doi.org/10.59350/h1bg1-3xv48</a> <br>Published November 29, 2023 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Apoorv Anand, Bruna Wundervald, Eunseop Kim, Emi Tanaka, François Michonneau, Francisco Cardozo, Erle Holgersen, Marie Vendettuoli, Jonathan Keane, Yanina Bellini Saibene<br>One important aspect of rOpenSci’s mission is to build capacity and promote passionate community members who help the open science and open source software community grow and improve. The rOpenSci Champions Program is a unique opportunity for us to identify, recognize, and reward such individuals and support them in their work to improve their communities and the wider ecosystem.</p>
+<section id="introducing-ropensci-champions---cohort-2023-2024" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-ropensci-champions---cohort-2023-2024"><a href="https://doi.org/10.59350/s8tfx-mfh53">Introducing rOpenSci Champions - Cohort 2023-2024</a></h3>
+<p><a href="https://doi.org/10.59350/s8tfx-mfh53">https://doi.org/10.59350/s8tfx-mfh53</a> <br>Published February 15, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Ezekiel Adebayo Ogundepo, Sehrish Kanwal, Andrea Gomez Vargas, Liz Hare, Francesca Belem Lopes Palmeira, Yi-Chin Sunny Tseng, Mirna Vazquez Rosas Landa, Erika Siregar, Jacqui Levy, Yanina Bellini Saibene<br>The rOpenSci Champions Program starts this 2024 with a new cohort of Champions. We are pleased to introduce you to our Champions and their projects!Ezekiel Adebayo Ogundepo Hello, I’m Ezekiel, a data science professional deeply fascinated by the intersection of mathematics, statistics, and real-world challenges.</p>
 </section>
-<section id="the-imperative-of-reforming-scientific-publishing" class="level3">
-<h3 class="anchored" data-anchor-id="the-imperative-of-reforming-scientific-publishing"><a href="https://doi.org/10.54900/77seh-89t57">The Imperative of Reforming Scientific Publishing</a></h3>
-<p><a href="https://doi.org/10.54900/77seh-89t57">https://doi.org/10.54900/77seh-89t57</a> <br>Published November 29, 2023 in <a href="https://rogue-scholar.org/blogs/upstream">Upstream</a><br>Moumita Koley, Megha Sud<br><em> The International Science Council is a non-government organization that brings together 45 international scientific Unions and Associations, over 140 national and regional scientific organizations, including Academies and Research Councils, 60 international Federations and Societies, and Young Academies and Associations. </em> <em> The ISC is charting a path toward the mission to advance human development within sustainable planetary and </em></p>
+<section id="new-paper-pneumaticity-in-a-rebbachisaurid-caudal-vertebra" class="level3">
+<h3 class="anchored" data-anchor-id="new-paper-pneumaticity-in-a-rebbachisaurid-caudal-vertebra"><a href="https://doi.org/10.59350/n02nv-k4z74">New paper: pneumaticity in a rebbachisaurid caudal vertebra</a></h3>
+<p><a href="https://doi.org/10.59350/n02nv-k4z74">https://doi.org/10.59350/n02nv-k4z74</a> <br>Published February 15, 2024 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Matt Wedel<br><strong> Fig. 2. </strong> Rebbachisauridae indet. (MDPA-Pv 007) from the Sierra Chata locality (Candeleros Formation) Cenomanian (Upper Cretaceous). Anterior caudal vertebra in anterior ( <strong> A1 </strong> , <strong> A3 </strong> ), posterior ( <strong> A4 </strong> , <strong> A6 </strong> ), and left lateral ( <strong> A7 </strong> , <strong> A9 </strong> ) views.</p>
 </section>
-<section id="isc23-project-poster-scalable-scalable-lattice-boltzmann-leaps-to-exascale" class="level3">
-<h3 class="anchored" data-anchor-id="isc23-project-poster-scalable-scalable-lattice-boltzmann-leaps-to-exascale"><a href="https://doi.org/10.34732/xdvblg-eg9gxx">ISC23 Project Poster: SCALABLE: Scalable Lattice-Boltzmann Leaps to Exascale</a></h3>
-<p><a href="https://doi.org/10.34732/xdvblg-eg9gxx">https://doi.org/10.34732/xdvblg-eg9gxx</a> <br>Published November 29, 2023 in <a href="https://rogue-scholar.org/blogs/x_dev">JSC Accelerating Devices Lab</a><br>Jayesh Badwaik<br>At the ISC High Performance Conference 2023 a little while ago, we presented a project poster on the SCALABLE project. The work was also presented as a paper at the the Computing Frontiers 2023 conference previously.</p>
+<section id="brms-hacking-linear-predictors-for-random-effect-standard-deviations" class="level3">
+<h3 class="anchored" data-anchor-id="brms-hacking-linear-predictors-for-random-effect-standard-deviations"><a href="https://doi.org/10.59350/rd59h-hca42">Brms hacking: linear predictors for random effect standard deviations</a></h3>
+<p><a href="https://doi.org/10.59350/rd59h-hca42">https://doi.org/10.59350/rd59h-hca42</a> <br>Published February 17, 2024 in <a href="https://rogue-scholar.org/blogs/martinmodrak">Martin Modrák</a><br>Martin Modrák<br>brms is a great package. It allows you to put predictors on a lot of things. Its power is however not absolute — one thing it doesn’t let you directly do is use data to predict variances of random/varying effects.</p>
 </section>
-<section id="its-2023---why-are-we-still-not-sharing-phylogenies" class="level3">
-<h3 class="anchored" data-anchor-id="its-2023---why-are-we-still-not-sharing-phylogenies"><a href="https://doi.org/10.59350/n681n-syx67">It’s 2023 - why are we still not sharing phylogenies?</a></h3>
-<p><a href="https://doi.org/10.59350/n681n-syx67">https://doi.org/10.59350/n681n-syx67</a> <br>Published November 29, 2023 in <a href="https://rogue-scholar.org/blogs/iphylo">iPhylo</a><br>Roderic Page<br>A quick note to support a recent Twitter thread https://twitter.com/rdmpage/status/1729816558866718796?s=61&amp;t=nM4XCRsGtE7RLYW3MyIpMA The article “Diversification of flowering plants in space and time” by Dimitrov et al.&nbsp;describes a genus-level phylogeny for 14,244 flowering plant genera. This is a major achievement, and yet neither the tree nor the data supporting that tree are readily available.</p>
+<section id="what-is-llmlingua" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-llmlingua"><a href="https://doi.org/10.59350/2k8wt-8kr16">What is LLMLingua?</a></h3>
+<p><a href="https://doi.org/10.59350/2k8wt-8kr16">https://doi.org/10.59350/2k8wt-8kr16</a> <br>Published February 18, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br><strong> The AI Helper Turning Mountains of Data into Bite-Sized Instructions </strong> Author: Aland Astudillo https://orcid.org/0009-0008-8672-3168 LLMs have been changing the way the entire world deals with problems and day-by-day tasks. To make them better for specific applications, they need huge amounts of data and complex and expensive approaches to training them.</p>
 </section>
-<section id="german-funder-dfg-why-the-sudden-inconsistency" class="level3">
-<h3 class="anchored" data-anchor-id="german-funder-dfg-why-the-sudden-inconsistency"><a href="https://doi.org/10.59350/qaze1-egz32">German funder DFG: Why the sudden inconsistency?</a></h3>
-<p><a href="https://doi.org/10.59350/qaze1-egz32">https://doi.org/10.59350/qaze1-egz32</a> <br>Published November 29, 2023 in <a href="https://rogue-scholar.org/blogs/brembs">bjoern.brembs.blog</a><br>Björn Brembs<br>The DFG is a very progressive and modern funding agency. More than two years ago, the main German science funding agency signed the “Declaration on Research Assessment” DORA.</p>
+<section id="help-make-waywiser-better-user-requests-wanted" class="level3">
+<h3 class="anchored" data-anchor-id="help-make-waywiser-better-user-requests-wanted"><a href="https://doi.org/10.59350/n29ak-pmk26">Help make waywiser better! User requests wanted</a></h3>
+<p><a href="https://doi.org/10.59350/n29ak-pmk26">https://doi.org/10.59350/n29ak-pmk26</a> <br>Published February 19, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Mike Mahoney, Maëlle Salmon<br>The package waywiser maintained by Mike Mahoney provides ergonomic methods for assessing spatial models.Assessing predictive models of spatial data can be challenging,both because these models are typically built for extrapolating outside the original region represented by training data and due to potential spatially structured errors,with “hot spots” of higher than expected error clustered geographically due to spatial structure in the</p>
 </section>
-<section id="resilience-another-advantage-of-openly-licensed-content" class="level3">
-<h3 class="anchored" data-anchor-id="resilience-another-advantage-of-openly-licensed-content"><a href="https://doi.org/10.59350/psmbr-f6p84">Resilience: another advantage of openly-licensed content</a></h3>
-<p><a href="https://doi.org/10.59350/psmbr-f6p84">https://doi.org/10.59350/psmbr-f6p84</a> <br>Published November 30, 2023 in <a href="https://rogue-scholar.org/blogs/rossmounce">A blog by Ross Mounce</a><br>Ross Mounce<br>As you may have seen in the news, the British Library has been affected by a significant cyberattack. Many of the digital services it provides have gone down and stayed down for many weeks now, whilst investigations take place. I have a lot of sympathy for the BL staff. As has been observed, public services can be a relatively easy target.</p>
+<section id="thank-you-for-your-warm-work-earnestly" class="level3">
+<h3 class="anchored" data-anchor-id="thank-you-for-your-warm-work-earnestly"><a href="https://doi.org/10.59350/7yhmz-8sx36">Thank you for your warm work… earnestly</a></h3>
+<p><a href="https://doi.org/10.59350/7yhmz-8sx36">https://doi.org/10.59350/7yhmz-8sx36</a> <br>Published February 19, 2024 in <a href="https://rogue-scholar.org/blogs/clearskiesadam">Stories by Adam Day on Medium</a><br>Adam Day<br>So, we’ve established that papermills like to use templates. We see templates in referee reports and in the text of cookie-cutter research papers. There’s an important insight&nbsp;here:Templates are used in legit academic behaviour as well as in industrial research fraud.</p>
 </section>
-<section id="single-segment-neck-muscles-in-diplodocids" class="level3">
-<h3 class="anchored" data-anchor-id="single-segment-neck-muscles-in-diplodocids"><a href="https://doi.org/10.59350/9z7rj-wee37">Single-segment neck muscles in diplodocids?</a></h3>
-<p><a href="https://doi.org/10.59350/9z7rj-wee37">https://doi.org/10.59350/9z7rj-wee37</a> <br>Published November 30, 2023 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Matt Wedel<br>I don’t remember now when I first noticed bifurcated cervical ribs in apatosaurines. I imagine 2016 at the latest, because on our Sauropocalypse that year Mike and I saw examples at both BYU and Dinosaur Journey.</p>
+<section id="mechanistic-templates-computed-for-the-grubbs-alkene-metathesis-reaction." class="level3">
+<h3 class="anchored" data-anchor-id="mechanistic-templates-computed-for-the-grubbs-alkene-metathesis-reaction."><a href="https://doi.org/10.59350/g2tek-v7c59">Mechanistic templates computed for the Grubbs alkene-metathesis reaction.</a></h3>
+<p><a href="https://doi.org/10.59350/g2tek-v7c59">https://doi.org/10.59350/g2tek-v7c59</a> <br>Published February 19, 2024 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>Following on from my template exploration of the Wilkinson hydrogenation catalyst, I now repeat this for the Grubbs variant of the Alkene metathesis reaction. As with the Wilkinson, here I focus on the stereochemistry of the mechanism as first suggested by Chauvin[1], an aspect lacking in eg the Wikipedia entry.</p>
 </section>
-<section id="scholarly-societies-like-a-cat-chasing-the-laser-dot" class="level3">
-<h3 class="anchored" data-anchor-id="scholarly-societies-like-a-cat-chasing-the-laser-dot"><a href="https://doi.org/10.59350/ab2we-xvt92">Scholarly societies: like a cat chasing the laser dot</a></h3>
-<p><a href="https://doi.org/10.59350/ab2we-xvt92">https://doi.org/10.59350/ab2we-xvt92</a> <br>Published December 1, 2023 in <a href="https://rogue-scholar.org/blogs/brembs">bjoern.brembs.blog</a><br>Björn Brembs<br>You may have seen a neutered version of this post over at the LSE blog. This post below, however, puts the tiger in the tank, as it was enhanced by CatGPT: Maybe scholarly societies have taken “the instruction”follow the money!” a tad too literally?</p>
+<section id="read-and-play-digital-music-midi-in-r-using-the-fluidsynth-package" class="level3">
+<h3 class="anchored" data-anchor-id="read-and-play-digital-music-midi-in-r-using-the-fluidsynth-package"><a href="https://doi.org/10.59350/x436c-7vr38">Read and Play Digital Music (MIDI) in R using the <em>fluidsynth</em> package</a></h3>
+<p><a href="https://doi.org/10.59350/x436c-7vr38">https://doi.org/10.59350/x436c-7vr38</a> <br>Published February 20, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Jeroen Ooms<br>A few weeks ago, prof Matt Crump wrote a blog post in which he explores tools to handle MIDI data in R, in preparation for a cognition experiment that involves creating musical stimuli. In the article he ends up using a mix of external command line tools ffmpeg and fluidsynth and a python module.</p>
 </section>
-<section id="how-many-learned-societies-publish-diamond-open-access-journals" class="level3">
-<h3 class="anchored" data-anchor-id="how-many-learned-societies-publish-diamond-open-access-journals"><a href="https://doi.org/10.59350/b66bh-pkd46">How many learned societies publish Diamond Open Access journals?</a></h3>
-<p><a href="https://doi.org/10.59350/b66bh-pkd46">https://doi.org/10.59350/b66bh-pkd46</a> <br>Published December 1, 2023 in <a href="https://rogue-scholar.org/blogs/rossmounce">A blog by Ross Mounce</a><br>Ross Mounce<br>To seek an answer to the question posed in the title, I sought out reliable data on open access journals. My first port of call was the Directory of Open Access Journals (DOAJ). Although DOAJ certainly isn’t a complete listing of open access journals, as is well documented in ’The OA Diamond Journals Study‘ (2021), it will at least help provide a minimum bound answer to the question.</p>
+<section id="taking-spatial-omics-into-the-next-dimension" class="level3">
+<h3 class="anchored" data-anchor-id="taking-spatial-omics-into-the-next-dimension"><a href="https://doi.org/10.59350/f07m6-3h227">Taking Spatial Omics into the Next Dimension</a></h3>
+<p><a href="https://doi.org/10.59350/f07m6-3h227">https://doi.org/10.59350/f07m6-3h227</a> <br>Published February 20, 2024 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Scott Edmunds<br><em> A multitude of papers on novel methods for Spatial Omics are published in a cross-journal series launching today in GigaScience and GigaByte Journals. </em> Spatial Omics is a new field that is taking large-scale data-rich biological and biomedical research into new dimensions. Which is having a significant impact on the fundamental fields of biology and biomedicine.</p>
 </section>
-<section id="bitter-lessons-in-chemistry" class="level3">
-<h3 class="anchored" data-anchor-id="bitter-lessons-in-chemistry"><a href="https://doi.org/10.59350/tkq4r-55311">Bitter Lessons in Chemistry</a></h3>
-<p><a href="https://doi.org/10.59350/tkq4r-55311">https://doi.org/10.59350/tkq4r-55311</a> <br>Published December 1, 2023 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>“And I took the little scroll from the hand of the angel and ate it. It was sweet as honey in my mouth, but when I had eaten it my stomach was made bitter.” –Revelation 10:10 As machine learning becomes more and more important to chemistry, it’s worth reflecting on Richard Sutton’s 2019 blog post about the “bitter lesson.” In</p>
+<section id="problems-with-the-datacite-data-citation-corpus" class="level3">
+<h3 class="anchored" data-anchor-id="problems-with-the-datacite-data-citation-corpus"><a href="https://doi.org/10.59350/t80g1-xys37">Problems with the DataCite Data Citation Corpus</a></h3>
+<p><a href="https://doi.org/10.59350/t80g1-xys37">https://doi.org/10.59350/t80g1-xys37</a> <br>Published February 20, 2024 in <a href="https://rogue-scholar.org/blogs/iphylo">iPhylo</a><br>Roderic Page<br>DataCite have released the Data Citation Corpus, together with a dashboard that summarises the corpus. This is billed as: The goal is to build a citation database between scholarly articles and data, such as datasets in repositories, sequences in GenBank, protein structures in PDB, etc. Access to the corpus can be obtained by submitting a form, then having a (very pleasant) conversation with DataCite about the nature of the corpus.</p>
 </section>
-<section id="prediction-vs-accommodation-which-is-better-and-when" class="level3">
-<h3 class="anchored" data-anchor-id="prediction-vs-accommodation-which-is-better-and-when"><a href="https://doi.org/10.59350/dzs01-6b484">Prediction vs Accommodation: Which is Better and When?</a></h3>
-<p><a href="https://doi.org/10.59350/dzs01-6b484">https://doi.org/10.59350/dzs01-6b484</a> <br>Published December 4, 2023 in <a href="https://rogue-scholar.org/blogs/markrubin">Critical Metascience</a><br>Mark Rubin<br>In a recent article published in Synthese, philosopher of science Pekka Syrjänen asks “does a theory become better confirmed if it fits data that was not used in its construction versus if it was specifically designed to fit the data?”</p>
-</section>
-<section id="in-review-gigabyte-journal-coming-of-age-and-more" class="level3">
-<h3 class="anchored" data-anchor-id="in-review-gigabyte-journal-coming-of-age-and-more"><a href="https://doi.org/10.59350/64kz1-bg169">2023 in review: Gigabyte journal coming of age, and more</a></h3>
-<p><a href="https://doi.org/10.59350/64kz1-bg169">https://doi.org/10.59350/64kz1-bg169</a> <br>Published December 4, 2023 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Hans Zauner<br><strong> It’s December, the festive season and the end of&nbsp; year are approaching fast –&nbsp; and it’s time for our traditional look back on the past 12 months at <em> GigaScience Press </em> . Once more, we are pleased with the view in the rear mirror.&nbsp; In its 11th year, GigaScience again published exceptional “big data” science (read on for examples). And GigaScience’s </strong></p>
-</section>
-<section id="divide-and-conquer-from-polar-to-the-polarverse" class="level3">
-<h3 class="anchored" data-anchor-id="divide-and-conquer-from-polar-to-the-polarverse"><a href="https://doi.org/10.59350/swnyg-ger25">Divide and Conquer: From polar To the Polarverse</a></h3>
-<p><a href="https://doi.org/10.59350/swnyg-ger25">https://doi.org/10.59350/swnyg-ger25</a> <br>Published December 5, 2023 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Juan Pablo Ruiz Nicolini<br><em> “I’m just a political scientist, standing in front of the R console asking it to help me finish my thesis.” </em> It was 2015, a Political Science master’s student had to process data to hand in his thesis and decided to take the opportunity to learn how to use R. To the long and winding road of the academic requirement was added an extra degree of difficulty: incorporating programming software from scratch, with a somewhat steep learning</p>
-</section>
-<section id="informate-where-are-the-data" class="level3">
-<h3 class="anchored" data-anchor-id="informate-where-are-the-data"><a href="https://doi.org/10.54900/vnevh-vaw22">INFORMATE: Where Are the Data?</a></h3>
-<p><a href="https://doi.org/10.54900/vnevh-vaw22">https://doi.org/10.54900/vnevh-vaw22</a> <br>Published December 5, 2023 in <a href="https://rogue-scholar.org/blogs/upstream">Upstream</a><br>Ted Habermann, Jamaica Jones, Howard Ratner, Tara Packer<br>Introduction A recent blog post described a new partnership between Metadata Game Changers and CHORUS aimed at understanding how CHORUS data can help federal agencies, other funders, and other users access and use information from the global research infrastructure to measure this infrastructure and understand connections between research objects.</p>
-</section>
-<section id="yellow-rattle" class="level3">
-<h3 class="anchored" data-anchor-id="yellow-rattle"><a href="https://doi.org/10.59350/gd53j-86161">Yellow Rattle</a></h3>
-<p><a href="https://doi.org/10.59350/gd53j-86161">https://doi.org/10.59350/gd53j-86161</a> <br>Published December 5, 2023 in <a href="https://rogue-scholar.org/blogs/irishplants">Irish Plants</a><br>Jake Dalzell<br><em> This is an adapted version of my poster, which is also available as a pdf or png. As with all my work on this site it is CC BY 4.0 (free for use/adaptation as long as I am credited). </em> The Meadow Maker Yellow Rattle ( <em> Rhinanthus minor </em> ) has become well known in restoration ecology and wildlife gardening as a “meadow maker”, which can transform a species-poor patch of grasses into a biodiverse and flower-rich one.</p>
-</section>
-<section id="poster-gemmerator-gemm-kernel-generator" class="level3">
-<h3 class="anchored" data-anchor-id="poster-gemmerator-gemm-kernel-generator"><a href="https://doi.org/10.34732/xdvblg-2uowsc">Poster: GEMMERATOR – GEMM Kernel Generator</a></h3>
-<p><a href="https://doi.org/10.34732/xdvblg-2uowsc">https://doi.org/10.34732/xdvblg-2uowsc</a> <br>Published December 5, 2023 in <a href="https://rogue-scholar.org/blogs/x_dev">JSC Accelerating Devices Lab</a><br>Stepan Nassyr<br><strong> <i> </i> Poster in institute repository: </strong> http://dx.doi.org/10.34734/FZJ-2023-03437 During the RISC-V Summit Europe 2023 <sup> <i> </i> </sup> in Barcelona we presented our work generating highly optimized RISC-V and ARM GEMM microkernels for BLIS using a custom software tool. <sup> 1 </sup> We presented results on the Fujitsu A64FX processor, the in-development RISC-V <em> VEC </em> processor from the EUPILOT project using an</p>
+<section id="commonmeta-py-now-supports-metadata-lists" class="level3">
+<h3 class="anchored" data-anchor-id="commonmeta-py-now-supports-metadata-lists"><a href="https://doi.org/10.53731/b8j4w-zpk40">commonmeta-py now supports metadata lists</a></h3>
+<p><a href="https://doi.org/10.53731/b8j4w-zpk40">https://doi.org/10.53731/b8j4w-zpk40</a> <br>Published February 20, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>This week the commonmeta-py Python library adds an important new feature: metadata lists. With this feature commonmeta-py no longer only operates on metadata for a single scholarly work (e.g.&nbsp;a journal article, book, dataset, software, or blog post), but can handle lists of scholarly works.</p>
 </section>
 </div>
 </div>
@@ -1798,7 +1778,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-december-6-2023/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-february-21-2024/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1817,7 +1797,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
