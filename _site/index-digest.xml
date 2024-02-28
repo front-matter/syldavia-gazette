@@ -16,7 +16,511 @@
 <link>https://syldavia-gazette.org/#category=digest</link>
 </image>
 <generator>quarto-1.4.549</generator>
-<lastBuildDate>Tue, 20 Feb 2024 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 27 Feb 2024 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Rogue Scholar Digest February 28, 2024</title>
+  <dc:creator>Martin Fenner</dc:creator>
+  <link>https://syldavia-gazette.org/posts/rogue-scholar-digest-february-28-2024/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div id="d789ebee" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> requests</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> locale</span>
+<span id="cb1-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> re</span>
+<span id="cb1-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> typing <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Optional</span>
+<span id="cb1-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> datetime</span>
+<span id="cb1-6"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> IPython.display <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Markdown</span>
+<span id="cb1-7"></span>
+<span id="cb1-8">locale.setlocale(locale.LC_ALL, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"en_US"</span>)</span>
+<span id="cb1-9">baseUrl <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://api.rogue-scholar.org/"</span></span>
+<span id="cb1-10">published_since <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2024-02-21"</span></span>
+<span id="cb1-11">published_until <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2024-02-27"</span></span>
+<span id="cb1-12">feature_image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb1-13">include_fields <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
+<span id="cb1-14">url <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (</span>
+<span id="cb1-15">    baseUrl</span>
+<span id="cb1-16">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"posts?&amp;published_since=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_since<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&amp;published_until=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_until<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&amp;language=en&amp;sort=published_at&amp;order=asc&amp;per_page=50&amp;include_fields=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>include_fields<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-17">)</span>
+<span id="cb1-18">response <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> requests.get(url)</span>
+<span id="cb1-19">result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> response.json()</span>
+<span id="cb1-20"></span>
+<span id="cb1-21"></span>
+<span id="cb1-22"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> get_post(post):</span>
+<span id="cb1-23">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"document"</span>]</span>
+<span id="cb1-24"></span>
+<span id="cb1-25"></span>
+<span id="cb1-26"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> format_post(post):</span>
+<span id="cb1-27">    doi <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> post.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"doi"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>)</span>
+<span id="cb1-28">    url <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> doi <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span></span>
+<span id="cb1-29">    title <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'title'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>doi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> doi <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'title'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'url'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span></span>
+<span id="cb1-30">    published_at <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> datetime.datetime.utcfromtimestamp(post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"published_at"</span>]).strftime(</span>
+<span id="cb1-31">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%B </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%-d</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">, %Y"</span></span>
+<span id="cb1-32">    )</span>
+<span id="cb1-33">    blog <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"[</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blog_name'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">](https://rogue-scholar.org/blogs/</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blog_slug'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)"</span></span>
+<span id="cb1-34">    author <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">", "</span>.join([<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>x[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'name'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> post.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"authors"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> []])</span>
+<span id="cb1-35">    summary <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> post[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"summary"</span>]</span>
+<span id="cb1-36">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"### </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>title<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>url<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">Published </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>published_at<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> in </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>blog<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>author<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;br /&gt;</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>summary<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-37"></span>
+<span id="cb1-38"></span>
+<span id="cb1-39">posts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [get_post(x) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i, x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">enumerate</span>(result[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hits"</span>])]</span>
+<span id="cb1-40">posts_as_string <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>.join([format_post(x) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> posts])</span>
+<span id="cb1-41"></span>
+<span id="cb1-42"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> doi_from_url(url: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> Optional[<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>]:</span>
+<span id="cb1-43">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""Return a DOI from a URL"""</span></span>
+<span id="cb1-44">    match <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> re.search(</span>
+<span id="cb1-45">        <span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">r"\A(?:(http|https)://(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.\d{4,5}/.+)\Z"</span>,</span>
+<span id="cb1-46">        url,</span>
+<span id="cb1-47">    )</span>
+<span id="cb1-48">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> match <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">is</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb1-49">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb1-50">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> match.group(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>).lower()</span>
+<span id="cb1-51"></span>
+<span id="cb1-52">images <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [x[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"image"</span>] <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> posts <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> x.get(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"image"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">is</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">not</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>]</span>
+<span id="cb1-53">image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> images[feature_image]</span>
+<span id="cb1-54">markdown <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"![](</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>image<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-55">markdown <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> posts_as_string</span>
+<span id="cb1-56">Markdown(markdown)</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<div>
+<figure class="figure">
+<p><a href="https://eve.gd/images/header_dice.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://eve.gd/images/header_dice.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<section id="betting-against-the-future" class="level3">
+<h3 class="anchored" data-anchor-id="betting-against-the-future"><a href="https://doi.org/10.59348/y2pn2-rs963">Betting against the future</a></h3>
+<p><a href="https://doi.org/10.59348/y2pn2-rs963">https://doi.org/10.59348/y2pn2-rs963</a> <br>Published February 21, 2024 in <a href="https://rogue-scholar.org/blogs/eve">Martin Paul Eve</a><br>Martin Paul Eve<br>I am tired of medical decisions with a trade-off. On a regular basis I am presented with decisions that have deferred negative consequences in order to fix something in the present. The two examples that spring to mind are the BK virus nephropathy and hip replacement surgery.</p>
+</section>
+<section id="how-reliable-is-the-scholarly-literature" class="level3">
+<h3 class="anchored" data-anchor-id="how-reliable-is-the-scholarly-literature"><a href="https://doi.org/10.59350/geexp-5zj30">How reliable is the scholarly literature?</a></h3>
+<p><a href="https://doi.org/10.59350/geexp-5zj30">https://doi.org/10.59350/geexp-5zj30</a> <br>Published February 21, 2024 in <a href="https://rogue-scholar.org/blogs/brembs">bjoern.brembs.blog</a><br>Björn Brembs<br>A few years ago, I came across a cartoon that seemed to capture a particular aspect of scholarly journal publishing quite well: The academic journal publishing system sure feels all too often a bit like a sinking boat.</p>
+</section>
+<section id="beautiful-code-because-were-worth-it" class="level3">
+<h3 class="anchored" data-anchor-id="beautiful-code-because-were-worth-it"><a href="https://doi.org/10.59350/tbdps-5xc82">Beautiful Code, Because We’re Worth It!</a></h3>
+<p><a href="https://doi.org/10.59350/tbdps-5xc82">https://doi.org/10.59350/tbdps-5xc82</a> <br>Published February 22, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Maëlle Salmon, Yanina Bellini Saibene<br>rOpenSci’s second cohort of champions was onboarded!Their training started with a session on code style, which we will summarize here in this post.Knowing more about code quality is relevant to all Champion projects, be it creating a new package, submitting a package to software review, or reviewing a package.This training session consisted of a talk and discussion, whereas the next package development training sessions will be more hands-on.Why</p>
+</section>
+<section id="josscast-4-applying-ml-to-quantum-monte-carlo-simulations-nicolas-renaud-on-qmctorch" class="level3">
+<h3 class="anchored" data-anchor-id="josscast-4-applying-ml-to-quantum-monte-carlo-simulations-nicolas-renaud-on-qmctorch"><a href="https://doi.org/10.59349/qheph-wex21">JOSSCast #4: Applying ML to Quantum Monte Carlo simulations – Nicolas Renaud on QMCTorch</a></h3>
+<p><a href="https://doi.org/10.59349/qheph-wex21">https://doi.org/10.59349/qheph-wex21</a> <br>Published February 22, 2024 in <a href="https://rogue-scholar.org/blogs/joss">Journal of Open Source Software Blog |</a><br>Arfon M. Smith<br><strong> Subscribe Now: </strong> Apple, Spotify, YouTube, RSS Nicolas Renaud joins Arfon and Abby to discuss QMCTorch, a PyTorch implementation of real-space Quantum Monte-Carlo simulations of molecular systems, and work to promote research software as a research output. Nico is the head of the Natural Sciences and Engineering section of the Netherlands eScience Center and Senior Researcher at the Quantum Application Lab.</p>
+</section>
+<section id="ropensci-news-digest-february-2024" class="level3">
+<h3 class="anchored" data-anchor-id="ropensci-news-digest-february-2024"><a href="https://doi.org/10.59350/3qdf9-xrq67">rOpenSci News Digest, February 2024</a></h3>
+<p><a href="https://doi.org/10.59350/3qdf9-xrq67">https://doi.org/10.59350/3qdf9-xrq67</a> <br>Published February 23, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>The rOpenSci Team<br>Dear rOpenSci friends, it’s time for our monthly news roundup!</p>
+</section>
+<section id="a-bite-marked-apatosaurus-pubis-in-bone-and-in-bronze" class="level3">
+<h3 class="anchored" data-anchor-id="a-bite-marked-apatosaurus-pubis-in-bone-and-in-bronze"><a href="https://doi.org/10.59350/gaewv-x6f11">A bite-marked <i>Apatosaurus</i> pubis, in bone and in bronze</a></h3>
+<p><a href="https://doi.org/10.59350/gaewv-x6f11">https://doi.org/10.59350/gaewv-x6f11</a> <br>Published February 23, 2024 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Matt Wedel<br>MWC 861 in bone (left) and in bronze (right). Here’s a cool comparo.</p>
+</section>
+<section id="the-comics-grid-new-and-recent-articles-2023-2024" class="level3">
+<h3 class="anchored" data-anchor-id="the-comics-grid-new-and-recent-articles-2023-2024"><a href="https://doi.org/10.59350/477jz-wjx10">The Comics Grid: New and Recent Articles (2023-2024)</a></h3>
+<p><a href="https://doi.org/10.59350/477jz-wjx10">https://doi.org/10.59350/477jz-wjx10</a> <br>Published February 23, 2024 in <a href="https://rogue-scholar.org/blogs/ernestopriego">Everything is Connected</a><br>Ernesto Priego<br><strong> R </strong> ecently we announced there’s new content in the journal, corresponding to our 13th and 14th volumes.Both volumes include a variety of work by 13 international scholars with affiliations in academic institutions based in nine different countries. I’d like to pesonally thank every author, editorial board member and peer reviewer who contributed to making the publication of these articles possible.</p>
+</section>
+<section id="akademienls-new-admin" class="level3">
+<h3 class="anchored" data-anchor-id="akademienls-new-admin"><a href="https://doi.org/10.59350/ky2cy-1fk34">AkademieNL’s new admin</a></h3>
+<p><a href="https://doi.org/10.59350/ky2cy-1fk34">https://doi.org/10.59350/ky2cy-1fk34</a> <br>Published February 23, 2024 in <a href="https://rogue-scholar.org/blogs/chjh">Chris Hartgerink</a><br>Chris Hartgerink<br>The social media landscape is so different today from when I started participating around 2011. Things change, and that is okay — when the old dies, it becomes the compost for something new. For me, something new sprouted from Twitter’s compost beyond just joining Mastodon: I am taking over as the admin for the Mastodon server akademienl.social.</p>
+</section>
+<section id="how-learning-evidence-synthesis-systematic-reviews-etc-changed-the-way-i-search-and-some-thoughts-about-semantic-search-as-a-complement-search-technique" class="level3">
+<h3 class="anchored" data-anchor-id="how-learning-evidence-synthesis-systematic-reviews-etc-changed-the-way-i-search-and-some-thoughts-about-semantic-search-as-a-complement-search-technique"><a href="https://doi.org/10.59350/n01x0-tk156">How learning evidence synthesis (systematic reviews etc) changed the way I search and some thoughts about semantic search as a complement search technique</a></h3>
+<p><a href="https://doi.org/10.59350/n01x0-tk156">https://doi.org/10.59350/n01x0-tk156</a> <br>Published February 24, 2024 in <a href="https://rogue-scholar.org/blogs/musings">Aaron Tay’s Musings about librarianship</a><br>Aaron Tay<br>I’ve spent a large part of my career as an academic librarian studying the question of discovery from many angles.</p>
+</section>
+<section id="motivation-for-an-open-source-flow-battery" class="level3">
+<h3 class="anchored" data-anchor-id="motivation-for-an-open-source-flow-battery"><a href="https://doi.org/10.59350/fknwy-k7a54">Motivation for an open-source flow battery</a></h3>
+<p><a href="https://doi.org/10.59350/fknwy-k7a54">https://doi.org/10.59350/fknwy-k7a54</a> <br>Published February 25, 2024 in <a href="https://rogue-scholar.org/blogs/dualpower">Dual Power Supply</a><br>Kirk Pollard Smith<br><em> Towards the end of 2022 I drafted this, consider it a work in progress - it was before I had joined forces with Daniel to form the Flow Battery Research Collective </em> <strong> Motivation for an open-source flow battery </strong> <strong> This project aims to develop an open-source flow battery design suitable for mid-scale manufacturing by a well-equipped hackerspace or conventional machine shop. </strong></p>
+</section>
+<section id="data-citation-a-snapshot-of-the-chemical-landscape." class="level3">
+<h3 class="anchored" data-anchor-id="data-citation-a-snapshot-of-the-chemical-landscape."><a href="https://doi.org/10.59350/vy0e7-fkc63">Data Citation – a snapshot of the chemical landscape.</a></h3>
+<p><a href="https://doi.org/10.59350/vy0e7-fkc63">https://doi.org/10.59350/vy0e7-fkc63</a> <br>Published February 26, 2024 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>The recent release of the DataCite Data Citation corpus, which has the stated aim of providing “a trusted central aggregate of all data citations to further our understanding of data usage and advance meaningful data metrics” made me want to investigate what the current state of citing data in the area of chemistry might be. Chemistry is known to be a “data rich” science (as most of the physical sciences are) and &nbsp;here on this very blog I</p>
+</section>
+<section id="moving-to-open-source" class="level3">
+<h3 class="anchored" data-anchor-id="moving-to-open-source"><a href="https://doi.org/10.59350/j026n-acb89">Moving to open source</a></h3>
+<p><a href="https://doi.org/10.59350/j026n-acb89">https://doi.org/10.59350/j026n-acb89</a> <br>Published February 26, 2024 in <a href="https://rogue-scholar.org/blogs/europepmc">Europe PMC News Blog</a><br>Maria Levchenko<br><strong> Europe PMC POSI update – 2 years on </strong> Two years have sailed by since Europe PMC adopted the Principles of Open Scholarly Infrastructure (POSI) in February 2021. POSI is a set of guidelines for open scholarly infrastructure providers and outlines how these organisations should be run and sustained. It offers a framework to uphold transparency and accountability.</p>
+</section>
+<section id="rogue-scholar-launches-a-free-personal-plan" class="level3">
+<h3 class="anchored" data-anchor-id="rogue-scholar-launches-a-free-personal-plan"><a href="https://doi.org/10.53731/bdrgt-cjh09">Rogue Scholar launches a free personal plan</a></h3>
+<p><a href="https://doi.org/10.53731/bdrgt-cjh09">https://doi.org/10.53731/bdrgt-cjh09</a> <br>Published February 26, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>The Rogue Scholar science blog archive today has launched a new free <strong> Personal Plan </strong> : similar to the <strong> Starter Plan </strong> launched last year, but only for personal (single-author) blogs, and with no limitations on the number of blog posts that can be archived and registered with a DOI per year.</p>
+</section>
+<section id="help-make-assertr-better-come-close-issues" class="level3">
+<h3 class="anchored" data-anchor-id="help-make-assertr-better-come-close-issues"><a href="https://doi.org/10.59350/gjjjr-1ka42">Help make assertr better! Come close issues</a></h3>
+<p><a href="https://doi.org/10.59350/gjjjr-1ka42">https://doi.org/10.59350/gjjjr-1ka42</a> <br>Published February 27, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Tony Fischetti, Maëlle Salmon<br>The package assertr maintained by Tony Fischetti, provides functionality to assert conditions that have to be met so that errors in data used in analysis pipelines can fail quickly.The provided functionality is similar to stopifnot() but more powerful, friendly, and easier for use in pipelines.Contributed to assertr!</p>
+</section>
+<section id="efficient-information-retrieval-and-response-generation-with-retrieval-augmented-generation-rag" class="level3">
+<h3 class="anchored" data-anchor-id="efficient-information-retrieval-and-response-generation-with-retrieval-augmented-generation-rag"><a href="https://doi.org/10.59350/q2pq3-0fv85">Efficient Information Retrieval and Response Generation with Retrieval-Augmented Generation (RAG)</a></h3>
+<p><a href="https://doi.org/10.59350/q2pq3-0fv85">https://doi.org/10.59350/q2pq3-0fv85</a> <br>Published February 27, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br><strong> How to efficiently retrieve information for different applications </strong> <strong> Author: Wenyi Pi </strong> <strong> https://orcid.org/0009-0002-2884-2771 </strong> This article aims to explore various ways in which Retrieval-Augmented Generation (RAG) can be utilised to retrieve information and generate responses effectively within the dialogue system.</p>
+</section>
+<section id="understanding-retrieval-pitfalls-challenges-faced-by-retrieval-augmented-generation-rag-models" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-retrieval-pitfalls-challenges-faced-by-retrieval-augmented-generation-rag-models"><a href="https://doi.org/10.59350/wek8b-sbj84">Understanding Retrieval Pitfalls: Challenges Faced by Retrieval Augmented Generation (RAG) models</a></h3>
+<p><a href="https://doi.org/10.59350/wek8b-sbj84">https://doi.org/10.59350/wek8b-sbj84</a> <br>Published February 27, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br><strong> Improving the performance and application of Large Language&nbsp;Models </strong> <strong> Author: Amanda Kau </strong> <strong> https://orcid.org/0009-0004-4949-9284 </strong> Large language models (LLMs) like GPT-4, the engine of products like ChatGPT, have taken centre stage in recent years due to their astonishing capabilities. Yet, they are far from perfect.</p>
+</section>
+<section id="rag-the-next-big-thing-after-llms" class="level3">
+<h3 class="anchored" data-anchor-id="rag-the-next-big-thing-after-llms"><a href="https://doi.org/10.59350/9xds0-bcq66">RAG: The next big thing after LLMs?</a></h3>
+<p><a href="https://doi.org/10.59350/9xds0-bcq66">https://doi.org/10.59350/9xds0-bcq66</a> <br>Published February 27, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br>Improving the performance of Large Language&nbsp;Models <strong> Author: </strong> <strong> Dhruv&nbsp;Gupta </strong> ChatGPT, which first came out in late 2022, took the world by storm. Since then, various LLM models and LLM based products such as Meta’s Llama and Google’s Gemini have emerged, demonstrating the power of LLMs.</p>
+</section>
+<section id="hallucination-in-large-language-models-and-two-effective-alleviation-pathways" class="level3">
+<h3 class="anchored" data-anchor-id="hallucination-in-large-language-models-and-two-effective-alleviation-pathways"><a href="https://doi.org/10.59350/g73v1-rq310">Hallucination in Large Language Models and Two Effective Alleviation Pathways</a></h3>
+<p><a href="https://doi.org/10.59350/g73v1-rq310">https://doi.org/10.59350/g73v1-rq310</a> <br>Published February 27, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br><strong> An Introduction to Retrieval Augmented Generation (RAG) and Knowledge Graph </strong> Author: Qingqin Fang(0009–0003–5348–4264) <strong> <strong> Introduction </strong> </strong> Large Language Models (LLMs) have transformed the landscape of natural language processing, demonstrating exceptional proficiency in generating text that closely resembles human language.</p>
+</section>
+<section id="refining-ai-vision-how-retrieval-augmented-generation-transforms-image-captioning-in-large" class="level3">
+<h3 class="anchored" data-anchor-id="refining-ai-vision-how-retrieval-augmented-generation-transforms-image-captioning-in-large"><a href="https://doi.org/10.59350/pn1ra-vpc97">Refining AI Vision: How Retrieval-Augmented Generation Transforms Image Captioning in Large…</a></h3>
+<p><a href="https://doi.org/10.59350/pn1ra-vpc97">https://doi.org/10.59350/pn1ra-vpc97</a> <br>Published February 27, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br><strong> Refining AI Vision: How Retrieval-Augmented Generation Transforms Image Captioning in Large Language&nbsp;Models </strong> Leveraging External Knowledge to Enhance the Descriptive Capabilities of AI&nbsp;Systems Author: Vaibhav Khobragade (0009–0009–8807–5982) <strong> Introduction </strong> Large Language Models (LLMs) are artificial intelligence models that are trained on massive amounts of text data in order to generate human-like</p>
+</section>
+<section id="recent-advances-in-using-retrieving-multimodal-information-for-augmented-generation" class="level3">
+<h3 class="anchored" data-anchor-id="recent-advances-in-using-retrieving-multimodal-information-for-augmented-generation"><a href="https://doi.org/10.59350/s5yn9-my222">Recent Advances in using Retrieving Multimodal Information for Augmented Generation</a></h3>
+<p><a href="https://doi.org/10.59350/s5yn9-my222">https://doi.org/10.59350/s5yn9-my222</a> <br>Published February 27, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br>An Introduction to RA-CM3, MuRAG and&nbsp;RACE Author: Xuzeng He (0009-0005-7317-7426) Generative Artificial Intelligence (GAI) has demonstrated impressive performances in tasks such as text generation and text-to-image generation.</p>
+</section>
+<section id="what-are-the-challenges-in-integrating-llms-into-organisations-data-workflows" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-the-challenges-in-integrating-llms-into-organisations-data-workflows"><a href="https://doi.org/10.59350/8y2q9-a4d89">What are the challenges in integrating LLMs into organisations’ data workflows?</a></h3>
+<p><a href="https://doi.org/10.59350/8y2q9-a4d89">https://doi.org/10.59350/8y2q9-a4d89</a> <br>Published February 27, 2024 in <a href="https://rogue-scholar.org/blogs/amiraryani">Stories by Amir Aryani on Medium</a><br>Amir Aryani<br>Integrating Large Language Models (LLMs) such as GPT into organizations’ data workflows is a complex process with various challenges. These obstacles include but are not limited to technical, operational, ethical, and legal dimensions, each presenting hurdles that organisations must navigate to harness the full potential of LLMs effectively.</p>
+</section>
+</div>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>digest</category>
+  <guid>https://syldavia-gazette.org/posts/rogue-scholar-digest-february-28-2024/</guid>
+  <pubDate>Tue, 27 Feb 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://syldavia-gazette.org/images/header_dice.png" medium="image" type="image/png" height="27" width="144"/>
+</item>
 <item>
   <title>Rogue Scholar Digest February 21, 2024</title>
   <dc:creator>Martin Fenner</dc:creator>
