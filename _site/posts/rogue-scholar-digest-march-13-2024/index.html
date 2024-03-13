@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Fenner">
-<meta name="dcterms.date" content="2024-01-10">
-<meta name="description" content="This is a summary of the Rogue Scholar blog posts published January 3 - January 9, 2024.">
+<meta name="dcterms.date" content="2024-03-13">
+<meta name="description" content="This is a summary of the Rogue Scholar blog posts published March 6 - March 12, 2024.">
 
-<title>Syldavia Gazette - Rogue Scholar Digest January 10, 2024</title>
+<title>Syldavia Gazette - Rogue Scholar Digest March 13, 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,12 +112,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest January 10, 2024">
-<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published January 3 - January 9, 2024.">
-<meta property="og:image" content="https://syldavia-gazette.org/images/bookcase.png">
+<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest March 13, 2024">
+<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published March 6 - March 12, 2024.">
+<meta property="og:image" content="https://syldavia-gazette.org/images/photo-1515187029135-18ee286d815b.webp">
 <meta property="og:site_name" content="Syldavia Gazette">
-<meta property="og:image:height" content="808">
-<meta property="og:image:width" content="1444">
 </head>
 
 <body class="floating nav-fixed">
@@ -1054,7 +1052,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rogue Scholar Digest January 10, 2024</h1>
+<h1 class="title">Rogue Scholar Digest March 13, 2024</h1>
   <div class="quarto-categories">
     <div class="quarto-category">digest</div>
   </div>
@@ -1062,7 +1060,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    <p>This is a summary of the Rogue Scholar blog posts published January 3 - January 9, 2024.</p>
+    <p>This is a summary of the Rogue Scholar blog posts published March 6 - March 12, 2024.</p>
   </div>
 </div>
 
@@ -1086,7 +1084,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 10, 2024</p>
+      <p class="date">March 13, 2024</p>
     </div>
   </div>
   
@@ -1098,7 +1096,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="a7f3d6a1" class="cell" data-execution_count="1">
+<div id="81eb75c7" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -1110,9 +1108,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>locale.setlocale(locale.LC_ALL, <span class="st">"en_US"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2024-01-03"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2024-01-09"</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2024-03-06"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2024-03-12"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    baseUrl</span>
@@ -1161,64 +1159,100 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
 <div>
 <figure class="figure">
-<p><a href="https://blog.front-matter.io/content/images/2024/01/bookcase.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.front-matter.io/content/images/2024/01/bookcase.png" class="img-fluid figure-img"></a></p>
+<p><a href="https://www.leidenmadtrics.nl/images/uploads/photo-1515187029135-18ee286d815b.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.leidenmadtrics.nl/images/uploads/photo-1515187029135-18ee286d815b.webp" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<section id="looking-back-on-the-norbornyl-cation" class="level3">
-<h3 class="anchored" data-anchor-id="looking-back-on-the-norbornyl-cation"><a href="https://doi.org/10.59350/h94q8-1cs70">Looking Back on the Norbornyl Cation</a></h3>
-<p><a href="https://doi.org/10.59350/h94q8-1cs70">https://doi.org/10.59350/h94q8-1cs70</a> <br>Published January 3, 2024 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>In this post, I’m trying something new and embedding calculations on Rowan alongside the text. You can view the structures and energies right in the page, or you can follow a link and view the full data in a new tab.</p>
+<section id="can-i-have-the-clt-please-a-straightforward-explanation-of-the-central-limit-theorem-and-the-magic-n" class="level3">
+<h3 class="anchored" data-anchor-id="can-i-have-the-clt-please-a-straightforward-explanation-of-the-central-limit-theorem-and-the-magic-n"><a href="https://doi.org/10.59350/bje88-8r592">“{Can I have the CLT, please– a straightforward explanation of the Central Limit Theorem and the magic (n )}”</a></h3>
+<p><a href="https://doi.org/10.59350/bje88-8r592">https://doi.org/10.59350/bje88-8r592</a> <br>Published March 6, 2024 in <a href="https://rogue-scholar.org/blogs/jpmonteagudo">JP’s blog</a><br>JP Monteagudo<br>RQ: What exactly is the CLT and what’s the deal with n 30? CLT - mathematical definition and simple terms definition How we use CLT How to know when empirical distribution converges to normal distribution? How did we come up with n $ $ 30? Cohen (1991) Taught that at least 30 observations were needed to use critical-ratio approach used in t-tables when comparing groups.</p>
 </section>
-<section id="tips-from-the-blog-xvi-getting-fasta-sequences" class="level3">
-<h3 class="anchored" data-anchor-id="tips-from-the-blog-xvi-getting-fasta-sequences"><a href="https://doi.org/10.59350/57w5w-bk852">Tips from the Blog XVI: getting FASTA sequences</a></h3>
-<p><a href="https://doi.org/10.59350/57w5w-bk852">https://doi.org/10.59350/57w5w-bk852</a> <br>Published January 4, 2024 in <a href="https://rogue-scholar.org/blogs/quantixed">quantixed</a><br>Stephen Royle<br>I am having some fun running AlphaPulldown on a computing cluster. A requirement is to have input sequences in FASTA format. I found that I needed to get ~600 sequences. I had a list of the relevant Uniprot IDs. Surely getting the sequences for these proteins should be straightforward? Solution The Uniprot IDs can be converted – using the ID Mapping Tool on the Uniprot website – into any number of other IDs.</p>
+<section id="designing-book-covers-in-half-an-hour-redux" class="level3">
+<h3 class="anchored" data-anchor-id="designing-book-covers-in-half-an-hour-redux"><a href="https://doi.org/10.59350/8nhy7-7e692">Designing book covers in half an hour, redux</a></h3>
+<p><a href="https://doi.org/10.59350/8nhy7-7e692">https://doi.org/10.59350/8nhy7-7e692</a> <br>Published March 6, 2024 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>Long-time readers may remember that back in 2013, Matt and I played a game where we each designed a cover, in half an hour, for a book whose name was randomly generated. Here’s what I came up with for <em> The Name of the Names </em> : I really enjoyed that process and even toyed with the idea of offering it as a service for hire, for people creating self-published books.</p>
 </section>
-<section id="physical-organic-chemistry-alive-or-dead" class="level3">
-<h3 class="anchored" data-anchor-id="physical-organic-chemistry-alive-or-dead"><a href="https://doi.org/10.59350/5nybg-w2n59">Physical Organic Chemistry: Alive or Dead?</a></h3>
-<p><a href="https://doi.org/10.59350/5nybg-w2n59">https://doi.org/10.59350/5nybg-w2n59</a> <br>Published January 5, 2024 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>In Wednesday’s post, I wrote that “traditional physical organic chemistry is barely practiced today,” which attracted some controversy on X. Here are some responses: “POC has evolved in many directions and its concepts are widely used, e.g., in host-guest chem, org syn, materials sci, drug discovery.” -</p>
+<section id="marketing-ideas-for-your-package" class="level3">
+<h3 class="anchored" data-anchor-id="marketing-ideas-for-your-package"><a href="https://doi.org/10.59350/04b0t-fv224">Marketing Ideas For Your Package</a></h3>
+<p><a href="https://doi.org/10.59350/04b0t-fv224">https://doi.org/10.59350/04b0t-fv224</a> <br>Published March 7, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Yanina Bellini Saibene, Maëlle Salmon<br>Now that you have created your package, presenting it to the world is a crucial step to <strong> gain visibility and attract users </strong> . Marketing your package effectively contributes to reaching the people your package can support, finding users to assist you in maintaining and improving your package and allowing you to learn about how people use it. In this blog post we suggest a series of activities and tools for advertising your</p>
 </section>
-<section id="lair---language-as-intermediate-representation" class="level3">
-<h3 class="anchored" data-anchor-id="lair---language-as-intermediate-representation"><a href="https://doi.org/10.59350/qg7b3-crs97">LAIR - Language As Intermediate Representation</a></h3>
-<p><a href="https://doi.org/10.59350/qg7b3-crs97">https://doi.org/10.59350/qg7b3-crs97</a> <br>Published January 6, 2024 in <a href="https://rogue-scholar.org/blogs/chrisvoncsefalvay">Chris von Csefalvay</a><br>Chris von Csefalvay<br>The awesome thing about language is that, well, we all mostly speak it, to some extent or another. This gives us an immensely powerful tool to manipulate transformational tasks. For the purposes of this post, I consider a transformational task to be essentially anything that takes an input and is largel intended to return some version of the same thing. This is not a very precise definition, but it will have to do for now.</p>
+<section id="josscast-5-rewrite-in-rust-gui-castelão-and-luiz-irber-on-gibbs-seawater-oceanographic-toolbox-in-rust" class="level3">
+<h3 class="anchored" data-anchor-id="josscast-5-rewrite-in-rust-gui-castelão-and-luiz-irber-on-gibbs-seawater-oceanographic-toolbox-in-rust"><a href="https://doi.org/10.59349/ewkq1-2ys83">JOSSCast #5: Rewrite in Rust – Gui Castelão and Luiz Irber on Gibbs SeaWater Oceanographic Toolbox in Rust</a></h3>
+<p><a href="https://doi.org/10.59349/ewkq1-2ys83">https://doi.org/10.59349/ewkq1-2ys83</a> <br>Published March 7, 2024 in <a href="https://rogue-scholar.org/blogs/joss">Journal of Open Source Software Blog |</a><br>Arfon M. Smith<br><strong> Subscribe Now: </strong> Apple, Spotify, YouTube, RSS Gui Castelão and Luiz Irber join Arfon and Abby to discuss their work implementing the Gibbs Sea Water Oceanographic Toolbox of TEOS-10 in Rust, and the role of instrument builders in science. Gui is an oceanographer at the Scripps Institution of Oceanography, previously part of the Instrument Developing Group. Luiz is a Computer Science PhD at UC Davis and an avid Rustacean.</p>
 </section>
-<section id="every-rogue-scholar-blog-post-now-available-in-markdown-epub-and-pdf-formats" class="level3">
-<h3 class="anchored" data-anchor-id="every-rogue-scholar-blog-post-now-available-in-markdown-epub-and-pdf-formats"><a href="https://doi.org/10.53731/1dfxr-hs665">Every Rogue Scholar blog post now available in Markdown, ePub, and PDF formats</a></h3>
-<p><a href="https://doi.org/10.53731/1dfxr-hs665">https://doi.org/10.53731/1dfxr-hs665</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>The Rogue Scholar science blog archive starts 2024 with an important release: all blog posts (more than 13,000) are now available for download in Markdown, ePub, and PDF formats. This builds on work completed in December to store the full text of every Rogue Scholar blog post in Markdown format in the Rogue Scholar backend. Combined with the metadata in YAML format, these posts can now be downloaded via the Rogue Scholar API, e.g.</p>
+<section id="concurrent-evidence-a-framework-for-using-evidence-from-multiple-disciplines" class="level3">
+<h3 class="anchored" data-anchor-id="concurrent-evidence-a-framework-for-using-evidence-from-multiple-disciplines"><a href="https://doi.org/10.59350/j5484-3zf84">Concurrent Evidence: a framework for using evidence from multiple disciplines</a></h3>
+<p><a href="https://doi.org/10.59350/j5484-3zf84">https://doi.org/10.59350/j5484-3zf84</a> <br>Published March 7, 2024 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Tsuyoshi Hondou, Ismael Rafols<br>Studies on transdisciplinary research often focus on how different forms of expertise are brought together to build robust knowledge. However, in policy and legal affairs, there are many situations in which it is not possible to use new transdisciplinary knowledge due to contextual factors, such as urgency, political expediency, or lack of resources.</p>
 </section>
-<section id="return-to-and-of-the-ecology-blogosphere" class="level3">
-<h3 class="anchored" data-anchor-id="return-to-and-of-the-ecology-blogosphere"><a href="https://doi.org/10.59350/ftfvp-2yp03">Return to (and of?) the ecology blogosphere</a></h3>
-<p><a href="https://doi.org/10.59350/ftfvp-2yp03">https://doi.org/10.59350/ftfvp-2yp03</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/jabberwocky_ecology">Jabberwocky Ecology</a><br>Ethan White<br>We started Jabberwocky Ecology back in 2008 when blogs were becoming the dominant medium for informal (online) academic discussions.</p>
+<section id="the-pitfalls-of-preregistration" class="level3">
+<h3 class="anchored" data-anchor-id="the-pitfalls-of-preregistration"><a href="https://doi.org/10.59350/dymqx-wk326">The Pitfalls of Preregistration</a></h3>
+<p><a href="https://doi.org/10.59350/dymqx-wk326">https://doi.org/10.59350/dymqx-wk326</a> <br>Published March 7, 2024 in <a href="https://rogue-scholar.org/blogs/markrubin">Critical Metascience</a><br><br>Notes on Presentations by Chris Donkin and Stephan Lewandowsky</p>
 </section>
-<section id="macrocyclic-peptide-antibiotics-now-zosurabalpin-then-antibacterial-agents-based-on-cyclic-dl-α-peptide-architectures." class="level3">
-<h3 class="anchored" data-anchor-id="macrocyclic-peptide-antibiotics-now-zosurabalpin-then-antibacterial-agents-based-on-cyclic-dl-α-peptide-architectures."><a href="https://doi.org/10.59350/fadrq-1x843">Macrocyclic peptide antibiotics – now Zosurabalpin – then antibacterial agents based on cyclic D,L-α-peptide architectures.</a></h3>
-<p><a href="https://doi.org/10.59350/fadrq-1x843">https://doi.org/10.59350/fadrq-1x843</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>Zosurabalbin[1],[2], is receiving a great deal of attention as a new class of antibiotic which can target infections for which&nbsp;current treatment options are inadequate.</p>
+<section id="managing-lockheeds-skunk-works" class="level3">
+<h3 class="anchored" data-anchor-id="managing-lockheeds-skunk-works"><a href="https://doi.org/10.59350/eqrbs-40871">Managing Lockheed’s Skunk Works</a></h3>
+<p><a href="https://doi.org/10.59350/eqrbs-40871">https://doi.org/10.59350/eqrbs-40871</a> <br>Published March 7, 2024 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br>Eric Gilliam<br>And Many Stories About the Maleffects of Bureaucracy on R&amp;D</p>
 </section>
-<section id="papers-for-md9a8-2024-edition" class="level3">
-<h3 class="anchored" data-anchor-id="papers-for-md9a8-2024-edition"><a href="https://doi.org/10.59350/wzzny-4hm48">Papers for MD9A8 – 2024 edition</a></h3>
-<p><a href="https://doi.org/10.59350/wzzny-4hm48">https://doi.org/10.59350/wzzny-4hm48</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/quantixed">quantixed</a><br>Stephen Royle<br>It is time for my annual post of the papers I selected for a module that I teach (MD9A8, the module formerly known as MD997). Previous selections are grouped&nbsp;here&nbsp;or&nbsp;here. <strong> The list serves as a snapshot of interesting papers published in the previous 12 months or so. </strong> I hope it is useful to others who are looking for lists of papers to read, for student selections or for anything else.</p>
+<section id="inspiring-inclusion-the-9th-annual-women-in-science-conference" class="level3">
+<h3 class="anchored" data-anchor-id="inspiring-inclusion-the-9th-annual-women-in-science-conference"><a href="https://doi.org/10.59350/d79fp-pqj24">Inspiring Inclusion: The 9th Annual Women in Science Conference</a></h3>
+<p><a href="https://doi.org/10.59350/d79fp-pqj24">https://doi.org/10.59350/d79fp-pqj24</a> <br>Published March 8, 2024 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Nicole Nogoy<br><strong> The 9th Women in Science Conference took place in Shenzhen. Below are some highlights from the conference co-organized by our Publishing Director, Laurie Goodman, and Co-Chaired by Doris Yang, from BGI-College. </strong> Today,&nbsp; March 8, 2024 marks International Women’s Day – where women’s achievement and inclusivity is celebrated.</p>
 </section>
-<section id="some-sea-cucumbers-like-it-hot" class="level3">
-<h3 class="anchored" data-anchor-id="some-sea-cucumbers-like-it-hot"><a href="https://doi.org/10.59350/vf5xp-jfw28">Some sea cucumbers like it hot</a></h3>
-<p><a href="https://doi.org/10.59350/vf5xp-jfw28">https://doi.org/10.59350/vf5xp-jfw28</a> <br>Published January 8, 2024 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Hans Zauner<br><strong> We start the new year with news from the deep, published in GigaScience: The genome of a sea cucumber, collected at a depth of 2400 m during a submarine trip to a hydrothermal vent, helps scientists to understand how marine animals can survive in extreme conditions. </strong> Hydrothermal vents are an unlikely environment for animals to flourish.</p>
+<section id="a-plagiarised-edtech-book-and-nobody-cares" class="level3">
+<h3 class="anchored" data-anchor-id="a-plagiarised-edtech-book-and-nobody-cares"><a href="https://doi.org/10.59350/af3zr-q8s77">A plagiarised edtech book and nobody cares</a></h3>
+<p><a href="https://doi.org/10.59350/af3zr-q8s77">https://doi.org/10.59350/af3zr-q8s77</a> <br>Published March 8, 2024 in <a href="https://rogue-scholar.org/blogs/kalz">Posts | Prof.&nbsp;Dr.&nbsp;Marco Kalz</a><br>Marco Kalz<br>Some of my regular readers might remember that I have reported a case of AI-supported plagiarism in a book on learning analytics which has been published in German last year see original post here. One of our papers has been plagiarized by a team of authors who have published a book in German on “Educational Data Mining and Learning Analytics”. Here I report about what has happened since I have reported the case.</p>
 </section>
-<section id="research-software-alliance-community-report-2023" class="level3">
-<h3 class="anchored" data-anchor-id="research-software-alliance-community-report-2023"><a href="https://doi.org/10.59350/n4epb-gxm91">Research Software Alliance Community Report 2023</a></h3>
-<p><a href="https://doi.org/10.59350/n4epb-gxm91">https://doi.org/10.59350/n4epb-gxm91</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/researchsoft">Research Software Alliance</a><br>Research Software Alliance<br>January 2024 This downloadable report features ReSA’s engagement in 2023 with key decision makers and influencers involved with research software across the globe, as well as the broader research software community. Citation: Hartley, Kim &amp; Barker, Michelle (2024). Research Software Alliance Community Report 2023. Zenodo.</p>
+<section id="pre-self-what-fraction-of-a-journals-papers-are-preprinted" class="level3">
+<h3 class="anchored" data-anchor-id="pre-self-what-fraction-of-a-journals-papers-are-preprinted"><a href="https://doi.org/10.59350/z31a3-kjh29">Pre Self: what fraction of a journal’s papers are preprinted?</a></h3>
+<p><a href="https://doi.org/10.59350/z31a3-kjh29">https://doi.org/10.59350/z31a3-kjh29</a> <br>Published March 9, 2024 in <a href="https://rogue-scholar.org/blogs/quantixed">quantixed</a><br>Stephen Royle<br>Answering the question of what fraction of a journal’s papers were previously available as a preprint is quite difficult to do. The tricky part is matching preprints (from a number of different servers) with the published output from a journal.</p>
 </section>
-<section id="rusting-away-or-packing-the-entire-crossref-database-into-a-sqlite-file" class="level3">
-<h3 class="anchored" data-anchor-id="rusting-away-or-packing-the-entire-crossref-database-into-a-sqlite-file"><a href="https://doi.org/10.59348/5tkbp-dpa74">Rusting Away (or: packing the entire Crossref database into a SQLite file)</a></h3>
-<p><a href="https://doi.org/10.59348/5tkbp-dpa74">https://doi.org/10.59348/5tkbp-dpa74</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/eve">Martin Paul Eve</a><br>Martin Paul Eve<br>Over the past few weeks I’ve been working to pack the entire Crossref database into a distributable SQLite file. While this sounds somewhat insane – the resulting file is 900GB – it’s quite a cool project for, say, embedded systems work in situations where no internet connection is available. It also provides speedy local indexed lookups, working faster than the internet-dependent API ever could.</p>
+<section id="ropensci-dev-guide-0.9.0-multilingual-now-and-better" class="level3">
+<h3 class="anchored" data-anchor-id="ropensci-dev-guide-0.9.0-multilingual-now-and-better"><a href="https://doi.org/10.59350/fmkfz-0rv74">rOpenSci Dev Guide 0.9.0: Multilingual Now! And Better</a></h3>
+<p><a href="https://doi.org/10.59350/fmkfz-0rv74">https://doi.org/10.59350/fmkfz-0rv74</a> <br>Published March 11, 2024 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>Maëlle Salmon, Mark Padgham, Noam Ross<br>rOpenSci Software Peer Review’s guidance is gathered in an online book that keeps improving!This blog post summarises what’s new in our Dev Guide 0.9.0, with all changes listed in the changelog.Now available in Spanish!</p>
 </section>
-<section id="it-really-is-the-return-of-the-ecology-blogosphere" class="level3">
-<h3 class="anchored" data-anchor-id="it-really-is-the-return-of-the-ecology-blogosphere"><a href="https://doi.org/10.59350/abmvx-e2989">It really is the return of the ecology blogosphere!</a></h3>
-<p><a href="https://doi.org/10.59350/abmvx-e2989">https://doi.org/10.59350/abmvx-e2989</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/jabberwocky_ecology">Jabberwocky Ecology</a><br>Ethan White<br>After posting yesterday that we were ramping up the blog again, my RSS feed let me know that arguably the most impactful ecology blog of all time, Dynamic Ecology, was doing the same thing!</p>
+<section id="papermills-prefer-open-access" class="level3">
+<h3 class="anchored" data-anchor-id="papermills-prefer-open-access"><a href="https://doi.org/10.59350/brd0r-j4136">Papermills prefer Open Access</a></h3>
+<p><a href="https://doi.org/10.59350/brd0r-j4136">https://doi.org/10.59350/brd0r-j4136</a> <br>Published March 11, 2024 in <a href="https://rogue-scholar.org/blogs/clearskiesadam">Stories by Adam Day on Medium</a><br>Adam Day<br>TL;DR: the rate of Papermill Alarm alerts is significantly higher in gold OA content than it is in subscription content. If you’re concerned about papermills, Clear Skies offers the Papermill Alarm: the world’s leading papermill detection tool. Get in touch for a&nbsp;demo. I’m a big believer in Open Science.</p>
 </section>
-<section id="regime-shift-cometh" class="level3">
-<h3 class="anchored" data-anchor-id="regime-shift-cometh"><a href="https://doi.org/10.59350/7bkhw-q2y44">Regime Shift Cometh?</a></h3>
-<p><a href="https://doi.org/10.59350/7bkhw-q2y44">https://doi.org/10.59350/7bkhw-q2y44</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/jabberwocky_ecology">Jabberwocky Ecology</a><br>Morgan Ernest<br>We’ve been studying how rodent communities change through time in the Arizona desert for 40 years. About once a decade we see a rapid change. Is the next one about to happen? It might be!</p>
+<section id="open-access-repositories-in-transition-strategies-for-professionalization" class="level3">
+<h3 class="anchored" data-anchor-id="open-access-repositories-in-transition-strategies-for-professionalization"><a href="https://doi.org/10.57689/dini-blog.20240311">Open Access Repositories in Transition: Strategies for Professionalization</a></h3>
+<p><a href="https://doi.org/10.57689/dini-blog.20240311">https://doi.org/10.57689/dini-blog.20240311</a> <br>Published March 11, 2024 in <a href="https://rogue-scholar.org/blogs/epub_fis">FIS &amp; EPub</a><br>Gastautor(en)<br>In 1995, one of the first institutional Open Access repositories in Germany, MONARCH, was launched at the Technical University of Chemnitz (Blumtritt, 2006). These early repositories, aimed to publish theses dissertations.</p>
 </section>
-<section id="an-interview-with-chuck-thorpe-on-cmu-operating-an-autonomous-vehicle-research-powerhouse" class="level3">
-<h3 class="anchored" data-anchor-id="an-interview-with-chuck-thorpe-on-cmu-operating-an-autonomous-vehicle-research-powerhouse"><a href="https://doi.org/10.59350/cqp6w-bq710">An Interview with Chuck Thorpe on CMU: Operating an autonomous vehicle research powerhouse</a></h3>
-<p><a href="https://doi.org/10.59350/cqp6w-bq710">https://doi.org/10.59350/cqp6w-bq710</a> <br>Published January 9, 2024 in <a href="https://rogue-scholar.org/blogs/freaktakes">FreakTakes</a><br><br>Listen now | The centerpiece of today’s post is an extensive interview with Chuck Thorpe. Thorpe, now President of Clarkson University, spent over two decades at Carnegie Mellon University. These years were largely spent as a student, project manager, and PI working on Carnegie Mellon’s autonomous vehicle vision research.</p>
+<section id="the-comics-grid-call-for-comics-studies-book-reviews-spring-2024" class="level3">
+<h3 class="anchored" data-anchor-id="the-comics-grid-call-for-comics-studies-book-reviews-spring-2024"><a href="https://doi.org/10.59350/cnw7t-ber58">The Comics Grid: Call for Comics Studies Book Reviews (Spring 2024)</a></h3>
+<p><a href="https://doi.org/10.59350/cnw7t-ber58">https://doi.org/10.59350/cnw7t-ber58</a> <br>Published March 11, 2024 in <a href="https://rogue-scholar.org/blogs/ernestopriego">Everything is Connected</a><br>Ernesto Priego<br><strong> <em> The Comics Grid: Journal of Comics Scholarship </em> </strong> <em> </em> is seeking contributions to its book reviews section. The journal seeks 2,000- to 2,500-word scholarly reviews of academic publications on comics and graphic novels, historical to contemporary, global north to global south, in all comics cultures.</p>
+</section>
+<section id="enhancing-pubmed-from-a-medical-database-to-beyond" class="level3">
+<h3 class="anchored" data-anchor-id="enhancing-pubmed-from-a-medical-database-to-beyond"><a href="https://doi.org/10.59350/cjqwx-pt545">Enhancing PubMed: from a Medical Database to beyond</a></h3>
+<p><a href="https://doi.org/10.59350/cjqwx-pt545">https://doi.org/10.59350/cjqwx-pt545</a> <br>Published March 11, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br>An introduction to tools supporting PubMed <strong> Author: </strong> Xuzeng He ( <strong> ORCID: </strong> 0009–0005–7317–7426) PubMed is a free Web literature search service developed and maintained by the National Center for Biotechnology Information ( <strong> NCBI </strong> ), and it is also a part of NCBI’s Entrez retrieval system that provides access to a diverse set of 38 databases.</p>
+</section>
+<section id="preprints-opening-surgical-science-to-greater-innovation-and-transparency" class="level3">
+<h3 class="anchored" data-anchor-id="preprints-opening-surgical-science-to-greater-innovation-and-transparency"><a href="https://doi.org/10.59350/hkh11-qhg09">Preprints: Opening Surgical Science to Greater Innovation and Transparency</a></h3>
+<p><a href="https://doi.org/10.59350/hkh11-qhg09">https://doi.org/10.59350/hkh11-qhg09</a> <br>Published March 12, 2024 in <a href="https://rogue-scholar.org/blogs/ideas">I.D.E.A.S.</a><br>Tejas S. Sathe<br>This is a preprint of a perspective paper that has been submitted for peer review. Think about the last time you submitted a paper. After meticulous editing, you uploaded your manuscript and hit the “submit” button. Then, you waited. And waited. The reviewers requested revisions, which you obliged. More waiting. Finally, the paper was accepted and sent for proofing. You were one of the lucky ones.</p>
+</section>
+<section id="retraction-activities-of-edtech-journals" class="level3">
+<h3 class="anchored" data-anchor-id="retraction-activities-of-edtech-journals"><a href="https://doi.org/10.59350/vv1gh-0z147">Retraction activities of EdTech journals</a></h3>
+<p><a href="https://doi.org/10.59350/vv1gh-0z147">https://doi.org/10.59350/vv1gh-0z147</a> <br>Published March 12, 2024 in <a href="https://rogue-scholar.org/blogs/kalz">Posts | Prof.&nbsp;Dr.&nbsp;Marco Kalz</a><br>Marco Kalz<br>Due to my current side-project of getting a plagiarised, AI-generated book retracted, I was curious to see how selected top-ranked journals in Educational Technology have been actively retracting articles. I have been using the GoogleScholar ranking and have focused on journals I would include in this list. Here is a table of my findings.</p>
+</section>
+<section id="the-ethical-and-social-impact-of-artificial-intelligence" class="level3">
+<h3 class="anchored" data-anchor-id="the-ethical-and-social-impact-of-artificial-intelligence"><a href="https://doi.org/10.59350/gakpd-y5s73">The Ethical and Social Impact of Artificial Intelligence</a></h3>
+<p><a href="https://doi.org/10.59350/gakpd-y5s73">https://doi.org/10.59350/gakpd-y5s73</a> <br>Published March 12, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br><strong> Addressing Misinformation, Bias, and Privacy&nbsp;Concerns </strong> <strong> Author: </strong> <strong> Wenyi Pi (ORCID: </strong> <strong> 0009–0002–2884–2771 </strong> <strong> ) </strong> Recently, the spread of false or misinformation has become an important concern for people all over the world, especially in the era of big data and multimedia, where people are faced with a flood of information that makes it difficult to determine its</p>
+</section>
+<section id="how-much-can-vision-language-models-really-see" class="level3">
+<h3 class="anchored" data-anchor-id="how-much-can-vision-language-models-really-see"><a href="https://doi.org/10.59350/zryt2-f3v34">How Much Can Vision Language Models Really ‘See’?</a></h3>
+<p><a href="https://doi.org/10.59350/zryt2-f3v34">https://doi.org/10.59350/zryt2-f3v34</a> <br>Published March 12, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br><strong> Exploring the potentials and limitations of Vision Language&nbsp;Models </strong> <strong> Author: </strong> <strong> Amanda Kau (ORCID: </strong> <strong> 0009–0004–4949–9284 </strong> <strong> ) </strong> The human brain is more extraordinary than any machine we could build. From an early age, many of us gain the ability to comprehend what our eyes tell us and articulate it. Furthermore, we combine evidence from all our senses to reason.</p>
+</section>
+<section id="language-models-deep-dive-into-bert" class="level3">
+<h3 class="anchored" data-anchor-id="language-models-deep-dive-into-bert"><a href="https://doi.org/10.59350/tfm92-t8y93">Language Models: Deep Dive into BERT</a></h3>
+<p><a href="https://doi.org/10.59350/tfm92-t8y93">https://doi.org/10.59350/tfm92-t8y93</a> <br>Published March 12, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br><strong> Unlocking the power of language models: A deep dive into&nbsp;BERT </strong> <strong> Author: </strong> <strong> Dhruv Gupta (ORCID: </strong> <strong> 0009–0004–7109–5403 </strong> <strong> ) </strong> Clive Humby, in 2006 rightly said, “Data is the new oil”. With data being present everywhere, it has never been more valuable.</p>
+</section>
+<section id="ethics-and-ai-confronting-the-challenges-ahead" class="level3">
+<h3 class="anchored" data-anchor-id="ethics-and-ai-confronting-the-challenges-ahead"><a href="https://doi.org/10.59350/t5gj9-1fe45">Ethics and AI: Confronting the Challenges Ahead</a></h3>
+<p><a href="https://doi.org/10.59350/t5gj9-1fe45">https://doi.org/10.59350/t5gj9-1fe45</a> <br>Published March 12, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br><strong> Exploring AI’s Ethical Terrain: Addressing Bias, Security, and&nbsp;Beyond </strong> <strong> Author </strong> Vaibhav Khobragade ORCID: <strong> </strong> 0009–0009–8807–5982 Large language models (LLMs) like OpenAI’s GPT-4, Meta’s LLaMA, and Google Gemini (previously called Bard) have showcased their vast capabilities, from passing bar exams and crafting articles to generating images and website code.</p>
+</section>
+<section id="unveiling-research-trends-through-openalex-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="unveiling-research-trends-through-openalex-visualization"><a href="https://doi.org/10.59350/mcb06-tyv62">Unveiling Research Trends through OpenAlex Visualization</a></h3>
+<p><a href="https://doi.org/10.59350/mcb06-tyv62">https://doi.org/10.59350/mcb06-tyv62</a> <br>Published March 12, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Research Graph<br>Exploring the OpenAlex Data Structure and Visualization <strong> Author: </strong> · Qingqin Fang ( <strong> ORCID: </strong> 0009–0003–5348–4264) <strong> <strong> Introduction to&nbsp;OpenAlex </strong> </strong> In today’s world, the realm of research papers is brimming with countless hot topics, and the sheer volume of publications can be overwhelming.</p>
+</section>
+<section id="why-were-prehistoric-sea-creatures-so-tiny" class="level3">
+<h3 class="anchored" data-anchor-id="why-were-prehistoric-sea-creatures-so-tiny"><a href="https://doi.org/10.59350/y0cds-hgw36">Why were prehistoric sea creatures so tiny?</a></h3>
+<p><a href="https://doi.org/10.59350/y0cds-hgw36">https://doi.org/10.59350/y0cds-hgw36</a> <br>Published March 12, 2024 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>My friend Toby Lowther wrote to me back in December to ask this question: It’s strange, isn’t it? The last I knew, <em> Shonisaurus </em> was the largest ichthyosaur, at about 20 m and 50 tonnes, and this is considerably bigger than any plesiosaur or mosasaur I know of. It’s up the sperm-whale size category, but not even close to the bigger baleen whales. Why not?</p>
 </section>
 </div>
 </div>
@@ -1792,7 +1826,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-january-10-2024/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-march-13-2024/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1811,7 +1845,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
