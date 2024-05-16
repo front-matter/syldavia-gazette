@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Fenner">
-<meta name="dcterms.date" content="2023-11-29">
-<meta name="description" content="This is a summary of the Rogue Scholar blog posts published since November 22, 2023.">
+<meta name="dcterms.date" content="2024-05-08">
+<meta name="description" content="This is a summary of the Rogue Scholar blog posts published April 24 - May 7, 2024.">
 
-<title>Syldavia Gazette - Rogue Scholar Digest November 29, 2023</title>
+<title>Syldavia Gazette - Rogue Scholar Digest May 8, 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,10 +112,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest November 29, 2023">
-<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published since November 22, 2023.">
-<meta property="og:image" content="https://syldavia-gazette.org/images/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.webp">
+<meta property="og:title" content="Syldavia Gazette - Rogue Scholar Digest May 8, 2024">
+<meta property="og:description" content="This is a summary of the Rogue Scholar blog posts published April 24 - May 7, 2024.">
+<meta property="og:image" content="https://syldavia-gazette.org/images/2024-04-24-footer.png">
 <meta property="og:site_name" content="Syldavia Gazette">
+<meta property="og:image:height" content="203">
+<meta property="og:image:width" content="600">
 </head>
 
 <body class="floating nav-fixed">
@@ -1052,7 +1054,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rogue Scholar Digest November 29, 2023</h1>
+<h1 class="title">Rogue Scholar Digest May 8, 2024</h1>
   <div class="quarto-categories">
     <div class="quarto-category">digest</div>
   </div>
@@ -1060,7 +1062,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    <p>This is a summary of the Rogue Scholar blog posts published since November 22, 2023.</p>
+    <p>This is a summary of the Rogue Scholar blog posts published April 24 - May 7, 2024.</p>
   </div>
 </div>
 
@@ -1084,7 +1086,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 29, 2023</p>
+      <p class="date">May 8, 2024</p>
     </div>
   </div>
   
@@ -1096,25 +1098,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-This post finds Rogue Scholar blog posts published the last seven days using the Rogue Scholar API.
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Results are filtered by posts published between <code>2023-11-22</code> and <code>2023-11-28</code> and <code>en</code> as language.</li>
-<li>We retrieve the <code>title</code>, <code>authors</code>, <code>publication date</code>, <code>abstract</code>, <code>blog name</code>, <code>blog_slug</code>, and <code>doi</code>.</li>
-<li>We sort the results in chronological order (oldest first).</li>
-<li>We format the results and generate markdown output.</li>
-</ul>
-</div>
-</div>
-<div id="2812989b" class="cell" data-execution_count="1">
+<div id="c0f2c38f" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -1126,9 +1110,9 @@ This post finds Rogue Scholar blog posts published the last seven days using the
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>locale.setlocale(locale.LC_ALL, <span class="st">"en_US"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>baseUrl <span class="op">=</span> <span class="st">"https://api.rogue-scholar.org/"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2023-11-22"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2023-11-28"</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>published_since <span class="op">=</span> <span class="st">"2024-04-24"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>published_until <span class="op">=</span> <span class="st">"2024-05-07"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>feature_image <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>include_fields <span class="op">=</span> <span class="st">"title,authors,published_at,summary,blog_name,blog_slug,doi,url,image"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    baseUrl</span>
@@ -1174,59 +1158,123 @@ This post finds Rogue Scholar blog posts published the last seven days using the
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>markdown <span class="op">+=</span> posts_as_string</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Markdown(markdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="4">
 <div>
 <figure class="figure">
-<p><a href="https://epriego.files.wordpress.com/2021/01/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.jpg?w=656" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://epriego.files.wordpress.com/2021/01/the-lockdown-chronicles-year-2-paying-dividends-12-january-2020.jpg?w=656" class="img-fluid figure-img"></a></p>
+<p><a href="https://tzovar.as/assets/images/2024-04-24-footer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://tzovar.as/assets/images/2024-04-24-footer.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<section id="uk-covid-inquiry-eoho-hate-to-say-we-told-you-so" class="level3">
-<h3 class="anchored" data-anchor-id="uk-covid-inquiry-eoho-hate-to-say-we-told-you-so"><a href="https://doi.org/10.59350/ckhj4-ty439">UK Covid Inquiry: EOHO, Hate to Say We Told You So</a></h3>
-<p><a href="https://doi.org/10.59350/ckhj4-ty439">https://doi.org/10.59350/ckhj4-ty439</a> <br>Published November 22, 2023 in <a href="https://rogue-scholar.org/blogs/ernestopriego">Everything is Connected</a><br>Ernesto Priego<br>Eat Out to Help Out reversed social distancing guidance and contributed to a second Covid wave. Hate to say we told you so.</p>
+<section id="an-update-on-the-scholars-on-twitter-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="an-update-on-the-scholars-on-twitter-dataset"><a href="https://doi.org/10.59350/abapf-y4f53">An update on the Scholars on Twitter dataset</a></h3>
+<p><a href="https://doi.org/10.59350/abapf-y4f53">https://doi.org/10.59350/abapf-y4f53</a> <br>Published April 24, 2024 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Philippe Mongeon, Timothy D. Bowman, Rodrigo Costas, Wenceslao Arroyo-Machado<br><strong> Introduction </strong> On August 21, 2022, we made available the first version of our dataset of scholars on Twitter created with two open data sources: Crossref Event Data and OpenAlex.</p>
 </section>
-<section id="rogue-scholar-updates-guids-and-fields-of-science" class="level3">
-<h3 class="anchored" data-anchor-id="rogue-scholar-updates-guids-and-fields-of-science"><a href="https://doi.org/10.53731/fy5gh-g0w69">Rogue Scholar updates: GUIDs and fields of science</a></h3>
-<p><a href="https://doi.org/10.53731/fy5gh-g0w69">https://doi.org/10.53731/fy5gh-g0w69</a> <br>Published November 22, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>The Rogue Scholar science blog archive launched two new features today: GUIDs (globally unique identifiers) and support for OECD Fields of Science and Technology. Globally unique identifiers (GUIDs) GUIDs are used to globally identify a blog post and are part of the RSS, Atom, and JSON Feed specifications.</p>
+<section id="automating-data-exports-from-apple-health" class="level3">
+<h3 class="anchored" data-anchor-id="automating-data-exports-from-apple-health"><a href="https://doi.org/10.59350/cap2n-agh49">Automating data exports from Apple Health</a></h3>
+<p><a href="https://doi.org/10.59350/cap2n-agh49">https://doi.org/10.59350/cap2n-agh49</a> <br>Published April 24, 2024 in <a href="https://rogue-scholar.org/blogs/tzovar">Bastian Greshake Tzovaras</a><br>Bastian Greshake Tzovaras<br>The dynamic footer of my website has been powered by a little aggregation of some of my personal data for about 5 1/2 years by now. Until recently, all the data related to my activity and physiology (steps, heart rate, sleep, body) came from an Oura Ring.</p>
 </section>
-<section id="jstor-generative-ai-pilot---or-is-semantic-search-coming-for-academic-databases" class="level3">
-<h3 class="anchored" data-anchor-id="jstor-generative-ai-pilot---or-is-semantic-search-coming-for-academic-databases"><a href="https://doi.org/10.59350/d6m23-vk771">JSTOR generative AI pilot - Or is Semantic Search coming for academic databases?</a></h3>
-<p><a href="https://doi.org/10.59350/d6m23-vk771">https://doi.org/10.59350/d6m23-vk771</a> <br>Published November 22, 2023 in <a href="https://rogue-scholar.org/blogs/musings">Aaron Tay’s Musings about librarianship</a><br>Aaron Tay<br>A decade ago in 2012, I observed how the dominance of Google had slowly affected how Academic databases and OPACs/ catalogues (now discovery services) work.</p>
+<section id="markov-chain-monte-what" class="level3">
+<h3 class="anchored" data-anchor-id="markov-chain-monte-what"><a href="https://doi.org/10.59350/mxfyk-6av39">Markov Chain Monte What?</a></h3>
+<p><a href="https://doi.org/10.59350/mxfyk-6av39">https://doi.org/10.59350/mxfyk-6av39</a> <br>Published April 25, 2024 in <a href="https://rogue-scholar.org/blogs/bayesically_speaking">Bayesically Speaking</a><br>Matías Castillo-Aguilar<br><strong> Introduction </strong> Alright, folks, let’s dive into the wild world of statistics and data science! Picture this: you’re knee-deep in data, trying to make sense of the chaos.</p>
 </section>
-<section id="introducing-the-cwts-focal-area-engagement-and-inclusion-a-vision-and-roadmap" class="level3">
-<h3 class="anchored" data-anchor-id="introducing-the-cwts-focal-area-engagement-and-inclusion-a-vision-and-roadmap"><a href="https://www.leidenmadtrics.nl/articles/introducing-the-cwts-focal-area-engagement-and-inclusion-a-vision-and-roadmap">Introducing the CWTS Focal Area Engagement and Inclusion: A vision and roadmap</a></h3>
-<p>Published November 23, 2023 in <a href="https://rogue-scholar.org/blogs/leidenmadtrics">Leiden Madtrics</a><br>Leiden Madtrics<br>The new Focal Area Engagement &amp; Inclusion at CWTS aims to create a more diverse, inclusive and engaging science ecosystem. This blogpost introduces our main vision and roadmap for the future. We welcome any person or organisation interested in these topics to reach out to us!To develop our CWTS knowledge agenda we formed three focal areas at the start of this year to organise our activities.</p>
+<section id="the-courage-to-discuss" class="level3">
+<h3 class="anchored" data-anchor-id="the-courage-to-discuss"><a href="https://doi.org/10.59350/bjh0z-gw219">The courage to discuss</a></h3>
+<p><a href="https://doi.org/10.59350/bjh0z-gw219">https://doi.org/10.59350/bjh0z-gw219</a> <br>Published April 25, 2024 in <a href="https://rogue-scholar.org/blogs/chjh">Chris Hartgerink</a><br>Chris Hartgerink<br>I want to recommit to writing, to recommit to actively and publicly think about what is happening. I want to recommit to the idea that thoughts are dynamic and never settled — that thinking in public helps move away from sharing only finalized arguments. Thoughts are produced and reproduced through the conversations we have, be it directly on the phone or indirectly through writing and reading.</p>
 </section>
-<section id="ropensci-news-digest-november-2023" class="level3">
-<h3 class="anchored" data-anchor-id="ropensci-news-digest-november-2023"><a href="https://doi.org/10.59350/e961a-yxp83">rOpenSci News Digest, November 2023</a></h3>
-<p><a href="https://doi.org/10.59350/e961a-yxp83">https://doi.org/10.59350/e961a-yxp83</a> <br>Published November 24, 2023 in <a href="https://rogue-scholar.org/blogs/ropensci">rOpenSci - open tools for open science</a><br>The rOpenSci Team<br>Dear rOpenSci friends, it’s time for our monthly news roundup! You can read this post on our blog.Now let’s dive into the activity at and around rOpenSci!rOpenSci HQ Giving season: consider donating to rOpenSci This Giving Season consider donating to rOpenSci to support our mission of empowering Open Science.</p>
+<section id="dna-day-launch-for-hong-kongs-moonshot-for-biology" class="level3">
+<h3 class="anchored" data-anchor-id="dna-day-launch-for-hong-kongs-moonshot-for-biology"><a href="https://doi.org/10.59350/eemcp-h8f94">DNA Day Launch for Hong Kong’s Moonshot for Biology</a></h3>
+<p><a href="https://doi.org/10.59350/eemcp-h8f94">https://doi.org/10.59350/eemcp-h8f94</a> <br>Published April 25, 2024 in <a href="https://rogue-scholar.org/blogs/gigablog">GigaBlog</a><br>Scott Edmunds<br><em> The first emblematic species sequenced by the Hong Kong Biodiversity Genomics Consortium are published to coincide with International DNA Day. </em></p>
 </section>
-<section id="rogue-scholar-updates-documentation-and-comments" class="level3">
-<h3 class="anchored" data-anchor-id="rogue-scholar-updates-documentation-and-comments"><a href="https://doi.org/10.53731/7qcr3-0m590">Rogue Scholar updates: documentation and comments</a></h3>
-<p><a href="https://doi.org/10.53731/7qcr3-0m590">https://doi.org/10.53731/7qcr3-0m590</a> <br>Published November 24, 2023 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>Shortly following an update earlier this week, the Rogue Scholar science blog archive has updated or added two features today: better documentation and new comments.Documentation The Rogue Scholar documentation site was launched with the service but hasn’t seen any updates in several months. Today I updated the platforms page, explaining what blogging platforms are used by the blogs participating in Rogue Scholar and how they are integrated.</p>
+<section id="molecular-symmetry-analysis-made-easy" class="level3">
+<h3 class="anchored" data-anchor-id="molecular-symmetry-analysis-made-easy"><a href="https://doi.org/10.59350/s4ctj-7k667">Molecular Symmetry Analysis Made Easy</a></h3>
+<p><a href="https://doi.org/10.59350/s4ctj-7k667">https://doi.org/10.59350/s4ctj-7k667</a> <br>Published April 25, 2024 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>Pure mathematics has all sorts of unexpected connections to other fields, and chemistry is no exception.</p>
 </section>
-<section id="book-review-working-backwards" class="level3">
-<h3 class="anchored" data-anchor-id="book-review-working-backwards"><a href="https://doi.org/10.59350/16tt5-31h26">Book Review: Working Backwards</a></h3>
-<p><a href="https://doi.org/10.59350/16tt5-31h26">https://doi.org/10.59350/16tt5-31h26</a> <br>Published November 25, 2023 in <a href="https://rogue-scholar.org/blogs/cwagen">Corin Wagen</a><br>Corin Wagen<br>I took a pistol course in undergrad, and while I was a poor marksman I enjoyed the experience. In particular, I was surprised by how meditative the act of shooting was. As our instructor explained, much of good shooting comes down to not doing anything when you pull the trigger.</p>
+<section id="the-mhongoose-survey-of-atomic-gas-in-and-around-galaxies" class="level3">
+<h3 class="anchored" data-anchor-id="the-mhongoose-survey-of-atomic-gas-in-and-around-galaxies"><a href="https://doi.org/10.59350/686jg-5dh08">The MHONGOOSE survey of atomic gas in and around galaxies</a></h3>
+<p><a href="https://doi.org/10.59350/686jg-5dh08">https://doi.org/10.59350/686jg-5dh08</a> <br>Published April 26, 2024 in <a href="https://rogue-scholar.org/blogs/tritonstation">Triton Station</a><br>Stacy McGaugh<br>I have been spending a lot of time lately writing up a formal paper on high redshift galaxies, so haven’t had much time to write here. The paper is a lot more involved than I told you so, but yeah, I did. Repeatedly. I do have a start on a post on self-interacting dark matter that I hope eventually to get back to. Today, I want to give a quick note about the MHONGOOSE survey. But first, a non-commercial interruption.</p>
 </section>
-<section id="a-new-revolutionary-workflow-for-a-unified-collection-of-citations-say-hello-to-the-opencitations-index" class="level3">
-<h3 class="anchored" data-anchor-id="a-new-revolutionary-workflow-for-a-unified-collection-of-citations-say-hello-to-the-opencitations-index"><a href="https://doi.org/10.59350/r0rjh-a4885">A new revolutionary workflow for a unified collection of citations: say hello to the OpenCitations Index</a></h3>
-<p><a href="https://doi.org/10.59350/r0rjh-a4885">https://doi.org/10.59350/r0rjh-a4885</a> <br>Published November 27, 2023 in <a href="https://rogue-scholar.org/blogs/opencitations">OpenCitations blog</a><br>Chiara Di Giambattista<br><em> Blog post by Ivan Heibi (University of Bologna), Arianna Moretti (University of Bologna) and Chiara Di Giambattista (University of Bologna). </em> In the past five years, the OpenCitations data has been enriched with numerous new indexes of open citation data from different sources.</p>
+<section id="five-years-of-economics-from-the-top-down" class="level3">
+<h3 class="anchored" data-anchor-id="five-years-of-economics-from-the-top-down"><a href="https://doi.org/10.59350/8a58k-yg969">Five Years of Economics from the Top Down</a></h3>
+<p><a href="https://doi.org/10.59350/8a58k-yg969">https://doi.org/10.59350/8a58k-yg969</a> <br>Published April 27, 2024 in <a href="https://rogue-scholar.org/blogs/etd">Economics from the Top Down</a><br>Blair Fix<br>My how time flies. As of April 11th, 2024, I’ve been blogging for five years. To celebrate, I thought I’d engage in some obligatory naval gazing. Why blog? I started this blog on a whim. In the spring of 2019, I was one year post PhD and busy publishing pieces of my dissertation. It was about as much fun as licking sandpaper. The problem, I now realize, is that I hate academic writing.</p>
 </section>
-<section id="a-simple-old-school-paper-about-bifurcated-cervical-ribs" class="level3">
-<h3 class="anchored" data-anchor-id="a-simple-old-school-paper-about-bifurcated-cervical-ribs"><a href="https://doi.org/10.59350/wm7d1-tb814">A simple, old-school paper about bifurcated cervical ribs</a></h3>
-<p><a href="https://doi.org/10.59350/wm7d1-tb814">https://doi.org/10.59350/wm7d1-tb814</a> <br>Published November 27, 2023 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>Everybody(<em>) knows that the turiasaurian sauropod Moabosaurus has bifurcated cervical ribs: it was all anyone was talking about back when that animal was described (Britt et al.&nbsp;2017). We’ve featured the best rib here before, and here it is again: (</em>) All right, but you know what I mean.</p>
+<section id="atlantal-ribs-of-the-carnegie-diplodocus-moscow-and-vienna-casts" class="level3">
+<h3 class="anchored" data-anchor-id="atlantal-ribs-of-the-carnegie-diplodocus-moscow-and-vienna-casts"><a href="https://doi.org/10.59350/0ezp4-a1h55">Atlantal ribs of the Carnegie <i>Diplodocus</i>, Moscow and Vienna casts</a></h3>
+<p><a href="https://doi.org/10.59350/0ezp4-a1h55">https://doi.org/10.59350/0ezp4-a1h55</a> <br>Published April 27, 2024 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>Eighteen months ago, I noted that the Carnegie Museum’s <em> Diplodocus </em> mount has no atlantal ribs (i.e.&nbsp;ribs of the first cervical vertebra, the atlas). But that the Paris cast has long atlantal ribs — so long the extend past the posterior end of the axis. There were two especially provocative comments to that post. First, Konstantin linked to a photo of the Russian cast (first mounted in St.&nbsp;Petersburg but currently residing in Moscow).</p>
 </section>
-<section id="our-2022-emission-estimates" class="level3">
-<h3 class="anchored" data-anchor-id="our-2022-emission-estimates"><a href="https://doi.org/10.59350/p4e8v-kmt48">Our 2022 emission estimates</a></h3>
-<p><a href="https://doi.org/10.59350/p4e8v-kmt48">https://doi.org/10.59350/p4e8v-kmt48</a> <br>Published November 28, 2023 in <a href="https://rogue-scholar.org/blogs/libscie">Liberate Science</a><br>Liberate Science<br>The climate crisis demands immediate action, in order to prevent every bit of warming we can. Organizations are big emitters, because they consume, spend, and grow — a lot. All of those economic activities are strongly coupled with emissions. We do our emission assessments because that information is key to taking informed action. Our previous assessments in 2019, 2020, and 2021 already influenced our equipment policy and event policy.</p>
+<section id="large-language-models-for-code-writing-security-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="large-language-models-for-code-writing-security-assessment"><a href="https://doi.org/10.59350/c9qeh-m6z87">Large Language Models for Code Writing: Security Assessment</a></h3>
+<p><a href="https://doi.org/10.59350/c9qeh-m6z87">https://doi.org/10.59350/c9qeh-m6z87</a> <br>Published April 28, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Xuzeng He<br>Latest effort in assessing the security of the code generated by large language&nbsp;models Author · Xuzeng He ( <strong> ORCID: </strong> 0009–0005–7317–7426) Introduction With the surge of Large Language Models (LLMs) nowadays, there is a rising trend among developers to use Large Language Models to assist their daily code writing. Famous products include GitHub Copilot or simply ChatGPT.</p>
 </section>
-<section id="fair-data-digest-22" class="level3">
-<h3 class="anchored" data-anchor-id="fair-data-digest-22"><a href="https://doi.org/10.59350/ph09x-ncj11">FAIR Data Digest #22</a></h3>
-<p><a href="https://doi.org/10.59350/ph09x-ncj11">https://doi.org/10.59350/ph09x-ncj11</a> <br>Published November 28, 2023 in <a href="https://rogue-scholar.org/blogs/fairdata">FAIR Data Digest</a><br>Sven Lieber<br>How I solved data integration performance problems by rewriting SPARQL queries or changing the approach. Food for thought that might help you too!</p>
+<section id="i-put-the-ways-of-childhood-behind-me-my-remembrance-of-dan-dennett" class="level3">
+<h3 class="anchored" data-anchor-id="i-put-the-ways-of-childhood-behind-me-my-remembrance-of-dan-dennett"><a href="https://doi.org/10.59350/17mxp-ng136">“I put the ways of childhood behind me” — my remembrance of Dan Dennett</a></h3>
+<p><a href="https://doi.org/10.59350/17mxp-ng136">https://doi.org/10.59350/17mxp-ng136</a> <br>Published April 29, 2024 in <a href="https://rogue-scholar.org/blogs/sfmatheson">Quintessence of Dust</a><br>Stephen Matheson<br>For five years through 2018, our humanist community, the Humanist Hub*, met every Sunday afternoon at our suite in Harvard Square for fellowship, music, and a speaker. Our advisory board included luminaries of humanism such as Rebecca Goldstein, Steven Pinker, and Dan Dennett. These friends of the organization regularly spoke at Humanist Hub events.</p>
 </section>
-<section id="what-dorsal-processes-on-cervical-ribs-tell-us-about-neck-muscles-and-their-functions" class="level3">
-<h3 class="anchored" data-anchor-id="what-dorsal-processes-on-cervical-ribs-tell-us-about-neck-muscles-and-their-functions"><a href="https://doi.org/10.59350/ehs80-z5462">What dorsal processes on cervical ribs tell us about neck muscles and their functions</a></h3>
-<p><a href="https://doi.org/10.59350/ehs80-z5462">https://doi.org/10.59350/ehs80-z5462</a> <br>Published November 28, 2023 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Matt Wedel<br>Here are some cervical ribs of sauropods that show a spectrum of morphologies, from a low dorsal process that makes an obtuse angle with the shaft of the rib in Dicraeosaurus (upper right), to one that makes a right angle in Brontosaurus (center), to a prominent spike of bone in Apatosaurus (bottom left), to a […]</p>
+<section id="commonmeta-grows-up" class="level3">
+<h3 class="anchored" data-anchor-id="commonmeta-grows-up"><a href="https://doi.org/10.53731/zkrxq-mj859">Commonmeta grows up</a></h3>
+<p><a href="https://doi.org/10.53731/zkrxq-mj859">https://doi.org/10.53731/zkrxq-mj859</a> <br>Published April 29, 2024 in <a href="https://rogue-scholar.org/blogs/front_matter">Front Matter</a><br>Martin Fenner<br>The Commonmeta standard for scholarly metadata continues towards version 1.0 with some important changes in version v0.14, released this week. And metadata for all DOIs from Crossref and DataCite can now be retrieved in commonmeta format via a new web service.</p>
+</section>
+<section id="multimodal-large-language-models-for-misinformation-detection-and-reasoning" class="level3">
+<h3 class="anchored" data-anchor-id="multimodal-large-language-models-for-misinformation-detection-and-reasoning"><a href="https://doi.org/10.59350/mtep9-gwy69">Multimodal Large Language Models for Misinformation Detection and Reasoning</a></h3>
+<p><a href="https://doi.org/10.59350/mtep9-gwy69">https://doi.org/10.59350/mtep9-gwy69</a> <br>Published April 29, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Wenyi Pi<br>Exploring innovative Strategies in Combating Misinformation with Enhanced Multimodal Understanding Author Wenyi Pi ( <strong> ORCID </strong> : 0009–0002–2884–2771) Introduction Misinformation refers to false or inaccurate information that is often given to someone in a deliberate attempt to make them believe something that is not true. This has a significantly negative impact on public health, political stability and social trust and harmony.</p>
+</section>
+<section id="rag-2.0-is-coming" class="level3">
+<h3 class="anchored" data-anchor-id="rag-2.0-is-coming"><a href="https://doi.org/10.59350/6frhg-zxp80">RAG 2.0 is Coming?</a></h3>
+<p><a href="https://doi.org/10.59350/6frhg-zxp80">https://doi.org/10.59350/6frhg-zxp80</a> <br>Published April 30, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Qingqin Fang<br>A Unified and Collaborative Framework for&nbsp;LLM Author · Qingqin Fang ( <strong> ORCID: </strong> 0009–0003–5348–4264) Introduction In today’s rapidly evolving field of artificial intelligence, large language models (LLMs) are demonstrating unprecedented potential. Particularly, the Retrieval-Augmented Generation (RAG) architecture has become a hot topic in AI technology due to its unique technical capabilities.</p>
+</section>
+<section id="rnns-vs-grus-vs-lstms" class="level3">
+<h3 class="anchored" data-anchor-id="rnns-vs-grus-vs-lstms"><a href="https://doi.org/10.59350/t6mga-7zd77">RNNs vs GRUs vs LSTMs</a></h3>
+<p><a href="https://doi.org/10.59350/t6mga-7zd77">https://doi.org/10.59350/t6mga-7zd77</a> <br>Published April 30, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Dhruv Gupta<br><strong> The Three Oldest Pillars of&nbsp;NLP </strong> Author Dhruv Gupta ( <strong> ORCID </strong> : 0009–0004–7109–5403) Introduction Natural Language Processing (NLP) has almost become synonymous with Large Language Models (LLMs), Generative AI, and fancy chatbots. With the ever-increasing amount of textual data and exponential growth in computational knowledge, these models are improving every day.</p>
+</section>
+<section id="detecting-anomeric-effects-in-tetrahedral-boron-bearing-four-oxygen-substituents." class="level3">
+<h3 class="anchored" data-anchor-id="detecting-anomeric-effects-in-tetrahedral-boron-bearing-four-oxygen-substituents."><a href="https://doi.org/10.59350/dybzk-cs537">Detecting anomeric effects in tetrahedral boron bearing four oxygen substituents.</a></h3>
+<p><a href="https://doi.org/10.59350/dybzk-cs537">https://doi.org/10.59350/dybzk-cs537</a> <br>Published April 30, 2024 in <a href="https://rogue-scholar.org/blogs/rzepa">Henry Rzepa’s Blog</a><br>Henry Rzepa<br>In an earlier post, I discussed[1] a phenomenon known as the “anomeric effect” exhibited by tetrahedral carbon compounds with four C-O bonds. Each oxygen itself bears two bonds and has two lone pairs, and either of these can align with one of three other C-O bonds to generate an anomeric effect. Here I change the central carbon to a boron to explore what happens, as indeed I promised earlier.</p>
+</section>
+<section id="the-brachiosaurus-altithorax-holotype-fmnh-pr-25107-in-the-ground" class="level3">
+<h3 class="anchored" data-anchor-id="the-brachiosaurus-altithorax-holotype-fmnh-pr-25107-in-the-ground"><a href="https://doi.org/10.59350/tfx7z-p1v71">The <i>Brachiosaurus altithorax</i> holotype FMNH PR 25107 in the ground</a></h3>
+<p><a href="https://doi.org/10.59350/tfx7z-p1v71">https://doi.org/10.59350/tfx7z-p1v71</a> <br>Published May 1, 2024 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>I was cleaning out my Downloads directory — which, even after my initial forays, still accounts for 11 Gb that I really need to reclaim from my perptually almost-full SSD. And I found this beautiful image under the filename <strong> csgeo4028.jpeg </strong> . <em> Brachiosaurus altithorax </em> holotype FMNH PR 25107 during excavation. The thing is, I have no idea where this image came from.</p>
+</section>
+<section id="josscast-9-reproducibility-in-neuroscience-mats-van-es-on-fieldtrip-reproducescript" class="level3">
+<h3 class="anchored" data-anchor-id="josscast-9-reproducibility-in-neuroscience-mats-van-es-on-fieldtrip-reproducescript"><a href="https://doi.org/10.59349/4pk73-a2h25">JOSSCast #9: Reproducibility in Neuroscience – Mats van Es on FieldTrip reproducescript</a></h3>
+<p><a href="https://doi.org/10.59349/4pk73-a2h25">https://doi.org/10.59349/4pk73-a2h25</a> <br>Published May 2, 2024 in <a href="https://rogue-scholar.org/blogs/joss">Journal of Open Source Software Blog |</a><br>Arfon M. Smith<br><strong> Subscribe Now: </strong> Apple, Spotify, YouTube, RSS Mats van Es joins Arfon and Abby to discuss reproducible science and the functionality he added to FieldTrip, a MATLAB software toolbox for analyzing brain imaging data. Mats is a cognitive neuroscientist at the University of Oxford. You can follow Mats on Twitter/X <span class="citation" data-cites="mats_van_es">@mats_van_es</span>.</p>
+</section>
+<section id="calculating-birthday-probabilities-with-r-instead-of-math" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-birthday-probabilities-with-r-instead-of-math"><a href="https://doi.org/10.59350/r419r-zqj73">Calculating birthday probabilities with R instead of math</a></h3>
+<p><a href="https://doi.org/10.59350/r419r-zqj73">https://doi.org/10.59350/r419r-zqj73</a> <br>Published May 3, 2024 in <a href="https://rogue-scholar.org/blogs/andrewheiss">Andrew Heiss’s blog</a><br>Andrew Heiss<br>Even though I’ve been teaching R and statistical programming since 2017, and despite the fact that I do all sorts of heavily quantitative research, <em> I’m really really bad at probability math </em> . Like super bad. The last time I truly had to do set theory and probability math was in my first PhD-level stats class in 2012.</p>
+</section>
+<section id="the-flowdown-1" class="level3">
+<h3 class="anchored" data-anchor-id="the-flowdown-1"><a href="https://dualpower.supply/posts/flowdown-1">The Flowdown #1</a></h3>
+<p>Published May 3, 2024 in <a href="https://rogue-scholar.org/blogs/dualpower">Dual Power Supply</a><br>Kirk Pollard Smith<br>I sip slowly from the information firehouse that is my cornucopia of industry newsletters, RSS feeds, and Google Scholar updates on new publications in the flow battery landscape. There’s not enough time to give everything a proper read, and often if I see something useful I just file it away in Zotero for it to collect digital dust.</p>
+</section>
+<section id="the-potter-creek-brachiosaurus-humerus-in-various-states-of-repair" class="level3">
+<h3 class="anchored" data-anchor-id="the-potter-creek-brachiosaurus-humerus-in-various-states-of-repair"><a href="https://doi.org/10.59350/rhh6a-m8195">The Potter Creek <i>Brachiosaurus</i> humerus, in various states of repair</a></h3>
+<p><a href="https://doi.org/10.59350/rhh6a-m8195">https://doi.org/10.59350/rhh6a-m8195</a> <br>Published May 5, 2024 in <a href="https://rogue-scholar.org/blogs/svpow">Sauropod Vertebra Picture of the Week</a><br>Mike Taylor<br>As iconic as <em> Brachiosaurus altithorax </em> is, it’s known from surprisingly little material.</p>
+</section>
+<section id="archiving-scholarly-blogs-with-rogue-scholar" class="level3">
+<h3 class="anchored" data-anchor-id="archiving-scholarly-blogs-with-rogue-scholar"><a href="https://doi.org/10.59350/pp903-gve38">Archiving scholarly blogs with Rogue Scholar</a></h3>
+<p><a href="https://doi.org/10.59350/pp903-gve38">https://doi.org/10.59350/pp903-gve38</a> <br>Published May 6, 2024 in <a href="https://rogue-scholar.org/blogs/tzovar">Bastian Greshake Tzovaras</a><br>Bastian Greshake Tzovaras<br>The pews of the <i> Internet Archive </i> back in 2018. <strong> tl;dr: Posts on this blog are now automatically archived, indexed and full-text searchable through <em> The Rogue Scholar </em> </strong> . The jury might still be out on whether the <em> small </em> or <em> indie </em> web will make a comeback, but I’ve personally enjoyed posting more on my blog here in recent months.</p>
+</section>
+<section id="are-large-language-models-our-allies-or-enemies-in-the-fight-against-fake-news" class="level3">
+<h3 class="anchored" data-anchor-id="are-large-language-models-our-allies-or-enemies-in-the-fight-against-fake-news"><a href="https://doi.org/10.59350/st0jr-ad818">Are Large Language Models Our Allies or Enemies in the Fight Against Fake News?</a></h3>
+<p><a href="https://doi.org/10.59350/st0jr-ad818">https://doi.org/10.59350/st0jr-ad818</a> <br>Published May 7, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Amanda Kau<br>Large Language Models for Fake News Generation and Detection Author Amanda Kau ( <strong> ORCID </strong> : 0009–0004–4949–9284) Introduction In recent years, fake news has become an increasing concern for many, and for good reason. Newspapers, which we once trusted to deliver credible news through accountable journalists, are vanishing en masse along with their writers.</p>
+</section>
+<section id="transformers-models-in-nlp" class="level3">
+<h3 class="anchored" data-anchor-id="transformers-models-in-nlp"><a href="https://doi.org/10.59350/c7nrg-xay43">Transformers Models in NLP</a></h3>
+<p><a href="https://doi.org/10.59350/c7nrg-xay43">https://doi.org/10.59350/c7nrg-xay43</a> <br>Published May 7, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Dhruv Gupta<br>Attention mechanism not getting enough attention Author Dhruv Gupta ( <strong> ORCID </strong> : 0009–0004–7109–5403) Introduction As discussed in this article, RNNs were incapable of learning long-term dependencies. To solve this issue both LSTMs and GRUs were introduced. However, even though LSTMs and GRUs did a fairly decent job for textual data they did not perform well.</p>
+</section>
+<section id="fine-tuning-large-language-models-a-brief-introduction" class="level3">
+<h3 class="anchored" data-anchor-id="fine-tuning-large-language-models-a-brief-introduction"><a href="https://doi.org/10.59350/1aezq-kk827">Fine-tuning Large Language Models: A Brief Introduction</a></h3>
+<p><a href="https://doi.org/10.59350/1aezq-kk827">https://doi.org/10.59350/1aezq-kk827</a> <br>Published May 7, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Xuzeng He<br>Supervised Fine-tuning, Reinforcement Learning from Human Feedback and the latest&nbsp;SteerLM Author · Xuzeng He ( <strong> ORCID: </strong> 0009–0005–7317–7426) Introduction Large Language Models (LLMs), usually trained with extensive text data, can demonstrate remarkable capabilities in handling various tasks with state-of-the-art performance. However, people nowadays typically want something more personalised instead of a general solution.</p>
+</section>
+<section id="three-paradigms-of-rag" class="level3">
+<h3 class="anchored" data-anchor-id="three-paradigms-of-rag"><a href="https://doi.org/10.59350/5j7tt-5y328">Three Paradigms of RAG</a></h3>
+<p><a href="https://doi.org/10.59350/5j7tt-5y328">https://doi.org/10.59350/5j7tt-5y328</a> <br>Published May 7, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Vaibhav Khobragade<br><strong> From Naive to Modular: Tracing the Evolution of Retrieval-Augmented Generation </strong> Author · Vaibhav Khobragade ( <strong> ORCID: </strong> 0009–0009–8807–5982) Introduction Large Language Models (LLMs) have achieved remarkable success.</p>
+</section>
+<section id="brief-introduction-to-the-history-of-large-language-models-llms" class="level3">
+<h3 class="anchored" data-anchor-id="brief-introduction-to-the-history-of-large-language-models-llms"><a href="https://doi.org/10.59350/m4c7t-epg97">Brief Introduction to the History of Large Language Models (LLMs)</a></h3>
+<p><a href="https://doi.org/10.59350/m4c7t-epg97">https://doi.org/10.59350/m4c7t-epg97</a> <br>Published May 7, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Wenyi Pi<br>Understanding the Evolutionary Journey of&nbsp;LLMs Author Wenyi Pi ( <strong> ORCID </strong> : 0009–0002–2884–2771) Introduction When we talk about large language models (LLMs), we are actually referring to a type of advanced software that can communicate in a human-like manner. These models have the amazing ability to understand complex contexts and generate content that is coherent and has a human&nbsp;feel.</p>
+</section>
+<section id="the-longer-the-context-the-better-unlimited-context-length-in-megalodon" class="level3">
+<h3 class="anchored" data-anchor-id="the-longer-the-context-the-better-unlimited-context-length-in-megalodon"><a href="https://doi.org/10.59350/dx6a6-yy475">The longer the context, the better? Unlimited Context Length in Megalodon</a></h3>
+<p><a href="https://doi.org/10.59350/dx6a6-yy475">https://doi.org/10.59350/dx6a6-yy475</a> <br>Published May 7, 2024 in <a href="https://rogue-scholar.org/blogs/researchgraph">Stories by Research Graph on Medium</a><br>Qingqin Fang<br>An improvement architecture superior to the Transformer, proposed by&nbsp;Meta Author · Qingqin Fang ( <strong> ORCID: </strong> 0009–0003–5348–4264) Introduction Recently, researchers from Meta and the University of Southern California have introduced a model called Megalodon. They claim that this model can expand the context window of language models to handle millions of tokens without overwhelming your&nbsp;memory.</p>
 </section>
 </div>
 </div>
@@ -1800,7 +1848,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-november-29-2023/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/front-matter/syldavia-gazette/blob/main/posts/rogue-scholar-digest-may8-2024/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1819,7 +1867,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
