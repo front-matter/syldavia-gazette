@@ -25,7 +25,7 @@ website:
       - icon: github
         href: https://github.com/front-matter/syldavia-gazette
   page-footer:
-    left: "Copyright &copy;2023 Syldavia Gazette."
+    left: "Copyright &copy;2023-2024 Syldavia Gazette."
     center:
       - text: "About"
         href: about.qmd
